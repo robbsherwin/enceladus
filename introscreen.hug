@@ -1,0 +1,117 @@
+routine NewMenu
+{
+	TEXTCOLOR = BLACK
+	BGCOLOR =  BLACK
+	color TEXTCOLOR, BGCOLOR
+
+	cls
+
+!	PlayMusic("ENCEL01", "JESTER - Elysium", 80, false, true)
+	GrabFirstRandomSong()
+
+
+	if (display.hasgraphics) and GRAPHICS_ON = TRUE {
+		picture "ENCEL01", "titlescreen01"
+	}
+
+	
+:IntroScreenMenu
+
+	pause
+
+	if word[0] = 'S', 's', 'Q', 'q', ESCAPE_KEY, ENTER_KEY, MOUSE_CLICK
+	{
+		jump IntroScreenStartGame
+	}
+	if word[0] = 'R', 'r'
+	{
+		DoRestore()
+	}
+	if word[0] = 'C', 'c'
+	{
+		ChangeColorMenu()
+	}
+
+:IntroScreenStartGame
+!Do nothing, just start game
+
+
+!\
+	input 
+
+	select(word[1])
+	case "s", "S"
+	{
+	}
+	case "r", "R"
+	{
+		"Restore a game!"
+		pause
+	}
+	case "c", "C"
+	{
+		ChangeColorMenu()
+	}
+	case else
+	{
+		!Starting a new game by default. 
+	}
+\!	
+}
+
+
+routine ChangeColorMenu()
+{
+local tempInput
+
+	cls 
+
+	TEXTCOLOR = WHITE
+	BGCOLOR =  BLACK
+	color TEXTCOLOR, BGCOLOR
+
+	locate 1, 3
+
+	"Pick a color for the game's text:"
+
+	"0) Black 1) Blue 2) Green 3) Cyan 4) Red 5) Magenta 6) Brown 7) White\n
+	8) Dark Gray 9) Light Blue 10) Light Green 11) Light Cyan 12) Light Red\n
+	13) Light Magenta 14) Yellow 15) Bright White"
+	">";
+
+	input
+
+	if word[1]
+	{
+		tempInput = StringToNumber(word[1])
+	}
+	else
+	{
+		tempInput = StringToNumber(parse$)
+	}
+
+	TEXTCOLOR = tempInput
+
+
+	"Pick a color for the game's background:"
+
+	"0) Black 1) Blue 2) Green 3) Cyan 4) Red 5) Magenta 6) Brown 7) White\n
+	8) Dark Gray 9) Light Blue 10) Light Green 11) Light Cyan 12) Light Red\n
+	13) Light Magenta 14) Yellow 15) Bright White"
+	">";
+
+	input
+
+	if word[1]
+	{
+		tempInput = StringToNumber(word[1])
+	}
+	else
+	{
+		tempInput = StringToNumber(parse$)
+	}
+
+	BGCOLOR = tempInput
+
+	color TEXTCOLOR, BGCOLOR
+}

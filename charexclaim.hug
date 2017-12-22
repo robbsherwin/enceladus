@@ -1,0 +1,18 @@
+! charexclaim.hug
+
+! Script usage:  &CharExclaim, <char> <obj>
+routine CharExclaim(char, obj)
+{
+	if (((char in location) or (char is following)) and (char.conscious = 1))
+	{
+	select (char)
+		case Captain:
+		{
+		select(obj)
+			case ExclaimArray[1]
+			{
+				"\nThe Captain massages her temples."
+			}
+		}
+	}
+}

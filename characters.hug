@@ -1,0 +1,123 @@
+!Characters
+!The Captain
+!Finnian
+!Shelley
+!Mr 
+
+npc Captain "Captain"
+{
+charnumber 2
+article "the"
+nouns "captain" "girl" "woman"
+capacity 50
+maxhitpoints 10
+hitpoints 10
+armorclass 3
+attackadjust 0
+damagepotential 5
+!amount_can_carry 50
+cast_desc "The Captain"
+peaceful true
+is neutral, living, female, hidden
+in TheCaptainsQuarters
+confidence 100
+
+	long_desc
+	{
+		"She is ten years older than me, but looks younger, what with being away from 
+		the sun for much of her life.  She's six feet tall, has auburn hair styled in a 
+		1920's bob cut and owns a jawline that reveals her position as the toughest person on the 
+		ship. I am ";
+		print number confidence ;
+		"% sure she is not a werewolf."
+	}
+	before
+	{
+		object DoTell
+		{
+			select xobject
+				case werewolf
+				{
+					if GameEvents[1] = 0
+					{
+						"I try to tell the Captain about the werewolf, but I am not sure that she even recognizes me.\n"
+						"\"Who - sorry, I can't see anything, it's too early for this,\" she says. \"OK, I know you aren't Grimes, since
+						this conversation is taking place away from the cafeteria.\""
+					}
+					else
+					{
+						"\"How did it get on the ship?\" she asks.\n"
+						"\"We aren't sure. Nobody is sure,\" I say."
+					}
+				}
+		}
+	}		
+}
+
+
+npc Finnian "Finnian"
+{
+charnumber 3
+nouns "finnian""o'connell" "pilot"
+adjectives "finnian"
+is neutral
+
+	long_desc
+	{
+		select(location)
+		case TheCaptainsQuarters
+		{
+			"He's wearing a fur-lined banana thong, \Ilittle\i else."
+		}
+		case else
+		{
+			![xxx]
+		}
+	}
+	before
+	{
+		object DoAsk
+		{
+			select xobject
+				case werewolf
+				{
+					"\"I haven't actually seen it yet,\" says Finnian. \"I'll assume this is all a horrible ship's malfunction. Probably with your part. What do you do on the ship?\"\n"
+					"\"I'm the x-ray technician.\"\n"
+					"\"That pretty much destroys my working theory there, so nevermind.\""
+				}
+				case else
+				{
+					return false
+				}
+		}
+	}
+}
+
+
+npc Grimes "Grimes"
+{
+charnumber 4
+}
+
+
+npc Shelly "Shelly"
+{
+charnumber 5
+is female 
+}
+
+
+npc Mailx "Mr Mailx"
+{
+charnumber 6
+}
+
+
+npc werewolf "werewolf"
+{
+nouns "werewolf" "wolf"
+adjectives "man"
+article "the"
+charnumber 7
+is known
+}

@@ -1,0 +1,45 @@
+!routines.hug
+
+routine DoInitialGameRoutines
+{
+		if (TEXTCOLOR = BGCOLOR)
+			{
+				TEXTCOLOR = WHITE
+				BGCOLOR = RED
+				color TEXTCOLOR, BGCOLOR
+				cls
+			}
+
+			if not glk 
+			{
+			     locate 1, 3  
+			 } 
+}
+
+
+routine Version()
+{
+	
+	print "\BEnceladus\b"
+	print "Interactive Fiction"
+	print "Copyright (c) 2012. Written and programmed by Robb Sherwin"
+	print "Release 1.00 / Serial number 120530 / Hugo 3.1"
+	print ""
+}
+
+
+replace DoWakeCharacter
+{
+	"That's probably not necessary."
+}
+
+
+replace DoKiss
+{
+	"I'm not into that kinda stuff."
+}
+
+routine DoRead
+{
+	"That doesn't seem to be readable."
+}

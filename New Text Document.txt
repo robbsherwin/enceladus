@@ -1,0 +1,156 @@
+http://www.glassgiant.com/ascii/
+
+A werewolf is lose on the HMCS Plagoo. 
+
+Ja'Rod Butler: the protagonist. X-ray astronomer, junior science officer. 
+The Captain: She is a beautiful woman with a bobcut. (Unclear when we reveal her actual name in the game. )
+Shelly McKenzie: The life support technician
+Finnian O'Connell: The pilot 
+Mr Mailx: the ship's robot. Based on Grimes's personality. 
+Grimes: the really fat geographer who dies right away
+
+Equinox - a human/horse constructed creature that was exiled to Enceladus by the Captain. 
+
+To do:
+create PCjr
+create "Plagoo"
+Am I going to implement WHAT IS and WHO IS?
+Pick a conversational system. Christ, just use ask about and tell about. 
+create latte/coffee
+create door
+create doorknob
+implement Finnian yelling to be let in if the player locked the door
+describe dresser 
+
+add glitter to jumpsuit 
+add banana thong
+
+
+They leave the Captain's quarters and find the geographer's body ripped apart and mutilated. 
+
+* Ja'Rod: Grimes was engaged to be married when we got back to Earth.
+* Finnian: "They were gonna play Canon in (Mickey) D's when he walked down the aisle." 
+
+The Captain tells Finnian to get to the bridge and take the ship onto the closest moon.
+The Captain tells Ja'Rod to go find Shelly and bring her to the bridge. 
+
+***
+
+Ja'Rod gets two steps towards the elevator when he's hit over the head with a blunt instrument and knocked out. 
+
+***
+
+He finds himself in a control room outside the garbage area of the ship, where they flush the trash out into space.
+
+The antagonist, a six-foot tall humanoid with a horse's head is screeching into the PA system.  He -- EQUINOX -- has returned
+from the moon she exiled him to. He has the werewolf on a chain. 
+
+Mr Mailx and Shelly are there, and Equinox asks Ja'Rod to say the name of the one that is going to be flushed into
+space first. 
+
+Mr Mailx is wider than the hole leading out into space, so if Ja'Rod picks him, it will save Shelly. Otherwise, Shelly gets
+flushed into space and killed. 
+
+The Captain appears through a glass window on the opposite side of the trash area. Equinox just starts freaking out
+at that point, but one turn later Finnian has crash-landed the ship on Enceladus.
+
+***
+
+Ja'Rod wakes up to see Equinox take off in the ship's escape pod. The werewolf is long gone. 
+Equinox gives him the finger and laughing at him for being trapped on the shithole Enceladus, to see how THEY like it. 
+
+
+Finnian states that we need a new goddamn wall where he planted the ship. If she's still alive, Shelly is too injured to make the trip
+into "town" on Enceladus. The Captain gives her a star-pistol and tells her to hide and shoot anyone who approaches 
+her. 
+
+Ja'Rod, Finnian, Mr Mailx and the Captain therefore need METAL for the wall and a DOCTOR.
+They need to get them both before Equinox comes back and lasers the shit out of all of them. 
+(If Shelly is killed, then Mr Mailx got hurt real bad, but can still come with. He still needs a DOCTOR then.) 
+
+* Finnian states that if it's called Enceladus City, there's bound to be tons of shit there they can purchase. Only it's misnamed and very small. 
+
+
+*** 
+
+They travel a few kilometers and see the "city." It's tiny. 
+
+They argue before going into Mr. Boston's Tentacle Rape Bar. 
+* Finnian realizes that it's August 28, discovery day, and everyone is going to be drinking. 
+* "It's amateur night," he says. "A bunch of people who have never done it before trying it for the first time."
+* Mr Mailx says, "Anders Breivik said the same thing about Martin Luther King Day, since they only got one guy."
+* "Turn him off!" says Finnian. 
+
+* The Captain doesn't care, she's going to go in there and get a doctor. 
+* As soon as she opens the door, she's knocked backwards by an explosion, leaving the boys to decide who goes in there. 
+* There is a scene where they pick straws, only Finnian doesn't cut a small straw. He is too stupid to understand that.
+* Ja'Rod is the one to enter.
+
+***
+
+It's a coffee club. On Enceladus, everyone is cold all the time. Warm beverages have replaced beer. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+*In order to find out who a doctor is, Ja'Rod is gonna shoot or cut someone. He says to the player, "What's the fastest way to find an emergency room surgeon?"
+* There is a knife on the bar.
+* Ja'Rod can cut himself or one of the other patrons. 
+* This is a chance to have some background ambience with other humans.
+
+*** 
+
+The doctor helps the Captain up. He was in there drinking caffeine because there's a goddamn werewolf loose on Enceladus. 
+He either says he will go back and help Shelly or helps Finnian immediately.
+The werewolf is in an underground lair. 
+
+***
+
+Finnian explains that if they go underground, they can get enough material to plug the hole in the ship. It's just ice everywhere else on Enceladus.
+The Captain also stresses that they need to kill the werewolf.
+Mr Mailx announces that Equinox is coming back for them, intent on blowing up the entire moon. Or at least turning it to rubble. 
+
+** 
+
+The underground lair
+
+Adventuring and exploring. But what can we do down here? A "maze" maybe? 
+The werewolf has them all bound. Mr Mailx is turned off. If they say a word, they will die.
+Ja'Rod does a "say Mailx" and turns him on. 
+Mr Mailx punches the werewolf in the neck and kills him with his silver fist. 
+
+** 
+They return back to the ship 
+
+**
+
+Ja'Rod fires x-rays at Equinox's ship, blowing it up and saving Enceladus. 
+
+*** 
+
+
+
+
+
+
+
+
+
+
+
+
+
+

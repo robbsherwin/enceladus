@@ -1,0 +1,97 @@
+"\"Look, Captain, there's a werewolf loose on the ship. We have to go - now!!\"\n"
+"\"Who are you?' she says. \"And where are my pants??\"\n"
+"Ah, cripes!"
+
+"\BEnceladus\b"
+"Interactive Fiction"
+"Copyright (c) 2012. Written and programmed by Robb Sherwin"
+"Release 1.00 / Serial number 120530 / Hugo 3.1"
+
+I'm in the Captain's Quarters of the HMCS Plagoo. She has the biggest room not because it's her ship, but because we all figured out pretty early that she would be the only one who would clean it. She has a dresser and computer and, along the starboard wall, her bed. 
+
+(x computer) 
+
+The computers on the HMCS Plagoo are extremely old, as it's all the Captain could afford after she bought the ship.  This one is a PCjr.
+
+There's a message from my fellow crew member Finnian blinking on the screen
+
+(x instant message)
+
+
+It's from Finnian O'Conaill, the ship's pilot. I have to steady myself before reading it: in order to protest the pay cut the temporary Captain enforced until things turn around, Finnian changed his instant message font to Comic Sans.
+
+foconaill: there's  a were wolf on the ship
+foconaill: hello?
+foconaill: i woulda thouhgt that would have gotten more of a reaction tbqh, dear
+foconaill: ok ill come over
+
+The Captain shakes her head, as if she was looking for her jumpsuit. 
+
+"What do you mean by, 'werewolf'? she asks me.  
+
+(look in the dresser)
+
+A man of action, I bang the dresser right on the activation port. 
+
+Banging the activation port reveals the Captain's jumpsuit. 
+
+(take the jumpsuit)
+
+Taken! 
+
+(look at the captain)
+
+She is ten years older than me, but looks younger, what with being away from the sun for much of her life.  She's six feet tall, has auburn hair styled in a 1920's bob cut and owns a jawline that reveals her as the toughest person on the ship. I am 100% sure she is not a werewolf."
+
+(talk to the captain)
+
+She isn't dressed yet, and not really listening to anything I say. God, the werewolf! 
+
+(give jumpsuit to captain)
+
+The Captain throws off her nightgown and shimmies into her jumpsuit. She produces a latte out of nowhere (I mean, I wasn't looking when she got changed and everything. 
+I am the only gentleman on this ship. I have a reputation to maintain here, narmean?) 
+
+(talk to captain)
+
+"About the werewolf -- "
+"Right." She seems much more alert. "With you now." She doesn't slurp her coffee. She and the crystal 'Mouse Trap' game are the only classy parts of this ship. 
+"I don't know how it got on, but -- "
+
+Someone rattles the door knob from outside her quarters. In my horror I realize that I \Inever locked the door.\i
+
+(next turn) 
+
+Someone enters the quarters, but it's not a werewolf, hell-bent on consuming us all. It's just Finnian, the pilot. 
+
+"\"GRAVVVVVITY!!" he sings, "DON'T MEAN TOO MUCH TO ME!\" Nobody reacts. \"Hey gorgeous, there's a man-wolf on the ship." I'll assume he's not talking to me here. "You banned us from wearing fur, otherwise I would have space-lasered it 
+in-between the fangs and made a coat out of the unscorched part."
+
+"I banned you from wearing fur-lined banana thongs," says the Captain. 
+
+I yank out one of my teeth. "I thought you banned us from eating bananas." 
+
+"\"Jesus, Ja'Rod,\" says Finnian. He turns to the Captain. \"Kid's got a mouth like Yucca Mountain's public restroom. Get some vitamins!\"" 
+
+(look at Finnian)
+
+He's wearing a fur-lined banana thong, little else.
+
+(daemon)
+
+Finnian clears his throat and addresses the Captain. "Look, do you want us to kill the thing or what? I don't want to get in a situation where I'm trapped in the rec room with nothing other than that 
+fragile-as-shit Mouse Trap game for six hours."
+
+There's a horrible scream coming from directly beyond the Captain's door. 
+
+(daemon)
+
+"Let's go," says the Captain. "No more screwing around, you two. Let's get this off the ship before somebody gets killed."
+
+Port Hallway
+
+(mention Grimes and the Mickey D's joke.)
+
+
+
+

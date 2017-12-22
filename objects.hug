@@ -1,0 +1,233 @@
+object captainComputer "computer"
+{
+nouns "computer" "monitor" "screen" "pcjr" "pc"
+adjective "computer" "jr" "pc"
+article "the Captain's"
+is hidden
+in captainDesk
+
+	long_desc
+	{
+		"The computers on the HMCS Plagoo are extremely old, as it's all the Captain could afford after she bought the ship.  This one is a PCjr. ";
+
+		if instantMessage01 is not known
+		{
+			"The Captain has an unread instant message."
+		}
+
+		if instantMessage01 is special
+		{
+			"\nThere's a message from my fellow crew member Finnian blinking on the screen."
+		}
+	}
+}
+
+
+object instantMessage01 "instant message"
+{
+nouns "message" "instant" "im"
+adjective "instant" "unread"
+article "the"
+is hidden, readable
+in TheCaptainsQuarters
+
+	long_desc
+	{
+		self is not special
+
+		"It's from Finnian O'Connell, the ship's pilot. I have to steady myself before reading it: in order to protest the temporary pay cut the
+		Captain enforced until things turn around, Finnian changed his instant message font to Comic Sans.\n"
+
+		"\B\Ifoconnell \i:\b there's  a were wolf on the ship"
+		"\B\Ifoconnell \i:\b hello?"
+		"\B\Ifoconnell \i:\b cap, r u there?"
+		"\B\Ifoconnell \i:\b i woulda thouhgt that would have gotten more of a reaction tbqh"
+		"\B\Ifoconnell \i:\b ok ill come over"
+	}
+	before
+	{
+		object DoGet, DoMove
+		{
+			"Instant messages aren't something people can take with them. Most of them aren't even remotely in anything that approaches English!"
+		}
+		object DoRead
+		{
+			Perform(&DoRead, self)
+		}
+	}
+}
+
+
+object captainDesk "desk"
+{
+nouns "desk"
+article "the"
+in TheCaptainsQuarters
+is hidden, platform
+
+	long_desc
+	{
+		"It's made of a lightweight plastic and painted a cheap, glossy silver."
+		WhatsIn(self)
+	}
+}
+
+
+object captainDresser "dresser"
+{
+nouns "dresser" 
+article "the"
+in TheCaptainsQuarters
+is hidden, container, openable, not open 
+
+	long_desc
+	{
+		"The Captain's dresser is a five foot-tall light aluminum storage container that she keeps her clothes in. It has a small
+		dent in one side where it has been struck repeatedly."
+	}
+	before
+	{
+		object DoHit
+		{
+			Perform(&DoOpen, self)
+		}
+	}
+}
+
+
+object captainBed "bed"
+{
+nouns "bed"
+article "the Captain's"
+is enterable, hidden
+in TheCaptainsQuarters
+
+	long_desc
+	{
+		"She somehow fit a king-size in here. No idea how she got it through the door. I would assume she cut open a bulkhead at some point.
+		It's pretty old. The rest of us got upgrades from a RestWell (TM) vendor on Mimas last year."
+	}
+	before
+	{
+		object DoEnter
+		{
+			"That's a bit presumptuous."
+		}
+	}
+}
+
+
+object jumpsuit "jumpsuit" 
+{
+nouns "suit" "jumpsuit" "pants"
+adjectives "jump" "clothes"
+article "the Captain's"
+in captainDresser
+is clothing, plural
+
+	long_desc
+	{
+		"So, it's a size 4 (US) single piece, bandeau styled for a size-conscious fit. It's got glitter on it, but I don't know if 
+		the Captain added it herself or what."
+	}
+	before
+	{
+		object DoWear
+		{
+			"It would never fit m-- ... it would probably fit me, but I'm still not going to wear it!"
+		}
+		object DoGive
+		{
+			select xobject
+			case Captain
+			{
+				GameEvents[1] = 1
+				move tshirt to captainBed 
+				tshirt is not hidden 
+				move jumpsuit to Captain
+				jumpsuit is hidden
+
+				"The Captain throws off her long t-shirt and shimmies into her jumpsuit. She produces a latte out of nowhere. (I mean, I 
+				wasn't looking when she got changed and everything. I am the only gentleman on this ship. I have a reputation and everything.)\n"
+
+				Pause100thSeconds(100)
+
+				move latte to Captain
+
+				"\"I'm ready to communicate with you now, Ja'Rod,\" she says, at last smiling.\n"
+
+				"\"About the werewolf -- \"\n"
+
+				"\"Right.\" She seems much more alert. \"With you now.\" She doesn't slurp her latte. She and the crystal 'Mouse Trap' game 
+				in the rec room are the only classy parts of this ship.\n"
+
+				"\"I don't know how it got on, but -- \"\n"
+
+				Pause100thSeconds(400)
+
+				"Someone or some thing rattles the door knob from outside her quarters. In my horror I realize that \Inobody locked the door.\i"
+
+				Activate(FinnianEnters)
+			}
+			case Finnian
+			{
+				"I'm sure he'd jump at the chance to get extra attention by wearing it, but it's meant for the Captain. I think
+				it's the only way she's gonna focus at this hour."
+			}
+			case else
+			{
+				"It's the Captain's!"
+			}
+		}
+	}
+}
+
+
+object latte "latte"
+{
+nouns "coffee" "latte"
+adjectives "drink" "angelfish" "french"
+article "the"
+
+	long_desc
+	{
+		"I think the Captain prefers her latte from the Angelfish brewing company straight from beautiful
+		Paris. She brought a bunch of bags with her for this trip."
+	}
+	before
+	{
+		object DoDrink
+		{
+			"It belongs to the Captain, though -- she's very particular about her coffee!"
+		}
+	}
+}
+
+
+object tshirt "long t-shirt"
+{
+nouns "shirt" "tee" "t-shirt"
+adjectives "tee" "long"
+article "the Captain's"
+is clothing, hidden 
+in Captain
+
+	long_desc
+	{
+		"I've never seen her in it before. Grimes ";
+		if GameEvents[2] = 0 
+		{
+			"(this other crewmember) ";
+		}
+		"said he caught her raiding the fridge one night, but Grimes sort of camped there a lot. 
+		He said it was from someone she cared about a long time ago. That made it definitely not from Grimes."
+	}
+	before
+	{
+		object DoGet
+		{
+			"It doesn't belong to me and can't help with the werewolf problem."
+		}
+	}
+}
+

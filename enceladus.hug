@@ -1,0 +1,346 @@
+!\---------------------------------------------------------------------------
+	
+        ENCELADUS
+        by Robb Sherwin
+	Started: 10/16/2011
+
+---------------------------------------------------------------------------\!
+
+! Uncomment the following to use a precompiled version of the Hugo Library:
+! #set PRECOMPILED_LIBRARY
+
+! Uncomment the following to include the HugoFix Debugging Library:
+! #set DEBUG
+
+! Uncomment the following to include verb stub routines:
+#set VERBSTUBS
+
+#ifset DEBUG
+#switches -d
+#endif
+
+#set AT_HOME
+constant	 RELEASE "1.0"
+constant	 NUMCHARACTERS 20
+constant	 NUMENEMYNPCS 2
+constant	 MAXGAMEEVENTS 200
+constant	 MAXSONGS 5
+
+#include "verblib.g"			! grammar must come first
+#include "hugolib.h"
+#include "system.h"
+#include "window.h"
+#include "resource.h"
+#include "variables.hug"
+#include "robblibrary.h"
+#include "routines.hug"
+#include "daemons.hug"
+#include "charexclaim.hug"
+#include "glk.h"
+#include "introscreen.hug"
+#include "objects.hug"
+#include "music.hug"
+
+global GRAPHICS_ON = TRUE
+global last_drawn_picture
+global force_repaint
+global current_resource_file
+global current_resource
+global old_screenwidth
+property graphic 
+
+global	music_volume = 80
+
+array temparray[10] = 0,0,0,0,0,0,0,0,0,0
+array TempTimeArray[5] = 0,0,0,0,0
+array LastTimeArray[5] = 0,0,0,0,0
+array MusicArray[MAXSONGS]
+array MusicName[MAXSONGS]
+array MusicArrayTime[MAXSONGS]
+array randomArgs[7]
+
+array GameEvents[MAXGAMEEVENTS]
+! GameEvents[1] = Has Ja'Rod given the jumpsuit to the Captain? 
+! GameEvents[2] = Has Grimes been mentioned yet? 
+! GameEvents[3] = Can the HallwayDoor be opened?
+
+routine init
+{
+	InitializeMusic()
+
+	display.title_caption = "ENCELADUS by Robb Sherwin"
+
+	counter = -1
+
+	glkcheck()
+
+	STATUSTYPE = 0                  ! score/turns
+
+	TEXTCOLOR = DEF_FOREGROUND
+	BGCOLOR = DEF_BACKGROUND
+	SL_TEXTCOLOR = DEF_SL_FOREGROUND
+	SL_BGCOLOR = DEF_SL_BACKGROUND
+
+	prompt = ">"
+
+	NewMenu()
+
+	cls
+
+	DEFAULT_FONT	= PROP_ON
+	Font(DEFAULT_FONT)
+
+	player = JaRod                    ! player initialization
+	location = TheCaptainsQuarters
+	old_location = location        
+	
+	move player to location
+	FindLight(location)
+
+	locate 1,10
+
+	DescribePlace(location)
+	location is visited
+	CalculateHolding(player)
+
+	Activate(CaptainIdle)
+
+	old_screenwidth = display.screenwidth
+
+#ifset USE_PLURAL_OBJECTS
+	InitPluralObjects
+#endif
+}
+
+#ifset PRECOMPILED_LIBRARY
+replace main
+{
+#else
+routine main
+{
+#endif
+	counter = counter + 1
+	PrintStatusLine
+	run location.each_turn
+	MusicManager()
+	runevents
+	RunScripts
+	if parent(speaking)~=location
+		speaking = 0
+
+}
+
+
+character NPC
+{
+type NPC
+
+is living
+
+maxhitpoints 10
+hitpoints 10
+armorclass 10
+attackadjust 0
+damagepotential 1
+peaceful true
+
+	before
+	{
+		object DoLook
+		{
+		!UpdateFaceWindow(self)
+
+		run self.long_desc
+		if (self.conscious = 0) and (self is not female) and (self.hitpoints <= 0) and (self.hitpoints > -100)
+		{
+			"\n";
+			CPronoun(self)
+			"is currently ";
+
+			! Would have to do this again below if any female characters can be drunk 
+			if self is drunk
+			{
+				"passed ";
+			}
+			else
+			{
+				"knocked ";
+			}
+
+			"out."
+		}
+
+		if (self.conscious = 0) and (self is not female) and (self.hitpoints <= -100)
+		{
+			"\n";
+			CPronoun(self)
+			"is dead."
+		}
+
+		if (self.conscious = 0) and (self is female) and (self.hitpoints <= 0) and (self.hitpoints > -100)
+			"\nShe is currently knocked out."
+
+		if (self.conscious = 0) and (self is female) and (self.hitpoints <= -100)
+			"\nShe is dead."
+
+		}
+		object DoWakeCharacter
+		{
+			if self.conscious = 1
+			{
+				"That's not necessary."
+			}
+			else
+			{
+				"You try, but you don't get any sort of response back into consciousness."
+			}
+		}
+
+		object DoKiss
+		{
+			"That's not appropriate."
+		}
+		object DoListen
+		{
+			"Nothing out of the ordinary."
+		}
+
+	}
+
+in_scope 
+	{ if self in location : return 1
+          else : return 0
+        }
+
+conscious
+	{ if self.hitpoints > 0 : return 1 
+	  else : return 0 
+	}
+
+}
+
+
+player_character JaRod "I"
+{
+pronoun "I" "me" "my" "myself"
+nouns "jarod" "me" "self" "ja'rod" "butler"
+adjectives "ja'rod" "jarod"
+
+	long_desc
+	{
+		![xxx]
+	}
+}
+
+
+room TheCaptainsQuarters "The Captain's Quarters, on the HMCS Plagoo"
+{
+extra_scenery "wall" "walls"
+
+	long_desc
+	{
+		if self is not visited
+		{
+			DoInitialGameRoutines()
+
+			"\"Look, Captain, there's a werewolf loose on the ship. We have to go - now!!\"\n"
+			"\"Who are you?' she says. \"And where are my pants??\"\n"
+			"Ah, cripes!\n"
+
+			Version()
+
+			"I'm in the Captain's Quarters of the HMCS Plagoo. She has the biggest room not because 
+			it's her ship, but because we all figured out pretty early that she would be the only one 
+			who would clean it. She has a dresser and computer and, along the starboard wall, her bed."
+		}
+		else
+		{
+			"The big thing with the Captain's living quarters is that it currently doesn't contain a werewolf trying to gorge 
+			itself on any of the crew. That's fairly clutch. The Captain is wearing a long T-shirt, having just been roused out
+			of bed because it's the middle of the night.\n"
+
+			"Her quarters contains a dresser, a computer and, along the starboard wall, her bed.\n"
+
+			"(We're in a space ship ";
+			OneOf("cruising","flying","headed")
+			" toward Saturn.)\n"
+
+			"There is a door portside to a long hallway."
+		}
+	}
+
+w_to {return HallwayDoor }
+
+}
+
+
+door HallwayDoor "hallway door"
+{
+nouns "door"
+article "the"
+is locked, lockable, not open, openable
+between Hallway01 TheCaptainsQuarters
+key_object fakeKey
+
+	long_desc
+	{
+		"It slides into the wall with a light touch."
+	}
+	before
+	{
+		object DoTouch
+		{
+			Perform(&DoOpen, self)
+		}
+		object DoOpen
+		{
+			select(GameEvents[3])
+			case 0
+			{
+				"I can't -- there is a werewolf loose on the ship!"
+			}
+			case 1
+			{
+				GameEvents[3] = 2
+
+				"I open the door, but nothing jumps out at us. I can't explain the following feeling, but I 
+				am compelled to state the obvious anyway.\n"
+
+				"\"Nothing out there, \" I say. \"But it's dark, and -- \"\n"
+
+				"\"No, look down, kid,\" says Finnian. \"Grimes...\" Grimes, our geographer -- his body has been ripped apart and slung ten meters down 
+				the darkened hall. He weighed at least three hundred pounds, which leaves a lot of biomass to be slung about the floor.\n"
+
+				self is open
+				self is not locked
+			}
+			case else
+			{
+				"I don't need to worry about it any more."
+			}
+		}
+	}
+
+w_to Hallway01
+}
+
+
+room Hallway01
+{
+
+e_to { return HallwayDoor }
+}
+
+resource "ENCEL01"
+{
+	".\jpg\titlescreen01.jpg"
+	".\mod\BIONIC - Pure Motion.mod"
+	".\mod\JESTER - Elysium.mod"
+	".\mod\JESTER - Wizardry.mod"
+	".\mod\JOGEIR LILJEDAHL - G-Comp.mod"
+	".\mod\HELLSUN - We Have a Trance.xm"
+
+}
+
+
+#include "characters.hug"
