@@ -9,13 +9,49 @@ Finnian O'Connell: The pilot
 Mr Mailx: the ship's robot. Based on Grimes's personality. 
 Grimes: the really fat geographer who dies right away
 
-Equinox - a human/horse constructed creature that was exiled to Enceladus by the Captain. 
+
+
+A werewolf is lose on the HMCS Plagoo. 
+
+Use some influences. Use some tropes. Make a quick short fun game and get your name out there again. 
+The scary part of that Firefly episode was when Serenity almost got taken over. What if some guys tried to board the Plagoo and
+they used a werewolf and had to crash land it on Enceladus?
+
+* Flush out the airlock scene
+* Riggs McGrathley brought the genetically modified werewolf onto the Plagoo because it would create havoc
+* McGrathley states that he had had this beef for a while and is finally going to squash it
+* Finnigan uses a star pistol to melt a hole in the hull. McGrathley stays put due to his steel boots. The werewolf goes flying into space. 
+* Finnigan crash lands the ship, McGrathley jumps back to his ship because he feels the Plagoo people are insane
+* They need some metal and a doctor for Shelley 
+* They find an upscale bar that is supposed to be frequented by doctors
+* Ja'Rod cuts himself to find out who a doctor is 
+* (We practice giving Mr Mailx commands)
+* The doctor and Finnigan go to help Shelley and says there is a raw materials mine a little ways away
+* The Captain, Mr Mailx and Ja'Rod go into the mine and can get silver and aluminum (or whatever to repair the ship's exposed hull)
+* Ja'Rod has the only star pistol 
+* They get a transmission from Finnigan that the werewolf and McGrathley is back
+* The Captain steals a dune buggy, Ja'Rod can ride Mr Mailx back to the ship
+* They go back to the ship but are outside where the werewolf and McGrathley are
+* Ja'Rod can melt the silver on Mr Mailx's hand
+* Mailx, kill werewolf
+* The Captain punches McGrathley in the neck, stunning him 
+* Ja'Rod can shoot McGrathley's steel boots, melting them and holding him in place
+* Finnigan brings the ship up and squashes McGrathley
+* (Pun about squashing the beef after all)
+* Go back inside. Shelley is okay. She drinks a half bottle of vodka and the game makes you hit wait 5 times. 
+* The doctor says they're all insane and leaves. The crew is together. End of game. 
+
+
+
+
+
+
 
 To do:
 create PCjr
 create "Plagoo"
 Am I going to implement WHAT IS and WHO IS?
-Pick a conversational system. Christ, just use ask about and tell about. 
+Pick a conversational system. Christ, just use talk to
 create latte/coffee
 create door
 create doorknob
@@ -75,7 +111,7 @@ They need to get them both before Equinox comes back and lasers the shit out of 
 
 They travel a few kilometers and see the "city." It's tiny. 
 
-They argue before going into Mr. Boston's Tentacle Rape Bar. 
+They argue before going into Mr. Boston's Tentacle Fun Bar. 
 * Finnian realizes that it's August 28, discovery day, and everyone is going to be drinking. 
 * "It's amateur night," he says. "A bunch of people who have never done it before trying it for the first time."
 * Mr Mailx says, "Anders Breivik said the same thing about Martin Luther King Day, since they only got one guy."
@@ -89,21 +125,6 @@ They argue before going into Mr. Boston's Tentacle Rape Bar.
 ***
 
 It's a coffee club. On Enceladus, everyone is cold all the time. Warm beverages have replaced beer. 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 *In order to find out who a doctor is, Ja'Rod is gonna shoot or cut someone. He says to the player, "What's the fastest way to find an emergency room surgeon?"
