@@ -45,6 +45,7 @@ Riggs talks to the Captain about how this is revenge for
 Snaps her finger, Ja'Rod has one turn to fire the pistol at the wall
 >shoot or shoot wall
 Hole in the hull, werewolf goes flying. Riggs goes flying, Mailx fills the hole. Shelley is flung against him. 
+Ja'Rod observes that he heard the Captain got the ship by stealing it, thus being ok with shooting holes in it 
 Captain tells Finnian to go land the ship. 
 They need some metal to repair the hull and a doctor for Shelley 
 
@@ -53,11 +54,12 @@ Location: Outside the ship
 
 * They find an upscale bar that is supposed to be frequented by doctors and vets. 
 * Ja'Rod cuts himself to find a doctor. 
-* The doctor and Finnigan go to help Shelley and says there is a raw materials mine a little ways away
+* The doctor and Finnigan go to help Shelley and says there is a mine a little ways away
 * The Captain, Mr Mailx and Ja'Rod go into the mine and can get silver and aluminum (or whatever to repair the ship's exposed hull)
-* Ja'Rod has the only star pistol 
+* We buy giving Mr Mailx a command for later 
+* Ja'Rod has the only star pistol and the cooldown is almost set
 * They get a transmission from Finnigan that the werewolf and McGrathley is back
-* The Captain steals a dune buggy, Ja'Rod can ride Mr Mailx back to the ship
+* The Captain steals a dune buggy, (callback to the beginning) Ja'Rod can ride Mr Mailx back to the ship
 * They go back to the ship but are outside where the werewolf and McGrathley are
 * Ja'Rod can melt the silver on Mr Mailx's hand
 * Mailx, kill werewolf
@@ -67,8 +69,6 @@ Location: Outside the ship
 * (Pun about squashing the beef after all)
 * Go back inside. Shelley is okay. She drinks a half bottle of vodka and the game makes you hit wait 5 times. 
 * The doctor says they're all insane and leaves. The crew is together. End of game. 
-
-
 
 
 
