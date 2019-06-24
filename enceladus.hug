@@ -338,7 +338,7 @@ resource "ENCEL01"
 	".\mod\JESTER - Elysium.mod"
 	".\mod\JESTER - Wizardry.mod"
 	".\mod\JOGEIR LILJEDAHL - G-Comp.mod"
-	".\mod\HELLSUN - We Have a Trance.xm"
+	!".\mod\HELLSUN - We Have a Trance.xm"
 
 }
 

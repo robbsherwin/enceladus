@@ -7,8 +7,9 @@ The Captain: She is a beautiful woman with a bobcut. (Unclear when we reveal her
 Shelly McKenzie: The life support technician
 Finnian O'Connell: The pilot 
 Mr Mailx: the ship's robot. Based on Grimes's personality. 
-Grimes: the really fat geographer who dies right away
-
+Grimes: the really fat geographer who gets launched into space 
+Werewolf
+Rigg McGrathley: 
 
 
 A werewolf is lose on the HMCS Plagoo. 
@@ -17,15 +18,41 @@ Use some influences. Use some tropes. Make a quick short fun game and get your n
 The scary part of that Firefly episode was when Serenity almost got taken over. What if some guys tried to board the Plagoo and
 they used a werewolf and had to crash land it on Enceladus?
 
-* Flush out the airlock scene
-* Riggs McGrathley brought the genetically modified werewolf onto the Plagoo because it would create havoc
-* McGrathley states that he had had this beef for a while and is finally going to squash it
-* Finnigan uses a star pistol to melt a hole in the hull. McGrathley stays put due to his steel boots. The werewolf goes flying into space. 
-* Finnigan crash lands the ship, McGrathley jumps back to his ship because he feels the Plagoo people are insane
-* They need some metal and a doctor for Shelley 
-* They find an upscale bar that is supposed to be frequented by doctors
-* Ja'Rod cuts himself to find out who a doctor is 
-* (We practice giving Mr Mailx commands)
+>x captain
+(She needs her jumpsuit)
+>hit the dresser
+(this opens the dresser, we need to stop it from opening otherwise)
+>get the jumpsuit
+>give the jumpsuit to the captain
+(she produces some coffee and can analyze the situation)
+>x computer
+>read the message
+(Finnigan shows up)
+>touch door
+>x grimes 
+(We had Grimes be dead here, that can still work - they just picked him up, let's say.)
+ 
+>forward (to back of ship)
+>forward (Finnian gets the star pistol they were carrying as cargo, gives it to Ja'Rod as he can't hide it in the banana hammock outfit)
+>forward
+>starboard 
+
+Location: Near the airlock.
+Riggs and the werewolf are closest to the wall. Mr Mailx is next and at the far end is Shelley. Shelley is bleeding. 
+Captain whispers to Ja'Rod to fire the pistol at the wall as soon as she snaps her finger. (There is a sizeable cool down for it)
+McGrathley states that he had had this beef for a while and is finally going to squash it
+Riggs talks to the Captain about how this is revenge for 
+Snaps her finger, Ja'Rod has one turn to fire the pistol at the wall
+>shoot or shoot wall
+Hole in the hull, werewolf goes flying. Riggs goes flying, Mailx fills the hole. Shelley is flung against him. 
+Captain tells Finnian to go land the ship. 
+They need some metal to repair the hull and a doctor for Shelley 
+
+Location: Outside the ship 
+
+
+* They find an upscale bar that is supposed to be frequented by doctors and vets. 
+* Ja'Rod cuts himself to find a doctor. 
 * The doctor and Finnigan go to help Shelley and says there is a raw materials mine a little ways away
 * The Captain, Mr Mailx and Ja'Rod go into the mine and can get silver and aluminum (or whatever to repair the ship's exposed hull)
 * Ja'Rod has the only star pistol 
