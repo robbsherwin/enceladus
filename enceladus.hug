@@ -1,5 +1,5 @@
 !\---------------------------------------------------------------------------
-	
+
         ENCELADUS
         by Robb Sherwin
 	Started: 10/16/2011
@@ -47,7 +47,7 @@ global force_repaint
 global current_resource_file
 global current_resource
 global old_screenwidth
-property graphic 
+property graphic
 
 global	music_volume = 80
 
@@ -60,8 +60,8 @@ array MusicArrayTime[MAXSONGS]
 array randomArgs[7]
 
 array GameEvents[MAXGAMEEVENTS]
-! GameEvents[1] = Has Ja'Rod given the jumpsuit to the Captain? 
-! GameEvents[2] = Has Grimes been mentioned yet? 
+! GameEvents[1] = Has Ja'Rod given the jumpsuit to the Captain?
+! GameEvents[2] = Has Grimes been mentioned yet?
 ! GameEvents[3] = Can the HallwayDoor be opened?
 
 routine init
@@ -92,8 +92,8 @@ routine init
 
 	player = JaRod                    ! player initialization
 	location = TheCaptainsQuarters
-	old_location = location        
-	
+	old_location = location
+
 	move player to location
 	FindLight(location)
 
@@ -157,7 +157,7 @@ peaceful true
 			CPronoun(self)
 			"is currently ";
 
-			! Would have to do this again below if any female characters can be drunk 
+			! Would have to do this again below if any female characters can be drunk
 			if self is drunk
 			{
 				"passed ";
@@ -207,14 +207,14 @@ peaceful true
 
 	}
 
-in_scope 
+in_scope
 	{ if self in location : return 1
           else : return 0
         }
 
 conscious
-	{ if self.hitpoints > 0 : return 1 
-	  else : return 0 
+	{ if self.hitpoints > 0 : return 1
+	  else : return 0
 	}
 
 }
@@ -249,13 +249,13 @@ extra_scenery "wall" "walls"
 
 			Version()
 
-			"I'm in the Captain's Quarters of the HMCS Plagoo. She has the biggest room not because 
-			it's her ship, but because we all figured out pretty early that she would be the only one 
+			"I'm in the Captain's Quarters of the HMCS Plagoo. She has the biggest room not because
+			it's her ship, but because we all figured out pretty early that she would be the only one
 			who would clean it. She has a dresser and computer and, along the starboard wall, her bed."
 		}
 		else
 		{
-			"The big thing with the Captain's living quarters is that it currently doesn't contain a werewolf trying to gorge 
+			"The big thing with the Captain's living quarters is that it currently doesn't contain a werewolf trying to gorge
 			itself on any of the crew. That's fairly clutch. The Captain is wearing a long T-shirt, having just been roused out
 			of bed because it's the middle of the night.\n"
 
@@ -303,12 +303,12 @@ key_object fakeKey
 			{
 				GameEvents[3] = 2
 
-				"I open the door, but nothing jumps out at us. I can't explain the following feeling, but I 
+				"I open the door, but nothing jumps out at us. I can't explain the following feeling, but I
 				am compelled to state the obvious anyway.\n"
 
 				"\"Nothing out there, \" I say. \"But it's dark, and -- \"\n"
 
-				"\"No, look down, kid,\" says Finnian. \"Grimes...\" Grimes, our geographer -- his body has been ripped apart and slung ten meters down 
+				"\"No, look down, kid,\" says Finnian. \"Grimes...\" Grimes, our geographer -- his body has been ripped apart and slung ten meters down
 				the darkened hall. He weighed at least three hundred pounds, which leaves a lot of biomass to be slung about the floor.\n"
 
 				self is open
@@ -325,11 +325,7 @@ w_to Hallway01
 }
 
 
-room Hallway01
-{
 
-e_to { return HallwayDoor }
-}
 
 resource "ENCEL01"
 {

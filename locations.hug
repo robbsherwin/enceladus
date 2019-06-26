@@ -1,0 +1,62 @@
+!locations.hug
+
+room Hallway01
+{
+
+e_to { return HallwayDoor }
+}
+
+room Hallway02
+{
+
+}
+
+room Hallway03
+{
+
+}
+
+room BeforeTheAirlock
+{
+
+}
+
+room OutsideTheShip
+{
+
+}
+
+room SnowyPath01
+{
+
+}
+
+room SnowyPath02
+{
+
+}
+
+room SnowyPath03
+{
+
+}
+
+room CenterOfTown
+{
+
+}
+
+room HotSauceBar
+{
+
+}
+
+room EntranceToMine
+{
+
+}
+
+room mine
+{
+
+}

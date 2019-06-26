@@ -33,12 +33,13 @@ they used a werewolf and had to crash land it on Enceladus?
 (We had Grimes be dead here, that can still work - they just picked him up, let's say.)
 (Finnian states that maybe we can get raises now that Grimes doesn't need a share)
 
->forward (to back of ship)
->forward (Finnian gets the star pistol they were carrying as cargo, gives it to Ja'Rod as he can't hide it in the banana hammock outfit)
->forward
+>forward (to back of ship) Hallway01
+>forward (Finnian gets the star pistol they were carrying as cargo, gives it to Ja'Rod as he can't hide it in the banana hammock outfit) Hallway02
+>forward Hallway03
 >starboard
 
-Location: Near the airlock.
+Location: Before the Airlock
+
 Riggs and the werewolf are closest to the wall. Mr Mailx is next and at the far end is Shelley. Shelley is bleeding.
 Captain whispers to Ja'Rod to fire the pistol at the wall as soon as she snaps her finger. (There is a sizable cool down for it)
 McGrathley states that he had had this beef for a while and is finally going to squash it
