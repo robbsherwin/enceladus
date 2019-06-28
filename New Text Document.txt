@@ -63,8 +63,26 @@ Location: Outside the ship
 >cut self
 (Dr. )
 * The doctor and Finnigan go to help Shelley and says there is a mine a little ways away
-* The Captain, Mr Mailx and Ja'Rod go into the mine and can get silver and aluminum (or whatever to repair the ship's exposed hull)
+
+Location: THE MINE 
+* The Captain, Mr Mailx and Ja'Rod go into the mine
+* down 
+* down (near the mine cart)
+* get the silver and aluminum 
+(A thunder sound, and the way is blocked due to a cave in)
+(Can't use the star pistol due to another cave in)
+(Mr Mailx's lights provide the )
+(Captain sits down against the wall and just throws her head back with a sarcastic laugh.)
+>talk to captain - "Captain ... why ... why do you always seem so sad?"
+(Her partner was the ship doctor. They were a team. She was so in love with him. They were lawful. One day,
+a pirate lands his fucking (only use of a curse word in the game) ship on top of him. Authorities did nothing. So she
+didn't care any more. She went into piracy herself. No, she never found the guy.)
+
 * We buy giving Mr Mailx a command for later
+"I can punch through. You just have to tell me," says Mr Mailx. 
+>mailx, punch rocks >mailx, punch
+ 
+
 * Ja'Rod has the only star pistol and the cooldown is almost set
 * They get a transmission from Finnigan that the werewolf and McGrathley is back
 * The Captain steals a dune buggy, (callback to the beginning) Ja'Rod can ride Mr Mailx back to the ship
@@ -196,3 +214,36 @@ They return back to the ship
 Ja'Rod fires x-rays at Equinox's ship, blowing it up and saving Enceladus.
 
 ***
+
+
+>tell captain about rocks
+"\"There's not much and it's not lead. If I had to guess, I'd say it was just ... ice.\"\n"
+"\"It. Will. Never. Melt. Unfortuntately.\" adds Mr Mailx. "
+"The Captain, still sitting just smiles and nods. She closes her eyes. And there is just this total non-verbal, existential sadness to her. I mean,
+she has seemed like this ever since I rejoined the ship a few months ago. But I've never really inquired about the why for her constant *mood.*"
+
+>ask captain about mood
+"She doesn't open her eyes right away. She's always just so inscrutable, and I'm not always great at reading people to begin with, so I don't know,
+I don't even know if I should be asking, but it's like some other force compels me to do so, so I do.\n"
+
+"\"Are you okay, Captain? What happened to you? I know Forburn left, but -- \" Her eyes snap open.\n"
+
+"\"You hadn't heard, Ja'Rod?\" I shake my head in the negatory. No, I hadn't heard what happened to her partner when I was off the ship.\n"
+
+"\"I thought you had heard. You know I don't read the direct messages of everyone on the crew. I think the computers support that, but I turned it off when Forburn... he died, Ja'Rod.\"\n"
+
+"\"I'm so sorry. I didn't know. I had sort of thought something like that had happened. I am so, so sorry, Captain.\"n"
+
+"She smiles when I say 'Captain.' We're a close crew. \"We were bringing blood, actually. Hundreds and hundreds of bags of blood to one of the 
+colonies. All the different types. A ... B ... er... \"\n"
+
+"\"A. B.\" adds Mailx."
+
+"\"I said that,\" says the Captain.\n"
+
+"\"Wait.\" I turn to Mr Mailx. \"Are you saying A and B? Or AB?\"\n"
+
+"\"A. B.\" he says. The Captain just smiles again, still sitting with her back against the cave.\n"
+
+"\"Forburn had gotten off the ship. We were delivering them to Mimas, right inside the crater, and he had gotten off the Plagoo to talk to our contact
+with the government. I had a drone following him just because I was going to join him after running the last batch of tests on the 

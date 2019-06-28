@@ -39,12 +39,12 @@ event in FinnianEnters
 		"\"GRAVVVVVITY!!\" he sings, \"DON'T MEAN \BTOO MUCH\b TO ME!\" Nobody reacts. \"Hey gorgeous, there's a man-wolf on the ship.\" I'll assume he's not talking to me here. \"You banned us 
 		from wearing fur, otherwise I would have lasered it between the fangs and made a coat out of the part where he didn't piss 'imself.\"\n"
 
-		"\"I banned you from wearing fur-lined banana thongs,\" says the Captain.\n"
+		"\"No, I banned you all from wearing fur-lined banana thongs,\" says the Captain.\n"
 
-		"I yank out one of my teeth. \"I thought you banned us from \Ieating bananas.\i\"\n"
+		"I yank out one of my teeth. \"That's what you banned? I thought you banned us from eating bananas!\"\n"
 
-		"\"Jesus, Ja'Rod,\" says Finnian with a wince. He turns to the Captain. \"Kid's got a mouth like Yucca Mountain's public loo. Maybe you'll get lucky and
-		the werewolf is carrying some vitamins.\""
+		"\"Jesus, Ja'Rod,\" says Finnian with a wince. He turns to the Captain. \"Kid's got a mouth that's craggier than the public road leading up 
+		to Pripyat Reactor Four. When the werewolf bites you he'll actually be injecting vitamins into your bloodstream.\""
 	}
 	case 3
 	{
@@ -53,7 +53,7 @@ event in FinnianEnters
 		HallwayDoor is not locked
 
 		"\nFinnian clears his throat and addresses the Captain. \"Look, do you want us to kill the thing or what? I don't want to get in a situation where I'm trapped 
-		in the rec room with nothing other than that fragile-ass Mouse Trap game for six hours.\""
+		in the rec room with nothing other than that butt-fragile Mouse Trap game for six hours.\""
 	}
 	case 4
 	{
@@ -71,7 +71,7 @@ event in FinnianEnters
 		if (HallwayDoor is not open)
 		{
 			"\n\"You'll want to open that door for me, kid, thanks, now.\" says Finnian.\n"
-			"\"I don't have a laser here,\" says the Captain. \"Just be careful - and Ja'Rod, I'm ready to take down whatever's on the other side, too.\""
+			"\"I don't have the star pistol, Fin\" says the Captain. \"It's down in the hold. Just be careful - and Ja'Rod, I'll take whatever is on the other side.\""
 		}
 	}
 }
@@ -89,16 +89,15 @@ event in DiscussGrimesDeath
 	case 1
 	{
 		"\"What killed the lights in the halls?\" asks Finnian. \"I mean, it was probably the werewolf. Grimes had a thing about conserving electricity, though.\"\n"
-		"\"He just got engaged,\" I whisper, avoiding looking at the wisps and entrails of Grimes's corpse. \"He was gonna get married when we got back to Earth...\"\n"
-		"\"Yeah,\" says Finnian. \"They were gonna play Canon in Mickey D's when he walked down the aisle.\""
+		"\"He just got engaged,\" I whisper, avoiding looking at the wisps and entrails of Grimes's massive corpse. \"He was gonna get married 
+		when we got back to Earth...\"\n"
+		"\"Oh yeah,\" says Finnian. \"What, were they were gonna play Canon in Mickey D's when he walked down the aisle?\""
 	}
 	case 2
 	{
+
 	}
 	case 3
-	{
-	}
-	case else
 	{
 	}
 }

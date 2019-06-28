@@ -1,14 +1,14 @@
 object captainComputer "computer"
 {
-nouns "computer" "monitor" "screen" "pcjr" "pc"
-adjective "computer" "jr" "pc"
+nouns "computer" "monitor" "screen" "raspberry" "pc"
+adjective "computer" "blue" "pc"
 article "the Captain's"
 is hidden
 in captainDesk
 
 	long_desc
 	{
-		"The computers on the HMCS Plagoo are extremely old, as it's all the Captain could afford after she bought the ship.  This one is a PCjr. ";
+		"The computers on the HMCS Plagoo are extremely old, as it's all the Captain could afford after she bought the ship.  This one is a Blue Raspberry. ";
 
 		if instantMessage01 is not known
 		{
@@ -104,8 +104,11 @@ in TheCaptainsQuarters
 
 	long_desc
 	{
-		"She somehow fit a king-size in here. No idea how she got it through the door. I would assume she cut open a bulkhead at some point.
-		It's pretty old. The rest of us got upgrades from a RestWell (TM) vendor on Mimas last year."
+		"She somehow fit a king-size in here. None of us have any idea how she got it past the door. My impression was that she cut away part
+		of the hull. It's pretty old, but mattresses last longer when it's a single female using them. The rest of us got rack upgrades from a 
+		RestWell (TM) vendor on Mimas last year."
+
+		GameEvents[4] = 1
 	}
 	before
 	{
@@ -113,6 +116,23 @@ in TheCaptainsQuarters
 		{
 			"That's a bit presumptuous."
 		}
+		object DoGet
+		{
+			"I couldn't have gotten it in here, I certainly can't get it out!"
+		}
+	}
+}
+
+scenery bedCovers "covers"
+{
+	nouns "covers"
+	article "the bed's"
+	in TheCaptainsQuarters
+
+	long_desc
+	{
+		"The covers are on top of the bed, you can hardly tell that the Captain slept at all in them. They have a marble pattern, and are officially
+		called a duvet cover set."
 	}
 }
 
@@ -146,9 +166,10 @@ is clothing, plural
 				tshirt is not hidden 
 				move jumpsuit to Captain
 				jumpsuit is hidden
+				move latte to Captain 
 
 				"The Captain throws off her long t-shirt and shimmies into her jumpsuit. She produces a latte out of nowhere. (I mean, I 
-				wasn't looking when she got changed and everything. I am the only gentleman on this ship. I have a reputation and everything.)\n"
+				wasn't looking when she got changed and everything. I am the only gentleman on this ship. I have a reputation, narmean?)\n"
 
 				Pause100thSeconds(100)
 
@@ -158,14 +179,14 @@ is clothing, plural
 
 				"\"About the werewolf -- \"\n"
 
-				"\"Right.\" She seems much more alert. \"With you now.\" She doesn't slurp her latte. She and the crystal 'Mouse Trap' game 
+				"\"Right.\" She sips from the latte. She seems much more alert. \"With you now.\" She doesn't slurp her latte. She and the crystal 'Mouse Trap' game 
 				in the rec room are the only classy parts of this ship.\n"
 
 				"\"I don't know how it got on, but -- \"\n"
 
 				Pause100thSeconds(400)
 
-				"Someone or some thing rattles the door knob from outside her quarters. In my horror I realize that \Inobody locked the door.\i"
+				"Someone or some thing rattles the door knob from outside her quarters. In my horror I realize that \Inobody has locked the door.\i"
 
 				Activate(FinnianEnters)
 			}
@@ -199,6 +220,10 @@ article "the"
 		object DoDrink
 		{
 			"It belongs to the Captain, though -- she's very particular about her coffee!"
+		}
+		object DoGet
+		{
+			"It's the Captain's! Taking latte from the captain of a ship is a punishable offense. By my captain, anyway."
 		}
 	}
 }

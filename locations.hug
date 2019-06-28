@@ -1,6 +1,6 @@
 !locations.hug
 
-room Hallway01
+room Hallway01 "Ship Hallway"
 {
 
 e_to { return HallwayDoor }
@@ -8,12 +8,22 @@ e_to { return HallwayDoor }
 
 room Hallway02
 {
-
+e_to Hallway03
+w_to Hallway01
 }
 
-room Hallway03
+room Hallway03 "Ship Hold"
 {
 
+e_to Hallway04
+w_to Hallway02
+}
+
+room Hallway04 "Ship Hallway"
+{
+
+e_to BeforeTheAirlock
+w_to Hallway03
 }
 
 room BeforeTheAirlock

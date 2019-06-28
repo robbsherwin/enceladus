@@ -81,7 +81,8 @@ is neutral
 			select xobject
 				case werewolf
 				{
-					"\"I haven't actually seen it yet,\" says Finnian. \"I'll assume this is all a horrible ship's malfunction. Probably with your part. What do you do on the ship?\"\n"
+					"\"I haven't actually seen it yet,\" says Finnian. \"I'll assume this is all a horrible ship's malfunction. Probably with your part. 
+					What do you do on the ship?\"\n"
 					"\"I'm the x-ray technician.\"\n"
 					"\"That pretty much destroys my working theory there, so nevermind.\""
 				}
