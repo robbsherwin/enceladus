@@ -18,23 +18,23 @@ Use some influences. Use some tropes. Make a quick short fun game and get your n
 The scary part of that Firefly episode was when Serenity almost got taken over. What if some guys tried to board the Plagoo and
 they used a werewolf and had to crash land it on Enceladus?
 
->x captain
+[X] >x captain
 (She needs her jumpsuit)
->hit the dresser
+[X] >hit the dresser
 (this opens the dresser, we need to stop it from opening otherwise)
->get the jumpsuit
->give the jumpsuit to the captain
+[X] >get the jumpsuit
+[X] >give the jumpsuit to the captain
 (she produces some coffee and can analyze the situation)
->x computer
->read the message
+[X] >x computer
+[X] >read the message
 (Finnian shows up)
->touch door
->x grimes
+[X] >touch door
+[X] >x grimes
 (We had Grimes be dead here, that can still work - they just picked him up, let's say.)
 (Finnian states that maybe we can get raises now that Grimes doesn't need a share)
 
->forward (to back of ship) Hallway01
->forward (Finnian gets the star pistol they were carrying as cargo, gives it to Ja'Rod as he can't hide it in the banana hammock outfit) Hallway02
+[X] >forward (to back of ship) Hallway01
+>for ward (Finnian gets the star pistol they were carrying as cargo, gives it to Ja'Rod as he can't hide it in the banana hammock outfit) Hallway02
 >forward Hallway03
 >starboard
 
