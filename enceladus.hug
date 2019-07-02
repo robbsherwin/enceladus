@@ -3,6 +3,7 @@
         ENCELADUS
         by Robb Sherwin
 	Started: 10/16/2011
+	Re-started: 6/27/2019
 
 ---------------------------------------------------------------------------\!
 
@@ -26,6 +27,13 @@ constant	 NUMENEMYNPCS 2
 constant	 MAXGAMEEVENTS 200
 constant	 MAXSONGS 5
 
+!// Verbs
+verb "about"
+	*							DoAbout
+
+verb "exits"
+	*							DoExits
+
 #include "verblib.g"			! grammar must come first
 #include "hugolib.h"
 #include "system.h"
@@ -40,6 +48,7 @@ constant	 MAXSONGS 5
 #include "introscreen.hug"
 #include "objects.hug"
 #include "music.hug"
+#include "cango.h"
 
 global GRAPHICS_ON = TRUE
 global last_drawn_picture
@@ -63,6 +72,9 @@ array GameEvents[MAXGAMEEVENTS]
 ! GameEvents[1] = Has Ja'Rod given the jumpsuit to the Captain?
 ! GameEvents[2] = Has Grimes been mentioned yet?
 ! GameEvents[3] = Can the HallwayDoor be opened?
+! GameEvents[4] = Was the bed looked at? This is for a later joke regarding shooting the hull
+
+
 
 routine init
 {
@@ -259,7 +271,7 @@ extra_scenery "wall" "walls"
 			itself on any of the crew. That's fairly clutch. The Captain is wearing a long T-shirt, having just been roused out
 			of bed because it's the middle of the night.\n"
 
-			"Her quarters contains a dresser, a computer and, along the starboard wall, her bed.\n"
+			"Her quarters contains a dresser, a computer and (along the starboard wall) her bed.\n"
 
 			"(We're in a space ship ";
 			OneOf("cruising","flying","headed")
@@ -308,11 +320,15 @@ key_object fakeKey
 
 				"\"Nothing out there, \" I say. \"But it's dark, and -- \"\n"
 
-				"\"No, look down, kid,\" says Finnian. \"Grimes...\" Grimes, our geographer -- his body has been ripped apart and slung ten meters down
-				the darkened hall. He weighed at least three hundred pounds, which leaves a lot of biomass to be slung about the floor.\n"
+				"\"No, look down, kid,\" says Finnian. \"Grimes...\" Grimes, the geographer we picked up just this week and added to the crew. 
+				His body has been ripped apart and slung ten meters down the darkened hall. He weighed at least three hundred pounds, which leaves 
+				a lot of biomass to be slung about the floor.\n"
 
 				self is open
 				self is not locked
+
+				Activate(DiscussGrimesDeath)
+
 			}
 			case else
 			{

@@ -16,17 +16,30 @@ routine DoInitialGameRoutines
 			 } 
 }
 
+routine DoAbout()
+{
+	"Enceladus by Robb Sherwin."
+	"Originally submitted for the 2019 Interactive Fiction Competition. I've missed this."
+	"You can talk to people just by doing >ask person about thing and >tell person about thing. The things will be in bold. You can see current exits 
+	for the room you're in by doing >exits"
+	"For Frobozz."
+}
+
 
 routine Version()
 {
 	
 	print "\BEnceladus\b"
 	print "Interactive Fiction"
-	print "Copyright (c) 2012. Written and programmed by Robb Sherwin"
-	print "Release 1.00 / Serial number 120530 / Hugo 3.1"
+	print "Copyright (c) 2019. Written and programmed by Robb Sherwin"
+	print "Release 1.00 / Serial number 180123 / Hugo 3.1"
 	print ""
 }
 
+routine DoExits
+{
+	YouCanGo()
+}
 
 replace DoWakeCharacter
 {
