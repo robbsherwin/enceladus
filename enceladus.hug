@@ -320,8 +320,8 @@ key_object fakeKey
 
 				"\"Nothing out there, \" I say. \"But it's dark, and -- \"\n"
 
-				"\"No, look down, kid,\" says Finnian. \"Grimes...\" Grimes, the geographer we picked up just this week and added to the crew. 
-				His body has been ripped apart and slung ten meters down the darkened hall. He weighed at least three hundred pounds, which leaves 
+				"\"No, look down, kid,\" says Finnian. \"Grimes...\" Grimes, the geographer we picked up just this week and added to the crew.
+				His body has been ripped apart and slung ten meters down the darkened hall. He weighed at least three hundred pounds, which leaves
 				a lot of biomass to be slung about the floor.\n"
 
 				self is open
@@ -340,20 +340,19 @@ key_object fakeKey
 w_to Hallway01
 }
 
-
-
-
 resource "ENCEL01"
 {
-	".\jpg\titlescreen01.jpg"
-	".\mod\BIONIC - Pure Motion.mod"
-	".\mod\JESTER - Elysium.mod"
-	".\mod\JESTER - Wizardry.mod"
-	".\mod\JOGEIR LILJEDAHL - G-Comp.mod"
+	"jpg/titlescreen01.jpg"
+	"mod/BIONIC - Pure Motion.mod"
+	"mod/JESTER - Elysium.mod"
+	"mod/JESTER - Wizardry.mod"
+	"mod/JOGEIR LILJEDAHL - G-Comp.mod"
 	!".\mod\HELLSUN - We Have a Trance.xm"
 
 }
 
+!// CC Licenses
+!// Elysium - https://modarchive.org/index.php?request=view_by_moduleid&query=40475 Attribution-NonCommercial-ShareAlike 3.0 Unported (CC BY-NC-SA 3.0)
 
 #include "characters.hug"
 #include "locations.hug"

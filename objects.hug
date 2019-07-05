@@ -75,10 +75,10 @@ is hidden, platform
 
 object captainDresser "dresser"
 {
-nouns "dresser" 
+nouns "dresser"
 article "the"
 in TheCaptainsQuarters
-is hidden, container, openable, not open 
+is hidden, container, openable, not open
 
 	long_desc
 	{
@@ -105,7 +105,7 @@ in TheCaptainsQuarters
 	long_desc
 	{
 		"She somehow fit a king-size in here. None of us have any idea how she got it past the door. My impression was that she cut away part
-		of the hull. It's pretty old, but mattresses last longer when it's a single female using them. The rest of us got rack upgrades from a 
+		of the hull. It's pretty old, but mattresses last longer when it's a single female using them. The rest of us got rack upgrades from a
 		RestWell (TM) vendor on Mimas last year."
 
 		GameEvents[4] = 1
@@ -137,7 +137,7 @@ scenery bedCovers "covers"
 }
 
 
-object jumpsuit "jumpsuit" 
+object jumpsuit "jumpsuit"
 {
 nouns "suit" "jumpsuit" "pants"
 adjectives "jump" "clothes"
@@ -147,7 +147,7 @@ is clothing, plural
 
 	long_desc
 	{
-		"So, it's a size 4 (US) single piece, bandeau styled for a size-conscious fit. It's got glitter on it, but I don't know if 
+		"So, it's a size 4 (US) single piece, bandeau styled for a size-conscious fit. It's got glitter on it, but I don't know if
 		the Captain added it herself or what."
 	}
 	before
@@ -162,13 +162,13 @@ is clothing, plural
 			case Captain
 			{
 				GameEvents[1] = 1
-				move tshirt to captainBed 
-				tshirt is not hidden 
+				move tshirt to captainBed
+				tshirt is not hidden
 				move jumpsuit to Captain
 				jumpsuit is hidden
-				move latte to Captain 
+				move latte to Captain
 
-				"The Captain throws off her long t-shirt and shimmies into her jumpsuit. She produces a latte out of nowhere. (I mean, I 
+				"The Captain throws off her long t-shirt and shimmies into her jumpsuit. She produces a latte out of nowhere. (I mean, I
 				wasn't looking when she got changed and everything. I am the only gentleman on this ship. I have a reputation, narmean?)\n"
 
 				Pause100thSeconds(100)
@@ -179,7 +179,7 @@ is clothing, plural
 
 				"\"About the werewolf -- \"\n"
 
-				"\"Right.\" She sips from the latte. She seems much more alert. \"With you now.\" She doesn't slurp her latte. She and the crystal 'Mouse Trap' game 
+				"\"Right.\" She sips from the latte. She seems much more alert. \"With you now.\" She doesn't slurp her latte. She and the crystal 'Mouse Trap' game
 				in the rec room are the only classy parts of this ship.\n"
 
 				"\"I don't know how it got on, but -- \"\n"
@@ -234,17 +234,17 @@ object tshirt "long t-shirt"
 nouns "shirt" "tee" "t-shirt"
 adjectives "tee" "long"
 article "the Captain's"
-is clothing, hidden 
+is clothing, hidden
 in Captain
 
 	long_desc
 	{
 		"I've never seen her in it before. Grimes ";
-		if GameEvents[2] = 0 
+		if GameEvents[2] = 0
 		{
 			"(this other crewmember) ";
 		}
-		"said he caught her raiding the fridge one night, but Grimes sort of camped there a lot. 
+		"said he caught her raiding the fridge one night, but Grimes sort of camped there a lot.
 		He said it was from someone she cared about a long time ago. That made it definitely not from Grimes."
 	}
 	before
@@ -256,3 +256,23 @@ in Captain
 	}
 }
 
+object xraySpecs "x-ray specs"
+{
+nouns "specs" "x-ray"
+adjectives "x-ray"
+article "the"
+!// Not special is up, special is down
+is clothing, hidden, not special
+in JaRod
+
+	long_desc
+	{
+		"The specs are a set of chromatic filters that allow me to see the world in an x-ray sense - it helps a little bit in seeing behind objects
+		unless those objects are particularly dense."
+	}
+}
+
+object starPistol "star pistol"
+{
+
+}

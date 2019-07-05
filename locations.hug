@@ -8,12 +8,76 @@ e_to { return HallwayDoor }
 
 room Hallway02
 {
+  long_desc
+  {
+    if self is not visited
+    {
+      move Captain to location
+      move Finnian to location
+    }
+
+    "There is a brief hallway module connecting the Captain's bedroom to the hold, which is up ahead."
+
+    if self is not visited
+    {
+      "\"Not to be a pest, dear,\" starts Finnian to the Captain, \"but do you think we should put some form of
+      self-defense on the solar itinerary?\"\n"
+
+      if xraySpecs is not special
+      {
+        "The Captain smiles at him without using her eyes. She doesn't directly address him, which is something she didn't used to do,
+        but something I noticed her doing when I came back from leave. \"I think Ensign Butler lowering his x-ray specs to give
+        us some help on what's ahead would be the next best tactic,\"she says, genuinely sweetly.\n"
+
+        "Ensign Butler! Oops, that's me, and yes, as the x-ray technician of the Plagoo, I carry some specs with me.
+        I can put my specs down."
+      }
+      else
+      {
+        "The Captain smiles humorously. \"I think we're headed on a good path. We've a weapon upcoming in the hold and Ensign Butler
+        has his x-ray specs deployed in the scan position to let us know what's ahead.\" The Captain has a talent for seeming like
+        she's in control of the situation, which is nice, because I don't need augmented vision to know my heart is pounding. Although
+        I guess I really shouldn't stare at human bodies when the specs are engaged for too long."
+      }
+
+    }
+  }
 e_to Hallway03
 w_to Hallway01
 }
 
 room Hallway03 "Ship Hold"
 {
+  long_desc
+  {
+    if self is not visited
+    {
+      move Captain to location
+      move Finnian to location
+      move starPistol to Finnian
+      "The Plagoo has a small hold right off the Captain's bedroom, and this is it. The original owner of the ship didn't trust his crew
+      with the cargo they ran with. Our Captain does, but the Plagoo can't exactly be reconfigured.\n"
+    }
+
+    "The hold itself normally has poor lighting, it's even worse now that lighting systems have apparently been damaged. It's rectangular
+    in shape, maybe ten feet wide and fifteen feet long. The walls were painted a deep maroon like much of the rest of the interior at
+    one point. There's a great deal of pallets stacked on both sides."
+
+    if self is not visited
+    {
+      "\nThe Captain opens one of the packages on top of a pallet to my right. It's an unopened star pistol. She unboxes it, avoids
+      cursing at the tight grip plastic keeping the pistol in place and inserts the battery into the grip with a solid 'twack.' She
+      hands it to Finnian.\n"
+
+      "\"Let me do the talking if it gets that far, I've got an idea what is going on,\" she says to Finnian. \"I'd say don't draw
+      attention to yourself, but, well.\" She gestures at the hammock. \"Keep the pistol hidden.\""
+
+      Activate(FinnianGivesPistol)
+    }
+
+    "\nExits lead east, further into the ship, and west, back down the hallway."
+
+  }
 
 e_to Hallway04
 w_to Hallway02

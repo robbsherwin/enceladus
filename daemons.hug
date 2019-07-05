@@ -20,7 +20,7 @@ self.timer++
 
 daemon FinnianEnters
 {
-timer 0 
+timer 0
 }
 
 event in FinnianEnters
@@ -36,14 +36,14 @@ event in FinnianEnters
 
 		"\nSomeone enters the quarters, but it's not a werewolf, hell-bent on consuming us all. It's just Finnian, the pilot. \n"
 
-		"\"GRAVVVVVITY!!\" he sings, \"DON'T MEAN \BTOO MUCH\b TO ME!\" Nobody reacts. \"Hey gorgeous, there's a man-wolf on the ship.\" I'll assume he's not talking to me here. \"You banned us 
+		"\"GRAVVVVVITY!!\" he sings, \"DON'T MEAN \BTOO MUCH\b TO ME!\" Nobody reacts. \"Hey gorgeous, there's a man-wolf on the ship.\" I'll assume he's not talking to me here. \"You banned us
 		from wearing fur, otherwise I would have lasered it between the fangs and made a coat out of the part where he didn't piss 'imself.\"\n"
 
 		"\"No, I banned you all from wearing fur-lined banana thongs,\" says the Captain.\n"
 
 		"I yank out one of my teeth. \"That's what you banned? I thought you banned us from eating bananas!\"\n"
 
-		"\"Jesus, Ja'Rod,\" says Finnian with a wince. He turns to the Captain. \"Kid's got a mouth that's craggier than the public road leading up 
+		"\"Jesus, Ja'Rod,\" says Finnian with a wince. He turns to the Captain. \"Kid's got a mouth that's craggier than the public road leading up
 		to Pripyat Reactor Four. When the werewolf bites you he'll actually be injecting vitamins into your bloodstream.\""
 	}
 	case 3
@@ -52,14 +52,14 @@ event in FinnianEnters
 		Finnian is not hidden
 		HallwayDoor is not locked
 
-		"\nFinnian clears his throat and addresses the Captain. \"Look, do you want us to kill the thing or what? I don't want to get in a situation where I'm trapped 
+		"\nFinnian clears his throat and addresses the Captain. \"Look, do you want us to kill the thing or what? I don't want to get in a situation where I'm trapped
 		in the rec room with nothing other than that butt-fragile Mouse Trap game for six hours.\""
 	}
 	case 4
 	{
-		"\nThere's a horrible scream coming from the far, far limits of the hallway.\n" 
+		"\nThere's a horrible scream coming from the far, far limits of the hallway.\n"
 
-		"\"Let's go,\" says the Captain. Finnian rifles through her dresser for something proper to wear. \"No more screwing around, you two. Let's get this off the 
+		"\"Let's go,\" says the Captain. Finnian rifles through her dresser for something proper to wear. \"No more screwing around, you two. Let's get this off the
 		ship before somebody gets killed.\" She unlocks the door.\n"
 
 		"All business, Finnians turns to speak to me. \"Why don't you open the door, kid, and I'll eff up whatever's on the other side?\""
@@ -78,7 +78,7 @@ event in FinnianEnters
 
 daemon DiscussGrimesDeath
 {
-timer 0 
+timer 0
 }
 
 event in DiscussGrimesDeath
@@ -89,7 +89,7 @@ event in DiscussGrimesDeath
 	case 1
 	{
 		"\"What killed the lights in the halls?\" asks Finnian. \"I mean, it was probably the werewolf. Grimes had a thing about conserving electricity, though.\"\n"
-		"\"He just got engaged,\" I whisper, avoiding looking at the wisps and entrails of Grimes's massive corpse. \"He was gonna get married 
+		"\"He just got engaged,\" I whisper, avoiding looking at the wisps and entrails of Grimes's massive corpse. \"He was gonna get married
 		when we got back to Earth...\"\n"
 		"\"Oh yeah,\" says Finnian. \"What, were they were gonna play Canon in Mickey D's when he walked down the aisle?\""
 	}
@@ -99,5 +99,28 @@ event in DiscussGrimesDeath
 	}
 	case 3
 	{
+	}
+}
+
+daemon FinnianGivesPistol
+{
+timer 0
+}
+
+event in FinnianGivesPistol
+{
+	self.timer++
+
+	select(self.timer)
+	case 1
+	{
+	move starPistol to JaRod
+		"\"I can't hide this on me,\" says Finnian of the star pistol. \"You want me to hide it on me? Where? Are we carrying duct
+		tape in the hold?\"\n"
+
+		"\"No,\" starts the Captain. \"We aren't carrying duct tape in the hold.\"\n"
+
+		"Finnian's face makes about four different expressions before he shakes his head. \"Here, kid, you take it. And don't look at me,
+		I don't have a lot on to block the x-ray radiation, you know.\" Finnian hands me the star pistol."
 	}
 }
