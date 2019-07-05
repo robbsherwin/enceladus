@@ -90,7 +90,7 @@ e_to BeforeTheAirlock
 w_to Hallway03
 }
 
-room BeforeTheAirlock
+room BeforeTheAirlock "Before the Airlock"
 {
 
 }

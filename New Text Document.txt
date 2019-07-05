@@ -34,22 +34,36 @@ they used a werewolf and had to crash land it on Enceladus?
 (Finnian states that maybe we can get raises now that Grimes doesn't need a share)
 
 [X] >forward (to back of ship) Hallway01
->for ward (Finnian gets the star pistol they were carrying as cargo, gives it to Ja'Rod as he can't hide it in the banana hammock outfit) Hallway02
->forward Hallway03
->starboard
 
-Location: Before the Airlock
+room Hallway03 "Ship Hold"
+>forward (Finnian gets the star pistol they were carrying as cargo, gives it to Ja'Rod as he can't hide it in the banana hammock outfit) Hallway02
+(We can proceed when Ja'Rod has the specs down and when Finnian has given him the pistol)
+
+room Hallway04 "Ship Hold"
+(In this, Ja'Rod describes the scene ahead, which he can see, because he has the specs on.)
+>forward
+
+
+room BeforeTheAirlock "Before the Airlock"
 
 Riggs and the werewolf are closest to the wall. Mr Mailx is next and at the far end is Shelley. Shelley is bleeding.
 Captain whispers to Ja'Rod to fire the pistol at the wall as soon as she snaps her finger. (There is a sizable cool down for it)
-McGrathley states that he had had this beef for a while and is finally going to squash it
-Riggs talks to the Captain about how this is revenge for getting the plutonium transport job the year before
-Snaps her finger, Ja'Rod has one turn to fire the pistol at the wall
+
+daemon 1
+  McGrathley states that he had had this beef for a while and is finally going to squash it
+  Riggs talks to the Captain about how this is revenge for getting the plutonium transport job the year before
+
+daemon 2
+  Snaps her finger, Ja'Rod has one turn to fire the pistol at the wall
 >shoot or shoot wall
-Hole in the hull, werewolf goes flying. Riggs goes flying, Mailx fills the hole. Shelley is flung against him.
-Ja'Rod observes that he heard the Captain got the ship by stealing it, thus being ok with shooting holes in it
-Captain tells Finnian to go land the ship.
-They need some metal to repair the hull and a doctor for Shelley
+  Hole in the hull, werewolf goes flying. Riggs goes flying, Mailx fills the hole. Shelley is flung against him.
+  Ja'Rod observes that he heard the Captain got the ship by stealing it, thus being ok with shooting holes in it
+  Captain tells Finnian to go land the ship.
+
+daemon 1
+Captain says they need some metal to repair the hull and a doctor for Shelley
+(display graphic?)
+(scene cut, move player)
 
 Location: Outside the ship
 
@@ -64,11 +78,11 @@ Location: Outside the ship
 (Dr. )
 * The doctor and Finnigan go to help Shelley and says there is a mine a little ways away
 
-Location: THE MINE 
+Location: THE MINE
 * The Captain, Mr Mailx and Ja'Rod go into the mine
-* down 
+* down
 * down (near the mine cart)
-* get the silver and aluminum 
+* get the silver and aluminum
 (A thunder sound, and the way is blocked due to a cave in)
 (Can't use the star pistol due to another cave in)
 (Mr Mailx's lights provide the )
@@ -79,9 +93,9 @@ a pirate lands his fucking (only use of a curse word in the game) ship on top of
 didn't care any more. She went into piracy herself. No, she never found the guy.)
 
 * We buy giving Mr Mailx a command for later
-"I can punch through. You just have to tell me," says Mr Mailx. 
+"I can punch through. You just have to tell me," says Mr Mailx.
 >mailx, punch rocks >mailx, punch
- 
+
 
 * Ja'Rod has the only star pistol and the cooldown is almost set
 * They get a transmission from Finnigan that the werewolf and McGrathley is back
@@ -234,7 +248,7 @@ I don't even know if I should be asking, but it's like some other force compels 
 
 "\"I'm so sorry. I didn't know. I had sort of thought something like that had happened. I am so, so sorry, Captain.\"n"
 
-"She smiles when I say 'Captain.' We're a close crew. \"We were bringing blood, actually. Hundreds and hundreds of bags of blood to one of the 
+"She smiles when I say 'Captain.' We're a close crew. \"We were bringing blood, actually. Hundreds and hundreds of bags of blood to one of the
 colonies. All the different types. A ... B ... er... \"\n"
 
 "\"A. B.\" adds Mailx."
@@ -246,4 +260,4 @@ colonies. All the different types. A ... B ... er... \"\n"
 "\"A. B.\" he says. The Captain just smiles again, still sitting with her back against the cave.\n"
 
 "\"Forburn had gotten off the ship. We were delivering them to Mimas, right inside the crater, and he had gotten off the Plagoo to talk to our contact
-with the government. I had a drone following him just because I was going to join him after running the last batch of tests on the 
+with the government. I had a drone following him just because I was going to join him after running the last batch of tests on the
