@@ -78,13 +78,61 @@ room Hallway03 "Ship Hold"
     "\nExits lead east, further into the ship, and west, back down the hallway."
 
   }
+  before
+  {
+    location DoLook
+    {
+      if xRaySpecs is special
+      {
+        GameEvents[5] = 1
+        "I can see ahead that there's actually two people waiting for us in the next area.\n"
+        "\"Captain, I'm seeing two unknown forms and what I think is Shelley.\" Shelley is our naviagor and the life support tech. \"Shelley
+        seems to be in the fetal position next to the air lock. One of the forms definitely looks like the silouette of a werewolf. The other
+        form standing next to it is taller, has lead boots. No weapons that I can detect."
 
-e_to Hallway04
+      }
+      else {
+        run location.long_desc
+      }
+    }
+  }
+
+e_to {
+  if GameEvents[5] = 0 !// We need Finnian to give Ja'Rod the star pistol
+  {
+    "I should wait for the Captain to tell us to proceed instead of just running into trouble." ;
+
+    if GameEvents[6] = 0
+    {
+      GameEvents[6] = 1
+
+      " Not trying to be the softest serve on the ship, it's just that this is a learning experience for me, regarding werewolves on the ship."
+
+    }
+    else {
+      ""
+    }
+  }
+  else {
+    !// We need Ja'Rod to look at what is ahead
+    if GameEvents[7] = 1
+    {
+      return Hallway04
+    }
+    else {
+      "I can't go that way yet. The Captain wants me to lower my x-ray specs and take a look so we can see what's ahead."
+    }
+  }
+}
 w_to Hallway02
 }
 
 room Hallway04 "Ship Hallway"
 {
+  long_desc
+  {
+
+  }
 
 e_to BeforeTheAirlock
 w_to Hallway03
@@ -92,6 +140,8 @@ w_to Hallway03
 
 room BeforeTheAirlock "Before the Airlock"
 {
+
+
 
 }
 

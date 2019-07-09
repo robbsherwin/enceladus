@@ -270,6 +270,19 @@ in JaRod
 		"The specs are a set of chromatic filters that allow me to see the world in an x-ray sense - it helps a little bit in seeing behind objects
 		unless those objects are particularly dense."
 	}
+	before
+	{
+		object DoLower
+		{
+			self is special
+			"Okay, I've lowered my x-ray specs."
+		}
+		object DoRaise
+		{
+			self is not special
+			"My x-ray specs are now raised."
+		}
+	}
 }
 
 object starPistol "star pistol"

@@ -22,18 +22,9 @@ routine DoAbout()
 	"Originally submitted for the 2019 Interactive Fiction Competition. I've missed this."
 	"You can talk to people just by doing >ask person about thing and >tell person about thing. The things will be in bold. You can see current exits
 	for the room you're in by doing >exits"
+	">version for info about this release."
+	"Please use the Hugor interpreter for Windows, Mac and Linux: http://ifwiki.org/index.php/Hugor"
 	"For Frobozz."
-}
-
-
-routine Version()
-{
-
-	print "\BEnceladus\b"
-	print "Interactive Fiction"
-	print "Copyright (c) 2019. Written and programmed by Robb Sherwin"
-	print "Release 1.00 / Serial number 190123 / Hugo 3.1"
-	print ""
 }
 
 routine DoExits
@@ -41,18 +32,36 @@ routine DoExits
 	YouCanGo()
 }
 
-replace DoWakeCharacter
-{
-	"That's probably not necessary."
-}
-
-
 replace DoKiss
 {
-	"I'm not into that kinda stuff."
+	"This is an awful time for that."
+}
+
+routine DoLower
+{
+	"That can't be lowered."
+}
+
+routine DoRaise
+{
+	"That can't be raised, unfortunately."
 }
 
 routine DoRead
 {
 	"That doesn't seem to be readable."
+}
+
+routine Version()
+{
+	print "\BEnceladus\b"
+	print "Interactive Fiction"
+	print "Copyright (c) 2019. Written and programmed by Robb Sherwin"
+	print "Release 1.00 / Serial number 190123 / Hugo 3.1"
+	print ""
+}
+
+replace DoWakeCharacter
+{
+	"That's probably not necessary."
 }

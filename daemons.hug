@@ -115,7 +115,9 @@ event in FinnianGivesPistol
 	case 1
 	{
 	move starPistol to JaRod
-		"\"I can't hide this on me,\" says Finnian of the star pistol. \"You want me to hide it on me? Where? Are we carrying duct
+	GameEvents[5] = 1
+
+		"\"I can't hide this on me,\" says Finnian of the star pistol. \"Wait. You want me to hide it on me? Where? Are we carrying duct
 		tape in the hold?\"\n"
 
 		"\"No,\" starts the Captain. \"We aren't carrying duct tape in the hold.\"\n"
