@@ -42,6 +42,13 @@ verb "raise"
   * DoVague
   * object DoRaise
 
+verb "scan"
+  * DoScan
+  * "room"/"location"/"area" DoScan
+
+verb "shoot"
+  * DoVague
+  * object DoShoot 
 
 #include "verblib.g"			! grammar must come first
 #include "hugolib.h"
@@ -82,8 +89,9 @@ array GameEvents[MAXGAMEEVENTS]
 ! GameEvents[2] = Has Grimes been mentioned yet?
 ! GameEvents[3] = Can the HallwayDoor be opened?
 ! GameEvents[4] = Was the bed looked at? This is for a later joke regarding shooting the hull
-! GameEvents[5] = Determines if we can proceed in Hallway03
+! GameEvents[5] = Did JaRod get the star pistol from Finnian?
 ! GameEvents[6] = Stops flavor text from being printed twice in Hallway03
+! GameEvents[7] = Did JaRod look after lowering his specs?
 
 
 
@@ -127,6 +135,8 @@ routine init
 	CalculateHolding(player)
 
 	Activate(CaptainIdle)
+
+  MovePlayer(Hallway03)
 
 	old_screenwidth = display.screenwidth
 
@@ -302,7 +312,7 @@ door HallwayDoor "hallway door"
 nouns "door"
 article "the"
 is locked, lockable, not open, openable
-between Hallway01 TheCaptainsQuarters
+between Hallway02 TheCaptainsQuarters
 key_object fakeKey
 
 	long_desc
@@ -337,6 +347,7 @@ key_object fakeKey
 
 				self is open
 				self is not locked
+        move Grimes to location
 
 				Activate(DiscussGrimesDeath)
 
@@ -347,8 +358,6 @@ key_object fakeKey
 			}
 		}
 	}
-
-w_to Hallway01
 }
 
 resource "ENCEL01"

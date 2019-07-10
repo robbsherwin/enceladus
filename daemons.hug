@@ -112,17 +112,17 @@ event in FinnianGivesPistol
 	self.timer++
 
 	select(self.timer)
-	case 1
+	case 2
 	{
 	move starPistol to JaRod
 	GameEvents[5] = 1
 
-		"\"I can't hide this on me,\" says Finnian of the star pistol. \"Wait. You want me to hide it on me? Where? Are we carrying duct
+		"\n\"I can't hide this on me,\" says Finnian of the star pistol. \"Wait. You want me to hide it on me? Where? Are we carrying duct
 		tape in the hold?\"\n"
 
 		"\"No,\" starts the Captain. \"We aren't carrying duct tape in the hold.\"\n"
 
-		"Finnian's face makes about four different expressions before he shakes his head. \"Here, kid, you take it. And don't look at me,
-		I don't have a lot on to block the x-ray radiation, you know.\" Finnian hands me the star pistol."
+		"Finnian's face makes about four different expressions before he shakes his head. \"Here, kid, you take it. And don't stare at me,
+		I don't have a lot on to block the x-ray radiation, you know. Ha! Ha ha ha!\" Finnian hands me the star pistol."
 	}
 }

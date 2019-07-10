@@ -84,14 +84,14 @@ routine DoLookIn
 			if not object.after
 			{
 				object is not quiet
-	
+
 				tempformat = FORMAT
 				FORMAT = FORMAT | NOINDENT_F
 				list_nest = 0
-	
+
 				if WhatsIn(object) = 0
 					VMessage(&DoLookIn, 2)   ! "It's empty."
-	
+
 				FORMAT = tempformat
 			}
 		}
@@ -230,7 +230,7 @@ routine DoWaitUntil
 	}
 	else
 	{
-		
+
 		if object < counter
 		{
 			if object < 60
@@ -360,7 +360,7 @@ routine DoAsk
 		if not object.after
 		{
 			if not xobject.after
-			
+
 				! "Doesn't seem to know anything..."
 				VMessage(&DoAsk, 6)
 		}
@@ -472,7 +472,7 @@ routine DoGo
 
 #ifclear NO_OBJLIB
 	! See if the object is one of the current direction set
-	
+
 	if object.type = direction and object in direction
 	{
 		moveto = object
@@ -556,9 +556,9 @@ routine DoGo
 			}
 			else
 				return Perform(&DoExit, parent(player))
-			
-		}			
-		 
+
+		}
+
 		if not object
 		{
 			object = moveto
@@ -595,8 +595,8 @@ routine DoGo
 			}
 			else
 				return Perform(&DoExit, parent(player))
-		}			
-			
+		}
+
 		moveto = location.m
 		if moveto.door_to
 			moveto = moveto.door_to
@@ -664,7 +664,7 @@ routine DoEnter
 			VMessage(&DoEnter, 1)    ! "Be a little more specific..."
 			return false
 		}
-		
+
 		return Perform(&DoEnter, object)
 	}
 
@@ -713,7 +713,7 @@ routine DoSit
 routine DoExit
 {
 	local p
-	
+
 #ifclear NO_OBJLIB
 	! >GO OUT winds up calling DoExit with object = out_obj, thanks to
 	! the direction-parsing code in Perform().  English ambiguities being
@@ -722,7 +722,7 @@ routine DoExit
 	! container context we may be in.
 	if object = out_obj
 		object = nothing
-		
+
 	if object = nothing or object = location
 	{
 		if player in location and out_obj in direction
@@ -845,7 +845,7 @@ routine DoOpen
 						! has been revealed
 			if children(object) and object is not quiet
 			{
-				!RS - Changed 20101220 to remove line below. 
+				!RS - Changed 20101220 to remove line below.
 				!print ""
 				tempformat = FORMAT
 				FORMAT = FORMAT | NOINDENT_F
@@ -954,18 +954,18 @@ routine ImplicitTake(obj, no_newline)
 {
 	! It's generally okay to call ImplicitTake with no arguments
 	! from a verbroutine
-	
+
 	local r
-	
+
 	if obj ~= 0
 		object = obj
-		
+
 	if not FindObject(obj, location)
 	{
 		ParseError(11, obj)	! "You don't see that."
 		return false
 	}
-		
+
 	VMessage(&ImplicitTake)		! "(taking it first)"
 	r = Perform(&DoGet, object)
 	if object not in player
@@ -1020,13 +1020,13 @@ routine ImplicitTakeForDrop(obj, loc)
 			VMessage(&DoPutIn, 8)	! "It's already in..."
 			return false
 		}
-		
+
 		local r
 		r = ImplicitTake(obj)
-		
+
 		! ImplicitTake may reset this (via Perform)
 		checkheld is workflag
-		
+
 		return r
 	}
 	ParseError(15, obj)		! "You're not carrying that."
@@ -1047,13 +1047,13 @@ routine ParseCheckHeld
 	local i, obj, nextobj
 
 	ResetCheckHeld
-	
+
 	! checkheld is workflag when an ImplicitTakeForDrop has
 	! been executed during a series of Perform calls.  Don't
 	! include this in ResetCheckHeld since Perform calls
 	! ResetCheckHeld.
 	checkheld is not workflag
-	
+
 	! If the verb requires an explicitly held object
 	if VerbHeldMode(word[1]) = 1
 	{
@@ -1082,7 +1082,7 @@ routine ParseCheckHeld
 			elseif word[1] = ""
 				break
 		}
-		
+
 		if checkheld is not plural
 		{
 			for obj in player
@@ -1092,7 +1092,7 @@ routine ParseCheckHeld
 				checkheld.misc #(checkheld.size) = obj
 			}
 		}
-		
+
 		checkheld is active
 	}
 }
@@ -1100,21 +1100,21 @@ routine ParseCheckHeld
 routine CallVerbCheckHeld(v, loc)
 {
 	local r, impt
-	
+
 	if object not in player and object is not checkheld_flag
 	{
 		if not ImplicitTakeForDrop(object, loc)
 			return false
 		impt = true
 	}
-	
+
 	RemoveCheckHeldObj(object)
-	
+
 	r = Perform(v, object, xobject)
-	
+
 	! Perform will reset this:
 	if impt:  checkheld is workflag
-	
+
 	return r
 }
 
@@ -1269,7 +1269,7 @@ routine DoEmpty
 		VMessage(&DoEmpty, 2)           ! "It's already empty."
 		return true
 	}
-		
+
 	if object is not container, platform
 	{
 		ParseError(12, object)
@@ -1280,7 +1280,7 @@ routine DoEmpty
 	while thisobj
 	{
 		nextobj = sibling(thisobj)
-		
+
 		print thisobj.name; ":  ";
 
 		if thisobj is static
@@ -1307,7 +1307,7 @@ routine DoEmpty
 			if b not in object
 				object.holding = object.holding - b.size
 		}
-		
+
 		thisobj = nextobj
 	}
 
@@ -1392,7 +1392,7 @@ routine DoShow
 	{
 		VMessage(&DoShow, 1)    ! "Be more specific..."
 		return false
-	
+
 	}
 
 	if not xobject.after
@@ -2063,7 +2063,7 @@ routine VMessage(r, num, a, b)
 			print " "; The(object); "."
 		}
 	}
-	
+
 	case &DoExit
 	{
 		select num
@@ -2227,7 +2227,7 @@ routine VMessage(r, num, a, b)
 			else
 				"in";
 			print " "; The(xobject); "."
-		}					
+		}
 	}
 
 	case &DoEmpty

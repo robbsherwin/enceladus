@@ -52,6 +52,40 @@ routine DoRead
 	"That doesn't seem to be readable."
 }
 
+routine DoScan
+{
+	if xRaySpecs is special
+	{
+		if location.xRayDescription
+		{
+			!// The check up there runs the xRayDescription
+			return true
+		}
+		else {
+			"Nothing special to report here."
+		}
+	}
+	else {
+		if xRaySpecs in player
+		{
+			"My specs aren't lowered."
+		}
+		else {
+			"I need my specs for that."
+		}
+	}
+}
+
+routine DoShoot
+{
+	"That can't be shot!"
+}
+
+routine DoTwirl
+{
+	"I can't twirl that now, come on!"
+}
+
 routine Version()
 {
 	print "\BEnceladus\b"

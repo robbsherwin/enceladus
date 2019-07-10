@@ -260,7 +260,7 @@ object xraySpecs "x-ray specs"
 {
 nouns "specs" "x-ray"
 adjectives "x-ray"
-article "the"
+article "the", "my"
 !// Not special is up, special is down
 is clothing, hidden, not special
 in JaRod
@@ -287,5 +287,23 @@ in JaRod
 
 object starPistol "star pistol"
 {
+nouns "pistol"
+adjective "star"
+article "the"
 
+	long_desc
+	{
+
+	}
+	before
+	{
+		object DoShoot
+		{
+
+		}
+		object DoTwirl
+		{
+			"I twirl the star pistol around my index finger like a cowboy! Haha, I'm a space cowboy!"
+		}
+	}
 }

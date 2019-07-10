@@ -2,7 +2,7 @@
 !The Captain
 !Finnian
 !Shelley
-!Mr 
+!Mr
 
 npc Captain "Captain"
 {
@@ -24,9 +24,9 @@ confidence 100
 
 	long_desc
 	{
-		"She is ten years older than me, but looks younger, what with being away from 
-		the sun for much of her life.  She's six feet tall, has auburn hair styled in a 
-		1920's bob cut and owns a jawline that reveals her position as the toughest person on the 
+		"She is ten years older than me, but looks younger, what with being away from
+		the sun for much of her life.  She's six feet tall, has auburn hair styled in a
+		1920's bob cut and owns a jawline that reveals her position as the toughest person on the
 		ship. I am ";
 		print number confidence ;
 		"% sure she is not a werewolf."
@@ -51,7 +51,7 @@ confidence 100
 					}
 				}
 		}
-	}		
+	}
 }
 
 
@@ -81,7 +81,7 @@ is neutral
 			select xobject
 				case werewolf
 				{
-					"\"I haven't actually seen it yet,\" says Finnian. \"I'll assume this is all a horrible ship's malfunction. Probably with your part. 
+					"\"I haven't actually seen it yet,\" says Finnian. \"I'll assume this is all a horrible ship's malfunction. Probably with your part.
 					What do you do on the ship?\"\n"
 					"\"I'm the x-ray technician.\"\n"
 					"\"That pretty much destroys my working theory there, so nevermind.\""
@@ -98,13 +98,22 @@ is neutral
 npc Grimes "Grimes"
 {
 charnumber 4
+nouns "grimes"
+is neutral
+
+	long_desc
+	{
+		"Grimes was a 300 pound middle aged white guy that was our geographer. He was going to help us find the right place to land when we took jobs,
+		but that's over and done with now because right now he's dead on the floor in a pool of his own blood, his throat having been ripped out by
+		the werewolf that got on the ship."
+	}
 }
 
 
 npc Shelly "Shelly"
 {
 charnumber 5
-is female 
+is female
 }
 
 
