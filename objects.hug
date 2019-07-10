@@ -260,7 +260,7 @@ object xraySpecs "x-ray specs"
 {
 nouns "specs" "x-ray"
 adjectives "x-ray"
-article "the", "my"
+articles "the" "my"
 !// Not special is up, special is down
 is clothing, hidden, not special
 in JaRod
@@ -268,7 +268,15 @@ in JaRod
 	long_desc
 	{
 		"The specs are a set of chromatic filters that allow me to see the world in an x-ray sense - it helps a little bit in seeing behind objects
-		unless those objects are particularly dense."
+		unless those objects are particularly dense. I can \Bscan\b things when they are lowered.\n"
+		"The x-ray specs are currently " ;
+		if self is special
+		{
+			"lowered."
+		}
+		else {
+			"raised."
+		}
 	}
 	before
 	{
