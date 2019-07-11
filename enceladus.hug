@@ -48,7 +48,7 @@ verb "scan"
 
 verb "shoot"
   * DoVague
-  * object DoShoot 
+  * object DoShoot
 
 #include "verblib.g"			! grammar must come first
 #include "hugolib.h"
@@ -92,6 +92,7 @@ array GameEvents[MAXGAMEEVENTS]
 ! GameEvents[5] = Did JaRod get the star pistol from Finnian?
 ! GameEvents[6] = Stops flavor text from being printed twice in Hallway03
 ! GameEvents[7] = Did JaRod look after lowering his specs?
+! GameEvents[8] = Did the Captain praise Ja'Rod for looking into the next room?
 
 
 

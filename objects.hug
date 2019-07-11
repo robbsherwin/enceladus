@@ -260,7 +260,7 @@ object xraySpecs "x-ray specs"
 {
 nouns "specs" "x-ray"
 adjectives "x-ray"
-articles "the" "my"
+article "the" "my"
 !// Not special is up, special is down
 is clothing, hidden, not special
 in JaRod

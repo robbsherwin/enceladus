@@ -44,10 +44,11 @@ room Hallway03 "Ship Hold"
 {
   long_desc
   {
+    move Captain to location
+    move Finnian to location
+
     if self is not visited
     {
-      move Captain to location
-      move Finnian to location
       move starPistol to Finnian
       "The Plagoo has a small hold right off the Captain's bedroom, and this is it. The original owner of the ship didn't trust his crew
       with the cargo they ran with. Our Captain does, but the Plagoo can't exactly be reconfigured.\n"
@@ -77,7 +78,13 @@ xrayDescription {
         "I can see ahead that there's actually two people waiting for us in the next area.\n"
         "\"Captain, I'm seeing two unknown forms and what I think is Shelley.\" Shelley is our naviagor and the life support tech. \"Shelley
         seems to be in the fetal position next to the air lock. One of the forms definitely looks like the silouette of a werewolf. The other
-        form standing next to it is taller, has lead boots. No weapons that I can detect."
+        form standing next to it is taller, has lead boots. No weapons that I can detect. I also think that Grimes's robot is there."
+
+        if GameEvents[8] = 0
+        {
+          GameEvents[8] = 1
+          "\n\"Good work,\" says the Captain. \"Let's proceed.\""
+        }
 
 }
 
@@ -111,15 +118,28 @@ w_to {
 e_to Hallway02
 }
 
-room Hallway04 "Ship Hallway"
+room Hallway04 "Monitoring"
 {
   long_desc
   {
+    move Captain to location
+    move Finnian to location
 
+    "This is one area before the airlock, where I saw two figures next to Shelley, who is part of our crew, and Mr Mailx, who
+    is the robot that Grimes got working."
+
+    if self is not visited
+    {
+      "\"This is what I'd like us to do,\" says the Captain, \"When we go to the airlock up ahead. Finnian, I would like you to accompany me as we
+      talk to our interlopers on the ship. Ja'Rod, I would like you to stay hidden and shoot the hull behind them.\"\n"
+
+      "Finnian nods, the disposition he normally carries about has left for a moment. After all, there are enemies on the ship and we can still
+      save Shelley. I have a few thoughts - why not shoot the werewolf and the other guy instead of putting a hole in the ship, but I just nod as well."
+    }
   }
 
-e_to BeforeTheAirlock
-w_to Hallway03
+w_to BeforeTheAirlock
+e_to Hallway03
 }
 
 room BeforeTheAirlock "Before the Airlock"
