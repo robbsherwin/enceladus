@@ -36,10 +36,12 @@ verb "exits"
 
 verb "lower"
   * DoVague
+  * "the"/"my" object DoLower
   * object DoLower
 
 verb "raise"
   * DoVague
+  * "the"/"my" object DoRaise
   * object DoRaise
 
 verb "scan"

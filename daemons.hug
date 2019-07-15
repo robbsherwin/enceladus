@@ -114,15 +114,47 @@ event in FinnianGivesPistol
 	select(self.timer)
 	case 2
 	{
-	move starPistol to JaRod
-	GameEvents[5] = 1
+	  GameEvents[5] = 1
+		if starPistol in JaRod
+		{
+			"\n\"Well, the kid took the pistol already,\" says Finnian. \"Not that I had pockets, exactly, Captain.\""
+		}
+		else {
+		move starPistol to JaRod
 
-		"\n\"I can't hide this on me,\" says Finnian of the star pistol. \"Wait. You want me to hide it on me? Where? Are we carrying duct
-		tape in the hold?\"\n"
+			"\n\"I can't hide this on me,\" says Finnian of the star pistol. \"Wait. You want me to hide it on me? Where? Are we carrying duct
+			tape in the hold?\"\n"
 
-		"\"No,\" starts the Captain. \"We aren't carrying duct tape in the hold.\"\n"
+			"\"No,\" starts the Captain. \"We aren't carrying duct tape in the hold.\"\n"
 
-		"Finnian's face makes about four different expressions before he shakes his head. \"Here, kid, you take it. And don't stare at me,
-		I don't have a lot on to block the x-ray radiation, you know. Ha! Ha ha ha!\" Finnian hands me the star pistol."
+			"Finnian's face makes about four different expressions before he shakes his head. \"Here, kid, you take it. And don't stare at me,
+			I don't have a lot on to block the x-ray radiation, you know. Ha! Ha ha ha!\" Finnian hands me the star pistol."
+		}
+	}
+}
+
+
+daemon Airlock_Scene
+{
+timer 0
+}
+
+event in Airlock_Scene
+{
+	self.timer++
+
+	select(self.timer)
+	case 2
+	{
+		"\"Funeral dress or not, it's disgusting! Put some clothes on!\" shouts McGrathley. We took a job a couple years ago to deliver two tons of mini chile rellenos. We got the
+		job because McGrathley and his crew couldn't get it done, they couldn't move the merch and we could. He actually shot lasers at us about losing the deal.\n"
+		"\"We put out a distress call as soon as you killed Grimes,\" says the Captain. \"The sector is going to be crawling with cops.\"\n"
+		"\"At transmission times of light in a vacuum out here in the middle of nowhere I have plenty of time to send you all "
+
+	}
+	case 3
+	{
+		"The Captain snaps her fingers, very softly, her right hand having traveled slowly to her right hip. The lighting is very dark in the ship thanks to
+		the attack, so it's really not seen at all by either McGrathley or the werewolf. Not that I expect the werewolf to be focused on signs."
 	}
 }

@@ -282,13 +282,25 @@ in JaRod
 	{
 		object DoLower
 		{
-			self is special
-			"Okay, I've lowered my x-ray specs."
+			if self is special
+			{
+				"They are already lowered!"
+			}
+			else {
+				self is special
+				"Okay, I've lowered my x-ray specs."
+			}
 		}
 		object DoRaise
 		{
-			self is not special
-			"My x-ray specs are now raised."
+			if self is not special
+			{
+				"They are already raised."
+			}
+			else {
+				self is not special
+				"My x-ray specs are now raised."
+			}
 		}
 	}
 }

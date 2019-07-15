@@ -78,7 +78,7 @@ xrayDescription {
         "I can see ahead that there's actually two people waiting for us in the next area.\n"
         "\"Captain, I'm seeing two unknown forms and what I think is Shelley.\" Shelley is our naviagor and the life support tech. \"Shelley
         seems to be in the fetal position next to the air lock. One of the forms definitely looks like the silouette of a werewolf. The other
-        form standing next to it is taller, has lead boots. No weapons that I can detect. I also think that Grimes's robot is there."
+        form standing next to it is taller, has lead boots. No weapons that I can detect. I also think that Grimes's robot is there.\""
 
         if GameEvents[8] = 0
         {
@@ -130,22 +130,47 @@ room Hallway04 "Monitoring"
 
     if self is not visited
     {
-      "\"This is what I'd like us to do,\" says the Captain, \"When we go to the airlock up ahead. Finnian, I would like you to accompany me as we
-      talk to our interlopers on the ship. Ja'Rod, I would like you to stay hidden and shoot the hull behind them.\"\n"
+      "\n\"This is what I'd like us to do,\" says the Captain, \"when we proceed to the airlock up ahead. Finnian, I would like you to accompany me as we
+      talk to our interlopers on the ship. Ja'Rod, I would like you to stay hidden and shoot the hull behind them when I snap my fingers.\"\n"
 
       "Finnian nods, the disposition he normally carries about has left for a moment. After all, there are enemies on the ship and we can still
       save Shelley. I have a few thoughts - why not shoot the werewolf and the other guy instead of putting a hole in the ship, but I just nod as well."
     }
   }
-
 w_to BeforeTheAirlock
 e_to Hallway03
 }
 
 room BeforeTheAirlock "Before the Airlock"
 {
+long_desc
+{
+  if self is not visited
+  {
+    self is hidden
+  }
 
+  if self is hidden
+  {
+    "(I'm hidden behind some cargo crates, but nobody else is.)\n"
+  }
+  if self is not hidden
+  {
+    "We are in a narrow hallway, there are monitors mounted a couple meters high in both directions. Inside our airlock is Mr Mailx and Shelley. Outside of
+    the airlock is the werewolf and someone I don't recognize. The Captain and Finnian approach.\n"
+    "\"Captain!\" says the unknown figure. \"How nice of you to join us. I plan on sending every member of your crew out the airlock.\"\n"
+    "\"How did you get onto my ship?\" the Captain asks.\n"
+    "\"Through the airlock. The other way. It seems you sent the unencrypted wireless key to Grimes when you hired him, and Grimes failed to secure
+    his communicator.\"\n"
+    "\"You came in through the airlock on the opposite side? Without that thing wearing a suit?\" She points to the werewolf.\n"
+    "The werewolf's head is still pointed toward the Captain, but it turns bloodshot, vacuum-afflicted eyes towards the man after that reveal.\n"
+    "\"It can take it!\" the man exclaims. He notices Finnan for the first time. Desperate to change the subject, he addresses Fin. \"What are you wearing?\"\n"
+    "\"Appropriate funeral dress in this area of the solar system, McGrathley,\" he says. McGrathley! I didn't recognize him in the spacesuit,
+    but this is Riggs McGrathley, a pirate we've encountered once before."
 
+    Activate(Airlock_Scene)
+  }
+}
 
 }
 
