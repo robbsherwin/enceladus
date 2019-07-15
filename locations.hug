@@ -154,7 +154,7 @@ long_desc
   {
     "(I'm hidden behind some cargo crates, but nobody else is.)\n"
   }
-  if self is not hidden
+  if self is not visited
   {
     "We are in a narrow hallway, there are monitors mounted a couple meters high in both directions. Inside our airlock is Mr Mailx and Shelley. Outside of
     the airlock is the werewolf and someone I don't recognize. The Captain and Finnian approach.\n"
@@ -169,6 +169,9 @@ long_desc
     but this is Riggs McGrathley, a pirate we've encountered once before."
 
     Activate(Airlock_Scene)
+  }
+  else {
+    xxx
   }
 }
 
