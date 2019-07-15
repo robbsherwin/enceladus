@@ -1,7 +1,7 @@
 !Characters
 !The Captain
 !Finnian
-!Shelley
+!Alexandra
 !Mr
 
 npc Captain "Captain"
@@ -110,7 +110,7 @@ is neutral
 }
 
 
-npc Shelly "Shelly"
+npc Alexandra	"Alexandra"
 {
 charnumber 5
 is female

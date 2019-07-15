@@ -146,7 +146,7 @@ event in Airlock_Scene
 	select(self.timer)
 	case 2
 	{
-		"\"Funeral dress I would usually respect, but it's disgusting! Put some clothes on!\" shouts McGrathley. We took a job a couple years ago to deliver two tons
+		"\n\"Funeral dress I would usually respect, but it's disgusting! Put some clothes on!\" shouts McGrathley. We took a job a couple years ago to deliver two tons
 		of mini chile rellenos. We got the job because McGrathley and his crew couldn't get it done, they couldn't move the merch and we could. He actually fired
 		lasers at us about losing the deal.\n"
 		"\"We put out a distress call as soon as you killed Grimes,\" says the Captain. \"The sector is going to be crawling with cops.\"\n"
@@ -156,7 +156,24 @@ event in Airlock_Scene
 	}
 	case 3
 	{
-		"The Captain snaps her fingers, very softly, her right hand having traveled slowly to her right hip. The lighting is very dark in the ship thanks to
+		"\nThe Captain snaps her fingers, very softly, her right hand having traveled slowly to her right hip. The lighting is very dark in the ship thanks to
 		the attack, so it's really not seen at all by either McGrathley or the werewolf. Not that I expect the werewolf to be focused on signs."
+	}
+	case 4
+	{
+		"\nCool as can be, the Captain snaps her fingers again.\n"
+		"\"No more sarcasm, Captain? No more trying to get your little shots in?\" Technically, it was Finnian who did both of those things, but I keep my
+		mouth shut. I think I am forgetting something but I don't know what."
+	}
+	case 5
+	{
+		"\nMcGrathley presses the red button on the airlock panel.\n"
+		"Alexandra's eyes go wide, she tries to get to her feet, but there is nothing she can do. She is flung into the dark void of outerspace. Her eyes go bloodshot,
+		her skin starts to swell. Mr Mailx is also ejected and bounces once into Alexandra, sending them both spinning. Alexandra manages to extend one useless hand
+		towards us before the difference in pressure has sent them spiraling so far away from us that they are mere specs reflecting the dim light of the sun.\n"
+		"\"You two!\" screams McGrathley. \"Into the airlock! Oh - and get that one behind the crates!\" Oh no no no the werewolf can see me, it's coming, how
+		can anything leap that far and that fast, no! No!!"
+		pause
+		endflag = 2
 	}
 }

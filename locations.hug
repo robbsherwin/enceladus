@@ -76,7 +76,7 @@ room Hallway03 "Ship Hold"
 xrayDescription {
         GameEvents[7] = 1
         "I can see ahead that there's actually two people waiting for us in the next area.\n"
-        "\"Captain, I'm seeing two unknown forms and what I think is Shelley.\" Shelley is our naviagor and the life support tech. \"Shelley
+        "\"Captain, I'm seeing two unknown forms and what I think is Alexandra.\" Alexandra is our naviagor and the life support tech. \"Alexandra
         seems to be in the fetal position next to the air lock. One of the forms definitely looks like the silouette of a werewolf. The other
         form standing next to it is taller, has lead boots. No weapons that I can detect. I also think that Grimes's robot is there.\""
 
@@ -125,7 +125,7 @@ room Hallway04 "Monitoring"
     move Captain to location
     move Finnian to location
 
-    "This is one area before the airlock, where I saw two figures next to Shelley, who is part of our crew, and Mr Mailx, who
+    "This is one area before the airlock, where I saw two figures next to Alexandra, who is part of our crew, and Mr Mailx, who
     is the robot that Grimes got working."
 
     if self is not visited
@@ -134,7 +134,7 @@ room Hallway04 "Monitoring"
       talk to our interlopers on the ship. Ja'Rod, I would like you to stay hidden and shoot the hull behind them when I snap my fingers.\"\n"
 
       "Finnian nods, the disposition he normally carries about has left for a moment. After all, there are enemies on the ship and we can still
-      save Shelley. I have a few thoughts - why not shoot the werewolf and the other guy instead of putting a hole in the ship, but I just nod as well."
+      save Alexandra. I have a few thoughts - why not shoot the werewolf and the other guy instead of putting a hole in the ship, but I just nod as well."
     }
   }
 w_to BeforeTheAirlock
@@ -156,7 +156,7 @@ long_desc
   }
   if self is not visited
   {
-    "We are in a narrow hallway, there are monitors mounted a couple meters high in both directions. Inside our airlock is Mr Mailx and Shelley. Outside of
+    "We are in a narrow hallway, there are monitors mounted a couple meters high in both directions. Inside our airlock is Mr Mailx and Alexandra. Outside of
     the airlock is the werewolf and someone I don't recognize. The Captain and Finnian approach.\n"
     "\"Captain!\" says the unknown figure. \"How nice of you to join us. I plan on sending every member of your crew out the airlock.\"\n"
     "\"How did you get onto my ship?\" the Captain asks.\n"
@@ -171,7 +171,14 @@ long_desc
     Activate(Airlock_Scene)
   }
   else {
-    xxx
+    if self is hidden
+    {
+      "I'm hiding behind some crates in the room before our airlock. " ;
+
+    }
+    else {
+      "This room is before our airlock and it's got a few scattered crates and a control panel along the portside wall."    
+    }
   }
 }
 
