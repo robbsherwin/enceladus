@@ -91,10 +91,12 @@ array GameEvents[MAXGAMEEVENTS]
 ! GameEvents[2] = Has Grimes been mentioned yet?
 ! GameEvents[3] = Can the HallwayDoor be opened?
 ! GameEvents[4] = Was the bed looked at? This is for a later joke regarding shooting the hull
-! GameEvents[5] = Did JaRod get the star pistol from Finnian?
+! GameEvents[5] = Did Ja'Rod get the star pistol from Finnian?
 ! GameEvents[6] = Stops flavor text from being printed twice in Hallway03
-! GameEvents[7] = Did JaRod look after lowering his specs?
+! GameEvents[7] = Did Ja'Rod look after lowering his specs?
 ! GameEvents[8] = Did the Captain praise Ja'Rod for looking into the next room?
+! GameEvents[9] = Does the Captain want us to shoot the pistol?
+! GameEvents[10] = Did Ja'Rod shoot the pistol at the hull successfully?
 
 
 

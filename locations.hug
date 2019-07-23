@@ -70,7 +70,7 @@ room Hallway03 "Ship Hold"
       Activate(FinnianGivesPistol)
     }
 
-    "\nExits lead east, further into the ship, and west, back down the hallway."
+    "\nExits lead west, further into the ship, and east, back down the hallway where we came."
 
   }
 xrayDescription {
@@ -125,7 +125,7 @@ room Hallway04 "Monitoring"
     move Captain to location
     move Finnian to location
 
-    "This is one area before the airlock, where I saw two figures next to Alexandra, who is part of our crew, and Mr Mailx, who
+    "This is one room before the airlock, where I saw two figures next to Alexandra, who is part of our crew, and Mr Mailx, who
     is the robot that Grimes got working."
 
     if self is not visited
@@ -145,6 +145,9 @@ room BeforeTheAirlock "Before the Airlock"
 {
 long_desc
 {
+  move Captain to location
+  move Finnian to location
+
   if self is not visited
   {
     self is hidden
@@ -177,10 +180,12 @@ long_desc
 
     }
     else {
-      "This room is before our airlock and it's got a few scattered crates and a control panel along the portside wall."    
+      "This room is before our airlock and it's got a few scattered crates and a control panel along the portside wall."
     }
   }
 }
+
+e_to { "I can't go that way right now."}
 
 }
 

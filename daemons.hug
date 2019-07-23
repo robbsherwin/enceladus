@@ -151,29 +151,44 @@ event in Airlock_Scene
 		lasers at us about losing the deal.\n"
 		"\"We put out a distress call as soon as you killed Grimes,\" says the Captain. \"The sector is going to be crawling with cops.\"\n"
 		"\"At transmission times of light in a vacuum out here in the middle of nowhere I have plenty of time to send you all into the icy, inhospitable
-		darkness of space!\" The werewolf again shifts its eyes to look at McGrathley before settling back on the Captain."
+		darkness of space. The worst torture imaginable!\" The werewolf again shifts its eyes to look at McGrathley before settling back on the Captain."
 
 	}
 	case 3
 	{
+		GameEvents[9] = 1
 		"\nThe Captain snaps her fingers, very softly, her right hand having traveled slowly to her right hip. The lighting is very dark in the ship thanks to
 		the attack, so it's really not seen at all by either McGrathley or the werewolf. Not that I expect the werewolf to be focused on signs."
 	}
 	case 4
 	{
-		"\nCool as can be, the Captain snaps her fingers again.\n"
-		"\"No more sarcasm, Captain? No more trying to get your little shots in?\" Technically, it was Finnian who did both of those things, but I keep my
-		mouth shut. I think I am forgetting something but I don't know what."
+		if GameEvents[10] = 1
+		{
+
+		}
+		else {
+			"\nCool as can be, the Captain snaps her fingers again.\n"
+			"\"No more sarcasm, Captain? No more trying to get your little shots in?\" Technically, it was Finnian who did both of those things, but I keep my
+			mouth shut. I think I am forgetting something but I don't know what."
+		}
+
 	}
 	case 5
 	{
-		"\nMcGrathley presses the red button on the airlock panel.\n"
-		"Alexandra's eyes go wide, she tries to get to her feet, but there is nothing she can do. She is flung into the dark void of outerspace. Her eyes go bloodshot,
-		her skin starts to swell. Mr Mailx is also ejected and bounces once into Alexandra, sending them both spinning. Alexandra manages to extend one useless hand
-		towards us before the difference in pressure has sent them spiraling so far away from us that they are mere specs reflecting the dim light of the sun.\n"
-		"\"You two!\" screams McGrathley. \"Into the airlock! Oh - and get that one behind the crates!\" Oh no no no the werewolf can see me, it's coming, how
-		can anything leap that far and that fast, no! No!!"
-		pause
-		endflag = 2
+		if GameEvents[10] = 1
+		{
+
+		}
+		else {
+			"\nMcGrathley presses the red button on the airlock panel.\n"
+			"Alexandra's eyes go wide, she tries to get to her feet, but there is nothing she can do. She is flung into the dark void of outerspace. Her eyes go bloodshot,
+			her skin starts to swell. Mr Mailx is also ejected and bounces once into Alexandra, sending them both spinning. Alexandra manages to extend one useless hand
+			towards us before the difference in pressure has sent them spiraling so far away from us that they are mere specs reflecting the dim light of the sun.\n"
+			"\"You two!\" screams McGrathley. \"Into the airlock! Oh - and get that one behind the crates!\" Oh no no no the werewolf can see me, it's coming, how
+			can anything leap that far and that fast, no! No!!"
+			pause
+			endflag = 2
+		}
+
 	}
 }
