@@ -4,7 +4,7 @@ A werewolf is lose on the HMCS Plagoo.
 
 Ja'Rod Butler: the protagonist. X-ray astronomer, junior science officer.
 The Captain: She is a beautiful woman with a bobcut. (Unclear when we reveal her actual name in the game. )
-Alexandra McKenzie: The life support technician
+Shelly McKenzie: The life support technician
 Finnian O'Connell: The pilot
 Mr Mailx: the ship's robot. Based on Grimes's personality.
 Grimes: the really fat geographer who gets launched into space
@@ -46,7 +46,7 @@ room Hallway04 "Ship Hold"
 
 room BeforeTheAirlock "Before the Airlock"
 
-Riggs and the werewolf are closest to the wall. Mr Mailx is next and at the far end is Alexandra. Alexandra is bleeding.
+Riggs and the werewolf are closest to the wall. Mr Mailx is next and at the far end is Shelley. Shelley is bleeding.
 Captain whispers to Ja'Rod to fire the pistol at the wall as soon as she snaps her finger. (There is a sizable cool down for it)
 
 daemon 1
@@ -56,12 +56,12 @@ daemon 1
 daemon 2
   Snaps her finger, Ja'Rod has one turn to fire the pistol at the wall
 >shoot or shoot wall
-  Hole in the hull, werewolf goes flying. Riggs goes flying, Mailx fills the hole. Alexandra is flung against him.
+  Hole in the hull, werewolf goes flying. Riggs goes flying, Mailx fills the hole. Shelley is flung against him.
   Ja'Rod observes that he heard the Captain got the ship by stealing it, thus being ok with shooting holes in it
   Captain tells Finnian to go land the ship.
 
 daemon 1
-Captain says they need some metal to repair the hull and a doctor for Alexandra
+Captain says they need some metal to repair the hull and a doctor for Shelley
 (display graphic?)
 (scene cut, move player)
 
@@ -76,7 +76,7 @@ Location: Outside the ship
 >get knife from Bar
 >cut self
 (Dr. )
-* The doctor and Finnigan go to help Alexandra and says there is a mine a little ways away
+* The doctor and Finnigan go to help Shelley and says there is a mine a little ways away
 
 Location: THE MINE
 * The Captain, Mr Mailx and Ja'Rod go into the mine
@@ -107,7 +107,7 @@ didn't care any more. She went into piracy herself. No, she never found the guy.
 * Ja'Rod can shoot McGrathley's steel boots, melting them and holding him in place
 * Finnigan brings the ship up and squashes McGrathley
 * (Pun about squashing the beef after all)
-* Go back inside. Alexandra is okay. She drinks a half bottle of vodka and the game makes you hit wait 5 times.
+* Go back inside. Shelley is okay. She drinks a half bottle of vodka and the game makes you hit wait 5 times.
 * The doctor says they're all insane and leaves. The crew is together. End of game.
 
 
@@ -261,3 +261,33 @@ colonies. All the different types. A ... B ... er... \"\n"
 
 "\"Forburn had gotten off the ship. We were delivering them to Mimas, right inside the crater, and he had gotten off the Plagoo to talk to our contact
 with the government. I had a drone following him just because I was going to join him after running the last batch of tests on the
+
+
+
+
+---
+
+"\"We need to land on Enceladus,\" says the Captain. \"It's the closest moon.\"\n"
+
+"\"Where is it? asks Finnian.\n"
+
+"\"You're the navigator, don't you know?\" she says.\n"
+
+"\"I don't just have the positions of all the moons of Jupiter memorized!\" he says.\n"
+
+"\"Saturn. Not. Jupiter,\" utters Mr Mailx.\n"
+
+"\"Right, that's what I mean,\" says Finnian.\n"
+
+"\"Tilt us to port,\" I say. \"Towards the southern cross.\"\n"
+
+"\"Ahhh... the southern cross? The cross? Is that what you mean?\" I don't think Finnian is joking.\n"
+
+"\"The constellation,\" I say\n".
+
+"\"It's just The Cross. Ol' Crux.\" Finnian adjusts something on the ship's navigation console.\n"
+
+"\"No, it's the Southern Cross. It's not visible in the northern hemisphere. Of the Earth. Thus the name.\" Now I'm certain he's not joking.\n"
+
+"\"Wait a second,\" says Finnian. \"You're telling me that God ... GOD, the all knowing and all powerful ... created this piece of religious iconography and then set
+it in a hemisphere that Christ never visited? What other star patterns are down there, instructions on how to escape a crucifix?\"\n"
