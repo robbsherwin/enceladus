@@ -166,9 +166,10 @@ long_desc
     "\"Through the airlock. The other way. It seems you sent the unencrypted wireless key to Grimes when you hired him, and Grimes failed to secure
     his communicator.\"\n"
     "\"You came in through the airlock on the opposite side? Without that thing wearing a suit?\" She points to the werewolf.\n"
-    "The werewolf's head is still pointed toward the Captain, but it turns bloodshot, vacuum-afflicted eyes towards the man after that reveal.\n"
-    "\"It can take it!\" the man exclaims. He notices Finnan for the first time. Desperate to change the subject, he addresses Fin. \"What are you wearing?\"\n"
-    "\"Appropriate funeral dress in this area of the solar system, McGrathley,\" he says. McGrathley! I didn't recognize him in the spacesuit,
+    "The werewolf's head is still pointed toward the Captain, but it turns bloodshot, vacuum-afflicted eyes towards the man after that  for a second
+    before settling back onto the Captain and Finnian.\n"
+    "\"It can take it!\" the man hisses. He notices Finnan for the first time. Desperate to change the subject, he addresses Fin. \"What are you wearing?\"\n"
+    "\"Appropriate dress in this area of the solar system for shore leave, McGrathley,\" he says. McGrathley! I didn't recognize him in the spacesuit,
     but this is Riggs McGrathley, a pirate we've encountered once before."
 
     Activate(Airlock_Scene)
@@ -186,6 +187,34 @@ long_desc
 }
 
 e_to { "I can't go that way right now."}
+
+}
+
+room Helm
+{
+  long_desc
+  {
+    if self is not visited
+    {
+      "Finnian and I run back to the helm. The Captain stayed to check on Alexandra. Finnian doesn't ever really start any conversations with me.
+      After working with him for two years and then a year break and then the last few weeks I have no idea if he likes me or not. It always seems
+      like I am bothering him working when I bring up non-work topics, and it always seems like he thinks I'm tedious when I bring up work at
+      any other time.\n"
+
+      "\"That was crazy, huh?\" I say. Why not, what can it hurt.\n"
+
+      "\"Well, the best part of that plan is that it would have also worked with Grimes's fat ass in the breach, not just his robot.\"
+      Former employee bashing! I guess I'm off the hook for a bit.\n"
+
+      "Finnian sits down and starts fiddling with the navigation controls."
+
+      Activate(Finnian_Lands_Ship)
+
+    }
+    else {
+
+    }
+  }
 
 }
 

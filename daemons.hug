@@ -148,12 +148,12 @@ event in Airlock_Scene
 	select(self.timer)
 	case 2
 	{
-		"\n\"Funeral dress I would usually respect, but it's disgusting! Put some clothes on!\" shouts McGrathley. We took a job a couple years ago to deliver two tons
-		of mini chile rellenos. We got the job because McGrathley and his crew couldn't get it done, they couldn't move the merch and we could. He actually fired
-		lasers at us about losing the deal.\n"
+		"\n\"You look disgusting! Put some clothes on!\" shouts McGrathley. We took a job a couple years ago to deliver two tons
+		of mini chile rellenos from Earth to Mimas. We got the job because McGrathley and his crew couldn't get it done, they couldn't move the merch and we could.
+		He actually fired lasers at us about losing the deal.\n"
 		"\"We put out a distress call as soon as you killed Grimes,\" says the Captain. \"The sector is going to be crawling with cops.\"\n"
 		"\"At transmission times of light in a vacuum out here in the middle of nowhere I have plenty of time to send you all into the icy, inhospitable
-		darkness of space. The worst torture imaginable!\" The werewolf again shifts its eyes to look at McGrathley before settling back on the Captain."
+		darkness of space. The worst torture imaginable!\" The werewolf again shifts its eyes to look at McGrathley for a beat before settling back on the Captain."
 
 	}
 	case 3
@@ -192,5 +192,19 @@ event in Airlock_Scene
 			endflag = 2
 		}
 
+	}
+}
+
+daemon Finnian_Lands_Ship
+{
+timer 0
+}
+
+event in Finnian_Lands_Ship
+{
+	select(self.timer)
+	case 2
+	{
+	
 	}
 }
