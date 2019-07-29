@@ -205,6 +205,36 @@ event in Finnian_Lands_Ship
 	select(self.timer)
 	case 2
 	{
-	
+		"\nThe Captain joins the rest of us on the bridge. She sits in the command chair.\n"
+		"\"How is Alexandra?\" I ask, taking over the scanning station.\n"
+		"\"She needs a doctor,\" says the Captain. \"Take us down,\" she says to Finnian.\n"
+		"\"Hmm?\" he says, having not paid attention.\n"
+	}
+	case 3
+	{
+		"\n\"We need to land on Enceladus,\" says the Captain. \"It's the closest moon, closest landing site.\"\n"
+
+		"\"Where is it? asks Finnian.\n"
+
+		"\"You're the navigator, what do you mean 'Where is it?' Don't you know?\" she says.\n"
+
+		"\"I don't just have the positions of all the moons of Jupiter memorized!\" he says.\n"
+
+		"\"Saturn. Not. Jupiter,\" utters Mr Mailx.\n"
+
+		"\"Right, that's what I mean,\" says Finnian.\n"
+
+		"\"Tilt us to port,\" I say. \"Towards the southern cross.\"\n"
+
+		"\"Ahhh... the southern cross? The cross? Is that what you mean?\" I don't think Finnian is joking.\n"
+
+		"\"The constellation,\" I say.\n"
+
+		"\"It's just The Cross. Ol' Crux.\" Finnian adjusts something on the ship's navigation console.\n"
+
+		"\"No, it's the Southern Cross. It's not visible in the northern hemisphere. Of the Earth. Thus the name.\" Now I'm certain he's not joking.\n"
+
+		"\"Wait a second,\" says Finnian. \"You're telling me that God ... GOD, the all knowing and all powerful ... created this piece of religious iconography and then set
+		it in a hemisphere that Christ never visited? What other star patterns are down there, instructions on how to escape a crucifix?\"\n"
 	}
 }
