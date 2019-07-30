@@ -202,6 +202,8 @@ timer 0
 
 event in Finnian_Lands_Ship
 {
+	self.timer++
+	
 	select(self.timer)
 	case 2
 	{
