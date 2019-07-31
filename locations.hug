@@ -215,7 +215,19 @@ room Helm "Bridge"
 
     }
   }
+}
 
+room PortSideHall01  "Port Side Hallway"
+{
+
+n_to PortSideHall02
+}
+
+room PortSideHall02 "PortSide Hallway"
+{
+
+s_to PortSideHall01
+n_to BeforeTheAirlock
 }
 
 room OutsideTheShip

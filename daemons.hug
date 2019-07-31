@@ -203,7 +203,7 @@ timer 0
 event in Finnian_Lands_Ship
 {
 	self.timer++
-	
+
 	select(self.timer)
 	case 2
 	{
@@ -238,5 +238,24 @@ event in Finnian_Lands_Ship
 
 		"\"Wait a second,\" says Finnian. \"You're telling me that God ... GOD, the all knowing and all powerful ... created this piece of religious iconography and then set
 		it in a hemisphere that Christ never visited? What other star patterns are down there, instructions on how to escape a crucifix?\"\n"
+	}
+	case 4
+	{
+		"\nFinnian sets the Plagoo down on Enceladus. A rather smooth landing, considering the hull breach that is plugged by the robot.\n"
+		"\"Ja'Rod, can you please pull Mr Mailx out of the hole in the ship and get Alexandra to the airlock, where it will be warm? Finnian
+		and I will meet you outside where we can discuss the plan thereafter.\" I nod. The Captain seems to be all business, Finnian's
+		joke(?) about the stars didn't seem to cheer her up. She gets like this now, pretty morose at times.\n"
+
+		"There is an exit out of the bridge to the north."
+	}
+
+	case 5
+	{
+		if player in Helm
+		{
+			remove Captain
+			remove Finnian
+			"\nFinnian and the Captain get in the lift downwards.\n"
+		}
 	}
 }
