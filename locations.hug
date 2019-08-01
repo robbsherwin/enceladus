@@ -145,46 +145,60 @@ room BeforeTheAirlock "Before the Airlock"
 {
 long_desc
 {
-  move Captain to location
-  move Finnian to location
 
-  if self is not visited
+  if GameEvents[11] = 1
   {
-    self is hidden
-  }
+    move MrMailx to location
+    move Alexandra to location
 
-  if self is hidden
-  {
-    "(I'm hidden behind some cargo crates, but nobody else is.)\n"
-  }
-  if self is not visited
-  {
-    "We are in a narrow hallway, there are monitors mounted a couple meters high in both directions. Inside our airlock is Mr Mailx and Alexandra. Outside of
-    the airlock is the werewolf and someone I don't recognize. The Captain and Finnian approach.\n"
-    "\"Captain!\" says the unknown figure. \"How nice of you to join us. I plan on sending every member of your crew out the airlock.\"\n"
-    "\"How did you get onto my ship?\" the Captain asks.\n"
-    "\"Through the airlock. The other way. It seems you sent the unencrypted wireless key to Grimes when you hired him, and Grimes failed to secure
-    his communicator.\"\n"
-    "\"You came in through the airlock on the opposite side? Without that thing wearing a suit?\" She points to the werewolf.\n"
-    "The werewolf's head is still pointed toward the Captain, but it turns bloodshot, vacuum-afflicted eyes towards the man after that for a second
-    before settling back onto the Captain and Finnian.\n"
-    "\"It can take it!\" the man hisses. He notices Finnan for the first time. Desperate to change the subject, he addresses Fin. \"What are you wearing?\"\n"
-    "\"Appropriate dress in this area of the solar system for shore leave, McGrathley,\" he says. McGrathley! I didn't recognize him in the spacesuit,
-    but this is Riggs McGrathley, a pirate we've encountered once before."
+    "Before the airlock, Mr Mailx is here plugging the hole I created. Alexandra is conscious, but laying on a blanket that the Captain somehow
+    produced. "
 
-    Activate(Airlock_Scene)
   }
   else {
+    move Captain to location
+    move Finnian to location
+
+    if self is not visited
+    {
+      self is hidden
+    }
+
     if self is hidden
     {
-      "I'm hiding behind some crates in the room before our airlock. " ;
+      "(I'm hidden behind some cargo crates, but nobody else is.)\n"
+    }
+    if self is not visited
+    {
+      "We are in a narrow hallway, there are monitors mounted a couple meters high in both directions. Inside our airlock is Mr Mailx and Alexandra. Outside of
+      the airlock is the werewolf and someone I don't recognize. The Captain and Finnian approach.\n"
+      "\"Captain!\" says the unknown figure. \"How nice of you to join us. I plan on sending every member of your crew out the airlock.\"\n"
+      "\"How did you get onto my ship?\" the Captain asks.\n"
+      "\"Through the airlock. The other way. It seems you sent the unencrypted wireless key to Grimes when you hired him, and Grimes failed to secure
+      his communicator.\"\n"
+      "\"You came in through the airlock on the opposite side? Without that thing wearing a suit?\" She points to the werewolf.\n"
+      "The werewolf's head is still pointed toward the Captain, but it turns bloodshot, vacuum-afflicted eyes towards the man after that for a second
+      before settling back onto the Captain and Finnian.\n"
+      "\"It can take it!\" the man hisses. He notices Finnan for the first time. Desperate to change the subject, he addresses Fin. \"What are you wearing?\"\n"
+      "\"Appropriate dress in this area of the solar system for shore leave, McGrathley,\" he says. McGrathley! I didn't recognize him in the spacesuit,
+      but this is Riggs McGrathley, a pirate we've encountered once before."
 
+      Activate(Airlock_Scene)
     }
     else {
-      "This room is before our airlock and it's got a few scattered crates and a control panel along the portside wall."
+      if self is hidden
+      {
+        "I'm hiding behind some crates in the room before our airlock. " ;
+
+      }
+      else {
+        "This room is before our airlock and it's got a few scattered crates and a control panel along the portside wall."
+      }
     }
   }
-}
+
+  }
+
 
 e_to { "I can't go that way right now."}
 
@@ -219,12 +233,25 @@ room Helm "Bridge"
 
 room PortSideHall01  "Port Side Hallway"
 {
-
+  long_desc
+  {
+    if self is not visited
+    {
+      "I can tell that Finnian has landed the ship."
+    }
+  }
 n_to PortSideHall02
 }
 
 room PortSideHall02 "PortSide Hallway"
 {
+  long_desc
+  {
+    if self is not visited
+    {
+      GameEvents[11] = 1
+    }
+  }
 
 s_to PortSideHall01
 n_to BeforeTheAirlock

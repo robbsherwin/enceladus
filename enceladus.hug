@@ -97,6 +97,7 @@ array GameEvents[MAXGAMEEVENTS]
 ! GameEvents[8] = Did the Captain praise Ja'Rod for looking into the next room?
 ! GameEvents[9] = Does the Captain want us to shoot the pistol?
 ! GameEvents[10] = Did Ja'Rod shoot the pistol at the hull successfully?
+! GameEvents[11] = Is this our second time in the Before the Airlock room?
 
 
 
