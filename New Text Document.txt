@@ -231,10 +231,13 @@ Ja'Rod fires x-rays at Equinox's ship, blowing it up and saving Enceladus.
 
 
 >tell captain about rocks
+
 "\"There's not much and it's not lead. If I had to guess, I'd say it was just ... ice.\"\n"
-"\"It. Will. Never. Melt. Unfortuntately.\" adds Mr Mailx. "
+
+"\"It. Will. Never. Melt. Unfortunately.\" adds Mr Mailx.\n"
+
 "The Captain, still sitting just smiles and nods. She closes her eyes. And there is just this total non-verbal, existential sadness to her. I mean,
-she has seemed like this ever since I rejoined the ship a few months ago. But I've never really inquired about the why for her constant *mood.*"
+she has seemed like this ever since I rejoined the ship a months ago. But I've never really inquired about the why for her new mood."
 
 >ask captain about mood
 "She doesn't open her eyes right away. She's always just so inscrutable, and I'm not always great at reading people to begin with, so I don't know,
@@ -244,12 +247,13 @@ I don't even know if I should be asking, but it's like some other force compels 
 
 "\"You hadn't heard, Ja'Rod?\" I shake my head in the negatory. No, I hadn't heard what happened to her partner when I was off the ship.\n"
 
-"\"I thought you had heard. You know I don't read the direct messages of everyone on the crew. I think the computers support that, but I turned it off when Forburn... he died, Ja'Rod.\"\n"
+"\"I thought you had heard. You know I don't read the direct messages of everyone on the crew. I think the ship computer supported that, but I
+never wanted to know what any of you were thinking anyway. I disabled it permanently when Forburn... he died, Ja'Rod.\"\n"
 
 "\"I'm so sorry. I didn't know. I had sort of thought something like that had happened. I am so, so sorry, Captain.\"n"
 
-"She smiles when I say 'Captain.' We're a close crew. \"We were bringing blood, actually. Hundreds and hundreds of bags of blood to one of the
-colonies. All the different types. A ... B ... er... \"\n"
+"She opens her eyes for the first time and smiles when I say the word 'Captain.' We're a close crew. \"We were bringing blood, actually,\" she says. \"Hundreds and hundreds of
+bags of blood to one of the colonies. All the different types. A ... B ... er... \"\n"
 
 "\"A. B.\" adds Mailx."
 
@@ -257,10 +261,33 @@ colonies. All the different types. A ... B ... er... \"\n"
 
 "\"Wait.\" I turn to Mr Mailx. \"Are you saying A and B? Or AB?\"\n"
 
-"\"A. B.\" he says. The Captain just smiles again, still sitting with her back against the cave.\n"
+"\"A. B.\" he says. The Captain smiles again, still sitting with her back against the cold wall of the cave.\n"
 
 "\"Forburn had gotten off the ship. We were delivering them to Mimas, right inside the crater, and he had gotten off the Plagoo to talk to our contact
-with the government. I had a drone following him just because I was going to join him after running the last batch of tests on the
+with the government. I was going to join him after running the last batch of tests on the cargo to make sure it was still good. I don't know exactly what
+happened. I didn't have a camera or a drone on him or anything. But he got bit by the contact's dog. I don't know if it's because something went wrong
+in the deal or if the contact was corrupt or what. When I left the ship and went to the meeting point, I found him dead, his eyes pointed in horror,
+dried blood on his cheeks and chest. The dog had a splash of blood all around her, but she was just calmly looking way from him, breathing roughly,
+peering out into the cosmos.\"\n"
+
+"\"Oh my God,\" I say. \"That is horrible.\"\n"
+
+"She nods. She closes her eyes again. \"I had to get his body back on the ship... I left the dog on Mimas. We buried him on Earth, we had him cremated, he
+said he always wanted that. There was a mixup at the crematorium, I was in so much grief, it was so senseless. I thought I would have forever with him. You know
+I didn't say goodbye to him before he left that day? We usually had coffee in the morning, but I was running late. First time in forever and it was that day.
+It doesn't seem ... well, he's gone, right? What else can you say?\"\n"
+
+"\"What did you do with the blood?\" I asked. Maybe a bad question with poor timing, but God, nobody gives you a manual for when your boss tells you about how her husband got
+murdered.\n"
+
+"\"I dumped it. I just wanted to do something hateful. We left three hours later and I was grieving and I specifically wanted to do something awful. I pushed every crate into the
+airlock and pushed the button when we started to fly away. Jupiter's not the only thing in the solar system with a big red spot now, mind you.\" I don't know whether to
+laugh at that or not. Suddenly there is a change in her demeanor. Her chin becomes a rock. \"We, Mr. Butler -- \"\n"
+
+"\"Captain, if you want to wait and -- \"\n"
+
+"\"We need to get out of this cave. We have a punching robot that doesn't listen to women and some ice that needs to be punched. Do you care to give him the order?\""
+
 
 
 
