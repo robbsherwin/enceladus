@@ -204,13 +204,13 @@ e_to { "I can't go that way right now."}
 
 }
 
-room Helm "Bridge"
+room Bridge "Bridge"
 {
   long_desc
   {
     if self is not visited
     {
-      "Finnian and I run back to the helm. The Captain stayed to check on Alexandra. Finnian doesn't ever really start any conversations with me.
+      "Finnian and I run back to the helm on the Bridge. The Captain stayed to check on Alexandra. Finnian doesn't ever really start any conversations with me.
       After working with him for two years and then a year break and then the last few weeks I have no idea if he likes me or not. It always seems
       like I am bothering him working when I bring up non-work topics, and it always seems like he thinks I'm tedious when I bring up work at
       any other time.\n"
@@ -229,6 +229,30 @@ room Helm "Bridge"
 
     }
   }
+
+  before {
+    location DoExits
+    {
+      if GameEvents[12] = 0
+      {
+        "There is an exit north to the hall but I shouldn't leave my post at the moment."
+      }
+      else {
+        "There is an exit north into the hall."
+      }
+
+      }
+  }
+
+n_to  {
+    if GameEvents[12] = 0
+    {
+      "I should stay here in the Bridge for a bit."
+    }
+    else {
+      return PortSideHall01
+    }
+}
 }
 
 room PortSideHall01  "Port Side Hallway"
@@ -239,7 +263,12 @@ room PortSideHall01  "Port Side Hallway"
     {
       "I can tell that Finnian has landed the ship."
     }
+    else {
+
+    }
   }
+
+s_to Bridge
 n_to PortSideHall02
 }
 
@@ -249,7 +278,7 @@ room PortSideHall02 "PortSide Hallway"
   {
     if self is not visited
     {
-      GameEvents[11] = 1
+      GameEvents[11] = 1 !//  Is this our second time in the Before the Airlock room?
     }
   }
 

@@ -247,11 +247,13 @@ event in Finnian_Lands_Ship
 		joke(?) about the stars didn't seem to cheer her up. She gets like this now, pretty morose at times.\n"
 
 		"There is an exit out of the bridge to the north."
+
+		GameEvents[12] = 1
 	}
 
 	case 5
 	{
-		if player in Helm
+		if player in Bridge
 		{
 			remove Captain
 			remove Finnian
