@@ -20,9 +20,8 @@ routine DoAbout()
 {
 	"Enceladus by Robb Sherwin."
 	"Originally submitted for the 2019 Interactive Fiction Competition. I've missed this."
-	"You can talk to people just by doing >ask person about thing and >tell person about thing. The things will be in bold. You can see current exits
-	for the room you're in by doing >exits"
-	">version for info about this release."
+	"You can talk to people just by using the >talk command, it's context sensitive. You can see current exits for the room you're in by doing >exits"
+	"Try >version for info about this release."
 	"Please use the Hugor interpreter for Windows, Mac and Linux: http://ifwiki.org/index.php/Hugor"
 	"For Frobozz."
 }

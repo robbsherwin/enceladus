@@ -148,10 +148,15 @@ long_desc
 
   if GameEvents[11] = 1
   {
+    GameEvents[11] = 2 !// Do this once, please!
     move Mailx to location
     move Alexandra to location
+    Mailx.talkValue = 1
+    Alexandra.talkValue = 1
+    move greenButton to location
+    move redButton to location
 
-    "Before the airlock, Mr Mailx is here plugging the hole I created. Alexandra is conscious, but laying on a blanket that the Captain somehow
+    "I'm before the airlock again. Mr Mailx is here plugging the hole I created. Alexandra is conscious, but laying on a blanket that the Captain somehow
     produced. "
 
   }
@@ -177,7 +182,7 @@ long_desc
       "\"Through the airlock. The other way. It seems you sent the unencrypted wireless key to Grimes when you hired him, and Grimes failed to secure
       his communicator.\"\n"
       "\"You came in through the airlock on the opposite side? Without that thing wearing a suit?\" She points to the werewolf.\n"
-      "The werewolf's head is still pointed toward the Captain, but it turns bloodshot, vacuum-afflicted eyes towards the man after that for a second
+      "The werewolf's head is still pointed toward the Captain, but it turns bloodshot, vacuum-afflicted eyes towards the man after that for a long second
       before settling back onto the Captain and Finnian.\n"
       "\"It can take it!\" the man hisses. He notices Finnan for the first time. Desperate to change the subject, he addresses Fin. \"What are you wearing?\"\n"
       "\"Appropriate dress in this area of the solar system for shore leave, McGrathley,\" he says. McGrathley! I didn't recognize him in the spacesuit,
@@ -198,6 +203,15 @@ long_desc
   }
 }
 
+s_to {
+  if GameEvents[15] = 0
+  {
+    "I can't go that way right now."
+  }
+  else {
+    return PortSideHall02
+  }
+}
 e_to { "I can't go that way right now."}
 }
 
@@ -258,10 +272,11 @@ room PortSideHall01  "Port Side Hallway"
   {
     if self is not visited
     {
+      "This is just a simple access hallway that allows me to get to different areas of the ship.\n"
       "I can tell that Finnian has landed the ship."
     }
     else {
-
+      "This is just a simple access hallway that allows me to get to different areas of the ship.\n"
     }
   }
 

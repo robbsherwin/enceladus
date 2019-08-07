@@ -236,7 +236,7 @@ event in Finnian_Lands_Ship
 
 		"\"No, it's the Southern Cross. It's not visible in the northern hemisphere. Of the Earth. Thus the name.\" Now I'm certain he's not joking.\n"
 
-		"\"Wait a second,\" says Finnian. \"You're telling me that God ... GOD, the all knowing and all powerful ... created this piece of religious iconography and then set
+		"\"Wait,\" says Finnian. \"You're telling me that God ... GOD, the all knowing and all powerful ... created this piece of religious iconography and then set
 		it in a hemisphere that Christ never visited? What other star patterns are only visible from that side, diagrams on how to escape a crucifix?\""
 	}
 	case 4
@@ -274,5 +274,33 @@ event in SpecsGoUp
 	case 2 {
 		xraySpecs is not special
 		"\n(My x-ray specs just automatically went back up.)"
+	}
+}
+
+daemon Airlock_Checker
+{
+timer 0
+}
+
+event in Airlock_Checker
+{
+	self.timer = 1
+	select(self.timer)
+	case 1
+	{
+			if greenButton is not special and redButton is not special and GameEvents[14] = 1 and GameEvents[16] = 0
+			{
+				GameEvents[15] = 1
+				GameEvents[16] = 0 !// Used only for printing this message. 
+				"Okay, Alexandra is in the airlock and both doors are shut. I can head back to the Bridge with Mailx now."
+			}
+			else {
+
+				if GameEvents[15] = 1
+				{
+					GameEvents[15] = 0
+					"Whoops, I need to have both airlock doors shut using the green and red button with Alexandra inside."
+				}
+			}
 	}
 }

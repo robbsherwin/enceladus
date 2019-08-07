@@ -24,8 +24,8 @@ property TalkName
 property cast_desc
 property slogan_desc
 property initiative
-property xRayDescription 
-
+property xRayDescription
+property talkValue
 
 ! Item Variables
 property real_object

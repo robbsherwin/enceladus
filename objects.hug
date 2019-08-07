@@ -354,8 +354,8 @@ scenery airlockHull "hull"
 				GameEvents[10] = 1
 
 				"I emerge from behind some crates and take aim at the section of the hull behind McGrathley and the werewolf. I am shaking
-				a bit, but luckily you don't actually have to be that accurate when blowing a hole in your ship. The star pistol takes a long,
-				long second to warm up after I squeeze the trigger. A ton of ping there. The werewolf probably had enough time to jump
+				a bit, but luckily you don't actually have to be that accurate when blowing a hole in your ship. The star pistol takes a second
+				 to warm up after I squeeze the trigger. A ton of ping there. The werewolf probably had enough time to jump
 				over the crates and rip out my neck, but I think it was about to bring up the fact that McGrathley got a spacesuit
 				for himself and not it. Regardless - oh, there it goes.\n"
 				"There is a horrible screeching sound as the air and everything else nearby starts to get sucked out by the small hole.\n"
@@ -376,6 +376,110 @@ scenery airlockHull "hull"
 			}
 			else {
 				"Well, I can't shoot it again."
+			}
+		}
+	}
+}
+
+scenery greenButton "green button"
+{
+nouns "button" "green"
+adjective "green"
+article "the"
+! Not going to have them in the airlock initially, since Ja'Rod can't get to them
+is not special
+
+	long_desc
+	{
+		"The green button controls the transparent door on the 'ship' side of the airlock. " ;
+		if self is not special
+		{
+			"The door is currently closed."
+		}
+		else {
+			"The door is currently open."
+		}
+	}
+	before
+	{
+		object DoPush
+		{
+			GameEvents[16] = 0
+
+			if self is not special
+			{
+				self is special
+				"The first door to the airlock is now open."
+
+				if GameEvents[14] = 0
+				{
+					GameEvents[14] = 1
+					{
+						"\nAlexandra, still very much holding what I think is her lower intestine, crawls over inside the airlock."
+					}
+				}
+			}
+			else {
+				self is not special
+				"The first door to the airlock is now closed."
+
+				if GameEvents[14] = 1 !// Meaning, if Alexandra is in the airlock
+				{
+					"Alexandra nods at me."
+				}
+			}
+		}
+	}
+}
+
+scenery redButton "red button"
+{
+nouns "button" "red"
+adjective "red"
+article "the"
+! Not going to have them in the airlock initially, since Ja'Rod can't get to them
+is not special
+
+	long_desc
+	{
+		"The red button controls the opaque door on the 'empty vacuum of space' side of the airlock. " ;
+		if self is not special
+		{
+			"It is currently closed."
+		}
+		else {
+			"It is currently open."
+		}
+	}
+	before
+	{
+		object DoPush
+		{
+			GameEvents[16] = 0
+
+			if self is not special
+			{
+				self is special
+				"The door to the outside is now open."
+
+				if GameEvents[14] = 1 !// Meaning, Alexandra is in the airlock
+				{
+					"Alexandra looks at the open door and then looks at me.\n"
+
+					if greenButton is not special
+					{
+						"She mouths something that I can't hear because the first door is closed.\n"
+						"\"She. Is. Saying. Close. The. Outside. Door. Dummy,\" offers Mailx."
+
+					}
+					else {
+						"\"Close the door, dummy! Red button! It's freezing in here!\""
+					}
+				}
+			}
+			else {
+				self is not special
+				"The door to the outside is now closed."
 			}
 		}
 	}

@@ -21,6 +21,7 @@ peaceful true
 is neutral, living, female, hidden
 in TheCaptainsQuarters
 confidence 100
+talkValue 0
 
 	long_desc
 	{
@@ -61,6 +62,7 @@ charnumber 3
 nouns "finnian""o'connell" "pilot"
 adjectives "finnian"
 is neutral
+talkValue 0
 
 	long_desc
 	{
@@ -100,6 +102,7 @@ npc Grimes "Grimes"
 charnumber 4
 nouns "grimes"
 is neutral
+talkValue 0
 
 	long_desc
 	{
@@ -115,12 +118,47 @@ npc Alexandra	"Alexandra"
 nouns "alexandra"
 charnumber 5
 is female
+talkValue 0
+
 	long_desc
 	{
 		"Alexandra is a tall redhead, our life support technician. She is usually the life of the party on the ship that people can actually
 		stand, meaning, not a narcissist like maybe our other ship's extrovert. She is wearing a silver jumpsuit and black moon boots,
 		I think she was on watch when the werewolf stuff happened. She is in a lot of pain at the moment, though I am not sure
 		specifically what Riggs did to her."
+	}
+	before
+	{
+		object DoPull
+		{
+			if location = BeforeTheAirlock
+			{
+				"She doesn't need to be pulled anywhere! She is not plugging any holes, for instance."
+			}
+			else {
+				"There is no point in doing that."
+			}
+		}
+		object DoTalk
+		{
+			select(self.talkvalue)
+			case 0
+			{
+				"I don't have anything to say to her at the moment."
+			}
+			case 1
+			{
+				"\"Are you in a lot of pain? Can you move?\"\n"
+				"\"Hey Ja'Rod,\" she says. \"It's not great, the Captain gave me some dilaudid though. I think I'm allergic to it, but that's a problem
+				for future Alexandra.\"\n"
+				"\"Time. Travel. Is. Impossible.\" chimes in Mailx.\n"
+				"Alexandra rolls her eyes. \"Shot in the appendix by two pieces of space garbage and I can still find software bugs,\" she says.\n"
+				"\"Hold tight, Captain said I should get you in the airlock where we can control the temperature until we can fix the ship and
+				get you a doctor. I imagine we're going to go planetside soon.\"\n"
+				"\"Enceladus. Is. A. Moon,\" says Mailx.\n"
+				"There's a green button and a red button on the control panel for the airlock."
+			}
+		}
 	}
 }
 
@@ -130,6 +168,7 @@ npc Mailx "Mr Mailx"
 nouns "mailx" "robot"
 adjective "mr"
 charnumber 6
+talkValue 0
 
 	long_desc
 	{
@@ -161,6 +200,19 @@ charnumber 6
 					"That wouldn't do anything."
 				}
 			}
+		object DoTalk
+		{
+			select(self.talkValue)
+			case 0
+			{
+				"I don't have anything to say to Mr Mailx at the moment."
+			}
+			case 1
+			{
+				"\"You all right? Hey look, Grimes died. But you can stay with us anyway, we'll take care of you.\"\n"
+				"Mailx's LEDs where his head would be flicker a little bit. He doesn't say anything."
+			}
+		}
 	}
 }
 
