@@ -210,7 +210,7 @@ event in Finnian_Lands_Ship
 		"\nThe Captain joins the rest of us on the bridge. She sits in the command chair.\n"
 		"\"How is Alexandra?\" I ask, taking over the scanning station.\n"
 		"\"She needs a doctor,\" says the Captain. \"Take us down,\" she says to Finnian.\n"
-		"\"Hmm?\" he says, having not paid attention.\n"
+		"\"Hmm?\" he says, having not paid attention."
 	}
 	case 3
 	{
@@ -237,7 +237,7 @@ event in Finnian_Lands_Ship
 		"\"No, it's the Southern Cross. It's not visible in the northern hemisphere. Of the Earth. Thus the name.\" Now I'm certain he's not joking.\n"
 
 		"\"Wait a second,\" says Finnian. \"You're telling me that God ... GOD, the all knowing and all powerful ... created this piece of religious iconography and then set
-		it in a hemisphere that Christ never visited? What other star patterns are down there, instructions on how to escape a crucifix?\"\n"
+		it in a hemisphere that Christ never visited? What other star patterns are only visible from that side, diagrams on how to escape a crucifix?\""
 	}
 	case 4
 	{
@@ -259,5 +259,20 @@ event in Finnian_Lands_Ship
 			remove Finnian
 			"\nFinnian and the Captain get in the lift downwards.\n"
 		}
+	}
+}
+
+daemon SpecsGoUp
+{
+timer 0
+}
+
+event in SpecsGoUp
+{
+	self.timer++
+	select(self.timer)
+	case 2 {
+		xraySpecs is not special
+		"\n(My x-ray specs just automatically went back up.)"
 	}
 }

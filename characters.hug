@@ -112,14 +112,56 @@ is neutral
 
 npc Alexandra	"Alexandra"
 {
+nouns "alexandra"
 charnumber 5
 is female
+	long_desc
+	{
+		"Alexandra is a tall redhead, our life support technician. She is usually the life of the party on the ship that people can actually
+		stand, meaning, not a narcissist like maybe our other ship's extrovert. She is wearing a silver jumpsuit and black moon boots,
+		I think she was on watch when the werewolf stuff happened. She is in a lot of pain at the moment, though I am not sure
+		specifically what Riggs did to her."
+	}
 }
 
 
 npc Mailx "Mr Mailx"
 {
+nouns "mailx" "robot"
+adjective "mr"
 charnumber 6
+
+	long_desc
+	{
+		"Mr Mailx is the robot that Grimes brought onto the ship with him. I am not entirely sure what his function on the ship is supposed to be
+		or going to be. He is just over six feet tall. His torso is made up of three vertically-racked large tower PC cases. He has no head, but
+		a right and left speaker are mounted to the topmost computer. The speakers each have a dull green power LED that aren't eyes, but look like
+		they are. He has tank-like tread on each side to offer locomotion, which is fine, but his arms and hands go weird into the uncanny valley
+		a bit: they are made up of protruding pieces of PVC pipe with red, green, yellow and white wires all around them and inside. His hands are
+		spindly, ethereal - each a Raspberry Pi board with three fingers and a thumb soldered into the board's breadboard pins. He is not an attractive
+		robot."
+	}
+	before {
+		object DoPull
+			{
+				if GameEvents[13] = 0
+				{
+					GameEvents[13] = 1
+					"\"All right buddy,\" I say to Mailx, \"Let me get you out of there.\"\n"
+					"\"Understood. Agreed,\" says Mr Mailx.\n"
+					"I count to three, kind of looking the power LEDs that make up his eyes in good eye contact and grip his wispy metal fingers. On three
+					I yank him out and the cases that make up his backside pop out.\n"
+					"\"You okay, man?\" I ask him.\n"
+					"\"Will. Run. Diagnostic.\" he says. I nod. \"Alexandra, we gotta get you over to the airlock, okay? It's going to get really cold in a bit
+					with that giant hole in the hull, but in the airlock we can at least control the temperature there.\"\n"
+					"She doesn't say anything but grimaces a nod to let me know she understood. She's holding her hand against her spleen. Or her liver? Her kidneys
+					maybe. I can't tell how bruised she is, but it's enough to keep her laying on the floor.\n"
+				}
+				else {
+					"That wouldn't do anything."
+				}
+			}
+	}
 }
 
 

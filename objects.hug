@@ -361,17 +361,18 @@ scenery airlockHull "hull"
 				"There is a horrible screeching sound as the air and everything else nearby starts to get sucked out by the small hole.\n"
 				"The werewolf never had a chance. Being closest, it gets fired through and sent flying into the nothingness of space. McGrathley
 				maybe had an extra half-second, but he was next. He definitely lowered his helmet before he was ejected.\n"
+				"\"Don't body shame me!\" shouts Finnian towards our ejected interlopers while all this is going on.\n"
 				"I then comprehend the Captain's plan - Mr Mailx was next, but was too large for the pistol's hole. He instead plugged
 				the hole like a Dutch boy's finger. It was all over before Alexandra, clearly injured, even really moved.\n"
-				"\"Finnian, Ja'Rod,\" starts the Captain, \"Get over to the bridge, we're going to perform an emergency landing.\n"
+				"\"Finnian, Ja'Rod,\" starts the Captain, \"Get over to the bridge, we're going to perform an emergency landing.\"\n"
 				"\"Aye-aye,\" I say and get going. Fin does the same.\n"
 				"[Strike any key to continue]"
 
 				pause
 
-				MovePlayer(Helm)
-				move Captain to helm
-				move Finnian to helm 		
+				MovePlayer(Bridge)
+				move Captain to Bridge
+				move Finnian to Bridge
 			}
 			else {
 				"Well, I can't shoot it again."

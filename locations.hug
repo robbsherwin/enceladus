@@ -148,7 +148,7 @@ long_desc
 
   if GameEvents[11] = 1
   {
-    move MrMailx to location
+    move Mailx to location
     move Alexandra to location
 
     "Before the airlock, Mr Mailx is here plugging the hole I created. Alexandra is conscious, but laying on a blanket that the Captain somehow
@@ -196,12 +196,9 @@ long_desc
       }
     }
   }
-
-  }
-
+}
 
 e_to { "I can't go that way right now."}
-
 }
 
 room Bridge "Bridge"

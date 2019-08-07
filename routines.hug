@@ -59,7 +59,9 @@ routine DoScan
 		if location.xRayDescription
 		{
 			!// The check up there runs the xRayDescription
+			Activate(SpecsGoUp)
 			return true
+
 		}
 		else {
 			"Nothing special to report here."

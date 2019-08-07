@@ -99,6 +99,7 @@ array GameEvents[MAXGAMEEVENTS]
 ! GameEvents[10] = Did Ja'Rod shoot the pistol at the hull successfully?
 ! GameEvents[11] = Is this our second time in the Before the Airlock room?
 ! GameEvents[12] = Can Ja'Rod leave the Helm?
+! GameEvents[13] = Has Mailx been pulled out of the hole in the hull?
 
 
 

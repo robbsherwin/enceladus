@@ -148,7 +148,7 @@ global UNDO_OFF                         ! overrides undo when true
 
 global counter                          ! elapsed turns (or time, as desired)
 global score                            ! accumulated score
-global verbosity                        ! for room descriptions
+global verbosity = 2                    ! for room descriptions
 global list_nest                        ! used by ListObjects
 global light_source                     ! in location
 global event_flag                       ! set when something happens
@@ -473,7 +473,7 @@ routine PrintEndGame(end_type)
 					MatchPlural(player, "has", "have"); \
 					" died! ***"
 		}
-			
+
 	Font(BOLD_OFF)
 	PrintScore(true)
 }
@@ -579,13 +579,13 @@ routine Parse
 
 	if nothing ~= 0                   ! best place to check this
 		print "[WARNING:  Objects/classes defined before library]"
-		
+
 #ifset DEBUG
 	if debug_flags & D_PARSE_RANK
 	{
 		print "[parser_data[BEST_PARSE_RANK] = 0]"
 	}
-#endif			
+#endif
 
 #ifclear OLD_STYLE_PRONOUNS
 	! Only need to set up all attributes once, so that a given
@@ -605,7 +605,7 @@ routine Parse
 
 	if word[1] = "~oops"
 		return
-		
+
 	! Allow the player object to override the parsing cycle completely
 	temp_verb = verbroutine
 	temp_obj = object
@@ -652,7 +652,7 @@ routine Parse
 	! Must do this after AssignPronoun, and reset it to 0
 	! after both of Perform and ParseError:
 	parser_data[PARSER_STATUS] = PARSER_ACTIVE
-	
+
 #ifclear OLD_STYLE_PRONOUNS
 	move it_object to parent(it_obj)
 	move him_object to parent(him_obj)
@@ -688,7 +688,7 @@ routine Parse
 					case "them":    a = them_obj
 					case "him":     a = him_obj
 					case "her":     a = her_obj
-					
+
 				if a = nothing
 				{
 					! "...be a little more specific"
@@ -733,7 +733,7 @@ routine Parse
 #ifset OLD_STYLE_PRONOUNS
 	if number_pronouns = 2 and replace_pronoun[0] = replace_pronoun[1]
 		number_pronouns--
-		
+
 	if number_pronouns > 0
 	{
 		PrintReplacedPronouns(number_pronouns)
@@ -814,7 +814,7 @@ routine CurrentCommandWords
 {
 	if words = 0
 		return 0
-		
+
 	local i
 	for (i=1; i<words; i++)		! not <=, because of the i++
 	{
@@ -841,7 +841,7 @@ routine SetObjWord(a, obj)      ! inserts unique name of <obj> at word <a>
 			if i = 15: break	! match MAX_MOBJ in heparse.c
 		}
 	}
-	
+
 	if obj.#nouns                    ! ...and 1 noun (obj.noun #1)
 	{
 		for (i=1; i<=obj.#nouns; i++)
@@ -890,7 +890,7 @@ routine DeleteWord(p, n)                ! deletes <n> words at position <p>
 
 	return n
 }
-	
+
 routine VerbWord(which)			! returns word used as verb
 {					! in a typed command
 	select verbroutine
@@ -917,7 +917,7 @@ routine ObjWord(wd, obj)                ! returns adjective or noun if <wd>
 routine PrintReplacedPronouns(number_pronouns)
 {
 	local count
-	
+
 	Message(&Parse, 2)      ! "Assuming you mean..."
 	for (count = 0; count < number_pronouns; count++)
 	{
@@ -960,7 +960,7 @@ routine ParseError(errornumber, obj)
 		parser_data[PARSER_STATUS] = PARSER_RESET
 		return r
 	}
-	
+
 	if errornumber >= 100
 	{
 		CustomError(errornumber, obj)
@@ -976,7 +976,7 @@ routine ParseError(errornumber, obj)
 		parser_data[PARSER_STATUS] = PARSER_RESET
 		return true
 	}
-	
+
 #ifset DEBUG
 	if debug_flags & D_PARSE
 	{
@@ -1205,7 +1205,7 @@ routine NewParseError(errornumber, obj) ! to be replaced for custom error
 
 routine CustomError(errornumber, obj)   ! to be replaced for custom error
 {}                                      ! messages for user parsing routines
-					
+
 !----------------------------------------------------------------------------
 ! SpeakTo is called by the engine when a command is addressed to a
 ! character object via:  SpeakTo(character)
@@ -1256,7 +1256,7 @@ routine SpeakTo(char)
 #endif
 
 	speaking = 0
-	
+
 	if char is not living
 	{
 		ParseError(6)
@@ -1289,7 +1289,7 @@ routine SpeakTo(char)
 		jump IgnorePlayer
 
 	speaking = char
-	
+
 	! In the event of:  >CHARACTER, GO NORTH.  GET THE THING.  GO WEST., etc.
 	if not FindObject(char, location)
 	{
@@ -1402,12 +1402,12 @@ routine Perform(action, obj, xobj, queue, isxverb)
 
 	if queue
 		parser_data[PARSER_STATUS] |= PERFORM_QUEUE
-		
+
 	if not queue and object
 		parser_data[LAST_SINGLE_OBJECT] = object
 	else
 		parser_data[LAST_SINGLE_OBJECT] = 0
-		
+
 	parser_data[VERB_IS_XVERB] = isxverb
 
 	objtemp = object
@@ -1419,7 +1419,7 @@ routine Perform(action, obj, xobj, queue, isxverb)
 	xobject = xobj
 	verbroutine = action
 	actor = player
-	
+
 #ifclear OLD_STYLE_PRONOUNS
 	local number_pronouns = 0
 	if object = it_object:		object = it_obj
@@ -1490,7 +1490,7 @@ routine Perform(action, obj, xobj, queue, isxverb)
 	object = objtemp
 	xobject = xobjtemp
 	actor = actortemp
-	
+
 	if queue = -1
 		last_object = -1
 	parser_data[PARSER_STATUS] = PARSER_RESET
@@ -1506,7 +1506,7 @@ routine SetupDirectionObjects
 	if not object or not xobject
 	{
 		local i, wordnum
-		
+
 		! The last word in the command might be a direction, e.g. in the grammar for
 		! >PUSH OBJECT NORTH or >OUT.  If we don't see an object or xobject we might
 		! need to parse the last word as a direction and supply that.
@@ -1551,14 +1551,14 @@ routine SetupDirectionObjects
 routine BeforeRoutines(queue)
 {
 	local r, i
-	
+
 	r = player.react_before
 	if r
 	{
 #ifset DEBUG
 		if debug_flags & D_PARSE
 		{
-			print "\B["; player.name; 
+			print "\B["; player.name;
 			if debug_flags & D_OBJNUM
 				print " ["; number player; "]";
 			print ".react_before returned "; number r; "]\b"
@@ -1572,7 +1572,7 @@ routine BeforeRoutines(queue)
 #ifset DEBUG
 		if debug_flags & D_PARSE
 		{
-			print "\B["; player.name; 
+			print "\B["; player.name;
 			if debug_flags & D_OBJNUM
 				print " ["; number player; "]";
 			print ".before returned "; number r; "]\b"
@@ -1587,7 +1587,7 @@ routine BeforeRoutines(queue)
 #ifset DEBUG
 		if debug_flags & D_PARSE
 		{
-			print "\B["; location.name; 
+			print "\B["; location.name;
 			if debug_flags & D_OBJNUM
 				print " ["; number location; "]";
 			print ".react_before returned "; number r; "]\b"
@@ -1601,7 +1601,7 @@ routine BeforeRoutines(queue)
 #ifset DEBUG
 		if debug_flags & D_PARSE
 		{
-			print "\B["; location.name; 
+			print "\B["; location.name;
 			if debug_flags & D_OBJNUM
 				print " ["; number location; "]";
 			print "before returned "; number r; "]\b"
@@ -1609,7 +1609,7 @@ routine BeforeRoutines(queue)
 #endif
 		return r
 	}
-	
+
 	for i in location
 	{
 		r = i.react_before
@@ -1618,7 +1618,7 @@ routine BeforeRoutines(queue)
 #ifset DEBUG
 			if debug_flags & D_PARSE
 			{
-				print "\B["; i.name; 
+				print "\B["; i.name;
 				if debug_flags & D_OBJNUM
 					print " ["; number i; "]";
 				print ".react_before returned "; number r; "]\b"
@@ -1637,7 +1637,7 @@ routine BeforeRoutines(queue)
 #ifset DEBUG
 			if debug_flags & D_PARSE
 			{
-				print "\B["; xobject.name; 
+				print "\B["; xobject.name;
 				if debug_flags & D_OBJNUM
 					print " ["; number xobject; "]";
 				print ".before returned "; number r; "]\b"
@@ -1655,7 +1655,7 @@ routine BeforeRoutines(queue)
 #ifset DEBUG
 			if debug_flags & D_PARSE
 			{
-				print "\B["; object.name; 
+				print "\B["; object.name;
 				if debug_flags & D_OBJNUM
 					print " ["; number object; "]";
 				print ".before returned "; number r; "]\b"
@@ -1685,7 +1685,7 @@ routine AfterRoutines
 #ifset DEBUG
 		if debug_flags & D_PARSE
 		{
-			print "\B["; player.name; 
+			print "\B["; player.name;
 			if debug_flags & D_OBJNUM
 				print " ["; number player; "]";
 			print ".after returned "; number r; "]\b"
@@ -1699,35 +1699,35 @@ routine AfterRoutines
 #ifset DEBUG
 		if debug_flags & D_PARSE
 		{
-			print "\B["; player.name; 
+			print "\B["; player.name;
 			if debug_flags & D_OBJNUM
 				print " ["; number player; "]";
 			print ".react_after returned "; number r; "]\b"
 		}
 #endif
 	}
-	
+
 	r = location.after
 	if r
 	{
 #ifset DEBUG
 		if debug_flags & D_PARSE
 		{
-			print "\B["; location.name; 
+			print "\B["; location.name;
 			if debug_flags & D_OBJNUM
 				print " ["; number location; "]";
 			print ".after returned "; number r; "]\b"
 		}
 #endif
 	}
-	
+
 	r = location.react_after
 	if r
 	{
 #ifset DEBUG
 		if debug_flags & D_PARSE
 		{
-			print "\B["; location.name; 
+			print "\B["; location.name;
 			if debug_flags & D_OBJNUM
 				print " ["; number location; "]";
 			print ".react_after returned "; number r; "]\b"
@@ -1743,7 +1743,7 @@ routine AfterRoutines
 #ifset DEBUG
 			if debug_flags & D_PARSE
 			{
-				print "\B["; i.name; 
+				print "\B["; i.name;
 				if debug_flags & D_OBJNUM
 					print " ["; number i; "]";
 				print ".react_after returned "; number r; "]\b"
@@ -1836,7 +1836,7 @@ routine FindObject(obj, objloc, recurse)
 	local a, p
 	local this_parse_rank
 	local found_result = true
-	
+
 	if obj = nothing or obj = player
 	{
 		if obj = nothing and not recurse
@@ -1886,7 +1886,7 @@ routine FindObject(obj, objloc, recurse)
 	! apply to a particular command, like trying to open something that's
 	! already open:
 	this_parse_rank = obj.parse_rank
-	
+
 	! And be ready to prefer the last specifically referred to object in
 	! the event of disambiguation
 	if obj = parser_data[LAST_SINGLE_OBJECT]
@@ -2001,7 +2001,7 @@ routine FindObject(obj, objloc, recurse)
 #endif
 			return false
 		}
-			
+
 		if not recurse
 		{
 			if parser_data[PARSE_RANK_TESTS]++ = 0
@@ -2080,7 +2080,7 @@ routine FindObject(obj, objloc, recurse)
 			}
 		}
 	}
-	
+
 	if obj is not living
 		parser_data[PARSER_STATUS] |= FINDOBJECT_NONLIVING
 
@@ -2162,7 +2162,7 @@ routine FindObject(obj, objloc, recurse)
 			}
 		}
 	}
-	
+
 #ifset DEBUG
 	if debug_flags & D_FINDOBJECT and not recurse
 	{
@@ -2217,7 +2217,7 @@ routine FindObject(obj, objloc, recurse)
 ! objects from player actions, replace ObjectisKnown with a routine that
 ! always returns a true value.
 
-routine ObjectIsKnown(obj)        
+routine ObjectIsKnown(obj)
 {
 	if obj is known
 		return true
@@ -2235,7 +2235,7 @@ routine ExcludeFromAll(obj)
 	if obj is hidden
 		return true
 	return false
-}                               
+}
 
 !----------------------------------------------------------------------------
 ! PutInScope(object, actor)
@@ -2288,11 +2288,11 @@ routine AssignPronoun(obj)
 #endif
 	if parser_data[PARSER_STATUS] & PRONOUNS_SET:  return
 	if obj = player:  return
-	
+
 	! No use if you can't refer to it
 	if not obj.#noun and not obj.#adjective
 		return
-		
+
 	if obj is not living
 	{
 		if obj is not plural
@@ -2625,7 +2625,7 @@ routine StringToNumber(w)
 {
 	local len, val, n, factor = 1
 	len = string(_temp_string, w, 255)
-	
+
 	local i
 	for (i=len-1; i>=0; i--)
 	{
@@ -2641,7 +2641,7 @@ routine StringToNumber(w)
 		}
 		else
 			return 0
-			
+
 		factor *= 10
 	}
 	return val
@@ -2664,7 +2664,7 @@ routine Indent(newl)
 	{
 		! See display.cursor_column > 1, above
 		!print newline
-		
+
 		if newl
 			print ""
 		print "\_";
@@ -2913,7 +2913,7 @@ routine Describeplace(place, long)
 					WhatsIn(obj)
 				}
 			}
-			
+
 			! For scenery-derived objects that may change the type
 			elseif obj is static, hidden
 				obj is known
@@ -2935,7 +2935,7 @@ routine Describeplace(place, long)
 routine ShortDescribe(obj)
 {
 	obj is known
-	
+
 	if list_nest = 1
 		print newline
 
@@ -2988,11 +2988,11 @@ routine ShortDescribe(obj)
 		list_nest = 1
 		WhatsIn(obj)
 	}
-	
+
 	! If INDENT_SIZE is 0, formatting may be thrown off when listing
 	! the contents of an object:
 	if INDENT_SIZE = 0:  need_newline = true
-	
+
 	if need_newline:  print newline
 }
 
@@ -3027,10 +3027,10 @@ routine WhatsIn(obj)
 		(obj ~= player or FORMAT & INVENTORY_F) and obj is not quiet
 	{
 		SpecialDesc(obj)
-	
+
 		! If list_count is 0 now, but totallisted was not, something must have been
 		! printed by SpecialDesc
-	
+
 		if list_count = 0
 		{
 			if FORMAT & INVENTORY_F and not (FORMAT & LIST_F) and
@@ -3113,9 +3113,9 @@ routine WhatsIn(obj)
 				FORMAT = FORMAT | ISORARE_F
 			}
 		}
-		
+
 		ListObjects(obj)
-		
+
 		list_nest = initial_list_nest
 	}
 	return totallisted
@@ -3300,16 +3300,16 @@ routine ListObjects(thisobj)
 					else
 						print NumberWord(id_count);
 					print " "; this_class.name;
-					
+
 					if this_class.type = plural_class
 					{
 						local k
-						
+
 						if FORMAT & LIST_F
 							print ":";
 						else
 							print " (";
-						
+
 						k = 0
 						for (i=1; i<=this_class.#plural_of; i++)
 						{
@@ -3720,10 +3720,10 @@ routine Contains(obj, possible_child)
 routine CheckReach(obj)
 {
 	local i
-	
+
 	if not obj or obj = parent(player)
 		return true
-	
+
 #ifclear NO_VERBS
 	if (verbroutine ~= &DoLook, &DoLookIn) and parent(object) and
 		parent(object) ~= player and
@@ -3761,7 +3761,7 @@ routine CheckReach(obj)
 			return true
 		}
 	}
-	
+
 #ifset USE_ATTACHABLES
 	if parent(player).type = attachable
 	{
@@ -4113,7 +4113,7 @@ routine Menu(num, width, selection)
 		{
 			i = word[0] - '0'
 			if i = 0:  i = 10
-			
+
 			selection = 1
 			while --i
 			{
@@ -4208,27 +4208,27 @@ class daemon
 routine Activate(a, set)                ! <set> is for fuses only
 {
 	local err
-	
+
 	a.in_scope = player
 	a is active
 	if a.type = fuse
 	{
 		if set
 			a.timer = set
-			
+
 		run a.activate_event
 	}
 	elseif a.type = daemon
 	{
 		if set and not a.#timer
 		{
-			print "[WARNING:  Attempt to set nonexistent timer 
+			print "[WARNING:  Attempt to set nonexistent timer
 				property on daemon (object "; number a; ")]"
 			err = true
 		}
 		else
 			a.timer = set
-			
+
 		run a.activate_event
 	}
 	else
@@ -4253,7 +4253,7 @@ routine Activate(a, set)                ! <set> is for fuses only
 routine Deactivate(a)
 {
 	local err
-	
+
 	remove a
 	a.in_scope = 0
 	a is not active
