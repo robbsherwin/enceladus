@@ -425,7 +425,7 @@ is not special
 
 				if GameEvents[14] = 1 !// Meaning, if Alexandra is in the airlock
 				{
-					"Alexandra nods at me."
+					"\nAlexandra nods at me."
 				}
 			}
 		}
@@ -438,7 +438,7 @@ nouns "button" "red"
 adjective "red"
 article "the"
 ! Not going to have them in the airlock initially, since Ja'Rod can't get to them
-is not special
+is special !// Going to make it open for starters
 
 	long_desc
 	{
@@ -464,7 +464,7 @@ is not special
 
 				if GameEvents[14] = 1 !// Meaning, Alexandra is in the airlock
 				{
-					"Alexandra looks at the open door and then looks at me.\n"
+					"\nAlexandra looks at the open door and then looks at me.\n"
 
 					if greenButton is not special
 					{

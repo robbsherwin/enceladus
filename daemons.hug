@@ -291,8 +291,8 @@ event in Airlock_Checker
 			if greenButton is not special and redButton is not special and GameEvents[14] = 1 and GameEvents[16] = 0
 			{
 				GameEvents[15] = 1
-				GameEvents[16] = 0 !// Used only for printing this message. 
-				"Okay, Alexandra is in the airlock and both doors are shut. I can head back to the Bridge with Mailx now."
+				GameEvents[16] = 1 !// Used only for printing this message.
+				"\nOkay, Alexandra is in the airlock and both doors are shut. I can head back to the Bridge with Mailx now."
 			}
 			else {
 

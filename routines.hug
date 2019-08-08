@@ -87,6 +87,22 @@ routine DoTwirl
 	"I can't twirl that now, come on!"
 }
 
+routine StartPlanetFallScene
+{
+	move player to OutsideTheShip
+	move Captain to OutsideTheShip
+	move Finnian to OutsideTheShip
+	move Mailx to OutsideTheShip
+
+	if self is not visited
+	{
+
+	}
+	else {
+	
+	}
+}
+
 routine Version()
 {
 	print "\BEnceladus\b"

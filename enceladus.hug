@@ -102,7 +102,8 @@ array GameEvents[MAXGAMEEVENTS]
 ! GameEvents[13] = Has Mailx been pulled out of the hole in the hull?
 ! GameEvents[14] = Has Alexandra moved into the airlock?
 ! GameEvents[15] = Can Ja'Rod go back to the bridge after helping Alexandra?
-! GameEvents[16] = This is used every time we push the airlock buttons so we don't print the daemon too often 
+! GameEvents[16] = This is used every time we push the airlock buttons so we don't print the daemon too often
+! GameEvents[17] = Should we move everybody into the Airlock scene? 
 
 routine init
 {

@@ -148,13 +148,17 @@ long_desc
 
   if GameEvents[11] = 1
   {
-    GameEvents[11] = 2 !// Do this once, please!
-    move Mailx to location
-    move Alexandra to location
-    Mailx.talkValue = 1
-    Alexandra.talkValue = 1
-    move greenButton to location
-    move redButton to location
+    if GameEvents[17] = 0
+    {
+      GameEvents[17] = 1 !// Do this once, please!
+      move Mailx to location
+      move Alexandra to location
+      Mailx.talkValue = 1
+      Alexandra.talkValue = 1
+      move greenButton to location
+      move redButton to location
+      Activate(Airlock_Checker)
+    }
 
     "I'm before the airlock again. Mr Mailx is here plugging the hole I created. Alexandra is conscious, but laying on a blanket that the Captain somehow
     produced. "
@@ -237,6 +241,19 @@ room Bridge "Bridge"
 
     }
     else {
+      "This is the Bridge of our ship, there's a chair in the middle of the room for the Captain. Finnian has a navigator's console before a
+      large black high definition television. I have a station behind the Captain port side."
+
+      if GameEvents[16] = 1
+      {
+       move Mailx to location
+       "\"Ensign Butler,\" starts the Captain, \"How is our life support technician doing?\"\n"
+       "\"Alexandra is inside the airlock, the temperature controls are active and she'll be safe there. That room is getting cold.\n"
+       "The Captain nods. \"Very well. Let's - the four of us - meet outside for our next steps.\n"
+       "[Strike any key to continue]"
+       pause
+       StartPlanetFallScene()
+      }
 
     }
   }
@@ -277,6 +294,12 @@ room PortSideHall01  "Port Side Hallway"
     }
     else {
       "This is just a simple access hallway that allows me to get to different areas of the ship.\n"
+
+      if GameEvents[16] = 1
+      {
+        move Mailx to location
+        "Mailx is here with me."
+      }
     }
   }
 
@@ -292,6 +315,12 @@ room PortSideHall02 "PortSide Hallway"
     {
       GameEvents[11] = 1 !//  Is this our second time in the Before the Airlock room?
     }
+
+    if GameEvents[16] = 1
+    {
+      "I arrive here from the airlock with Mailx."
+      move Mailx to location
+    }
   }
 
 s_to PortSideHall01
@@ -300,40 +329,143 @@ n_to BeforeTheAirlock
 
 room OutsideTheShip
 {
+  long_desc
+  {
+    if self is not visited
+    {
+    "Finnian looks around before looking back toward the group. He changed before we came down, now wearing a real Lynx fur coat, a white dunce cap and new
+    old stock original Air Jordans. \"Crap, Captain, it's an ice planet!\"\n"
+    "She nods at that. \"Intelligence indicates that there's a small town a kilometer east of here.\"\n"
+    "\"What's your source of that intelligence?\" asks Finnian.\n"
+    "The Captain grits her teeth. \"I consulted Wikipedia. Okay? Is that all right?\"\n"
+    "\"No it's not all right!\" says Finnian. \"Wikipedia's moderator and administration system is filled with duplicitous losers that turned the
+    exchange of free information into a political battle where scumbags scuttle into tribes to spread their lies. Mr Mailx?\"\n"
+    "\"Yes,\" he says.\n"
+    "\"Delete the Wikipedia page on Enceladus and replace it with a 10K image of a giant tarantula.\"\n"
+    "\"Finnian, stop,\" says the Captain.\n"
+    "\"Done,\" says the robot, presumably having fired off some API calls.\n"
+    "Finnian laughs. It's a dry, hollow one. \"Seventy one minutes from now, good luck to any kid trying to do a book report. Cite that revision in your
+    bibliography.\"\n"
+
+    "The Captain walks east. Mr Mailx starts up to join her and after a shrug and then a replacing of his precariously-set hat, Finnian goes east too."
+    move Finnian to SnowyPath01
+    move Mailx to SnowyPath01
+    move Captain to SnowyPath01
+    }
+    else {
+      "I am outside the HMCS Plagoo, although the ship is locked and the walkway up is closed. The other three members of my party have gone east."
+    }
+  }
+}
+
+room SnowyPath01 "Snowy Path"
+{
+  long_desc
+  {
+    if self is not visited
+    {
+      "\"... I'm just saying, have you ever tried to edit something on it? No? Oh, hey Ja'Rod,\" says Finnian.\n"
+      "\"Our plan is going to be this,\" says the Captain. \"There's a hot sauce bar up ahead. We ask around to find a doctor. Since
+      we also need to repair the ship, let's see if we can find a mine.\"\n"
+      "We all nod at this except for Mr Mail, who just keeps treading east with a low whir."
+    }
+  }
+}
+
+room SnowyPath02 "Snowy Path"
+{
+  long_desc
+  {
+    if self is not visited
+    {
+      "\"... bring her back something to drink is all I'm saying, they can't just have hot sauce. Maybe a bottle of scotch to anesthetize her wound. Hey robot,
+      does scotch kill the bacteria and germs around wounds?\"\n"
+      "\"No,\" says Mr Mailx.\n"
+      "\"What does he know, he spends his free time vandalizing encyclopedias,\" Fin says.\n"
+      "\"What do you think the word anesthetize means?\" asks the Captain, who is still walking. For the first time I understand what
+      Finnian has been trying to do lately, he's trying to \Bcheer her up.\b It isn't working, because he's a socially maladjusted moron,
+      but he's trying.\n"
+      "\"Ja'Rod,\" she says, \"Can you give me a scan of what is up ahead?\""
+    }
+    else {
+
+    }
+  }
+
+  xRayDescription {
+    "\"Giant spiders, tell Mr Mailx to take some selfies for the next batch of edits,\" I say, trying to keep the conversation going. \"No,
+    for real though, there is, sure enough, a bar not too far away and it's across from the entrance to an underground mine. I'm not getting
+    good readings on what sort of metals are down there, so I assume it's lead and something else.\""
+  }
 
 }
 
-room SnowyPath01
+room SnowyPath03 "Snowy Path"
 {
+  long_desc
+  {
+    if self is not visited
+    {
 
-}
+    }
+    else {
 
-room SnowyPath02
-{
-
-}
-
-room SnowyPath03
-{
-
+    }
+  }
 }
 
 room CenterOfTown
 {
+long_desc
+{
+  if self is not visited
+  {
 
+  }
+  else {
+
+  }
+}
 }
 
 room HotSauceBar
 {
+long_desc
+{
+  if self is not visited
+  {
 
+  }
+  else {
+
+  }
+}
 }
 
 room EntranceToMine
 {
+long_desc
+{
+  if self is not visited
+  {
 
+  }
+  else {
+
+  }
+}
 }
 
 room mine
 {
+long_desc
+{
+  if self is not visited
+  {
 
+  }
+  else {
+
+  }
+}
 }
