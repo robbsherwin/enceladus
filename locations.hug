@@ -393,7 +393,7 @@ room SnowyPath02 "Snowy Path"
   }
 
   xRayDescription {
-    "\"Giant spiders, tell Mr Mailx to take some selfies for the next batch of edits,\" I say, trying to keep the conversation going. \"No,
+    "\"I see giant spiders, tell Mr Mailx to take some selfies for the next batch of edits,\" I say, trying to keep the conversation going. \"No,
     for real though, there is, sure enough, a bar not too far away and it's across from the entrance to an underground mine. I'm not getting
     good readings on what sort of metals are down there, so I assume it's lead and something else.\""
   }
@@ -420,6 +420,7 @@ long_desc
 {
   if self is not visited
   {
+    "There is a small log cabin building to the south."
 
   }
   else {
