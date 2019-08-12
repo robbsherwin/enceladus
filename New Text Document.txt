@@ -61,7 +61,7 @@ daemon 2
   Captain tells Finnian to go land the ship.
 
 daemon 1
-Captain says they need some metal to repair the hull and a doctor for Shelley
+Captain says they need some metal to repair the hull and a doctor Milad Nahas for Alexandra
 (display graphic?)
 (scene cut, move player)
 

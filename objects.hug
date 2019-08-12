@@ -592,6 +592,18 @@ in Mine
 		}
 }
 
+object wheelbarrow "wheelbarrow"
+{
+nouns "wheelbarrow"
+article "the"
+in Mine
+
+	long_desc
+	{
+
+	}
+}
+
 object silverOre "silver ore"
 {
 nouns "ore" "silver"
@@ -634,4 +646,18 @@ article "the"
 	{
 
 	}
+}
+
+
+vehicle snowmobile "snowmobile"
+{
+nouns "snowmobile"
+
+article "the"
+
+
+		long_desc
+		{
+
+		}
 }
