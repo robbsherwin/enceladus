@@ -76,39 +76,72 @@ Location: Outside the ship
 >get knife from Bar
 >cut self
 (Dr. )
-* The doctor and Finnigan go to help Shelley and says there is a mine a little ways away
+* The doctor and Finnian go to help Alexandra and says there is a mine a little ways away
 
 Location: THE MINE
 * The Captain, Mr Mailx and Ja'Rod go into the mine
 * down
 * down (near the mine cart)
-* get the silver and aluminum
-(A thunder sound, and the way is blocked due to a cave in)
-(Can't use the star pistol due to another cave in)
-(Mr Mailx's lights provide the )
-(Captain sits down against the wall and just throws her head back with a sarcastic laugh.)
->talk to captain - "Captain ... why ... why do you always seem so sad?"
-(Her partner was the ship doctor. They were a team. She was so in love with him. They were lawful. One day,
-a pirate lands his fucking (only use of a curse word in the game) ship on top of him. Authorities did nothing. So she
-didn't care any more. She went into piracy herself. No, she never found the guy.)
+* get silver ore (it's shaped like a baseball)
+* cave in happens
+* (Captain sits down against the wall and just throws her head back with a sarcastic laugh.)
+* mailx, strip wheelbarrow break wheelbarrow, disassemble wheelbarrow, harvest wheelbarrow
+* talk to captain >talk to captain - "Captain ... why ... why do you always seem so sad?"
+* mailx, punch ice punch rocks
 
-* We buy giving Mr Mailx a command for later
-"I can punch through. You just have to tell me," says Mr Mailx.
->mailx, punch rocks >mailx, punch
+* get in the cart and we flash forward to the surface
 
+* They get a transmission from Finnian that the werewolf and McGrathley is back
 
-* Ja'Rod has the only star pistol and the cooldown is almost set
-* They get a transmission from Finnigan that the werewolf and McGrathley is back
-* The Captain steals a dune buggy, (callback to the beginning) Ja'Rod can ride Mr Mailx back to the ship
+* The Captain steals a snowmobile for them
+* The Captain has quietly taken the star pistol
+* get on snowmobile
+
 * They go back to the ship but are outside where the werewolf and McGrathley are
-* Ja'Rod can melt the silver on Mr Mailx's hand
-* Mailx, kill werewolf
-* The Captain punches McGrathley in the neck, stunning him
-* Ja'Rod can shoot McGrathley's steel boots, melting them and holding him in place
-* Finnigan brings the ship up and squashes McGrathley
-* (Pun about squashing the beef after all)
-* Go back inside. Shelley is okay. She drinks a half bottle of vodka and the game makes you hit wait 5 times.
-* The doctor says they're all insane and leaves. The crew is together. End of game.
+* throw silver at werewolf or hit werewolf with silver
+* McGrathley states that he is going to kill everyone on the shi--
+* Captain just shoots him with the star pistol
+  And then the Captain, my hero, she brandishes the star pistol, which I didn't even know she had grabbed from me,
+  and in a singular motion squeezes the trigger with a shot aimed directly at the middle of McGrathley's face. He
+  is bathed in a red glow that starts between the eyes and is disintegrated, ending up as a pile of ash that
+  gets dispersed as Finnian lowers the Boarding Ramp.
+
+* Finnian states that Alexandra is conscious and moved to the drinks deck.
+
+* enter the plagoo
+
+(taken to the drinks deck)
+
+
+
+* Go back inside. Alexandra is okay.
+* In the room description, please mention one empty chair, which is meant to be symbolic for Frobozz / Forburn not being with us.
+
+Finnian and the Captain have a glass of scotch. Milad has a ginger ale. Ja'Rod has a ginger ale and gin. Alexandra has an entire bottle
+of Sobieski. Mailx has a Dixie cup of engine oil.
+
+* The Captain raises her glass. "To family," she says, a genuine smile for the first time in ages.
+
+* drink, drink beverage, drink drink, drink gin
+
+I take a sip of my gin and ginger. The Captain consumes her scotch without fanfare, Finnian starts in on his with as much fanfare as humanly possible. Alexandra
+opens the cap slightly and with a flick of her finger sends it spinning clear across the room. She takes a long pull from bottle of vodka and
+Doctor Nahas looks at all of us, leaving his drink raised.
+
+Alexandra keeps drinking the vodka.
+
+Alexandra keeps drinking the vodka. The oil melts through the Dixie cup Mailx was holding, creating a mess. Doctor Nahas drinks his ginger ale out of
+polite awkwardness that Alexandra hasn't stopped yet.
+
+Alexandra keeps drinking.
+
+Alexandra finishes the bottle of vodka. "A girl really feels the lack of humidity out here on the Jovian moons," she says as Finnian's eyes light up
+and he gestures in laughter towards the Captain. I look around for something to clean the spill up with as I make myself another drink. We might be a
+million miles from where we meant to be and ten million miles from where we want to be but at least for the moment we're right where we belong. Together.
+
+
+She drinks a half bottle of vodka and the game makes you hit wait 5 times.
+* The doctor, Milad Nahas, says they're all insane. The crew is together. End of game.
 
 
 

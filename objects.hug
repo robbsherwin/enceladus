@@ -577,3 +577,61 @@ object mineKey "key"
 {
 
 }
+
+vehicle mineCart "mine cart"
+{
+nouns "cart"
+adjective "mine"
+article "the"
+
+in Mine
+
+		long_desc
+		{
+
+		}
+}
+
+object silverOre "silver ore"
+{
+nouns "ore" "silver"
+adjective "silver"
+article "the"
+
+in bottomOfMine
+
+	long_desc
+	{
+
+	}
+	before
+	{
+		object DoDrop
+		{
+			"I don't think dropping the ore is a good idea."
+		}
+		xobject DoThrow
+		{
+			select(object)
+			case(werewolf)
+			{
+
+			}
+			case else
+			{
+
+			}
+		}
+	}
+}
+
+object aluminum "aluminum"
+{
+nouns "aluminum"
+article "the"
+
+	long_desc
+	{
+
+	}
+}
