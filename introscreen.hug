@@ -6,15 +6,15 @@ routine NewMenu
 
 	cls
 
-!	PlayMusic("ENCEL01", "JESTER - Elysium", 80, false, true)
-	GrabFirstRandomSong()
+	PlayMusic("ENCEL01", "JESTER - Elysium", 80, true, true)
+	!GrabFirstRandomSong()
 
 
 	if (display.hasgraphics) and GRAPHICS_ON = TRUE {
 		picture "ENCEL01", "titlescreen01"
 	}
 
-	
+
 :IntroScreenMenu
 
 	pause
@@ -37,7 +37,7 @@ routine NewMenu
 
 
 !\
-	input 
+	input
 
 	select(word[1])
 	case "s", "S"
@@ -54,9 +54,9 @@ routine NewMenu
 	}
 	case else
 	{
-		!Starting a new game by default. 
+		!Starting a new game by default.
 	}
-\!	
+\!
 }
 
 
@@ -64,7 +64,7 @@ routine ChangeColorMenu()
 {
 local tempInput
 
-	cls 
+	cls
 
 	TEXTCOLOR = WHITE
 	BGCOLOR =  BLACK

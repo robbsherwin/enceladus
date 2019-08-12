@@ -313,10 +313,16 @@ article "the"
 
 	long_desc
 	{
-
+		"There was a wave of retro nostalgia that hit laser weapons about a decade ago. This pistol looks like a atom-for-atom
+		reconstruction of a French Navy pistol, with a curved walnut stock, brass fittings. Somewhere inside are the electronic
+		components allowing it to produce steel-melting laser beams."
 	}
 	before
 	{
+		object DoDrop
+		{
+			"I've been tasked with holding onto this, so I probably shouldn't just leave it around."
+		}
 		object DoShoot
 		{
 
@@ -326,6 +332,49 @@ article "the"
 			"I twirl the star pistol around my index finger like a cowboy! Haha, I'm a space cowboy!"
 		}
 	}
+}
+
+scenery airlock "airlock"
+{
+	nouns "airlock"
+	article "the"
+
+		long_desc
+		{
+			if greenButton not in location
+			{
+				"The airlock allows us to get things in and off the ship without exposing the entirety of the ship to the cold vacuum of space. Right
+				now there isn't anyone inside. The door to the outside is closed but the door closest to us is open. Mr Mailx and Alexandra are closest
+				to the airlock itself, with the werewolf and McGrathley near the control panel."
+			}
+			else {
+				if greenButton is not special
+				{
+					"The transparent wall of the airlock, the one closest to me, is down. " ;
+				}
+				else {
+					"The transparent wall of the airlock, the one closest to me, is up. " ;
+				}
+
+				if redButton is not special
+				{
+					"The door to the outside is closed. " ;
+
+				}
+				else {
+					"The door to the outside is closed. " ;
+				}
+
+				if alexandraInAirlock = true
+				{
+					"Alexandra is inside the airlock right now, which is good - we want her in there so we can control the temperature of that space and keep
+					her warm without having to move her too much."
+				}
+				else {
+					""
+				}
+			}
+		}
 }
 
 scenery airlockHull "hull"
@@ -404,16 +453,14 @@ is not special
 	{
 		object DoPush
 		{
-			GameEvents[16] = 0
-
 			if self is not special
 			{
 				self is special
 				"The first door to the airlock is now open."
 
-				if GameEvents[14] = 0
+				if alexandraInAirlock = false
 				{
-					GameEvents[14] = 1
+					alexandraInAirlock = true
 					{
 						"\nAlexandra, still very much holding what I think is her lower intestine, crawls over inside the airlock."
 					}
@@ -423,7 +470,7 @@ is not special
 				self is not special
 				"The first door to the airlock is now closed."
 
-				if GameEvents[14] = 1 !// Meaning, if Alexandra is in the airlock
+				if alexandraInAirlock = true
 				{
 					"\nAlexandra nods at me."
 				}
@@ -438,7 +485,7 @@ nouns "button" "red"
 adjective "red"
 article "the"
 ! Not going to have them in the airlock initially, since Ja'Rod can't get to them
-is special !// Going to make it open for starters
+is special !// Going to make it open for starters and special means OPEN
 
 	long_desc
 	{
@@ -468,6 +515,7 @@ is special !// Going to make it open for starters
 
 					if greenButton is not special
 					{
+					  GameEvents[15] = 0
 						"She mouths something that I can't hear because the first door is closed.\n"
 						"\"She. Is. Saying. Close. The. Outside. Door. Dummy,\" offers Mailx."
 
@@ -483,4 +531,49 @@ is special !// Going to make it open for starters
 			}
 		}
 	}
+}
+
+object knife "knife"
+{
+	nouns "knife"
+	article "the"
+	in HotSauceBar
+
+	long_desc
+	{
+
+	}
+	before
+	{
+		xobject DoCut
+		{
+			select(object)
+			case player
+			{
+				"I slice, erm. I don't know what it's called. It's near my thumb but not the thumb precisely.
+				Maybe the fleshy part of the thumb? The meaty part of the thumb? The base of the thumb? The heel of
+				the thumb? The butt of the thumb? The pulpy part of the thumb? The muscley part of the thumb?\n"
+
+				"I guess the ball of the thumb, anyway, I slice a three inch gash on my left hand. Blood gushes out
+				and because there's ice all over the floor and on every single surface on this moon it starts to bounce,
+				like it does on hockey rinks.\n"
+
+				"\"Hey!\" screams someone from the back, \"What are you doing?\"\n"
+
+				"\"I've cut myself!\" I say convincingly. \"Ow!\""
+
+				Activate(Doctor_Arrives)
+
+			}
+			case else
+			{
+
+			}
+ 		}
+	}
+}
+
+object mineKey "key"
+{
+
 }

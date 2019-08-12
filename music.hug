@@ -10,8 +10,8 @@ TempTimeArray[4] = GetSystemTimeValue(TIME_SECONDS)
 
 
 
-! If we go to a different month, day or hour, play a new song. 
-if ((LastTimeArray[0] ~= TempTimeArray[0]) or (LastTimeArray[1] ~= TempTimeArray[1]) or (LastTimeArray[2] ~= TempTimeArray[2]))  
+! If we go to a different month, day or hour, play a new song.
+if ((LastTimeArray[0] ~= TempTimeArray[0]) or (LastTimeArray[1] ~= TempTimeArray[1]) or (LastTimeArray[2] ~= TempTimeArray[2]))
 {
 	PlayNewSong()
 
@@ -57,7 +57,7 @@ local x
 
 	! x = random(MAXSONGS)
 	! x--
-	! I'd like Elysium to play every time the game starts. 
+	! I'd like Elysium to play every time the game starts.
 	x = 1
 
 	PlayMusic("ENCEL01", MusicArray[x], music_volume, false, true)
@@ -153,7 +153,7 @@ print number LastTimeAsNumber
 
 ""
 
-"Current Song Length is "; 
+"Current Song Length is ";
 print number MusicArrayTime[LastSongPlayed]
 
 ""
@@ -164,6 +164,7 @@ print number nextSongTime
 
 }
 
+! "Yomaru Kasuga - Blue Danube" is not a random song.
 
 routine InitializeMusic()
 {

@@ -89,18 +89,7 @@ routine DoTwirl
 
 routine StartPlanetFallScene
 {
-	move player to OutsideTheShip
-	move Captain to OutsideTheShip
-	move Finnian to OutsideTheShip
-	move Mailx to OutsideTheShip
-
-	if self is not visited
-	{
-
-	}
-	else {
-	
-	}
+	MovePlayer(OutsideTheShip)
 }
 
 routine Version()

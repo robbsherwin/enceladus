@@ -177,8 +177,15 @@ talkValue 0
 		a right and left speaker are mounted to the topmost computer. The speakers each have a dull green power LED that aren't eyes, but look like
 		they are. He has tank-like tread on each side to offer locomotion, which is fine, but his arms and hands go weird into the uncanny valley
 		a bit: they are made up of protruding pieces of PVC pipe with red, green, yellow and white wires all around them and inside. His hands are
-		spindly, ethereal - each a Raspberry Pi board with three fingers and a thumb soldered into the board's breadboard pins. He is not an attractive
-		robot."
+		spindly, ethereal - each a Raspberry Pi board with three fingers and a thumb soldered into the board's breadboard pins. " ;
+
+		if mailxIsPulled = false
+		{
+			"His fingers are extended out like the wisps of a scarecrow while he is stuck plugging the hole in the Plagoo. " ;
+
+		}
+		
+		"He is not an attractive robot."
 	}
 	before {
 		object DoPull
@@ -194,7 +201,9 @@ talkValue 0
 					"\"Will. Run. Diagnostic.\" he says. I nod. \"Alexandra, we gotta get you over to the airlock, okay? It's going to get really cold in a bit
 					with that giant hole in the hull, but in the airlock we can at least control the temperature there.\"\n"
 					"She doesn't say anything but grimaces a nod to let me know she understood. She's holding her hand against her spleen. Or her liver? Her kidneys
-					maybe. I can't tell how bruised she is, but it's enough to keep her laying on the floor.\n"
+					maybe. I can't tell how bruised she is, but it's enough to keep her laying on the floor."
+
+					mailxIsPulled = true
 				}
 				else {
 					"That wouldn't do anything."
@@ -215,7 +224,6 @@ talkValue 0
 		}
 	}
 }
-
 
 npc werewolf "werewolf"
 {

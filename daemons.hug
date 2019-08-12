@@ -241,6 +241,8 @@ event in Finnian_Lands_Ship
 	}
 	case 4
 	{
+		PlayMusic("ENCEL01", "Yomaru Kasuga - Blue Danube", 60, false, true)
+
 		"\nFinnian sets the Plagoo down on Enceladus. A rather smooth landing, considering the hull breach that is plugged by the robot.\n"
 		"\"Ja'Rod, can you please pull Mr Mailx out of the hole in the ship and get Alexandra to the airlock, where it will be warm? Finnian
 		and I will meet you outside where we can discuss the plan thereafter.\" I nod. The Captain seems to be all business, Finnian's
@@ -288,19 +290,56 @@ event in Airlock_Checker
 	select(self.timer)
 	case 1
 	{
-			if greenButton is not special and redButton is not special and GameEvents[14] = 1 and GameEvents[16] = 0
+			if greenButton is not special and redButton is not special
 			{
-				GameEvents[15] = 1
-				GameEvents[16] = 1 !// Used only for printing this message.
-				"\nOkay, Alexandra is in the airlock and both doors are shut. I can head back to the Bridge with Mailx now."
-			}
-			else {
-
-				if GameEvents[15] = 1
+				if alexandraInAirlock = true
 				{
-					GameEvents[15] = 0
-					"Whoops, I need to have both airlock doors shut using the green and red button with Alexandra inside."
+					if mailxIsPulled = true
+					{
+						GameEvents[14] = 1
+						if location = BeforeTheAirlock
+						{
+							"\nOkay, Alexandra is in the airlock and both doors are shut. I can head back to the Bridge with Mailx now."
+						}
+					}
+					else {
+					  GameEvents[14] = 0
+
+						if location = BeforeTheAirlock
+						{
+							"\nOkay, Alexandra is in the airlock and both doors are shut, I just need to free Mailx."
+						}
+					}
+				}
+				else {
+				  GameEvents[14] = 0
+					"I need to have both airlock doors shut with Alexandra inside."
 				}
 			}
+			else {
+ 					"\n(I need to have both airlock doors shut using the green and red button with Alexandra inside.)"
+				}
+		}
+}
+
+daemon Doctor_Arrives
+{
+timer 0
+}
+
+event in Doctor_Arrives
+{
+	self.timer++
+	select(self.timer)
+	case 2
+	{
+
+	}
+	case 3
+	{
+		!// Bartender complains that there is blood on the floor
+		!// Captain offers to get more hot sauce that is kept in the mine
+		!// Given the key to the mine
+
 	}
 }
