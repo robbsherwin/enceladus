@@ -622,7 +622,7 @@ in bottomOfMine
 		{
 			"I don't think dropping the ore is a good idea."
 		}
-		xobject DoThrow
+		xobject DoThrowAt
 		{
 			select(object)
 			case(werewolf)

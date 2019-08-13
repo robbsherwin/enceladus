@@ -26,6 +26,15 @@ routine DoAbout()
 	"For Frobozz."
 }
 
+routine DoCredits()
+{
+	"Enceladus was written and programmed by Robb Sherwin."
+	"Roodylib is created and maintained by Jon Blask."
+	"Testing by Jizaboz."
+	"The Hugor Interpreter is created and maintained by Nikos Chantziaras"
+	"The Hugo Programming language is by Kent Tessman."
+}
+
 routine DoExits
 {
 	YouCanGo()
@@ -92,7 +101,7 @@ routine StartPlanetFallScene
 	MovePlayer(OutsideTheShip)
 }
 
-routine Version()
+routine VersionOfGame()
 {
 	print "\BEnceladus\b"
 	print "Interactive Fiction"

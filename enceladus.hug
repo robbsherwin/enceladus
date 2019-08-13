@@ -15,6 +15,7 @@
 
 ! Uncomment the following to include verb stub routines:
 #set VERBSTUBS
+#set USE_VEHICLES
 
 #ifset DEBUG
 #switches -d
@@ -52,8 +53,10 @@ verb "shoot"
   * DoVague
   * object DoShoot
 
+#include "roodylib.g"
 #include "verblib.g"			! grammar must come first
 #include "hugolib.h"
+#include "roodylib.h"
 #include "system.h"
 #include "window.h"
 #include "resource.h"
@@ -294,7 +297,7 @@ extra_scenery "wall" "walls"
 			"\"Who are you?' she says. \"And where are my pants??\"\n"
 			"Ah, cripes!\n"
 
-			Version()
+			VersionOfGame()
 
 			"I'm in the Captain's Quarters of the HMCS Plagoo. She has the biggest room not because
 			it's her ship, but because we all figured out pretty early that she would be the only one
