@@ -79,6 +79,9 @@ global current_resource
 global old_screenwidth
 property graphic
 
+global testValue = 0 !// Just used when we need a spare use-once variable
+global mistingValue = 30
+
 global	music_volume = 80
 
 array temparray[10] = 0,0,0,0,0,0,0,0,0,0
@@ -105,12 +108,15 @@ array GameEvents[MAXGAMEEVENTS]
 ! GameEvents[13] = Has Mailx been pulled out of the hole in the hull? - also use a flag, mailxIsPulled which is set to false initially
 ! GameEvents[14] = Can we leave BeforeTheAirlock and go back towards the Bridge, in other words, is alexandraInAirlock = true and is mailxIsPulled = true?
 ! GameEvents[15] = Did Ja'Rod cut himself?
+! GameEvents[16] = Has Ja'Rod done a scan on the SnowyPath02?
 
 global alexandraInAirlock = false
 global mailxIsPulled = false
 
 routine init
 {
+  FORMAT = FORMAT | DESCFORM_F | NOINDENT_F
+
 	InitializeMusic()
 
 	display.title_caption = "ENCELADUS by Robb Sherwin"
@@ -150,7 +156,7 @@ routine init
 
 	Activate(CaptainIdle)
 
-  MovePlayer(Hallway03)
+  MovePlayer(OutsideTheShip)
 
 	old_screenwidth = display.screenwidth
 

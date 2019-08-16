@@ -343,3 +343,32 @@ event in Doctor_Arrives
 
 	}
 }
+
+daemon Water_Mists
+{
+timer 0
+
+}
+
+event in Water_Mists
+{
+	select(self.timer)
+	case 0
+	{
+		if location = SnowyPath02
+		{
+			testValue = random(100)
+			if testValue < mistingValue !// Initially 30
+			{
+				!// We don't want to have this happen too often, so initially 30 and then 4
+				mistingValue = 4
+				
+				"\nIn the distance, just before the horizon, a beautiful jet of water bursts from a warm fracture in the crust of Enceladus. The gaseous plume fizzles
+				into outer space."
+			}
+		}
+	}
+	else {
+		Deactivate(Water_Mists)
+	}
+}

@@ -420,11 +420,20 @@ room SnowyPath02 "Snowy Path"
       "\"No,\" says Mr Mailx.\n"
       "\"What does he know, he spends his free time vandalizing encyclopedias,\" Fin says.\n"
       "\"What do you think the word anesthetize means?\" asks the Captain, who is still walking. For the first time I understand what
-      Finnian has been trying to do lately, he's trying to \Bcheer her up.\b It isn't working, because he's a socially maladjusted moron,
+      Finnian has been trying to do lately, he's trying to \Bcheer her up.\b It isn't working, because he's a socially maladjusted narcissist,
       but he's trying.\n"
       "\"Ja'Rod,\" she says, \"Can you give me a scan of what is up ahead?\""
+
+      Activate(Water_Mists)
     }
     else {
+
+      "Where we happen to be on Enceladus is a place on the moon that is on the opposite side of Saturn. I have heard it's a bit overwhelming when
+      you're on the other side of the moon and Saturn is there looking at you like a giant angry god. The way Enceladus moves in its orbit, we
+      won't ever get that view which is bad from a life experience standpoint but better from an anxiety-inducing one, I think.\n"
+
+      "The ground is pure ice, it isn't clear to me if humans or machines have ever truly walked on this particular part of the moon ever.
+      Very slippery."
 
     }
   }
@@ -433,6 +442,17 @@ room SnowyPath02 "Snowy Path"
     "\"I see giant spiders, tell Mr Mailx to take some on location shots for the next batch of edits,\" I say, trying to keep the conversation going. \"No,
     for real though, there is, sure enough, a bar not too far away and it's across from the entrance to an underground mine. I'm not getting
     good readings on what sort of metals are down there, so I assume it's lead and something else.\""
+  }
+
+  e_to {
+    if GameEvents[16] = 0
+    {
+      "I need to do a scan first, as requested by the Captain."
+
+    }
+    else {
+      return SnowyPath03
+    }
   }
 
 }
