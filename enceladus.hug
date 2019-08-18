@@ -109,6 +109,7 @@ array GameEvents[MAXGAMEEVENTS]
 ! GameEvents[14] = Can we leave BeforeTheAirlock and go back towards the Bridge, in other words, is alexandraInAirlock = true and is mailxIsPulled = true?
 ! GameEvents[15] = Did Ja'Rod cut himself?
 ! GameEvents[16] = Has Ja'Rod done a scan on the SnowyPath02?
+! GameEvents[17] = Has Ja'Rod initially sat on the stool? 
 
 global alexandraInAirlock = false
 global mailxIsPulled = false
@@ -156,7 +157,7 @@ routine init
 
 	Activate(CaptainIdle)
 
-  MovePlayer(OutsideTheShip)
+  MovePlayer(HotSauceBar)
 
 	old_screenwidth = display.screenwidth
 

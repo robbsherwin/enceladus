@@ -533,6 +533,42 @@ is special !// Going to make it open for starters and special means OPEN
 	}
 }
 
+object barStool "bar stool"
+{
+	noun "stool"
+	adjective "bar"
+	article "the"
+	is hidden
+	in HotSauceBar
+
+	long_desc
+	{
+		if GameEvents[17] = 1
+		{
+			"It's a little tall. Look, I'm above average in height. Okay? And this thing is just making a production of the fact that my feet don't touch the floor and the Captain's don't. Review: negative!!"
+		}
+		else {
+			"Thing's a bit tall, isn't it? Look, I'm above average in height. Depending on the source. Okay? And this thing is menacing over me like Carbonite Han in Jabba's Palace. I'd best check it for strings."
+		}
+	}
+	before
+	{
+		object DoSit
+		{
+			"I take a seat on the bar stool." ;
+
+			if GameEvents[17] = 0
+			{
+				GameEvents[17] = 1
+				" The Captain joins me to my left.\n"
+				"The bartender is a late-twenties Asian gal, I'd place her right in the middle of Los Angeles, California with her horn-rimmed glasses and all business body language.\n"
+				"\"Right, fancy a mite o Frank's eh come noe lurves?\"\n"
+				"(Nailed it, deep southeast L.A. near Baker, I think.)"
+			}
+		}
+	}
+}
+
 object knife "knife"
 {
 	nouns "knife"
@@ -541,10 +577,22 @@ object knife "knife"
 
 	long_desc
 	{
-
+		"It's inexplicably a cheap steak knife that is being used to slice up lemons and limes here. I suspect its main use, however, is in
+		cutting the plastic wrap off hot sauce bottles."
 	}
 	before
 	{
+		object DoGet
+		{
+			if GameEvents[17] = 0
+			{
+				"I should sit on the stool and get closer to the bar first."
+			}
+			else {
+				"Taken."
+				move knife to player
+			}
+		}
 		xobject DoCut
 		{
 			select(object)
@@ -570,6 +618,47 @@ object knife "knife"
 
 			}
  		}
+	}
+}
+
+object blairsUltraDeath "Blair's Ultra Death"
+{
+	nouns "ultra" "death"
+	adjective "blair" "blair's"
+	article "the"
+	in HotSauceBar
+	long_desc
+	{
+
+	}
+	before
+	{
+		object DoDrink
+		{
+			if GameEvents[17] = 0
+			{
+				"I should sit down first."
+			}
+			else {
+				"I take the Blair's Sauce and turn 180 degrees on the bar stool. I unwrap it and drink the entire thing in one quick slurp.\n"
+				"This was a terrible idea, probably the worst idea I've ever had.\n"
+				"My eyes start to water, my x-ray specs inexplicably start scanning even though they are on top of my head and I start coughing and hiccuping. This is poison, there
+				was a mixup or something, there is no way anyone could have ever put this into a bottle intentionally. It burns, it's burning through my face!\n"
+				"\"Aye pal, one milk then, innit, won ye done wit pure greeting,\" asks(?) the bartender.\n"
+				"I can't respond. I'm hunched over dying. This is it, I'm $%^&ing dying. Even the Captain has gone from an arched eyebrow to actual concern.\n"
+				"A man emerges from the far booth. \"What did this flailing cretin do?\" he asks. I assume I am hallucinating, but he has a white lab coat and a stethescope. So great, while
+				this sauce is killing me I ended up finding a doctor either in full Enceladus City Comic Con Cosplay or a porn.\n"
+				"\"He ingested a little too much of the hot sauce,\" says the Captain. She puts her hand on my forehead. At first I think she's trying to take my temperature and I feel
+				like that was really motherly of her, but then I realize she was just trying to turn my specs off so I don't irradiate every living bit of tissue in the bar.\n"
+				"[Strike any key to continue]\n"
+				pause
+				"The doctor rips the two liters of milk that the bartender produced out of her hands and splashes me in the face with it. He forces me to drink about a quarter of the jug.
+				It's not really helping anything past my throat, but I think I'm not dying any more.\n"
+				"\"Thanks, Doc,\" I try to say, but what comes out it something more akin to, 'Quaalude Farsase.'"
+
+				Activate(JaRod_Hallucinates)
+			}
+		}
 	}
 }
 

@@ -362,7 +362,7 @@ event in Water_Mists
 			{
 				!// We don't want to have this happen too often, so initially 30 and then 4
 				mistingValue = 4
-				
+
 				"\nIn the distance, just before the horizon, a beautiful jet of water bursts from a warm fracture in the crust of Enceladus. The gaseous plume fizzles
 				into outer space."
 			}
@@ -370,5 +370,24 @@ event in Water_Mists
 	}
 	else {
 		Deactivate(Water_Mists)
+	}
+}
+
+daemon JaRod_Hallucinates
+{
+timer 0
+}
+
+event in JaRod_Hallucinates
+{
+	self.timer++
+	select(self.timer)
+	case 2
+	{
+
+	}
+	case 3
+	{
+
 	}
 }

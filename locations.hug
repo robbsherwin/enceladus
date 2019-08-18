@@ -395,13 +395,16 @@ room SnowyPath01 "Snowy Path"
   {
     if self is not visited
     {
+      move Finnian to SnowyPath02
+      move Mailx to SnowyPath02
+      move Captain to SnowyPath02
       "\"... I'm just saying, have you ever tried to edit something on it? No? Oh, hey Ja'Rod,\" says Finnian.\n"
       "\"Our plan is going to be this,\" says the Captain. \"There's a hot sauce bar up ahead. We ask around to find a doctor. Since
       we also need to repair the ship, let's see if we can find a mine.\"\n"
       "We all nod at this except for Mr Mail, who just keeps treading east with a low whir."
     }
     else {
-      "We are within a long, flat crater on the moon Enceladus."
+      "I am on a snowy path towards civilization on the moon Enceladus."
     }
   }
 
@@ -434,21 +437,28 @@ room SnowyPath02 "Snowy Path"
 
       "The ground is pure ice, it isn't clear to me if humans or machines have ever truly walked on this particular part of the moon ever.
       Very slippery."
-
     }
   }
 
   xRayDescription {
-    "\"I see giant spiders, tell Mr Mailx to take some on location shots for the next batch of edits,\" I say, trying to keep the conversation going. \"No,
-    for real though, there is, sure enough, a bar not too far away and it's across from the entrance to an underground mine. I'm not getting
-    good readings on what sort of metals are down there, so I assume it's lead and something else.\""
+
+    if GameEvents[16] = 0
+    {
+      "\"I see giant spiders, tell Mr Mailx to take some on location shots for the next batch of edits,\" I say, trying to keep the conversation going. \"No,
+      for real though, there is, sure enough, a bar not too far away and it's across from the entrance to an underground mine. I'm not getting
+      good readings on what sort of metals are down there, so I assume it's lead and something else.\""
+
+      GameEvents[16] = 1
+    }
+    else {
+      "Up ahead is a bar and across the street from it is an underground mine."
+    }
   }
 
   e_to {
     if GameEvents[16] = 0
     {
       "I need to do a scan first, as requested by the Captain."
-
     }
     else {
       return SnowyPath03
@@ -463,40 +473,88 @@ room SnowyPath03 "Snowy Path"
   {
     if self is not visited
     {
+      move Finnian to location
+      move Captain to location
+      move Mailx to location
+
+      "\"Okay, so we need a doctor to come back to the ship,\" says Finnian. \"D'ya think they'll just come because Alexandra is hurt? That would make it sort of a house call, wouldn't it? I don't know
+      if doctors on this moon do house calls.\"\n"
+      "\"I don't think we should bring up payment until whoever we find does, \" says the Captain. \"And if they do, let's let them throw out a number first.\"\n"
+      "\"Ah-ha!\" exclains Finnian. \"So good to be on the other side of your negotiations for a chance. I see how it goes now. This mystery doc will be lucky to have an eighth share.\"\n"
+      "\"None of you are at an eighth of a share,\" replies the Captain.\n"
+      "\"The robot is. Hey robot, you getting an eighth of a share?\"\n"
+      "\"No,\" says Mr Mailx.\n"
+      "\"There ya go. Too bad you look like three poorly stacked Commodores. If the type of machine you were was a Rug Doctor the Captain might have paid you for this.\" Finnian waves his hands. \"All
+      of this.\"\n"
+
+      "I see now that we landed in just an enormous flat crater -- the crater's edge is just beyond this little section of town. I still have no idea where anyone around here lives. I'm hoping their
+      homes are out of the crater and they all get around by jetpack. (There is what appears to be an abandoned snowmobile close by with tracks leading to the bar, so maybe it's just that.)"
 
     }
     else {
-
+      "I'm inside the far edge of a crater here on Enceladus. The crater's walls are visible now, maybe no more than another kilometer. The whole moon is only a quarter the size of Ethiopia, where
+      I grew up. A disused snowmobile lies a bit away, and up ahead, to the east, is the hot sauce bar and the entrance to a mine."
     }
   }
+
+  e_to CenterOfTown
+  w_to SnowyPath02
 }
 
-room CenterOfTown
+room CenterOfTown "Center of Town"
 {
-long_desc
-{
-  if self is not visited
+  long_desc
   {
-    "There is a small log cabin building to the south."
-  }
-  else {
-
-    if GameEvents[15] = 1 !// Did Ja'Rod cut himself?
+    if self is not visited
     {
-      !// This means we have sent the doctor and Finnian off.
+      move Finnian to location
+      move Captain to location
+      move Mailx to location
 
+      "There is a large log cabin to the south. Pretty rustic. Trees don't exactly grow here, so the fact that it exists at all means that someone really wanted to have an earthly experience. To the north
+      is a cave, my scan indicated that people can descend downwards.\n"
+
+      "\"I can do the talking once we g-- \" starts Finnian.\n"
+      "\"I'll do the talking,\" interrupts the Captain.\n"
+      "\"I'll try the milder hot sauces,\" I add, helpfully."
     }
+    else {
 
+      if GameEvents[15] = 1 !// Did Ja'Rod cut himself?
+      {
+        !// This means we have sent the doctor and Finnian off.
+      }
+    }
   }
-}
+
+s_to HotSauceBar
+w_to SnowyPath03
+
 }
 
-room HotSauceBar
+room HotSauceBar "Hot Sauce Bar"
 {
 long_desc
 {
   if self is not visited
   {
+    move Captain to location
+
+    "The four of us enter the bar and we're greeted by a doorman. He is suited up in a caribou skin and fur coat. I don't think it was made for him as he's sitting on a stool and the thing
+    falls all over the floor of the bar like a wedding dress.\n"
+    "\"You can't bring that thing in here,\" says the bouncer, but he is pointing to Finnian. Mr Mailx turns his entire body to face Finnian, which is the creepiest thing ever because
+    of how long it takes him to do that on tread.\n"
+    "\"That's my navigator,\" says the Captain.\n"
+    "\"There's one room and a bathroom in here, you'll be able make your way around just fine,\" says the bouncer. \"Get that cap out of here before I throw you all out myself.\"\n"
+    "\"Oh, it's the cap?\" asks Finnian. \"This thing is the height of fashion far back around the outer moons of Saturn.\" The Captain rolls her eyes.\n"
+    "\"This is a moon of Saturn, dummy,\" says the bouncer.\n"
+    "Finnian looks genuinely surprised at that revelation. \"Huh,\" he says. \"Come on, robot,\" he says to Mr Mailx. The two of them leave, to presumably wait outside or try to find a print
+    encyclopedia to assert the correctness of the bouncer's claim.\n"
+
+    "Now that we're inside, this looks just like any other bar in the solar system, except colder and with a scent of chile peppers instead of old hops. There are a series of booths around the
+    walls with the bar itself a square right in the middle. I'd say there's probably thirty or forty men, women and robots in here.\n"
+
+    "The Captain points to a couple empty stools near the plastic bin of lemons and limes. \"Shall we?\" she asks."
 
   }
   else {
