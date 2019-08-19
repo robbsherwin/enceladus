@@ -384,10 +384,31 @@ event in JaRod_Hallucinates
 	select(self.timer)
 	case 2
 	{
+		GameEvents[18] = 1
+		"\nOh god, god, the second wave is hitting me, I didn't realize there would be a second wave. This is awful, this cannot be how this -- I spastically throw my hands around and start bicycling while in
+		the fetal position on the floor -- "
 
 	}
 	case 3
 	{
 
+	}
+	case 4
+	{
+		GameEvents[18] = 0
+
+		"\nI think I'm okay ... for now. I stand. I take a quick glance around the bar to see if anyone has ordered wings, if that's a thing here. I pull on the bottom of my T-shirt to show everyone
+		I'm back and all business again. I'm not sure if that point has been made.\n"
+		"\"I'm all business, Captain,\" I say, eliminating all doubt.\n"
+		"\"You're telling me she almost went through an airlock?\" asks the doctor. The Captain nods her head, one professional to another. The doctor sees that I am standing.\n"
+		"\"Ja'Rod,\" he says. \"My name is Doctor Milad Nahas.\" He is speaking really slow in perfect Americanized English, which he doesn't really need to do. \"You ingested too
+		much hot sauce, okay? I'm going to ask you some questions to see if we need to stay here or not. Can you tell me your favorite game?\"\n"
+		"\"Yes, it's Mouse Trap,\" I say.\n"
+		"The doctor gives a concern look to the Captain. He looks back to me. \"Okay, Ja'Rod,\" he says, speaking even more slowly. \"I'm afraid you may be currently suffering from temporary
+		yet severe mental retardation -- \"\n"
+		"\"It's all we have on the ship!\" exclaims the Captain. \"He's fine, he's no different than any other member of my crew. Look, I have no idea what the criminal that was on my ship
+		did to my life support tech, but as far as I know she's dying in -- \" I mime like I am shivering to try to guide the Captain through her speech -- \"Dying in my airlock that was
+		disintegrated open. We absolutely need your help.\"\n"
+		"Doctor Nahas stuffs his stethoscope into a pocket. \"Take me there immediately, please ma'am.\""
 	}
 }

@@ -1,7 +1,7 @@
 !\---------------------------------------------------------------------------
 
-        ENCELADUS
-        by Robb Sherwin
+  ENCELADUS
+  by Robb Sherwin
 	Started: 10/16/2011
 	Re-started: 6/27/2019
 
@@ -16,6 +16,7 @@
 ! Uncomment the following to include verb stub routines:
 #set VERBSTUBS
 #set USE_VEHICLES
+#set NEW_DESCRIBEPLACE
 
 #ifset DEBUG
 #switches -d
@@ -109,7 +110,8 @@ array GameEvents[MAXGAMEEVENTS]
 ! GameEvents[14] = Can we leave BeforeTheAirlock and go back towards the Bridge, in other words, is alexandraInAirlock = true and is mailxIsPulled = true?
 ! GameEvents[15] = Did Ja'Rod cut himself?
 ! GameEvents[16] = Has Ja'Rod done a scan on the SnowyPath02?
-! GameEvents[17] = Has Ja'Rod initially sat on the stool? 
+! GameEvents[17] = Has Ja'Rod initially sat on the stool?
+! GameEvents[18] = Is Ja'Rod incapacitated via hot sauce?
 
 global alexandraInAirlock = false
 global mailxIsPulled = false
@@ -158,6 +160,7 @@ routine init
 	Activate(CaptainIdle)
 
   MovePlayer(HotSauceBar)
+  !MovePlayer(TheCaptainsQuarters)
 
 	old_screenwidth = display.screenwidth
 
@@ -279,16 +282,16 @@ conscious
 
 player_character JaRod "I"
 {
-pronoun "I" "me" "my" "myself"
+pronoun "me" "my" "myself"
 nouns "jarod" "me" "self" "ja'rod" "butler"
 adjectives "ja'rod" "jarod"
 
 	long_desc
 	{
-		![xxx]
+		"I am a twenty-three Ethiopian male, I am 5'9\" tall and I weigh 115 pounds. I have black hair and brown eyes. I am wearing a white T-shirt, blue denim jeans and black Doc Martins for shoes. My
+    hair is buzzed pretty tightly against my head and I am clean-shaven."
 	}
 }
-
 
 room TheCaptainsQuarters "The Captain's Quarters, on the HMCS Plagoo"
 {

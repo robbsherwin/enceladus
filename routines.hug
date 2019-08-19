@@ -19,9 +19,9 @@ routine DoInitialGameRoutines
 routine DoAbout()
 {
 	"Enceladus by Robb Sherwin."
-	"Originally submitted for the 2019 Interactive Fiction Competition. I've missed this."
+	"Originally submitted for the 2019 Interactive Fiction Competition."
 	"You can talk to people just by using the >talk command, it's context sensitive. You can see current exits for the room you're in by doing >exits"
-	"Try >version for info about this release."
+	"Try >version for info about this release. and >credits for game credits."
 	"Please use the Hugor interpreter for Windows, Mac and Linux: http://ifwiki.org/index.php/Hugor"
 	"For Frobozz."
 }
@@ -31,8 +31,10 @@ routine DoCredits()
 	"Enceladus was written and programmed by Robb Sherwin."
 	"Roodylib is created and maintained by Jon Blask."
 	"Testing by Jizaboz."
-	"The Hugor Interpreter is created and maintained by Nikos Chantziaras"
 	"The Hugo Programming language is by Kent Tessman."
+	"The Hugor Interpreter is created and maintained by Nikos Chantziaras"
+	"Thanks to RetroRomper and Jon Blask.\n"
+	"My other games can be downloaded at my website at https://www.joltcountry.com/games and my graphical text adventure Cryptozookeeper can be purchased on Steam."
 }
 
 routine DoExits
@@ -107,7 +109,8 @@ routine VersionOfGame()
 	print "Interactive Fiction"
 	print "Copyright (c) 2019. Written and programmed by Robb Sherwin"
 	print "Release 1.00 / Serial number 190123 / Hugo 3.1"
-	print ""
+	print "Please type >about for specific information and >credits for credits."
+	""
 }
 
 replace DoWakeCharacter

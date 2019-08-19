@@ -1,5 +1,5 @@
 !locations.hug
-room Hallway02
+room Hallway02 "Hallway Module"
 {
   long_desc
   {
@@ -35,6 +35,16 @@ room Hallway02
       }
 
     }
+  }
+
+  xrayDescription {
+    if Captain in location
+    {
+      "\"There's nothing out of the ordinary to report for the next room ahead, Captain - no werewolf, nothing particular crazy.\""
+    }
+    else {
+      "Nothing to report here."
+    }    
   }
 e_to HallwayDoor
 w_to Hallway03
