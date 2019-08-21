@@ -44,7 +44,7 @@ room Hallway02 "Hallway Module"
     }
     else {
       "Nothing to report here."
-    }    
+    }
   }
 e_to HallwayDoor
 w_to Hallway03
@@ -530,15 +530,25 @@ room CenterOfTown "Center of Town"
     }
     else {
 
-      if GameEvents[15] = 1 !// Did Ja'Rod cut himself?
+      if GameEvents[15] = 1 !// Did Ja'Rod cut himself or otherwise find the doctor?
       {
         !// This means we have sent the doctor and Finnian off.
+        !// We need to have the Captain tell Finnian and N
       }
     }
   }
 
 s_to HotSauceBar
 w_to SnowyPath03
+n_to {
+  if GameEvents[15] = 0
+  {
+    "I can't go that way just yet. Valid exits are to the south and west."
+  }
+  else {
+    return EntranceToMine
+  }
+}
 
 }
 
@@ -571,6 +581,16 @@ long_desc
 
   }
 }
+
+n_to {
+  if GameEvents[19] = 0
+  {
+    "I can't leave yet, I have to help find a doctor."
+  }
+  else {
+    return CenterOfTown
+  }
+}
 }
 
 room EntranceToMine
@@ -579,6 +599,7 @@ long_desc
 {
   if self is not visited
   {
+  !// Need to mention how the Captain got the key and why she gave it to Ja'Rod
 
   }
   else {

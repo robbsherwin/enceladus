@@ -112,6 +112,7 @@ array GameEvents[MAXGAMEEVENTS]
 ! GameEvents[16] = Has Ja'Rod done a scan on the SnowyPath02?
 ! GameEvents[17] = Has Ja'Rod initially sat on the stool?
 ! GameEvents[18] = Is Ja'Rod incapacitated via hot sauce?
+! GameEvents[19] = Did Ja'Rod and the Captain find a doctor?
 
 global alexandraInAirlock = false
 global mailxIsPulled = false

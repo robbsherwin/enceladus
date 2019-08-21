@@ -184,7 +184,7 @@ talkValue 0
 			"His fingers are extended out like the wisps of a scarecrow while he is stuck plugging the hole in the Plagoo. " ;
 
 		}
-		
+
 		"He is not an attractive robot."
 	}
 	before {
@@ -232,4 +232,17 @@ adjectives "man"
 article "the"
 charnumber 7
 is known
+}
+
+npc  MiladNahas "Doctor Nahas"
+{
+nouns "milad" "nahas" "doctor"
+adjectives "doctor" "milad"
+charnumber 8
+
+	long_desc
+	{
+		"Doctor Nahas is a middle aged Indian man with brown eyes and jet black hair. He is wearing a eggshell-colored smock
+		over a cyan polo, grey chinos and fur boots."
+	}
 }

@@ -640,6 +640,9 @@ object blairsUltraDeath "Blair's Ultra Death"
 				"I should sit down first."
 			}
 			else {
+
+				move MiladNahas to location
+				
 				"I take the Blair's Sauce and turn 180 degrees on the bar stool. I unwrap it and drink the entire thing in one quick slurp.\n"
 				"This was a terrible idea, probably the worst idea I've ever had.\n"
 				"My eyes start to water, my x-ray specs inexplicably start scanning even though they are on top of my head and I start coughing and hiccuping. This is poison, there
