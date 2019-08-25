@@ -325,7 +325,7 @@ article "the"
 		}
 		object DoShoot
 		{
-
+			!// [xxx]
 		}
 		object DoTwirl
 		{
@@ -422,6 +422,8 @@ scenery airlockHull "hull"
 				MovePlayer(Bridge)
 				move Captain to Bridge
 				move Finnian to Bridge
+				remove werewolf
+				remove McGrathley
 			}
 			else {
 				"Well, I can't shoot it again."
@@ -623,8 +625,8 @@ object knife "knife"
 
 object blairsUltraDeath "Blair's Ultra Death"
 {
-	nouns "ultra" "death"
-	adjective "blair" "blair's"
+	nouns "ultra" "death" "sauce" "bottle"
+	adjective "blair" "blair's" "hot"
 	article "the"
 	in HotSauceBar
 	long_desc
@@ -642,7 +644,7 @@ object blairsUltraDeath "Blair's Ultra Death"
 			else {
 
 				move MiladNahas to location
-				
+
 				"I take the Blair's Sauce and turn 180 degrees on the bar stool. I unwrap it and drink the entire thing in one quick slurp.\n"
 				"This was a terrible idea, probably the worst idea I've ever had.\n"
 				"My eyes start to water, my x-ray specs inexplicably start scanning even though they are on top of my head and I start coughing and hiccuping. This is poison, there
@@ -676,7 +678,7 @@ nouns "cart"
 adjective "mine"
 article "the"
 
-in Mine
+in mineLevelThree
 
 		long_desc
 		{
@@ -719,7 +721,28 @@ in bottomOfMine
 			select(object)
 			case(werewolf)
 			{
-
+				!// Kill the werewolf
+				Activate(Captain_Shoots_McGrathley)
+			}
+			case(McGrathley)
+			{
+				!// Kill the player
+			}
+			case(Captain)
+			{
+				!// Do not allow
+			}
+			case(Mailx)
+			{
+				!// Do not allow
+			}
+			case(snowmobile)
+			{
+				!// kill the player
+			}
+			case(Plagoo)
+			{
+				!// go ahead and ricochet it
 			}
 			case else
 			{
@@ -747,9 +770,78 @@ nouns "snowmobile"
 
 article "the"
 
-
 		long_desc
 		{
-
+			!// [xxx]s
 		}
+		before{
+			object DoEnter, DoDrive
+			{
+				if  GameEvents[20] = 0
+				{
+					"I don't have any interest in that old piece of moon garbage."
+				}
+				else {
+					!// Captain, Ja'Rod and Mailx all go to the Plagoo...
+
+					move Captain to OutsideTheShip
+					move Mailx to OutsideTheShip
+					move werewolf to OutsideTheShip
+					move McGrathley to OutsideTheShip
+					MovePlayer(OutsideTheShip)
+
+				}
+
+			}
+		}
+}
+
+object Plagoo "HMCS Plagoo"
+{
+nouns "plagoo"
+adjectives "hmcs"
+article "the"
+
+	long_desc
+	{
+		!// [xxx]
+	}
+	before
+	{
+		object DoEnter
+		{
+			if GameEvents[21] = 0
+			{
+				"I can't get over there right now."
+			}
+			else {
+
+
+			}
+		}
+	}
+}
+
+object refreshingBeverage "ginger and gin"
+{
+	nouns "gin"
+	adjectives "ginger"
+	article "the"
+	parse_rank 1
+
+	long_desc
+	{
+
+	}
+	before
+	{
+		object DoDrink
+		{
+			Final_Scene()
+		}
+		object DoRaise
+		{
+			!// [xxx]
+		}
+	}
 }

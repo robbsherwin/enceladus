@@ -395,8 +395,8 @@ event in JaRod_Hallucinates
 	}
 	case 4
 	{
-		GameEvents[18] = 0
-
+		GameEvents[18] = 0 !// Is Ja'Rod incapacitated via hot sauce?
+		GameEvents[19] = 1 !// Did Ja'Rod and the Captain find a doctor?
 
 		"\nI think I'm okay ... for now. I stand. I take a quick glance around the bar to see if anyone has ordered wings, if that's a thing here. I pull on the bottom of my T-shirt to show everyone
 		I'm back and all business again. I'm not sure if that point has been made.\n"
@@ -411,10 +411,33 @@ event in JaRod_Hallucinates
 		did to my life support tech, but as far as I know she's dying in -- \" I mime like I am shivering to try to guide the Captain through her speech -- \"Dying in my airlock that was
 		disintegrated open. We absolutely need your help.\"\n"
 		"Doctor Nahas stuffs his stethoscope into a pocket. \"Take me there immediately, please ma'am.\"\n"
-		The Captain is talking to the bartender as I stagger to my feet. After about ten seconds the bartender slips the Captain something. It's not this huge
+		"The Captain is talking to the bartender as I stagger to my feet. After about ten seconds the bartender slips the Captain something. It's not this huge
 		mystery or anything, as the Captain immediately gives me a black key."
 
+		remove blairsUltraDeath
+		remove knife
 		move mineKey to player
-		
+
+	}
+}
+
+daemon Captain_Shoots_McGrathley
+{
+timer 0
+}
+
+event in Captain_Shoots_McGrathley
+{
+	self.timer++
+	select(self.timer)
+	case 2
+	{
+		!// She calmly aims the star pistol at McGrathley and fires
+		!// Finnian lowers the boarding ramp, distributing McGrathley's ashes all over the moon
+
+
+		"[Strike any key to continue]"
+		pause
+		MoveEveryoneToRecRoom()
 	}
 }

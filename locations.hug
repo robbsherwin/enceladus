@@ -541,7 +541,7 @@ room CenterOfTown "Center of Town"
 s_to HotSauceBar
 w_to SnowyPath03
 n_to {
-  if GameEvents[15] = 0
+  if GameEvents[19] = 0 !// Did Ja'Rod and the Captain find a doctor?
   {
     "I can't go that way just yet. Valid exits are to the south and west."
   }
@@ -593,7 +593,7 @@ n_to {
 }
 }
 
-room EntranceToMine
+room EntranceToMine "Mine Entrance"
 {
 long_desc
 {
@@ -618,6 +618,7 @@ door MineDoor "door"
 
   long_desc
   {
+    !// [xxx]
 
   }
 }
@@ -629,20 +630,25 @@ long_desc
 {
   if self is not visited
   {
-
+    !// [xxx]
   }
   else {
-
+    !// [xxx]
   }
 }
+
+d_to mineLevelTwo
 }
 
 room mineLevelTwo "Mine Level Two"
 {
   long_desc
   {
-
+    !// [xxx]
   }
+
+u_to "We can't go that way by ourselves."
+d_to mineLevelThree
 }
 
 room mineLevelThree "Mine Level Three"
@@ -652,11 +658,32 @@ room mineLevelThree "Mine Level Three"
 
   }
 
+! Mine Cart is in here and can take us up.
+
+u_to "We can't go that way by ourselves."
 e_to bottomOfMine
 }
 
 room bottomOfMine "Bottom of Mine"
 {
+  long_desc
+  {
 
-w_to mineLevelThree
+  }
+
+u_to "We can't go that way by ourselves."
+w_to {
+  if GameEvents[20] = 0
+  {
+    "I can't go that way due to the cave-in."
+  }
+  else {
+    return mineLevelThree
+  }
+}
+}
+
+room RecRoom "Rec Room"
+{
+
 }

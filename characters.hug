@@ -246,3 +246,17 @@ charnumber 8
 		over a cyan polo, grey chinos and fur boots."
 	}
 }
+
+npc McGrathley "McGrathley"
+{
+nouns "mcgrathley"
+adjective "riggs"
+in BeforeTheAirlock 
+
+charnumber 9
+
+	long_desc
+	{
+		!// [xxx]
+	}
+}

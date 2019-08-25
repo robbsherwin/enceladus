@@ -113,6 +113,7 @@ array GameEvents[MAXGAMEEVENTS]
 ! GameEvents[17] = Has Ja'Rod initially sat on the stool?
 ! GameEvents[18] = Is Ja'Rod incapacitated via hot sauce?
 ! GameEvents[19] = Did Ja'Rod and the Captain find a doctor?
+! GameEvents[20] = Is the cave-in solved?
 
 global alexandraInAirlock = false
 global mailxIsPulled = false
@@ -283,7 +284,7 @@ conscious
 
 player_character JaRod "I"
 {
-pronoun "me" "my" "myself"
+pronoun "I" "me" "my" "myself"
 nouns "jarod" "me" "self" "ja'rod" "butler"
 adjectives "ja'rod" "jarod"
 

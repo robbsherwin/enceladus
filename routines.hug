@@ -37,6 +37,11 @@ routine DoCredits()
 	"My other games can be downloaded at my website at https://www.joltcountry.com/games and my graphical text adventure Cryptozookeeper can be purchased on Steam."
 }
 
+routine DoDrive()
+{
+	"I can't drive that."
+}
+
 routine DoExits
 {
 	YouCanGo()
@@ -98,9 +103,34 @@ routine DoTwirl
 	"I can't twirl that now, come on!"
 }
 
+routine Final_Scene()
+{
+	endflag = 1
+}
+
+routine MoveEveryoneToRecRoom()
+{
+	move Captain to RecRoom
+	move Alexandra to RecRoom
+	move Mailx to RecRoom
+	move MiladNahas to RecRoom
+	move Finnian to RecRoom
+
+	move refreshingBeverage to player
+
+	!// Move the other drinks to the other characters
+
+	MovePlayer(RecRoom)
+}
+
 routine StartPlanetFallScene
 {
 	MovePlayer(OutsideTheShip)
+}
+
+replace DoWakeCharacter
+{
+	"That's probably not necessary."
 }
 
 routine VersionOfGame()
@@ -111,9 +141,4 @@ routine VersionOfGame()
 	print "Release 1.00 / Serial number 190123 / Hugo 3.1"
 	print "Please type >about for specific information and >credits for credits."
 	""
-}
-
-replace DoWakeCharacter
-{
-	"That's probably not necessary."
 }
