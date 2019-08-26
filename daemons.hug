@@ -435,10 +435,14 @@ event in Cave_In
 	case 2
 	{
 		move iceBoulder to location
-		Mailx.talkValue = 2
-		Captain.talkValue = 1
 
-		"\nSomething triggered a terrible cave in, resulting in a chunk of ice coming down from the top of the mine."
+		"\nI can hear \Isomething\i going on up top, I think we all can. But we're down here in the depths of the mine and can't really get back up. The
+		'something' is quickly revealed as a cave-in.\n"
+		"A giant chunk of rock-hard ice falls down the shaft and comes to rest at the exit. We're trapped. Something triggered a terrible cave-in,
+		or ... it seems pretty intentional. Someone doesn't want us getting back up. The Captain taps her jacket to try to raise the Plagoo but just gets static.\n"
+
+		"She lets out a sarcastic laugh and sits down, her back up against the far eastern end of the mine, far from the boulder. She closes her eyes.
+		She looks as I would imagine someone looks who has had one disaster after another and just can't take it any longer."
 	}
 }
 

@@ -720,8 +720,6 @@ nouns "ore" "silver"
 adjective "silver"
 article "the"
 
-in bottomOfMine
-
 	long_desc
 	{
 
@@ -824,7 +822,8 @@ in CenterOfTown
 
 object iceBoulder "ice"
 {
-nouns "ice"
+nouns "ice" "boulder"
+adjectives "ice"
 article "the"
 
 	short_desc
@@ -835,6 +834,15 @@ article "the"
 	long_desc
 	{
 
+	}
+
+	before
+	{
+		object DoGet, DoMove, DoThrowAt, DoKick, DoHit
+		{
+			"It's too heavy for me to personally manipulate."
+
+		}
 	}
 }
 

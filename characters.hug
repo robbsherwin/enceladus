@@ -49,16 +49,16 @@ talkValue 0
 				"She doesn't open her eyes right away. She's always just so inscrutable, and I'm not always great at reading people to begin with, so I don't know,
 				I don't even know if I should be asking, but it's like some other force compels me to do so, so I do.\n"
 
-				"\"Wait. Are you okay, Captain? What happened to you? I know Forburn left, but -- \" Her smile gets broader, but it is lacking all warmth.\n"
+				"\"Wait. Are you okay, Captain? What happened to you when I was gone? I know Forburn left, but... \" Her smile gets broader, but it is lacking all warmth.\n"
 
 				"\"You hadn't heard, Ja'Rod?\" I shake my head in the negatory. No, I hadn't heard what happened to her husband when I was off the ship.\n"
 
-				"\"I thought you had heard. You know I don't actually read the direct messages of everyone on the crew. I think the ship computer supported that, but I
-				never wanted to know what any of you were thinking anyway. I disabled it permanently when Forburn... he died, Ja'Rod.\"\n"
+				"\"I thought you had heard. You know, unlike popular opinion, I don't actually read the direct messages of everyone on the crew. I think the ship
+				computer supported that, but I never wanted to know what any of you were thinking anyway. I disabled it permanently when Forburn... he died, Ja'Rod.\"\n"
 
-				"\"I'm so sorry. I didn't know. I had sort of thought something like that had happened. I am so, so sorry, Captain.\"n"
+				"\"I'm so sorry. I didn't know. I had sort of thought something like that had happened but I didn't know. I am so, so sorry, Captain.\"n"
 
-				"She opens her eyes for the first time and smiles when I say the word 'Captain.' We're a close crew. \"We were bringing blood, actually,\" she says. \"Hundreds and hundreds of
+				"She opens her eyes for the first time and smiles when I say the word 'Captain.' \"We were bringing blood, actually,\" she says. \"Hundreds and hundreds of
 				bags of blood to one of the colonies. All the different types. A ... B ... er... \"\n"
 
 				"\"A. B.\" adds Mailx.\n"
@@ -72,27 +72,30 @@ talkValue 0
 				"\"Forburn had gotten off the ship. We were delivering them to some dump in downtown Mimas, right inside the crater, and he had gotten off the Plagoo to talk to our contact
 				with the government. I was going to join him after running the last batch of tests on the cargo to make sure it was still good. I don't know exactly what
 				happened. I didn't have a camera or a drone on him or anything. But he got bit by the contact's dog. I don't know if it's because something went wrong
-				in the deal or if the contact was corrupt or what. It wasn't just a bite, I assume, it couldn't have been. When I left the ship and went to the meeting point, I
-				found him dead, his eyes pointed in horror, dried blood on his cheeks and chest. He had been mauled. The dog had a splash of blood all around her, but she was just calmly looking
-				way from him, breathing roughly, peering out into the cosmos.\"\n"
+				in the deal or if the contact was just a piece of garbage or what. And it wasn't just a bite, it couldn't have been. When I left the ship and went to the meeting point, I
+				found him dead, his eyes pointed in horror, dried blood on his cheeks and chest. He had been mauled. The dog had a splattering of blood all around her
+				face, but she was just calmly looking way from him, breathing roughly, peering out into the cosmos.\"\n"
 
 				"\"Oh my God,\" I say. \"That is horrible.\"\n"
 
-				"She nods. She closes her eyes again. \"I had to get his body back on the ship... I left the dog on Mimas. We buried Forburn on Earth, we had him cremated, he
-				said he always wanted that. There was a mixup at the crematorium, I was in so much grief, it was so senseless. I thought I would have forever with him. You know
-				I didn't say goodbye to him before he left that day? We usually had coffee in the morning, but I was running late. First time in forever and it was that day.
-				It doesn't seem fair ... well, he's gone, right? What else can you say?\"\n"
+				"She nods. She closes her eyes again. \"I had to get his body back on the ship... What I hated most about myself is that I knew he was dead and I just switched off and had
+				to get some tasks done and didn't feel anything for that initial moment, Ja'Rod. There was nothing at first. It was like I was being told a fact instead of experiencing
+				it. I left the dog on Mimas. We buried Forburn on Earth, we had him cremated, he said he always wanted that. But there was a mixup at the crematorium and I was in so
+				much grief, it was so senseless. I thought I would have forever with him. You know I didn't say goodbye to him before he left that day? We usually had coffee in the
+				morning, but I was running late. First time in forever and it was that day. It doesn't seem fair ... well, he's gone, right? What else can you say?\"\n"
 
 				"\"What did you do with the blood?\" I asked. Maybe a bad question with poor timing, but God, nobody gives you a manual for when your boss tells you about how her husband got
 				murdered.\n"
 
-				"\"I dumped it. I just wanted to do something hateful. We left three hours later and I was grieving and I specifically wanted to do something awful. I pushed every crate into the
-				airlock and slammed on the button when we started to fly away. Jupiter's not the only thing in the solar system with a big red spot now, mind you.\" I don't know whether to
-				laugh at that or not. Suddenly there is a change in her demeanor. Her chin becomes a rock. \"We, Ensign Butler -- \"\n"
+				"\"I dumped it. I dumped it out just wanted to do something hateful. We left Mimas three hours after I found him dead and by then I was grieving and I specifically
+				wanted to do something terrible. I pushed every crate of blood into the airlock and slammed the red button when we started to fly away. Jupiter's not the
+				only thing in the solar system with a big red spot now, mind you.\" I don't know whether to laugh at that or not. Suddenly there is a change in her
+				demeanor. She looks at the boulder. She stands up. Her chin becomes a rock. \"We, Ensign Butler -- \"\n"
 
 				"\"Captain, if you want to wait and -- \"\n"
 
-				"\"We need to get out of this cave. We have a punching robot that doesn't listen to women and some ice that needs to be punched. Do you care to give him the order?\""
+				"\"We need to get out of this cave. I assume it was McGrathley that locked us in here. We have a punching robot that doesn't listen to women and
+				some ice that needs to be punched. Do you care to give him the order?\""
 
 				Mailx.talkValue = 3
 				Captain.talkValue = 999
@@ -282,9 +285,20 @@ talkValue 0
 			}
 			case 3
 			{
+				iceBoulder is special !// destroyed
+				remove iceBoulder
+
 				"\"Mr Mailx, could you please destroy the ice blocking our exit?\n"
 				"\"All. Right,\" he says.\n"
-				"Mailx does a K-turn and with two gangly haymakers manages to pulverize the ice boulder into harmless rubble."
+				"Mailx does a K-turn and with two gangly haymakers, It takes about five minutes for him to turn around. He then lines his spindly
+				fingers up with the boulder of ice.\n"
+
+				"His fingers sort of intertwine within each other. I would describe them looking kind of like the end of a drill bit. They definitely
+				come to a sharp point. He then slides them each back about six inches from the front of the boulder. Then he strikes.\n"
+
+				"I guess I've seen videos of martial artists breaking through cement and stone with their bear hands. Mailx has chi, I guess? At any
+				rate, he only needs to do it twice before managing to completely pulverize the ice boulder into harmless rubble."
+
 				GameEvents[20] = 1 !// This is for noting that we solved the cave-in
 				CenterOfTown is visited !// This is purely for making testing easier.
 			}

@@ -114,7 +114,8 @@ array GameEvents[MAXGAMEEVENTS]
 ! GameEvents[18] = Is Ja'Rod incapacitated via hot sauce?
 ! GameEvents[19] = Did Ja'Rod and the Captain find a doctor?
 ! GameEvents[20] = Is the cave-in solved?
-! GameEvents[21] = Did Ja'Rod kill the werewolf with the silver? 
+! GameEvents[21] = Did Ja'Rod kill the werewolf with the silver?
+! GameEvents[22] = Did Ja'Rod do a scan in the mine area to reveal the silver ore?
 
 global alexandraInAirlock = false
 global mailxIsPulled = false

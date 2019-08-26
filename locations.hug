@@ -733,11 +733,65 @@ room bottomOfMine "Bottom of Mine"
 
   }
 
-u_to {"We can't go that way by ourselves." }
+xrayDescription {
+
+    if iceBoulder in location
+    {
+      "I take a quick scan of the area. This boulder is definitely pure ice, nothing else to it as far as I can tell.
+      The only issue is that the ice is harder than anything I can imagine and we have a giant chunk of it in front of us."
+    }
+    else {
+      if iceBoulder is special !// Meaning, destroyed
+      {
+        "I don't really have any other interesting info."
+      }
+    }
+
+    if GameEvents[21] = 0
+    {
+      GameEvents[21] = 1
+      Mailx.talkValue = 2
+      Captain.talkValue = 1
+
+      move silverOre to location
+
+      "\nI do find something interesting in the mine itself, however, a vein of silver ore about the size of a baseball, just
+      half an inch from the side of the northern wall. Covered in much more supple icy snow, I dig at it until it almost pops
+      out and ends up on the ground. I have no idea if the Captain is aware of what I just did, I should definitely talk
+      to her about it."
+    }
+  }
+
+before
+{
+  location DoExits
+  {
+    if GameEvents[20] = 0
+    {
+      if iceBoulder in location
+      {
+        "We're stuck here unless we can figure out a way to get past the boulder."
+      }
+      else {
+        "There is an exit west."
+      }
+    }
+    else {
+      "There is an exit west."
+    }
+  }
+}
+
 w_to {
   if GameEvents[20] = 0
   {
-    "I can't go that way due to the cave-in."
+    if iceBoulder not in location
+    {
+      "I can't go that way at the moment, I don't want to leave the Captain."
+    }
+    else {
+      "We can't go that way due to the cave-in."
+    }
   }
   else {
     return mineLevelThree
