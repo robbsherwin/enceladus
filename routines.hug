@@ -106,10 +106,44 @@ routine DoTwirl
 
 routine Final_Scene()
 {
-	"[Strike any key to continue]"
+	"I take a sip of my gin-tata. The Kool-Aid tastes pretty fresh, I have no idea where you get Fruit Punch flavor this far from Earth. The Captain consumes her
+	scotch without fanfare, Finnian starts in on his with as much fanfare as humanly possible. Alexandra opens the cap slightly and with a flick of her finger
+	sends it spinning clear across the room. She takes a long pull from bottle of vodka and Doctor Nahas looks at all of us, leaving his drink raised."
+
+	"\n[Strike any key to continue]"
+
 	pause
-	
+
+	"\nAlexandra keeps drinking the vodka."
+
+	"\n[Strike any key to continue]"
+
+	pause
+
+	"\nAlexandra keeps drinking the vodka. The oil melts through the Dixie cup Mailx was holding, creating a mess. Doctor Nahas drinks his ginger ale out of
+	polite awkwardness that Alexandra hasn't stopped yet."
+
+	"\n[Strike any key to continue]"
+
+	pause
+
+	"\nAlexandra keeps drinking."
+
+	"\n[Strike any key to continue]"
+
+	pause
+
+	"\nAlexandra finishes the bottle of vodka. Everyone except Mailx is looking in her direction. Maybe he is too. \"I'm parched,\" she says. \"A girl really feels
+	the lack of humidity out here on the Jovian moons,\" she says as Finnian's eyes light up and he gestures in laughter towards the Captain. I look around
+	for something to clean the spill up with as I make myself another drink. We might be a million miles from where we meant to be and ten
+	million miles from where we want to be but at least for the moment we're right where we belong. Together."
+
+	"\n[Strike any key to continue]"
+
+	pause
+
 	endflag = 1
+
 }
 
 routine MoveEveryoneToRecRoom()

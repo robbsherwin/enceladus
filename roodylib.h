@@ -17519,7 +17519,7 @@ routine RLibMessage(r, num, a, b)
 #endif
 		case &QuitGameText
 		{
-			"\IThanks for playing!\i"
+			"\IThank you for playing Enceladus by Robb Sherwin.\i"
 		}
 		case &RepaintScreen
 		{
