@@ -161,7 +161,7 @@ routine init
 
 	Activate(CaptainIdle)
 
-  MovePlayer(HotSauceBar)
+  MovePlayer(mineLevelThree)
   !MovePlayer(TheCaptainsQuarters)
 
 	old_screenwidth = display.screenwidth
@@ -314,6 +314,8 @@ extra_scenery "wall" "walls"
 			"I'm in the Captain's Quarters of the HMCS Plagoo. She has the biggest room not because
 			it's her ship, but because we all figured out pretty early that she would be the only one
 			who would clean it. She has a dresser and computer and, along the starboard wall, her bed."
+
+      Captain.talkValue = 2 
 		}
 		else
 		{

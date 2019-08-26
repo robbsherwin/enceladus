@@ -421,6 +421,25 @@ event in JaRod_Hallucinates
 	}
 }
 
+daemon Cave_In
+{
+timer 0
+}
+
+event in Cave_In
+{
+	self.timer++
+	select(self.timer)
+	case 2
+	{
+		move iceBoulder to location
+		Mailx.talkValue = 2
+		Captain.talkValue = 1
+		
+		"\nSomething triggered a terrible cave in, resulting in a chunk of ice coming down from the top of the mine."
+	}
+}
+
 daemon Captain_Shoots_McGrathley
 {
 timer 0

@@ -529,8 +529,18 @@ room CenterOfTown "Center of Town"
       "\"I'll try the milder hot sauces,\" I add, helpfully."
     }
     else {
+      if GameEvents[20] = 1
+      {
+        move snowmobile to location
+        "The Captain walks over to what I thought was a broken and useless snowmobile. She breaks open a panel underneath the steering mechanism and holds two
+        wires together. Nothing happens. She rolls her eyes and gives it a push down the snowy hill leading to the hot sauce bar... only she goes straight past
+        the bar and descends out of sight.\n"
+        "Twenty seconds later I hear a roar.\n"
+        "Ten seconds after that, I see her come back up the hill with the now-working snowmobile.\n"
+        "\"Get on, let's go,\" she says to me."
 
-      if GameEvents[15] = 1 !// Did Ja'Rod cut himself or otherwise find the doctor?
+      }
+      elseif GameEvents[15] = 1 !// Did Ja'Rod cut himself or otherwise find the doctor?
       {
         !// This means we have sent the doctor and Finnian off.
         !// We need to have the Captain tell Finnian and N
@@ -549,7 +559,6 @@ n_to {
     return EntranceToMine
   }
 }
-
 }
 
 room HotSauceBar "Hot Sauce Bar"
@@ -606,6 +615,9 @@ long_desc
 
   }
 }
+
+s_to {return CenterOfTown}
+n_to {return MineDoor}
 }
 
 door MineDoor "door"
@@ -613,7 +625,7 @@ door MineDoor "door"
   nouns "door"
   article "the"
   between EntranceToMine, mine
-  is locked
+  is openable, not open, lockable, locked
   key_object mineKey
 
   long_desc
@@ -637,6 +649,7 @@ long_desc
   }
 }
 
+s_to { return mineDoor}
 d_to mineLevelTwo
 }
 
@@ -659,7 +672,6 @@ room mineLevelThree "Mine Level Three"
   }
 
 ! Mine Cart is in here and can take us up.
-
 u_to "We can't go that way by ourselves."
 e_to bottomOfMine
 }
@@ -669,9 +681,16 @@ room bottomOfMine "Bottom of Mine"
   long_desc
   {
 
+    if self is not visited
+    {
+      move Captain to location
+      move Mailx to location
+      Activate(Cave_In)
+    }
+
   }
 
-u_to "We can't go that way by ourselves."
+u_to {"We can't go that way by ourselves." }
 w_to {
   if GameEvents[20] = 0
   {

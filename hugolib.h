@@ -322,7 +322,7 @@ synonym "any" for "~any"
 synonym "either" for "~any"
 synonym "oops" for "~oops"
 synonym "o" for "~oops"
-synonym "mine" for "my"
+!synonym "mine" for "my" !// Turned this off for the mine cart to work
 synonym "myself" for "me"
 #ifset NO_OBJLIB
 synonym "herself" for "her"

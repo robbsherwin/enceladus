@@ -677,6 +677,7 @@ vehicle mineCart "mine cart"
 nouns "cart"
 adjective "mine"
 article "the"
+parse_rank 1
 
 in mineLevelThree
 
@@ -684,6 +685,21 @@ in mineLevelThree
 		{
 
 		}
+		before
+		{
+			object DoEnter
+			{
+				"The three of us hop into the mine cart and are taken to the top ... "
+				"[Strike any key to continue]"
+				pause
+				move Mailx to EntranceToMine
+				move Captain to EntranceToMine
+				mineDoor is not locked
+				mineDoor is open
+				MovePlayer(EntranceToMine)
+			}
+		}
+
 }
 
 object wheelbarrow "wheelbarrow"
@@ -763,16 +779,15 @@ article "the"
 	}
 }
 
-
 vehicle snowmobile "snowmobile"
 {
 nouns "snowmobile"
-
 article "the"
+in CenterOfTown
 
 		long_desc
 		{
-			!// [xxx]s
+			!// [xxx]
 		}
 		before{
 			object DoEnter, DoDrive
@@ -791,9 +806,28 @@ article "the"
 					MovePlayer(OutsideTheShip)
 
 				}
-
+			}
+			object DoGet
+			{
+				"It's too heavy for me to carry, even with Enceladus's decreased gravity!"
 			}
 		}
+}
+
+object iceBoulder "ice"
+{
+nouns "ice"
+article "the"
+
+	short_desc
+	{
+		"There is a boulder of ice here that is preventing exit from the room."
+	}
+
+	long_desc
+	{
+
+	}
 }
 
 object Plagoo "HMCS Plagoo"
