@@ -269,8 +269,8 @@ room Bridge "Bridge"
        move Mailx to location
        "\n\"Ensign Butler,\" starts the Captain, \"How is our life support technician doing?\"\n"
        "\"Alexandra is inside the airlock, the temperature controls are active and she'll be safe there. That room is getting cold.\n"
-       "The Captain nods. \"Very well. Let's - the four of us - meet outside for our next steps.\n"
-       "[Strike any key to continue]"
+       "The Captain nods. \"Very well. Let's - the four of us - meet outside for our next steps."
+       "\n[Strike any key to continue]"
        pause
        StartPlanetFallScene()
       }
@@ -390,10 +390,38 @@ room OutsideTheShip "Outside the Plagoo"
       "The Captain walks east. Mr Mailx starts up to join her and after a shrug and then a replacing of his precariously-set hat, Finnian goes east too."
     }
     else {
-      "I am outside the HMCS Plagoo, although the ship is locked and the walkway up is closed. The other three members of my party have gone east. This
-      is my first time on Enceladus, the sixth moon of Saturn. The gravity is a lot lower than Earth or the ship, although a injector has been installed
-      in the moon's core to give it a little more pull than it had naturally. Virtually the entire surface is covered with ice, or (where people have
-      set up civilization) crushed ice."
+
+      if GameEvents[20] = 1
+      {
+        move werewolf to location
+        move McGrathley to location
+        remove Alexandra
+        remove Finnian
+        remove MiladNahas
+        move starPistol to Captain
+        starPistol is hidden
+
+        "McGrathley and the werewolf are here, it appears that they are trying to hack into the boarding ramp of the Plagoo in order to board it.\n"
+
+        "Upon seeing us, they put their handheld scanner away. The werewolf begins snarling, having recognized us, but it is waiting for a command
+        to strike.\n"
+
+        "\"The cave-in should have crushed you, Captain,\" says McGrathley. \"Enough, I'll just kill you myself.\" He produces a revolver, an old
+        fashioned six shot. The Captain disembarks the snowmobile and slowly begins walking toward him.\n"
+        "McGrathley fires once. The bullet misses the Captain by about twenty feet and reaches escape velocity, leaving Enceladus until it is presumably
+        captured by the gravity of Saturn.\n"
+
+        "I roll off the snowmobile and stand towards the Plagoo. The werewolf begins scrambling toward me."
+
+        Activate(Captain_Shoots_McGrathley)
+      }
+      else {
+        "I am outside the HMCS Plagoo, although the ship is locked and the walkway up is closed. The other three members of my party have gone east. This
+        is my first time on Enceladus, the sixth moon of Saturn. The gravity is a lot lower than Earth or the ship, although a injector has been installed
+        in the moon's core to give it a little more pull than it had naturally. Virtually the entire surface is covered with ice, or (where people have
+        set up civilization) crushed ice."
+      }
+
     }
   }
   e_to SnowyPath01
@@ -668,10 +696,22 @@ room mineLevelThree "Mine Level Three"
 {
   long_desc
   {
+    if self is not visited
+    {
+      move Captain to location
+      move Mailx to location
+    }
+    else {
+      if GameEvents[20] = 1
+      {
+        move Captain to location
+        move Mailx to location
+      }
 
+    }
   }
 
-! Mine Cart is in here and can take us up.
+!// Mine Cart is in here and can take us up.
 u_to "We can't go that way by ourselves."
 e_to bottomOfMine
 }
@@ -704,5 +744,12 @@ w_to {
 
 room RecRoom "Rec Room"
 {
+  long_desc
+  {
+    if self is not visited
+    {
+      ![xxx]
+    }
+  }
 
 }

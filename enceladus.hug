@@ -114,6 +114,7 @@ array GameEvents[MAXGAMEEVENTS]
 ! GameEvents[18] = Is Ja'Rod incapacitated via hot sauce?
 ! GameEvents[19] = Did Ja'Rod and the Captain find a doctor?
 ! GameEvents[20] = Is the cave-in solved?
+! GameEvents[21] = Did Ja'Rod kill the werewolf with the silver? 
 
 global alexandraInAirlock = false
 global mailxIsPulled = false
@@ -315,7 +316,7 @@ extra_scenery "wall" "walls"
 			it's her ship, but because we all figured out pretty early that she would be the only one
 			who would clean it. She has a dresser and computer and, along the starboard wall, her bed."
 
-      Captain.talkValue = 2 
+      Captain.talkValue = 2
 		}
 		else
 		{

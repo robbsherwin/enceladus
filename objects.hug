@@ -414,8 +414,8 @@ scenery airlockHull "hull"
 				"I then comprehend the Captain's plan - Mr Mailx was next, but was too large for the pistol's hole. He instead plugged
 				the hole like a Dutch boy's finger. It was all over before Alexandra, clearly injured, even really moved.\n"
 				"\"Finnian, Ja'Rod,\" starts the Captain, \"Get over to the bridge, we're going to perform an emergency landing.\"\n"
-				"\"Aye-aye,\" I say and get going. Fin does the same.\n"
-				"[Strike any key to continue]"
+				"\"Aye-aye,\" I say and get going. Fin does the same."
+				"\n[Strike any key to continue]"
 
 				pause
 
@@ -654,10 +654,10 @@ object blairsUltraDeath "Blair's Ultra Death"
 				"A man emerges from the far booth. \"What did this flailing cretin do?\" he asks. I assume I am hallucinating, but he has a white lab coat and a stethescope. So great, while
 				this sauce is killing me I ended up finding a doctor either in full Enceladus City Comic Con Cosplay or a porn.\n"
 				"\"He ingested a little too much of the hot sauce,\" says the Captain. She puts her hand on my forehead. At first I think she's trying to take my temperature and I feel
-				like that was really motherly of her, but then I realize she was just trying to turn my specs off so I don't irradiate every living bit of tissue in the bar.\n"
-				"[Strike any key to continue]\n"
+				like that was really motherly of her, but then I realize she was just trying to turn my specs off so I don't irradiate every living bit of tissue in the bar."
+				"\n[Strike any key to continue]"
 				pause
-				"The doctor rips the two liters of milk that the bartender produced out of her hands and splashes me in the face with it. He forces me to drink about a quarter of the jug.
+				"\nThe doctor rips the two liters of milk that the bartender produced out of her hands and splashes me in the face with it. He forces me to drink about a quarter of the jug.
 				It's not really helping anything past my throat, but I think I'm not dying any more.\n"
 				"\"Thanks, Doc,\" I try to say, but what comes out it something more akin to, 'Quaalude Farsase.'"
 
@@ -690,7 +690,7 @@ in mineLevelThree
 			object DoEnter
 			{
 				"The three of us hop into the mine cart and are taken to the top ... "
-				"[Strike any key to continue]"
+				"\n[Strike any key to continue]"
 				pause
 				move Mailx to EntranceToMine
 				move Captain to EntranceToMine
@@ -732,13 +732,20 @@ in bottomOfMine
 		{
 			"I don't think dropping the ore is a good idea."
 		}
-		xobject DoThrowAt
+		object DoThrowAt
 		{
-			select(object)
+			select(xobject)
 			case(werewolf)
 			{
 				!// Kill the werewolf
-				Activate(Captain_Shoots_McGrathley)
+				"I hit the werewolf in the chest with the silver. The thing about the plastic genetic surgery that these people sign up for is that in
+				order for the Live Action Role Playing to be accurate, they give themselves the weaknesses of the legendary creatures they want to be
+				as well as the strengths.\n"
+				"The chunk of silver ore goes right through the sternum of the werewolf, passing through like a metal skewer through marshmellow. The ore
+				isn't even particularly slowed down by the werewolf's flesh and strikes the Plagoo, falling to the ground.\n"
+				"The werewolf falls over, dead."
+
+				GameEvents[21] = 1
 			}
 			case(McGrathley)
 			{
@@ -803,6 +810,7 @@ in CenterOfTown
 					move Mailx to OutsideTheShip
 					move werewolf to OutsideTheShip
 					move McGrathley to OutsideTheShip
+					OutsideTheShip is visited
 					MovePlayer(OutsideTheShip)
 
 				}

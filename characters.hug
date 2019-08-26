@@ -9,6 +9,7 @@ npc Captain "Captain"
 charnumber 2
 article "the"
 nouns "captain" "girl" "woman"
+pronouns "she", "her", "her", "herself"
 capacity 50
 maxhitpoints 10
 hitpoints 10
@@ -284,7 +285,8 @@ talkValue 0
 				"\"Mr Mailx, could you please destroy the ice blocking our exit?\n"
 				"\"All. Right,\" he says.\n"
 				"Mailx does a K-turn and with two gangly haymakers manages to pulverize the ice boulder into harmless rubble."
-				GameEvents[20] = 1
+				GameEvents[20] = 1 !// This is for noting that we solved the cave-in
+				CenterOfTown is visited !// This is purely for making testing easier.
 			}
 			case 4
 			{

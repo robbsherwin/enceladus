@@ -188,6 +188,8 @@ event in Airlock_Scene
 			towards us before the difference in pressure has sent them spiraling so far away from us that they are mere specs reflecting the dim light of the sun.\n"
 			"\"You two!\" screams McGrathley. \"Into the airlock! Oh - and get that one behind the crates!\" Oh no no no the werewolf can see me, it's coming, how
 			can anything leap that far and that fast, no! No!!"
+
+			"\n[Strike any key to continue.]"
 			pause
 			endflag = 2
 		}
@@ -435,7 +437,7 @@ event in Cave_In
 		move iceBoulder to location
 		Mailx.talkValue = 2
 		Captain.talkValue = 1
-		
+
 		"\nSomething triggered a terrible cave in, resulting in a chunk of ice coming down from the top of the mine."
 	}
 }
@@ -449,14 +451,55 @@ event in Captain_Shoots_McGrathley
 {
 	self.timer++
 	select(self.timer)
+	case 1
+	{
+		if GameEvents[21] = 0
+		{
+			"\n\"Ja'Rod, kill that werewolf!\" shouts the Captain toward me. She whips out the star pistol, which she took from me at some point. She aims
+			it at McGrathley, who is clumsily trying to reload his revolver, apparently being too inexperienced with it to understand that you can
+			load five or six bullets at once."
+
+		}
+		else {
+			""
+
+		}
+	}
 	case 2
 	{
-		!// She calmly aims the star pistol at McGrathley and fires
-		!// Finnian lowers the boarding ramp, distributing McGrathley's ashes all over the moon
+		if GameEvents[21] = 0
+		{
+			"The werewolf kills Ja'Rod"
+			endflag = 2
+		}
+		else {
+			!// She calmly aims the star pistol at McGrathley and fires
+			!// Finnian lowers the boarding ramp, distributing McGrathley's ashes all over the moon
+
+			"\nThe Captain kills McGrathley."
+
+			"\n[Strike any key to continue]"
+			pause
+			MoveEveryoneToRecRoom()
+		}
+	}
+}
+
+daemon Ending_Daemon
+{
+timer 0
+}
+
+event in Ending_Daemon
+{
+	self.timer++
+	select(self.timer)
+	case 1
+	{
+
+		"You have won the game."
+		endflag = 1
 
 
-		"[Strike any key to continue]"
-		pause
-		MoveEveryoneToRecRoom()
 	}
 }
