@@ -872,10 +872,9 @@ article "the"
 	}
 }
 
-object refreshingBeverage "ginger and gin"
+object refreshingBeverage "gintata"
 {
-	nouns "gin"
-	adjectives "ginger"
+	nouns "gintata"
 	article "the"
 	parse_rank 1
 

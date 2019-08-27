@@ -319,7 +319,7 @@ charnumber 7
 is known
 }
 
-npc  MiladNahas "Doctor Nahas"
+npc MiladNahas "Doctor Nahas"
 {
 nouns "milad" "nahas" "doctor"
 adjectives "doctor" "milad"

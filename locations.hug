@@ -729,8 +729,14 @@ room bottomOfMine "Bottom of Mine"
       move Captain to location
       move Mailx to location
       Activate(Cave_In)
-    }
 
+      "We have come to the bottom of the mine and the farthest anyone has dug. Nothing allows any further passage.\n"
+      "It's a bit dark, although there is some neon rope providing a bit of light. There is icy rock on all sides of us."
+    }
+    else {
+      "We are in the bottom of the mine here in the city. A small piece of neon rope that is powered from who-knows-what
+      gives us a little bit of light, but that's it, really. It's cold in here as we are surrounded by icy rock on all sides."
+    }
   }
 
 xrayDescription {
@@ -805,7 +811,29 @@ room RecRoom "Rec Room"
   {
     if self is not visited
     {
-      ![xxx]
+      "The Recreation Room of the Plagoo is ten feet by ten feet and placed way in the back of the ship. I think the theory
+      for the designer of the class of ship that the Plagoo is, is that we'd constantly have people firing weapons at us, so
+      put the least important thing towards the tail. We are all gathered here.\n"
+      "\"I think we just need to all have a drink together after everything that went down,\" says the Captain, laughing, to
+      all of us.\n"
+      "I can see that the Captain and Finnian each have a glass of scotch. Doctor Nahas has a ginger ale. Alexandra has an entire
+      bottle of vodka and someone gave Mr Mailx a Dixie Cup with engine oil in it. (He can't actually drink anything.) Alexandra
+      hands me a drink of my own creation, a gintata.\n"
+
+      "\"To those we miss terribly and to all who remain,\" says the Captain as everyone raises their glass."
+
+      Captain is hidden
+      MiladNahas is hidden
+      Finnian is hidden
+      Mailx is hidden
+      Alexandra is hidden
+
+    }
+    else {
+      "This is the rec room of the Plagoo. Everyone here has their glasses raised in a toast, with drinking of said
+      beverage no doubt the next thing everyone does.\n"
+
+      "My friends are here."
     }
   }
 

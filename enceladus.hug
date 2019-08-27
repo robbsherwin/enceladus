@@ -163,8 +163,8 @@ routine init
 
 	Activate(CaptainIdle)
 
-  MovePlayer(mineLevelThree)
-  !MovePlayer(TheCaptainsQuarters)
+  !MovePlayer(mineLevelThree)
+  MovePlayer(TheCaptainsQuarters)
 
 	old_screenwidth = display.screenwidth
 
