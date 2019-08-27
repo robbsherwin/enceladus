@@ -480,7 +480,7 @@ event in Captain_Shoots_McGrathley
 			!// She calmly aims the star pistol at McGrathley and fires
 			!// Finnian lowers the boarding ramp, distributing McGrathley's ashes all over the moon
 
-			"\nThe Captain kills McGrathley."
+			"\nThe Captain kills McGrathley. [xxx] TODO - put some actual writing in here about this"
 
 			"\n[Strike any key to continue]"
 			pause

@@ -70,6 +70,13 @@ is hidden, platform
 		"It's made of a lightweight plastic and painted a cheap, glossy silver."
 		WhatsIn(self)
 	}
+	before
+	{
+		object DoGet
+		{
+			"I can't take the desk, unfortunately(?)."
+		}
+	}
 }
 
 
@@ -90,6 +97,10 @@ is hidden, container, openable, not open
 		object DoHit
 		{
 			Perform(&DoOpen, self)
+		}
+		object DoGet
+		{
+			"I can't take the desk, unfortunately(?)."
 		}
 	}
 }
@@ -722,7 +733,8 @@ article "the"
 
 	long_desc
 	{
-
+		"A baseball-sized chunk of silver ore, not the purest thing in the world, mind you, but pure enough for what I suspect
+		will be our purposes."
 	}
 	before
 	{
@@ -742,6 +754,8 @@ article "the"
 				"The chunk of silver ore goes right through the sternum of the werewolf, passing through like a metal skewer through marshmellow. The ore
 				isn't even particularly slowed down by the werewolf's flesh and strikes the Plagoo, falling to the ground.\n"
 				"The werewolf falls over, dead."
+
+				remove silverOre
 
 				GameEvents[21] = 1
 			}
@@ -880,7 +894,9 @@ object refreshingBeverage "gintata"
 
 	long_desc
 	{
-
+		"Ah, the gintata! This is a drink of my own invention. You put as much gin into a gallon bucket as will
+		fit and then fill the rest up with a flavor of Kool-Aid. You take a mason jar and dunk it into the bucket
+		and drink it. Have a couple of these  and that's it for you for the rest of the evening, ta-ta."
 	}
 	before
 	{
@@ -890,7 +906,7 @@ object refreshingBeverage "gintata"
 		}
 		object DoRaise
 		{
-			!// [xxx]
+			"I raise this perfect drink, this perfect specimen of alcohol with the others before drinking it."
 		}
 	}
 }
