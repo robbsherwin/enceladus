@@ -197,9 +197,18 @@ is clothing, plural
 
 				Pause100thSeconds(400)
 
-				"Someone or some thing rattles the door knob from outside her quarters. In my horror I realize that \Inobody has locked the door.\i"
+				"Someone or some thing rattles the door knob from outside her quarters. " ;
+
+					if HallwayDoor is not locked
+					{
+						"In my horror I realize that \Inobody has locked the door.\i"
+					}
+					else {
+						""
+					}
 
 				Activate(FinnianEnters)
+
 			}
 			case Finnian
 			{
@@ -213,7 +222,6 @@ is clothing, plural
 		}
 	}
 }
-
 
 object latte "latte"
 {

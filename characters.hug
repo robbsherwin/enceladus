@@ -29,9 +29,17 @@ talkValue 0
 		"She is ten years older than me, but looks younger, what with being away from
 		the sun for much of her life.  She's six feet tall, has auburn hair styled in a
 		1920's bob cut and owns a jawline that reveals her position as the toughest person on the
-		ship. I am ";
-		print number confidence ;
-		"% sure she is not a werewolf."
+		ship. " ;
+
+		if location = TheCaptainsQuarters
+		{
+			"I am ";
+			print number confidence ;
+			"% sure she is not a werewolf."
+		}
+		else {
+			""
+		}
 	}
 	before
 	{
