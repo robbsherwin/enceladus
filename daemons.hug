@@ -473,14 +473,42 @@ event in Captain_Shoots_McGrathley
 	{
 		if GameEvents[21] = 0
 		{
-			"The werewolf kills Ja'Rod"
+			if silverOre in player
+			{
+				"\nThe werewolf, with that head start, covers more ground than I would have thought possible and places both of its hands around
+				my neck. It screams in pain for a moment when it accidentally comes close to the silver ore I am carrying, but with one quick
+				swipe it manages to rip apart that piece of my torso and fling it halfway across the universe.
+
+				The blood comes squirting out of me and without Earth's gravity to bring it back down in a normal fashion, my blood
+				seems to be firing thirty feet into the air. The werewolf digs its other hand into my neck and its nails pierce my
+				flesh, the oblivion comes. It is all over forever."
+
+			}
+			else {
+				"\nThe werewolf, with that head start, covers more ground than I would have thought possible and places both of its hands around
+				my neck. It makes a slashing motion, causing my blood to squirt out of my head and about thirty feet into the air without
+				the gravity of terra firma to bring it back down. It's just a stupid genetically engineered monster, just a normal
+				guy that had some work done with all the strengths and weaknesses of the mythical werewolf creature. I try combing
+				my head for anything I could have encountered that would have stopped it, but it digs its nails into my skull,
+				fracturing it into pieces and the last thing I feel or see or smell is my brain going haywire, being unraveled,
+				being strewn about the moon. It ends, thankfully, it all ends and is all over."
+			}			
 			endflag = 2
 		}
 		else {
-			!// She calmly aims the star pistol at McGrathley and fires
-			!// Finnian lowers the boarding ramp, distributing McGrathley's ashes all over the moon
+			"\nMcGrathley fires again, this time somehow missing by an even greater distance. Apparently threatening to throw people
+			out airlocks develops different skills than using handheld weapons.\n"
+			"After being targeted twice, the Captain flips the safety on the star pistol, which I didn't even know it had, steadies
+			herself and fires a single shot. The Captain, my hero, quietly and without fanfare hits McGrathley right between the eyes.
+			His disintegrates into a sticky pile of ash.\n"
 
-			"\nThe Captain kills McGrathley. [xxx] TODO - put some actual writing in here about this"
+			"Finnian lowers the boarding ramp of the Plagoo with enough force to cause McGrathley's ashes to scatter into chunks
+			upon the Enceladusian surface.\n"
+
+			"The Captain puts the star pistol away as all of us get onto the boarding ramp. I can't help notice that she
+			twirled it one time before hiding it though."
+
+			remove starPistol
 
 			"\n[Strike any key to continue]"
 			pause
