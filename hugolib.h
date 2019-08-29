@@ -463,7 +463,7 @@ routine PrintEndGame(end_type)
 {
 	Font(BOLD_ON)
 	select end_type
-		case 1:  print "\n*** YOU'VE WON THE GAME! ***"
+		case 1:  print "\n*** You have won Enceladus, my entry in the 2019 Interactive Fiction Competition. ***"
 		case 2
 		{
 			if player_person = 2

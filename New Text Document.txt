@@ -24,6 +24,8 @@ Todo:
 - Do all the scenery descriptions
 - Do all the approrpriate talk to commands
 - Support for taking the knife off the bar and cutting Ja'Rod with it
+- Add the rope that we are using to go down the mine
+- Test what happens if they go up and down and such
 
 
 

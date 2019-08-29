@@ -21,7 +21,7 @@ cast_desc "The Captain"
 peaceful true
 is neutral, living, female, hidden
 in TheCaptainsQuarters
-confidence 100
+confidence 78
 talkValue 0
 
 	long_desc
@@ -34,7 +34,7 @@ talkValue 0
 		if location = TheCaptainsQuarters
 		{
 			"I am ";
-			print number confidence ;
+			print number self.confidence ;
 			"% sure she is not a werewolf."
 		}
 		else {

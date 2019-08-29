@@ -577,7 +577,32 @@ room CenterOfTown "Center of Town"
       {
         !// This means we have sent the doctor and Finnian off.
         !// We need to have the Captain tell Finnian and N
+        "The Captain sees Finnian, Mr Mailx and Doctor Nahas about to leave.\n"
+        "\"You're all set?\" she asks Finnian.\n"
+        "\"Yeah, we're huffing it back to the Plagoo.\"\n"
+        "\"I need Mr Mailx, but I have a suspicion that Grimes programmed it to not listen to women,\" she adds. Nahas looks
+        at the two of them like they are crazy.\n"
+        "\"He ... Grimes told me why he did it. He didn't do it because of anything other than he didn't want his fiancee back
+        on Earth to have it open up his stash of -- \" I make the 'cut him off' gesture at Finnian and look towards the Doctor. Him
+        getting weirded out is the last thing we need.\n"
+        "\"His, ah, stash of um ... er ... women's socks,\" says Finnian, finally. The fact that it took him ten seconds to come
+        up with something worse than if he just told the truth isn't helping. \"Do you need the robot, Cap? Mailx, go with the
+        Captain,\" says Finnian.\n"
+        "\"Okay,\" says Mailx. Finnian and the Doctor each head back to the Plagoo."
+
+        remove Finnian
+        remove MiladNahas
+        move Mailx to location
+        move Captain to location
       }
+    }
+  }
+
+  before
+  {
+    object DoExits
+    {
+      "To the south is a Hot Sauce bar. To the west is the snow path leading to the Plagoo. To the north is a mine."
     }
   }
 
@@ -623,7 +648,18 @@ long_desc
 
   }
   else {
+    "The bar doesn't look that much different than normal alcohol bars across the solar system. It's got a bit more rustic feel because they
+    had to make it out of logs, but it adds some charm, I guess. The bar itself is in the middle of the room, and there are shelves
+    here with different kinds of hot sauces, arranged by color, manufacturer, scoville rating and how many people they've made puke up.
+    The lights are fairly low " ;
 
+    if GameEvents[19] = 0
+    {
+      "and we don't have a lot of time to try to find a doctor."
+    }
+    else {
+      "and I'm ready to get out of here for the most part."
+    }
   }
 }
 
@@ -666,8 +702,7 @@ door MineDoor "door"
 
   long_desc
   {
-    !// [xxx]
-
+    "Looks like a reinforced metal door, about five feet tall so we'll have to duck under a little."
   }
 }
 
@@ -678,22 +713,40 @@ long_desc
 {
   if self is not visited
   {
-    !// [xxx]
+    move Mailx to mineLevelThree
+
+    "\"So we need some metal for patching up the ship,\" says the Captain, just reiterating the plan. I don't quite know
+    how a chunk of metal is going to help, but then it's unlikely to be my job to fix it, anyway. This area of the mine
+    extends about fifteen feet north. There is a (wooden) beam overhead and a rope leading downwards.\n"
+    "\"Shouldn't there be a cart or something to get us along?\" I ask.\n"
+    "Mr Mailx moves slowly to the edge of the hole. \"There, Is, One, Aaaaah,\" he says, having gotten
+    a little too close to the edge, and fallen. The Captain just shakes her head.\n"
+    "\"Let's go get him,\" she says with a sigh."
   }
   else {
-    !// [xxx]
+    "This is a makeshift antechamber, the best they can do here. There is snow on top of us and at all sides. The snow
+    is very compact and hard. Igloo-like, maybe? We can travel downwards if we wanted to."
   }
 }
 
 s_to { return mineDoor}
-d_to mineLevelTwo
+d_to {
+      if silverOre in player
+      {
+        "I'd rather not head down there again."
+      }
+      else {
+        return mineLevelTwo
+      }
+    }
 }
 
 room mineLevelTwo "Mine Level Two"
 {
   long_desc
   {
-    !// [xxx]
+    "We don't really see any metal that can help us out on this level of the mine. It also appears that there hasn't been
+    much digging around here. The rope leading downwards is visible, someone has installed some lighting down below."
   }
 
 u_to "We can't go that way by ourselves."
@@ -707,7 +760,7 @@ room mineLevelThree "Mine Level Three"
     if self is not visited
     {
       move Captain to location
-      move Mailx to location
+      !//[xxx]
     }
     else {
       if GameEvents[20] = 1
@@ -732,7 +785,6 @@ room bottomOfMine "Bottom of Mine"
     if self is not visited
     {
       move Captain to location
-      move Mailx to location
       Activate(Cave_In)
 
       "We have come to the bottom of the mine and the farthest anyone has dug. Nothing allows any further passage.\n"
