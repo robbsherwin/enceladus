@@ -33,11 +33,12 @@ event in FinnianEnters
 		move Finnian to TheCaptainsQuarters
 		Captain is hidden
 		Finnian is hidden
+		Captain.talkValue = 999
 
 		"\nSomeone enters the quarters, but it's not a werewolf, hell-bent on consuming us all. It's just Finnian, the pilot. \n"
 
 		"\"GRAVVVVVITY!!\" he sings, \"DON'T MEAN \BTOO MUCH\b TO ME!\" Nobody reacts. \"Hey gorgeous, there's a man-wolf on the ship.\" I'll assume he's not talking to me here. \"You banned us
-		from wearing fur, otherwise I would have lasered it between the fangs and made a coat out of the part where he didn't piss 'imself.\"\n"
+		from wearing fur, otherwise I would have lasered it between the fangs and made a coat out of the part where it didn't piss itself.\"\n"
 
 		"\"No, I banned you all from wearing fur-lined banana thongs,\" says the Captain.\n"
 
@@ -45,6 +46,8 @@ event in FinnianEnters
 
 		"\"Jesus, Ja'Rod,\" says Finnian with a wince. He turns to the Captain. \"Kid's got a mouth that's craggier than the public road leading up
 		to Pripyat Reactor Four. When the werewolf bites you he'll actually be injecting vitamins into your bloodstream.\""
+
+		move tooth to location
 	}
 	case 3
 	{
@@ -52,8 +55,8 @@ event in FinnianEnters
 		Finnian is not hidden
 		HallwayDoor is not locked
 
-		"\nFinnian clears his throat and addresses the Captain. \"Look, do you want us to kill the thing or what? I don't want to get in a situation where I'm trapped
-		in the rec room with nothing other than that butt-fragile Mouse Trap game for six hours.\""
+		"\nFinnian clears his throat and addresses the Captain. \"Look, do you want us to kill the thing or what? I don't want to get in a situation where it
+		has cornered us and I'm trapped in the rec room with nothing other than that butt-fragile Mouse Trap game for six hours.\""
 	}
 	case 4
 	{
@@ -492,7 +495,7 @@ event in Captain_Shoots_McGrathley
 				my head for anything I could have encountered that would have stopped it, but it digs its nails into my skull,
 				fracturing it into pieces and the last thing I feel or see or smell is my brain going haywire, being unraveled,
 				being strewn about the moon. It ends, thankfully, it all ends and is all over."
-			}			
+			}
 			endflag = 2
 		}
 		else {

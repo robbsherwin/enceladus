@@ -917,3 +917,101 @@ object refreshingBeverage "gintata"
 		}
 	}
 }
+
+scenery tooth "tooth"
+{
+	nouns "tooth" "teeth"
+	article "my"
+
+	long_desc
+	{
+		"Well, I can't save it now. I really gotta start adding limes to everything I eat, though."
+	}
+}
+
+object thong "thong"
+{
+	nouns "banana" "thong"
+	adjective "fur-lined"
+	article "Finnian's"
+	in Finnian
+	is hidden
+
+	long_desc
+	{
+		"I only really take a quick, passing glance. Like I was looking at something in that general direction. Look, this isn't the craziest outfit that
+		Finnian has reported to stand-up with."
+	}
+	before
+	{
+		object DoGet
+		{
+			"Ha! Not on my life!!"
+		}
+	}
+}
+
+object dunceCap "dunce cap"
+{
+	nouns "cap"
+	adjective "dunce"
+	article "the"
+	is hidden
+
+	long_desc
+	{
+		"It looks like a traffic cone painted white with the word DUNCE handwritten from the top down. I don't even know where he gets these things, much less
+		why he'd ever want to wear one."
+	}
+	before
+	{
+		object DoGet
+		{
+			"I can't, first he's much taller than I am and secondly I don't really have anything I want to do with it."
+		}
+	}
+}
+
+
+object furCoat "fur coat"
+{
+	nouns "coat"
+	adjective "fur" "lynx"
+	article "the"
+	is hidden
+
+	long_desc
+	{
+		"It's beautiful, pearl and shade-of-night marbled patterns, runs from the neck down to the ankles. You'd have to be a real prick to order one new. Finnian does check out
+		the antique shops every time we touch down somewhere, so maybe the former, but he also has a current subscription to the 'Skymall' of starships, which is also 'Skymall,'
+		so extra-maybe the latter."
+	}
+	before
+	{
+		object DoGet
+		{
+			"It's too big for me. To take. And to wear. Both, really."
+		}
+	}
+}
+
+object airJordans "Air Jordans"
+{
+	nouns "jordans"
+	adjectives "air"
+	article "Finnian's"
+	is hidden, plural
+
+	long_desc
+	{
+		"Size 12 red and white basketball sneakers, presumably re-issues, but considering the other things that Finnian has worn since I have known him, I wouldn't
+		bet on it."
+	}
+	before
+	{
+		object DoGet
+		{
+			"I think the last thing the solar system needs is some sort of working, in-progress stereotype of Ethiopian Ensigns stealing space sneakers."
+		}
+	}
+}

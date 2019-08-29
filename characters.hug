@@ -130,7 +130,7 @@ charnumber 3
 nouns "finnian""o'connell" "pilot"
 adjectives "finnian"
 is neutral
-talkValue 0
+talkValue 1
 
 	long_desc
 	{
@@ -146,21 +146,24 @@ talkValue 0
 	}
 	before
 	{
-		object DoAsk
+		object DoTalk
 		{
-			select xobject
-				case werewolf
-				{
-					"\"I haven't actually seen it yet,\" says Finnian. \"I'll assume this is all a horrible ship's malfunction. Probably with your part.
-					What do you do on the ship?\"\n"
-					"\"I'm the x-ray technician.\"\n"
-					"\"That pretty much destroys my working theory there, so nevermind.\""
-				}
-				case else
-				{
-					return false
-				}
+			select(self.talkValue)
+			case 1
+			{
+				"\"What do you know about the werewolf?\" I ask Finnian.\n"
+				"\"I assume it's a ship malfunction. Maybe you even did it. What is your job on the ship?\"\n"
+				"\"X-ray Technician.\"\n"
+				"Finnian gives me an unchanged look for five seconds too long. \"Okay, you definitely don't have enough
+				responsibility to have caused this.\""
+				self.talkValue = 999
+			}
+			case else
+			{
+				"I have nothing to say to him."
+			}
 		}
+
 	}
 }
 

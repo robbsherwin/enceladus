@@ -373,6 +373,11 @@ room OutsideTheShip "Outside the Plagoo"
 
       Deactivate(Airlock_Checker)
 
+      remove thong
+      move dunceCap to Finnian
+      move furCoat to Finnian
+      move airJordans to Finnian
+
       "Finnian looks around before looking back toward the group. He changed before we came down, now wearing a real Lynx fur coat, a white dunce cap and new
       old stock original Air Jordans. \"Crap, Captain, it's an ice planet!\"\n"
       "She nods at that. \"Intelligence indicates that there's a small town a kilometer east of here.\"\n"
@@ -385,7 +390,7 @@ room OutsideTheShip "Outside the Plagoo"
       "\"Finnian, stop,\" says the Captain.\n"
       "\"Done,\" says the robot, presumably having fired off some API calls.\n"
       "Finnian laughs. It's a dry, hollow one. \"Seventy one minutes from now, good luck to any kid trying to do a book report on Jovian moons. Cite
-      that revision in your bibliography.\"\n"
+      that revision in your bibliography, you sniveling Webelo punks.\"\n"
 
       "The Captain walks east. Mr Mailx starts up to join her and after a shrug and then a replacing of his precariously-set hat, Finnian goes east too."
     }
@@ -836,5 +841,4 @@ room RecRoom "Rec Room"
       "My friends are here."
     }
   }
-
 }
