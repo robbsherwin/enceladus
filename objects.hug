@@ -1011,7 +1011,28 @@ object airJordans "Air Jordans"
 	{
 		object DoGet
 		{
-			"I think the last thing the solar system needs is some sort of working, in-progress stereotype of Ethiopian Ensigns stealing space sneakers."
+			"I think the last thing the solar system needs is me contributing to some sort of working, in-progress
+			stereotype of Ethiopian Ensigns stealing space sneakers."
+		}
+	}
+}
+
+scenery miningRope "rope"
+{
+	nouns "rope"
+	article "the"
+	found_in mine mineLevelTwo mineLevelThree
+
+	long_desc
+	{
+		"It looks kind of old and weathered, which is odd, as presumably they only shipped new stuff to Enceladus from
+		off-world."
+	}
+	before
+	{
+		object DoClimb
+		{
+			Perform(&DoMove, d_obj)
 		}
 	}
 }

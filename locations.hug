@@ -745,8 +745,16 @@ room mineLevelTwo "Mine Level Two"
 {
   long_desc
   {
-    "We don't really see any metal that can help us out on this level of the mine. It also appears that there hasn't been
-    much digging around here. The rope leading downwards is visible, someone has installed some lighting down below."
+    if self is not visited
+    {
+      "The Captain and I, having descended from the rope above, come to rest on this level of the mine.\n"
+
+    }
+
+    "We don't really see any metal that can help us out here. It also appears that there hasn't been
+    much digging, as if there was something interesting further down, but they wanted a base here in case
+    of future expansion. The rope continues to lead downwards. There is some installed blue neon lighting below
+    that I can see. It appears that there's just one more level to the mine."
   }
 
 u_to "We can't go that way by ourselves."
@@ -760,13 +768,20 @@ room mineLevelThree "Mine Level Three"
     if self is not visited
     {
       move Captain to location
-      !//[xxx]
+      "Luckily, the rope is close enough to the sides of the mine that I can sort of steady myself and kick until I descend
+      completely.\n"
+
+      "The mine shaft ends here, in terms of going into the center of Enceladus. Carved out from the rock and snow is a path
+      to the east."
     }
     else {
       if GameEvents[20] = 1
       {
         move Captain to location
         move Mailx to location
+
+        "The mine shaft ends here, in terms of going into the center of Enceladus. Carved out from the rock and snow is a path
+        to the east."
       }
 
     }
