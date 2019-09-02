@@ -116,6 +116,13 @@ talkValue 0
 				this conversation is taking place away from the cafeteria.\"\n"
 				"\"I know it's not in this room, but that's it, Captain,\" I add."
 			}
+			case 3
+			{
+				"\"Can you go over the plan again?\" I ask.\n"
+				"\"Yup,\" she says, \"We're going to go west. You find a place to hide. When I snap my fingers ... shoot the hull.\"\n"
+				"\"The hull?\"\n"
+				"\"You got it.\""
+			}
 			case else
 			{
 				"I don't have anything to say to her at the moment."
@@ -141,7 +148,7 @@ talkValue 1
 		}
 		case else
 		{
-			![xxx]
+			"He is wearing a lynx coat from head to ankles, a dunce cap and Air Jordans."
 		}
 	}
 	before
@@ -158,12 +165,17 @@ talkValue 1
 				responsibility to have caused this.\""
 				self.talkValue = 999
 			}
+			case 2
+			{
+				"\"Hey, the Captain's been a little off since I got back from leave,\" I say to him. \"Did something happen?\"\n"
+				"Finnian turns to me and stops fiddling with the console. \"You really hadn't heard?\" he says. But we
+				hear people approach the bridge, so that is all he says for now.
+			}
 			case else
 			{
 				"I have nothing to say to him."
 			}
 		}
-
 	}
 }
 
@@ -171,7 +183,7 @@ npc Grimes "Grimes"
 {
 charnumber 4
 nouns "grimes"
-is neutral
+is neutral, not living
 talkValue 0
 
 	long_desc
@@ -343,7 +355,19 @@ in BeforeTheAirlock
 
 	long_desc
 	{
-		[xxx]
+		if GameEvents[23] = 0
+		{
+			"This thing is a horrible result of an intentional genetic compromise. You can get DNA manipulation of your characteristics
+			fairly cheaply on Phobos but some people take it too far. There are stories of people who have become mermaids and centaurs.
+			I've never seen one up close.\n"
+		}
+
+		"The werewolf stands about five and a half feet tall. Thick brown hair juts from every location that hair can grow on its
+		body. It has yellowing fingernails emerging from furry, blackened hands. Two fangs are obviously visible, but they are
+		bright, perfect white. It wears and needs no clothes due to all the hair.\n"
+
+		"Its eyes look a bit messed up, they are bloodshot, cells just bursting with blood, and I don't think it
+		was picked out by him when he did this to himself."
 	}
 }
 

@@ -100,6 +100,8 @@ event in DiscussGrimesDeath
 		"\"Oh yeah,\" says Finnian, poking a flip-flopped toe into Grimes's extensive stomach. \"What, were they were gonna play Canon in Mickey D's when he walked
 		down the aisle? Also: Captain. Captain? With Grimes not needing his share can the rest of us get a raise?\" I'm not sure if the Captain heard that or
 		if she did and just ignored it."
+
+		Grimes is known
 	}
 	case 2
 	{
@@ -215,6 +217,8 @@ event in Finnian_Lands_Ship
 	select(self.timer)
 	case 2
 	{
+		Finnian.talkValue = 999
+
 		"\nThe Captain joins the rest of us on the bridge. She sits in the command chair.\n"
 		"\"How is Alexandra?\" I ask, taking over the scanning station.\n"
 		"\"She needs a doctor,\" says the Captain. \"Take us down,\" she says to Finnian.\n"

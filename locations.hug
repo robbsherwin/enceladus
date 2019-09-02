@@ -8,6 +8,8 @@ room Hallway02 "Hallway Module"
       move Captain to location
       move Finnian to location
       remove latte
+
+      TheCaptainsQuarters.name = "The Captain's Quarters" !// Remove the bit about us being on the Plagoo
     }
 
     "There is a brief hallway module connecting the Captain's bedroom to the hold, which is up ahead."
@@ -35,7 +37,7 @@ room Hallway02 "Hallway Module"
         she's in control of the situation, which is nice, because I don't need augmented vision to know my heart is pounding. Although
         I guess I really shouldn't stare at human bodies when the specs are engaged for too long."
 
-        xraySpecs is not hidden 
+        xraySpecs is not hidden
       }
 
     }
@@ -87,6 +89,13 @@ room Hallway03 "Ship Hold"
 
     "\nExits lead west, further into the ship, and east, back down the hallway where we came."
 
+  }
+  before
+  {
+    object DoExits
+    {
+      "I can go west and east from here."
+    }
   }
 xrayDescription {
         GameEvents[7] = 1
@@ -150,6 +159,9 @@ room Hallway04 "Monitoring"
 
       "Finnian nods, the disposition he normally carries about has left for a moment. After all, there are enemies on the ship and we can still
       save Alexandra. I have a few thoughts - why not shoot the werewolf and the other guy instead of putting a hole in the ship, but I just nod as well."
+
+      Captain.talkValue = 3
+      Finnian.talkValue = 999
     }
   }
 w_to BeforeTheAirlock
@@ -160,7 +172,6 @@ room BeforeTheAirlock "Before the Airlock"
 {
 long_desc
 {
-
   if GameEvents[11] = 1
   {
     if GameEvents[17] = 0
@@ -186,6 +197,10 @@ long_desc
     if self is not visited
     {
       self is hidden
+      Captain.talkValue = 999
+      Finnian.talkValue = 999
+      move Alexandra to location
+      move Mailx to location
     }
 
     if self is hidden
@@ -221,12 +236,21 @@ long_desc
     }
   }
 }
-
 before
 {
   location DoJump
   {
     "Not a great place to do that."
+  }
+  object DoExits
+  {
+    if GameEvents[24] = 0
+    {
+      "I can't really leave right now."
+    }
+    else {
+      "I can go south back to the Bridge."
+    }
   }
 }
 
@@ -262,6 +286,9 @@ room Bridge "Bridge"
       "Finnian sits down and starts fiddling with the navigation controls."
 
       Activate(Finnian_Lands_Ship)
+
+      GameEvents[24] = 1 !// This is for the DoExits in BeforeTheAirlock
+      Finnian.talkValue = 2
 
     }
     else {
