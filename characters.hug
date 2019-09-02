@@ -180,6 +180,13 @@ talkValue 0
 		but that's over and done with now because right now he's dead on the floor in a pool of his own blood, his throat having been ripped out by
 		the werewolf that got on the ship."
 	}
+	before
+	{
+		object DoTalk
+		{
+			"Grimes is dead."
+		}
+	}
 }
 
 npc Alexandra	"Alexandra"
@@ -192,7 +199,7 @@ talkValue 0
 	long_desc
 	{
 		"Alexandra is a tall redhead, our life support technician. She is usually the life of the party on the ship that people can actually
-		stand, meaning, not a narcissist like maybe our other ship's extrovert. She is wearing a silver jumpsuit and black moon boots,
+		stand, meaning, not a self-serving narcissist like maybe our other ship's extrovert. She is wearing a silver jumpsuit and black moon boots,
 		I think she was on watch when the werewolf stuff happened. She is in a lot of pain at the moment, though I am not sure
 		specifically what Riggs did to her."
 	}
@@ -226,6 +233,10 @@ talkValue 0
 				get you a doctor. I imagine we're going to go planetside soon.\"\n"
 				"\"Enceladus. Is. A. Moon,\" says Mailx.\n"
 				"There's a green button and a red button on the control panel for the airlock."
+			}
+			case else
+			{
+				"I don't have anything that I can think of right now to say to Alexandra."
 			}
 		}
 	}
@@ -328,6 +339,12 @@ adjectives "man"
 article "the"
 charnumber 7
 is known
+in BeforeTheAirlock
+
+	long_desc
+	{
+		[xxx]
+	}
 }
 
 npc MiladNahas "Doctor Nahas"

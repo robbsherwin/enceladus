@@ -25,6 +25,8 @@ room Hallway02 "Hallway Module"
 
         "Ensign Butler! Oops, that's me, and yes, as the x-ray technician of the Plagoo, I carry some specs with me.
         I can put my specs down."
+
+        xraySpecs is not hidden
       }
       else
       {
@@ -32,6 +34,8 @@ room Hallway02 "Hallway Module"
         has his x-ray specs deployed in the scan position to let us know what's ahead.\" The Captain has a talent for seeming like
         she's in control of the situation, which is nice, because I don't need augmented vision to know my heart is pounding. Although
         I guess I really shouldn't stare at human bodies when the specs are engaged for too long."
+
+        xraySpecs is not hidden 
       }
 
     }

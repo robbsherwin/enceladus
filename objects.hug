@@ -20,6 +20,13 @@ in captainDesk
 			"\nThere's a message from my fellow crew member Finnian blinking on the screen."
 		}
 	}
+	before
+	{
+		object DoGet
+		{
+			"That's too heavy and bulky for me to take!"
+		}
+	}
 }
 
 
@@ -80,12 +87,13 @@ is hidden, platform
 }
 
 
-object captainDresser "dresser"
+scenery captainDresser "dresser"
 {
 nouns "dresser"
 article "the"
 in TheCaptainsQuarters
 is hidden, container, openable, not open
+parse_rank -1
 
 	long_desc
 	{
@@ -100,11 +108,10 @@ is hidden, container, openable, not open
 		}
 		object DoGet
 		{
-			"I can't take the desk, unfortunately(?)."
+			"I can't take the dresser, unfortunately(?)."
 		}
 	}
 }
-
 
 object captainBed "bed"
 {
@@ -151,10 +158,11 @@ scenery bedCovers "covers"
 object jumpsuit "jumpsuit"
 {
 nouns "suit" "jumpsuit" "pants"
+pronoun "it"
 adjectives "jump" "clothes"
 article "the Captain's"
 in captainDresser
-is clothing, plural
+is clothing
 
 	long_desc
 	{
@@ -163,6 +171,20 @@ is clothing, plural
 	}
 	before
 	{
+		object DoGet
+		{
+			if jumpsuit in Captain
+			{
+				"I can't do that."
+			}
+			else {
+				move jumpsuit to player
+				"I take it out of the Captain's dresser."
+				object = jumpsuit
+				xobject = jumpsuit
+			}
+
+		}
 		object DoWear
 		{
 			"It would never fit m-- ... it would probably fit me, but I'm still not going to wear it!"
@@ -281,7 +303,7 @@ nouns "specs" "x-ray"
 adjectives "x-ray"
 article "the" "my"
 !// Not special is up, special is down
-is clothing, hidden, not special
+is clothing, hidden, not special, plural
 in JaRod
 
 	long_desc
@@ -299,6 +321,10 @@ in JaRod
 	}
 	before
 	{
+		object DoDrop
+		{
+			"They are essential for me to do my job, I shouldn't be without them."
+		}
 		object DoLower
 		{
 			if self is special
@@ -341,10 +367,6 @@ article "the"
 		object DoDrop
 		{
 			"I've been tasked with holding onto this, so I probably shouldn't just leave it around."
-		}
-		object DoShoot
-		{
-			!// [xxx]
 		}
 		object DoTwirl
 		{
@@ -587,6 +609,10 @@ object barStool "bar stool"
 				"(Nailed it, deep southeast L.A. near Baker, I think.)"
 			}
 		}
+		object DoGet
+		{
+			"Even though the gravity here is lower, my desire to carry around a bar stool doesn't become higher."
+		}
 	}
 }
 
@@ -631,12 +657,19 @@ object knife "knife"
 
 				"\"I've cut myself!\" I say convincingly. \"Ow!\""
 
-				Activate(Doctor_Arrives)
-
+				Activate(Doctor_Arrives_Knife)
 			}
 			case else
 			{
+				"I don't know where the bouncer is, but I doubt he's going to let me cut other things and people. ";
 
+				if GameEvents[19] = 0
+				{
+					"Though if I could somehow inflict an injury, a doctor might come running..."
+				}
+				else {
+					""
+				}
 			}
  		}
 	}
@@ -650,7 +683,8 @@ object blairsUltraDeath "Blair's Ultra Death"
 	in HotSauceBar
 	long_desc
 	{
-
+		"This particular bottle had been open before, it's missing the keychain with the skull that is attached to unopen ones. It contains about five ounces of sauce, the
+		recipe has not changed in years. The cap is off, missing. It has a white human skull drawn on it. 'FEEL ALIVE,' it says, taunting all who read it."
 	}
 	before
 	{
@@ -688,7 +722,10 @@ object blairsUltraDeath "Blair's Ultra Death"
 
 object mineKey "key"
 {
-
+	long_desc
+	{
+		"I think it's made out of solid brass or a similarly heavy combo of metals, but it's painted black, the paint having started to chip."
+	}
 }
 
 vehicle mineCart "mine cart"
@@ -702,23 +739,34 @@ in mineLevelThree
 
 		long_desc
 		{
-
+			"It's more of a lift instead of a cart, but regardless three beings can easily fit inside and it would take us up if we wanted
+			to get into it and go that way."
 		}
 		before
 		{
 			object DoEnter
 			{
-				"The three of us hop into the mine cart and are taken to the top ... "
-				"\n[Strike any key to continue]"
-				pause
-				move Mailx to EntranceToMine
-				move Captain to EntranceToMine
-				mineDoor is not locked
-				mineDoor is open
-				MovePlayer(EntranceToMine)
+				if GameEvents[20] = 0
+				{
+					"Nobody else seems to want to get into it and I don't want to be weird, so I don't do that."
+				}
+				else {
+					"The three of us hop into the mine cart and are taken to the top ... "
+					"\n[Strike any key to continue]"
+					pause
+					move Mailx to EntranceToMine
+					move Captain to EntranceToMine
+					mineDoor is not locked
+					mineDoor is open
+					MovePlayer(EntranceToMine)
+				}
+
+			}
+			object DoGet
+			{
+				"The mine cart is physically attached to rails in the mine, so I cannot do that."
 			}
 		}
-
 }
 
 object wheelbarrow "wheelbarrow"
@@ -730,6 +778,13 @@ in Mine
 	long_desc
 	{
 
+	}
+	before
+	{
+		object DoGet
+		{
+			"I can't take that."
+		}
 	}
 }
 
@@ -889,6 +944,10 @@ article "the"
 			else {
 				!//[xxx]
 			}
+		}
+		object DoGet
+		{
+			"It's a spaceship, waaay too busy for me to carry."
 		}
 	}
 }
