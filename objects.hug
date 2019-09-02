@@ -576,6 +576,52 @@ is special !// Going to make it open for starters and special means OPEN
 	}
 }
 
+scenery navigationControls "navigation controls"
+{
+	noun "controls" "console"
+	adjective "navigation"
+	article "the"
+	in Bridge
+
+	long_desc
+	{
+		"The controls are in front of Finnian, they are what he uses to move the Plagoo - to apply thrust, yaw, roll,
+		tilt, all those things I did playing computer games as a kid that I would never dare try in real life. The
+		console is all buttons, though, the Captain couldn't afford the flightstick option for the Plagoo."
+
+		if self is not visited
+		{
+			Finnian.talkValue = 
+		}
+	}
+}
+
+scenery captainsChair "Captain's chair"
+{
+	noun "chair"
+	article "The Captain's"
+	in Bridge
+
+	long_desc
+	{
+		"The Captain did splurge a little on the chair, the Plagoo didn't originally come with it. It has a giant leather
+		rectangle that forms the back and a couple more for upper back support and a seat. There are a couple of wooden
+		arm rests as well, and two touchscreens beyond those."
+	}
+}
+
+scenery touchscreens "touchscreens"
+{
+	noun "screens "touchscreens" "touchscreen" "screen"
+	article "the"
+	in Bridge
+
+	long_desc
+	{
+		"They aren't showing anything and don't belong to me."
+	}
+}
+
 object barStool "bar stool"
 {
 	noun "stool"

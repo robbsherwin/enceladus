@@ -116,6 +116,8 @@ array GameEvents[MAXGAMEEVENTS]
 ! GameEvents[20] = Is the cave-in solved?
 ! GameEvents[21] = Did Ja'Rod kill the werewolf with the silver?
 ! GameEvents[22] = Did Ja'Rod do a scan in the mine area to reveal the silver ore?
+! GameEvents[23] = Have we looked at the werewolf?
+! GameEvents[24] = This is for the DoExits in BeforeTheAirlock 
 
 global alexandraInAirlock = false
 global mailxIsPulled = false
