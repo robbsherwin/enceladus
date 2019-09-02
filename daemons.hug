@@ -399,6 +399,9 @@ event in JaRod_Hallucinates
 	}
 	case 3
 	{
+		"\n\"Give him some milk!\" I hear someone shout from the far corner of the bar.\n"
+		"\"That won't help!\" shrieks someone else. \"That's a myth! Idiot!\"\n"
+		"\"Give him a slightly mellower hot sauce,\" I hear from the opposite corner of the first guy. Nobody's doing dick to actually help me though, so I don't appreciate these suggestions flying around."
 
 	}
 	case 4

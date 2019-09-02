@@ -34,7 +34,7 @@ routine DoCredits()
 	"Testing by Jizaboz."
 	"The Hugo Programming language is by Kent Tessman."
 	"The Hugor Interpreter is created and maintained by Nikos Chantziaras"
-	"Thanks to RetroRomper and Jon Blask.\n"
+	"Thanks to Pinback, RetroRomper and Jon Blask.\n"
 	"My other games can be downloaded at my website at https://www.joltcountry.com/games and my graphical text adventure Cryptozookeeper can be purchased on Steam."
 }
 
