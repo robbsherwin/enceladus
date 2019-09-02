@@ -92,7 +92,7 @@ room Hallway03 "Ship Hold"
   }
   before
   {
-    object DoExits
+    location DoExits
     {
       "I can go west and east from here."
     }
@@ -176,7 +176,7 @@ long_desc
   {
     if GameEvents[17] = 0
     {
-      GameEvents[17] = 1 !// Do this once, please!
+      GameEvents[17] = 1 !// Do this once, please for setting up Before the Airlock
       move Mailx to location
       move Alexandra to location
       Mailx.talkValue = 1
@@ -189,6 +189,8 @@ long_desc
     "I'm before the airlock again. Mr Mailx is here plugging the hole I created. Alexandra is conscious, but laying on a blanket that the Captain somehow
     produced. "
 
+    move airlock to BeforeTheAirlock
+    move blanket to BeforeTheAirlock
   }
   else {
     move Captain to location
@@ -218,7 +220,7 @@ long_desc
       "\"You came in through the airlock on the opposite side? Without that thing wearing a suit?\" She points to the werewolf.\n"
       "The werewolf's head is still pointed toward the Captain, but it turns bloodshot, vacuum-afflicted eyes towards the man after that for a long second
       before settling back onto the Captain and Finnian.\n"
-      "\"It can take it!\" the man hisses. He notices Finnan for the first time. Desperate to change the subject, he addresses Fin. \"What are you wearing?\"\n"
+      "\"It can take it!\" the man hisses. He notices Finnian for the first time. Desperate to change the subject, he addresses Fin. \"What are you wearing?\"\n"
       "\"Appropriate dress in this area of the solar system for shore leave, McGrathley,\" he says. McGrathley! I didn't recognize him in the spacesuit,
       but this is Riggs McGrathley, a pirate we've encountered once before."
 
@@ -242,7 +244,7 @@ before
   {
     "Not a great place to do that."
   }
-  object DoExits
+  location DoExits
   {
     if GameEvents[24] = 0
     {
@@ -296,17 +298,21 @@ room Bridge "Bridge"
       if mailxIsPulled = true and alexandraInAirlock = true
       {
        move Mailx to location
-       "\n\"Ensign Butler,\" starts the Captain, \"How is our life support technician doing?\"\n"
+       Mailx.talkValue = 999
+
+       "\nI hear the Captain via the communications system on the Plagoo.\n"
+       "\"Ensign Butler,\" she says, \"How is Alexandra?\"\n"
        "\"Alexandra is inside the airlock, the temperature controls are active and she'll be safe there. That room is getting cold.\n"
-       "The Captain nods. \"Very well. Let's - the four of us - meet outside for our next steps."
+       "\"Very well. Let's meet outside for our next steps.\""
+
        "\n[Strike any key to continue]"
+
        pause
+
        StartPlanetFallScene()
       }
-
     }
   }
-
   before {
     location DoExits
     {
@@ -317,10 +323,8 @@ room Bridge "Bridge"
       else {
         "There is an exit north into the hall."
       }
-
-      }
+    }
   }
-
 n_to  {
     if GameEvents[12] = 0
     {
@@ -344,7 +348,7 @@ room PortSideHall01  "Port Side Hallway"
       Some of the latter may simply be that Finnian is force-piping the album Big Generator through the ship's audio, however."
     }
     else {
-      "This is just a simple access hallway that allows me to get to different areas of the ship.\n"
+      "This is just a simple access hallway that allows me to get to different areas of the ship."
 
       if alexandraInAirlock = true and mailxIsPulled = true
       {
@@ -471,12 +475,12 @@ room SnowyPath01 "Snowy Path"
       move Mailx to SnowyPath02
       move Captain to SnowyPath02
       "\"... I'm just saying, have you ever tried to edit something on it? No? Oh, hey Ja'Rod,\" says Finnian.\n"
-      "\"Our plan is going to be this,\" says the Captain. \"There's a hot sauce bar up ahead. We ask around to find a doctor. Since
+      "\"Our plan is going to be this,\" says the Captain. \"There's a hot sauce bar up ahead. To the east. We ask around to find a doctor. Since
       we also need to repair the ship, let's see if we can find a mine.\"\n"
       "We all nod at this except for Mr Mail, who just keeps treading east with a low whir."
     }
     else {
-      "I am on a snowy path towards civilization on the moon Enceladus."
+      "I am on a snowy path towards civilization on the moon Enceladus. My goal from here is to go east and join up with everyone."
     }
   }
 
@@ -490,6 +494,10 @@ room SnowyPath02 "Snowy Path"
   {
     if self is not visited
     {
+      move Captain to location
+      move Finnian to location
+      move Mailx to location
+
       "\"... bring her back something to drink is all I'm saying, they can't just have hot sauce. Maybe a bottle of scotch to anesthetize her wound. Hey robot,
       does scotch kill the bacteria and germs around wounds?\"\n"
       "\"No,\" says Mr Mailx.\n"
@@ -503,12 +511,19 @@ room SnowyPath02 "Snowy Path"
     }
     else {
 
-      "Where we happen to be on Enceladus is a place on the moon that is on the opposite side of Saturn. I have heard it's a bit overwhelming when
+      "So, where we happen to be on Enceladus is a place that is on the opposite side of Saturn. I have heard it's a bit overwhelming when
       you're on the other side of the moon and Saturn is there looking at you like a giant angry god. The way Enceladus moves in its orbit, we
       won't ever get that view which is bad from a life experience standpoint but better from an anxiety-inducing one, I think.\n"
 
-      "The ground is pure ice, it isn't clear to me if humans or machines have ever truly walked on this particular part of the moon ever.
-      Very slippery."
+      "The ground is pure ice here. It isn't clear to me if humans or machines have ever truly walked on this particular part of the moon ever
+      due to just how slippery it is. The path to town is to the east."
+    }
+  }
+  before
+  {
+    location DoExits
+    {
+      "There are exists east and west from here."
     }
   }
 
@@ -527,6 +542,7 @@ room SnowyPath02 "Snowy Path"
     }
   }
 
+  w_to SnowyPath01
   e_to {
     if GameEvents[16] = 0
     {
@@ -559,12 +575,13 @@ room SnowyPath03 "Snowy Path"
       of this.\"\n"
 
       "I see now that we landed in just an enormous flat crater -- the crater's edge is just beyond this little section of town. I still have no idea where anyone around here lives. I'm hoping their
-      homes are out of the crater and they all get around by jetpack. (There is what appears to be an abandoned snowmobile close by with tracks leading to the bar, so maybe it's just that.)"
+      homes are out of the crater and they all get around by jetpack. (There is what appears to be an abandoned snowmobile close by with tracks leading to the bar, so maybe it's just that.) To the east
+      is the actual center of town."
 
     }
     else {
       "I'm inside the far edge of a crater here on Enceladus. The crater's walls are visible now, maybe no more than another kilometer. The whole moon is only a quarter the size of Ethiopia, where
-      I grew up. A disused snowmobile lies a bit away, and up ahead, to the east, is the hot sauce bar and the entrance to a mine."
+      I grew up. A disused snowmobile lies a bit away, to the east is the hot sauce bar and the entrance to a mine."
     }
   }
 
@@ -636,7 +653,7 @@ room CenterOfTown "Center of Town"
   }
   before
   {
-    object DoExits
+    location DoExits
     {
       "To the south is a Hot Sauce bar. To the west is the snow path leading to the Plagoo. To the north is a mine."
     }
@@ -753,7 +770,6 @@ door MineDoor "door"
   }
 }
 
-
 room mine "Mine"
 {
 long_desc
@@ -802,6 +818,11 @@ room mineLevelTwo "Mine Level Two"
     much digging, as if there was something interesting further down, but they wanted a base here in case
     of future expansion. The rope continues to lead downwards. There is some installed blue neon lighting below
     that I can see. It appears that there's just one more level to the mine."
+
+    if self is not visited
+    {
+      "\nThe Captain continues by going down."
+    }
   }
 
 u_to {"We can't go that way by ourselves."}
@@ -831,6 +852,13 @@ room mineLevelThree "Mine Level Three"
         to the east."
       }
 
+    }
+  }
+  before
+  {
+    location DoExits
+    {
+      "There's an exist east of where we are now. Entering the mine cart can also, in theory, bring us up."
     }
   }
 
@@ -866,25 +894,26 @@ xrayDescription {
       "I take a quick scan of the area. This boulder is definitely pure ice, nothing else to it as far as I can tell.
       The only issue is that the ice is harder than anything I can imagine and we have a giant chunk of it in front of us."
     }
-    else {
-      if iceBoulder is special !// Meaning, destroyed
-      {
-        "I don't really have any other interesting info."
-      }
-    }
 
     if GameEvents[21] = 0
     {
       GameEvents[21] = 1
-      Mailx.talkValue = 2
+      Mailx.talkValue = 2 !// "I should talk to the Captain first."
       Captain.talkValue = 1
 
       move silverOre to location
 
-      "\nI do find something interesting in the mine itself, however, a vein of silver ore about the size of a baseball, just
+      "\nI... okay, I do find something interesting in the mine itself, however, a vein of silver ore about the size of a baseball, just
       half an inch from the side of the northern wall. Covered in much more supple icy snow, I dig at it until it almost pops
-      out and ends up on the ground. I have no idea if the Captain is aware of what I just did, I should definitely talk
+      out and ends up on the ground. I pick it up. I have no idea if the Captain is aware of what I just did, I should definitely talk
       to her about it."
+
+      move silverOre to player
+    }
+
+    if iceBoulder not in location and GameEvents[21] = 1
+    {
+      "I don't get anything interesting."
     }
   }
 

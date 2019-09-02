@@ -110,7 +110,7 @@ array GameEvents[MAXGAMEEVENTS]
 ! GameEvents[14] = Can we leave BeforeTheAirlock and go back towards the Bridge, in other words, is alexandraInAirlock = true and is mailxIsPulled = true?
 ! GameEvents[15] = Did we send the Doctor, Finnian and Mailx away?
 ! GameEvents[16] = Has Ja'Rod done a scan on the SnowyPath02?
-! GameEvents[17] = Has Ja'Rod initially sat on the stool?
+! GameEvents[17] = This is for setting up Before the Airlock just once
 ! GameEvents[18] = Is Ja'Rod incapacitated via hot sauce?
 ! GameEvents[19] = Did Ja'Rod and the Captain find a doctor?
 ! GameEvents[20] = Is the cave-in solved?
@@ -120,7 +120,7 @@ array GameEvents[MAXGAMEEVENTS]
 ! GameEvents[24] = This is for the DoExits in BeforeTheAirlock
 ! GameEvents[25] = Did the Captain mention the twirling?
 ! GameEvents[26] = Did Ja'Rod ask the bartender for the sauce?
-
+! GameEvents[27] = Has Ja'Rod initially sat on the stool?
 global alexandraInAirlock = false
 global mailxIsPulled = false
 
@@ -167,8 +167,8 @@ routine init
 
 	Activate(CaptainIdle)
 
-  MovePlayer(SnowyPath03)
-  !MovePlayer(TheCaptainsQuarters)
+  !MovePlayer(SnowyPath03)
+  MovePlayer(TheCaptainsQuarters)
 
 	old_screenwidth = display.screenwidth
 

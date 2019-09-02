@@ -1,0 +1,14 @@
+enceladus.exe - the Windows instance of Hugor
+enceladus.hex - Hugo story file
+enceladus.cfg - Hugor configuration file
+ENCEL01 - media file for the game, graphics and sound 
+enceladus.txt - this file
+
+Enceladus was created by Robb Sherwin for the 2019
+Interactive Fiction Competition. To play more of 
+my games, please go to https://www.joltcountry.com/games
+
+
+Robb Sherwin
+beaver@zombieworld.com
+September 28th, 2019

@@ -20,20 +20,14 @@ they used a werewolf and had to crash land it on Enceladus?
 
 
 Todo:
-- Make it so we can take the alumninum off the wheelbarrow, put that in the bottom of the mine
 - Do all the scenery descriptions
 - Do all the approrpriate talk to commands
-- Support for taking the knife off the bar and cutting Ja'Rod with it
 - Add the rope that we are using to go down the mine
 - Test what happens if they go up and down and such
-
-
-
-
-
-
-
-
+- can't drive snowmobile
+- x airlock should work and it should tell us about the doors
+- add the crowd
+- failure message for shooting the boulder
 
 
 

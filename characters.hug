@@ -52,12 +52,12 @@ talkValue 0
 			}
 			case 1
 			{
-				"\"Captain ... are you okay?\"\n"
+				"\"Captain ...\" I was going to mention the silver, but I don't. \"Are you okay?\"\n"
 
 				"She doesn't open her eyes right away. She's always just so inscrutable, and I'm not always great at reading people to begin with, so I don't know,
 				I don't even know if I should be asking, but it's like some other force compels me to do so, so I do.\n"
 
-				"\"Wait. Are you okay, Captain? What happened to you when I was gone? I know Forburn left, but... \" Her smile gets broader, but it is lacking all warmth.\n"
+				"\"Wait. You're not okay, are you, Captain? What happened to you when I was gone? I know Forburn left, but...\" Her smile gets broader, but it is lacking all warmth.\n"
 
 				"\"You hadn't heard, Ja'Rod?\" I shake my head in the negatory. No, I hadn't heard what happened to her husband when I was off the ship.\n"
 
@@ -67,7 +67,7 @@ talkValue 0
 				"\"I'm so sorry. I didn't know. I had sort of thought something like that had happened but I didn't know. I am so, so sorry, Captain.\"n"
 
 				"She opens her eyes for the first time and smiles when I say the word 'Captain.' \"We were bringing blood, actually,\" she says. \"Hundreds and hundreds of
-				bags of blood to one of the colonies. All the different types. A ... B ... er... \"\n"
+				bags of blood to one of the colonies. All the different types. A ... B ... er...\"\n"
 
 				"\"A. B.\" adds Mailx.\n"
 
@@ -127,13 +127,17 @@ talkValue 0
 			{
 				"\"Captain, how are we going to find a doctor in here?\"\n"
 
-				if GameEvents[17] = 0
+				if GameEvents[27] = 0
 				{
 					"\"Let's sit first,\" she says."
 				}
 				else {
 					"\"Thinking about that,\" she says. \"I'm wondering if the money move here is to get one to perhaps come to us.\""
 				}
+			}
+			case 5
+			{
+				"I think she is having a nervous breakdown at the moment."
 			}
 			case else
 			{
@@ -323,6 +327,8 @@ talkValue 0
 			{
 				"\"You all right? Hey look, Grimes died. But you can stay with us anyway, we'll take care of you.\"\n"
 				"Mailx's LEDs where his head would be flicker a little bit. He doesn't say anything."
+
+				Mailx.talkValue = 999
 			}
 			case 2
 			{
@@ -334,6 +340,8 @@ talkValue 0
 				remove iceBoulder
 
 				move aluminum to player
+
+				Mailx.talkValue = 999
 
 				"\"Mr Mailx, could you please destroy the ice blocking our exit?\n"
 
@@ -357,6 +365,14 @@ talkValue 0
 			case 4
 			{
 				"\"Thanks, Mr Mailx."
+			}
+			case 5
+			{
+				"I think he's sulking."
+			}
+			case else
+			{
+				"He won't look at me."
 			}
 		}
 	}

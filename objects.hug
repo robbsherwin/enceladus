@@ -385,6 +385,7 @@ scenery airlock "airlock"
 {
 	nouns "airlock"
 	article "the"
+	!No initial location, we will move this in later.
 
 		long_desc
 		{
@@ -462,6 +463,7 @@ scenery airlockHull "hull"
 				the hole like a Dutch boy's finger. It was all over before Alexandra, clearly injured, even really moved.\n"
 				"\"Finnian, Ja'Rod,\" starts the Captain, \"Get over to the bridge, we're going to perform an emergency landing.\"\n"
 				"\"Aye-aye,\" I say and get going. Fin does the same."
+
 				"\n[Strike any key to continue]"
 
 				pause
@@ -578,6 +580,17 @@ is special !// Going to make it open for starters and special means OPEN
 	}
 }
 
+scenery blanket "blanket"
+{
+	noun "blanket"
+	article "the"
+
+	long_desc
+	{
+		"It's not really all that important, but I think it's a carbon fiber and silk mesh Snuggie."
+	}
+}
+
 scenery navigationControls "navigation controls"
 {
 	noun "controls" "console"
@@ -645,7 +658,7 @@ object barStool "bar stool"
 
 	long_desc
 	{
-		if GameEvents[17] = 1
+		if GameEvents[27] = 1
 		{
 			"It's a little tall. Look, I'm above average in height. Okay? And this thing is just making a production of the fact that my feet don't touch the floor and the Captain's don't. Review: negative!!"
 		}
@@ -659,9 +672,9 @@ object barStool "bar stool"
 		{
 			"I take a seat on the bar stool." ;
 
-			if GameEvents[17] = 0
+			if GameEvents[27] = 0
 			{
-				GameEvents[17] = 1
+				GameEvents[27] = 1
 				" The Captain joins me to my left.\n"
 				"The bartender is a late-twenties Asian gal, I'd place her right in the middle of Los Angeles, California with her horn-rimmed glasses and all business body language.\n"
 				"\"Right, fancy a mite o Frank's eh come noe lurves?\"\n"
@@ -718,7 +731,7 @@ object knife "knife"
 	{
 		object DoGet
 		{
-			if GameEvents[17] = 0
+			if GameEvents[27] = 0
 			{
 				"I should sit on the stool and get closer to the bar first."
 			}
@@ -732,7 +745,7 @@ object knife "knife"
 			select(object)
 			case player
 			{
-				if GameEvents[17] = 0
+				if GameEvents[27] = 0
 				{
 					"I should sit down first."
 				}
@@ -803,7 +816,7 @@ object blairsUltraDeath "Blair's Ultra Death"
 		}
 		object DoDrink
 		{
-			if GameEvents[17] = 0
+			if GameEvents[27] = 0
 			{
 				"I should sit down first."
 			}
@@ -829,7 +842,7 @@ object blairsUltraDeath "Blair's Ultra Death"
 				like that was really motherly of her, but then I realize she was just trying to turn my specs off so I don't irradiate every living bit of tissue in the bar."
 				"\n[Strike any key to continue]"
 				pause
-				"\nThe doctor rips the two liters of milk that the bartender produced out of her hands and splashes me in the face with it. He forces me to drink about a quarter of the jug.
+				"\nThe Doctor rips the two liters of milk that the bartender produced out of her hands and splashes me in the face with it. He forces me to drink about a quarter of the jug.
 				It's not really helping anything past my throat, but I think I'm not dying any more.\n"
 				"\"Thanks, Doc,\" I try to say, but what comes out it something more akin to, 'Quaalude Farsase.'"
 
@@ -844,10 +857,17 @@ object mineKey "key"
 	nouns "key"
 	adjective "mine"
 	article "the"
-	
+
 	long_desc
 	{
 		"I think it's made out of solid brass or a similarly heavy combo of metals, but it's painted black, the paint having started to chip."
+	}
+	before
+	{
+		object DoDrop
+		{
+			"Look, I'm just trying to do a good job here and throwing the key around isn't going to help me accomplish that."
+		}
 	}
 }
 
@@ -1031,15 +1051,14 @@ article "the"
 
 	long_desc
 	{
-
+		"It's impossibly large and dense, too big for me to manipulate or chip away at without freezing to death. It covers
+		the entirety of the way we came in."
 	}
-
 	before
 	{
 		object DoGet, DoMove, DoThrowAt, DoKick, DoHit
 		{
 			"It's too heavy for me to personally manipulate."
-
 		}
 	}
 }
