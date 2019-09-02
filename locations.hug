@@ -287,7 +287,8 @@ room Bridge "Bridge"
 
       Activate(Finnian_Lands_Ship)
 
-      GameEvents[24] = 1 !// This is for the DoExits in BeforeTheAirlock 
+      GameEvents[24] = 1 !// This is for the DoExits in BeforeTheAirlock
+      Finnian.talkValue = 2
 
     }
     else {

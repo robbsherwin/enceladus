@@ -591,7 +591,7 @@ scenery navigationControls "navigation controls"
 
 		if self is not visited
 		{
-			Finnian.talkValue = 
+			Finnian.talkValue =
 		}
 	}
 }
@@ -619,6 +619,22 @@ scenery touchscreens "touchscreens"
 	long_desc
 	{
 		"They aren't showing anything and don't belong to me."
+	}
+}
+
+scenery scanningStation "Scanning Station"
+{
+	noun "station" "console"
+	adjective "scanning"
+	article "the"
+	in Bridge
+
+	long_desc
+	{
+		"This is the area that I do my work in when I am on the Bridge. My job entails scanning, er, things and getting information.
+		So I've got my X-ray specs when things are up close but there's also a lot of scans I run at this console. Typically
+		I try to get an analysis of other ships when we encounter them but I also provide local weather when we are landing
+		on a planet or, past the asteroid belt, a moon."
 	}
 }
 

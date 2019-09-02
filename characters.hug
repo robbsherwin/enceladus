@@ -167,7 +167,9 @@ talkValue 1
 			}
 			case 2
 			{
-				xxx
+				"\"Hey, the Captain's been a little off since I got back from leave,\" I say to him. \"Did something happen?\"\n"
+				"Finnian turns to me and stops fiddling with the console. \"You really hadn't heard?\" he says. But we
+				hear people approach the bridge, so that is all he says for now.
 			}
 			case else
 			{

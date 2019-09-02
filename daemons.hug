@@ -217,6 +217,8 @@ event in Finnian_Lands_Ship
 	select(self.timer)
 	case 2
 	{
+		Finnian.talkValue = 999
+
 		"\nThe Captain joins the rest of us on the bridge. She sits in the command chair.\n"
 		"\"How is Alexandra?\" I ask, taking over the scanning station.\n"
 		"\"She needs a doctor,\" says the Captain. \"Take us down,\" she says to Finnian.\n"
