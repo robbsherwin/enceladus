@@ -253,7 +253,6 @@ before
     }
   }
 }
-
 s_to {
   !// Can we leave BeforeTheAirlock and go back towards the Bridge, in other words, is alexandraInAirlock = true and is mailxIsPulled = true?
   if GameEvents[14] = 0
@@ -289,7 +288,6 @@ room Bridge "Bridge"
 
       GameEvents[24] = 1 !// This is for the DoExits in BeforeTheAirlock
       Finnian.talkValue = 2
-
     }
     else {
       "This is the Bridge of our ship, there's a chair in the middle of the room for the Captain. Finnian has a navigator's console before a
@@ -538,7 +536,6 @@ room SnowyPath02 "Snowy Path"
       return SnowyPath03
     }
   }
-
 }
 
 room SnowyPath03 "Snowy Path"
@@ -603,32 +600,40 @@ room CenterOfTown "Center of Town"
         "Ten seconds after that, I see her come back up the hill with the now-working snowmobile.\n"
         "\"Get on, let's go,\" she says to me."
 
-      }
-      elseif GameEvents[15] = 1 !// Did Ja'Rod cut himself or otherwise find the doctor?
-      {
-        !// This means we have sent the doctor and Finnian off.
-        !// We need to have the Captain tell Finnian and N
-        "The Captain sees Finnian, Mr Mailx and Doctor Nahas about to leave.\n"
-        "\"You're all set?\" she asks Finnian.\n"
-        "\"Yeah, we're huffing it back to the Plagoo.\"\n"
-        "\"I need Mr Mailx, but I have a suspicion that Grimes programmed it to not listen to women,\" she adds. Nahas looks
-        at the two of them like they are crazy.\n"
-        "\"He ... Grimes told me why he did it. He didn't do it because of anything other than he didn't want his fiancee back
-        on Earth to have it open up his stash of -- \" I make the 'cut him off' gesture at Finnian and look towards the Doctor. Him
-        getting weirded out is the last thing we need.\n"
-        "\"His, ah, stash of um ... er ... women's socks,\" says Finnian, finally. The fact that it took him ten seconds to come
-        up with something worse than if he just told the truth isn't helping. \"Do you need the robot, Cap? Mailx, go with the
-        Captain,\" says Finnian.\n"
-        "\"Okay,\" says Mailx. Finnian and the Doctor each head back to the Plagoo."
+        snowmobile.short_desc = ""
 
-        remove Finnian
-        remove MiladNahas
-        move Mailx to location
-        move Captain to location
+      }
+      elseif GameEvents[19] = 1 !// Did Ja'Rod cut himself or otherwise find the doctor?
+      {
+        remove knife
+        remove blairsUltraDeath
+
+        if GameEvents[15] = 0 !// Did we send the Doctor, Finnian and Mailx away?
+        {
+          GameEvents[15] = 1
+          !// This means we have sent the doctor and Finnian off.
+          !// We need to have the Captain tell Finnian and N
+          "The Captain sees Finnian, Mr Mailx and Doctor Nahas about to leave.\n"
+          "\"You're all set?\" she asks Finnian.\n"
+          "\"Yeah, we're huffing it back to the Plagoo.\"\n"
+          "\"I need Mr Mailx, but I have a suspicion that Grimes programmed it to not listen to women,\" she adds. Nahas looks
+          at the two of them like they are crazy.\n"
+          "\"He ... Grimes told me why he did it. He didn't do it because of anything other than he didn't want his fiancee back
+          on Earth to have it open up his stash of --\" I make the 'cut him off' gesture at Finnian and look towards the Doctor. Him
+          getting weirded out is the last thing we need.\n"
+          "\"His, ah, stash of um ... er ... women's socks,\" says Finnian, finally. The fact that it took him ten seconds to come
+          up with something worse than if he just told the truth isn't helping. \"Do you need the robot, Cap? Mailx, go with the
+          Captain,\" says Finnian.\n"
+          "\"Okay,\" says Mailx. Finnian and the Doctor each head back to the Plagoo."
+
+          remove Finnian
+          remove MiladNahas
+          move Mailx to location
+          move Captain to location
+        }
       }
     }
   }
-
   before
   {
     object DoExits
@@ -657,6 +662,7 @@ long_desc
   if self is not visited
   {
     move Captain to location
+    Captain.talkValue = 4
 
     "The four of us enter the bar and we're greeted by a doorman. He is suited up in a caribou skin and fur coat. I don't think it was made for him as he's sitting on a stool and the thing
     falls all over the floor of the bar like a wedding dress.\n"
@@ -712,11 +718,21 @@ long_desc
   if self is not visited
   {
   !// Need to mention how the Captain got the key and why she gave it to Ja'Rod
+    "\"How did you get the key, anyway?\" I ask the Captain.\n"
+    "\"When you were flailing about, I just explained the situation to her and promised her no more theatrics. I guess
+    the mine is owned by the same company that owns the hot sauce bar. I guess they own everything around here.\"\n"
+    "\"Well, they are doing a great job, they put in air, they put in a little more gravity, they put in... well,\"\n"
+    "\"Yeah,\" says the Captain. \"I think we might be the only people in a decade to land here as opposed to crash
+    land here and be stuck.\""
 
   }
   else {
-
+    "The mine descends deep into the belly of the moon, but standing before us at the moment
+    is a formidable door."
   }
+
+  move Captain to location
+  move Mailx to location
 }
 
 s_to {return CenterOfTown}
@@ -788,7 +804,7 @@ room mineLevelTwo "Mine Level Two"
     that I can see. It appears that there's just one more level to the mine."
   }
 
-u_to "We can't go that way by ourselves."
+u_to {"We can't go that way by ourselves."}
 d_to mineLevelThree
 }
 
@@ -819,7 +835,7 @@ room mineLevelThree "Mine Level Three"
   }
 
 !// Mine Cart is in here and can take us up.
-u_to "We can't go that way by ourselves."
+u_to {"We can't go that way by ourselves."}
 e_to bottomOfMine
 }
 
@@ -827,10 +843,11 @@ room bottomOfMine "Bottom of Mine"
 {
   long_desc
   {
-
     if self is not visited
     {
       move Captain to location
+      move Mailx to location
+
       Activate(Cave_In)
 
       "We have come to the bottom of the mine and the farthest anyone has dug. Nothing allows any further passage.\n"

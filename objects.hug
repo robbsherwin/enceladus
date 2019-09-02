@@ -371,6 +371,12 @@ article "the"
 		object DoTwirl
 		{
 			"I twirl the star pistol around my index finger like a cowboy! Haha, I'm a space cowboy!"
+
+			if GameEvents[25] = 0 and Captain in location
+			{
+				GameEvents[25] = 1
+				"\n\"Oh my, be careful with that, please, Ja'Rod,\" says the Captain."
+			}
 		}
 	}
 }
@@ -545,8 +551,6 @@ is special !// Going to make it open for starters and special means OPEN
 	{
 		object DoPush
 		{
-			GameEvents[16] = 0
-
 			if self is not special
 			{
 				self is special
@@ -558,10 +562,8 @@ is special !// Going to make it open for starters and special means OPEN
 
 					if greenButton is not special
 					{
-					  GameEvents[15] = 0
 						"She mouths something that I can't hear because the first door is closed.\n"
 						"\"She. Is. Saying. Close. The. Outside. Door. Dummy,\" offers Mailx."
-
 					}
 					else {
 						"\"Close the door, dummy! Red button! It's freezing in here!\""
@@ -588,11 +590,6 @@ scenery navigationControls "navigation controls"
 		"The controls are in front of Finnian, they are what he uses to move the Plagoo - to apply thrust, yaw, roll,
 		tilt, all those things I did playing computer games as a kid that I would never dare try in real life. The
 		console is all buttons, though, the Captain couldn't afford the flightstick option for the Plagoo."
-
-		if self is not visited
-		{
-			Finnian.talkValue =
-		}
 	}
 }
 
@@ -612,7 +609,7 @@ scenery captainsChair "Captain's chair"
 
 scenery touchscreens "touchscreens"
 {
-	noun "screens "touchscreens" "touchscreen" "screen"
+	noun "screens" "touchscreens" "touchscreen" "screen"
 	article "the"
 	in Bridge
 
@@ -678,11 +675,39 @@ object barStool "bar stool"
 	}
 }
 
+
+object fruitTray "fruit tray"
+{
+	nouns "tray"
+	adjective "fruit"
+	article "the"
+	in HotSauceBar
+	is openable, not open
+
+	short_desc
+	{
+		"\nOn the bar is a small fruit tray."
+	}
+
+	long_desc
+	{
+		"I am not sure what the proper name for this thing is, it's probably not fruit tray, but that's what I am going to go with, I guess. "
+	}
+	before
+	{
+		object DoGet
+		{
+			"\"Hey! Put that down!\" exclaims the bouncer from the entrance. I make a gesture by raising both of my hands to show him that I am not
+			armed, which seems appropriate to me and I assume nobody else."
+		}
+	}
+}
+
 object knife "knife"
 {
 	nouns "knife"
 	article "the"
-	in HotSauceBar
+	in fruitTray
 
 	long_desc
 	{
@@ -707,23 +732,32 @@ object knife "knife"
 			select(object)
 			case player
 			{
-				"I slice, erm. I don't know what it's called. It's near my thumb but not the thumb precisely.
-				Maybe the fleshy part of the thumb? The meaty part of the thumb? The base of the thumb? The heel of
-				the thumb? The butt of the thumb? The pulpy part of the thumb? The muscley part of the thumb?\n"
+				if GameEvents[17] = 0
+				{
+					"I should sit down first."
+				}
+				else
+				{
+					remove blairsUltraDeath
+					"I slice, erm. I don't know what it's called. It's near my thumb but not the thumb precisely.
+					Maybe the fleshy part of the thumb? The meaty part of the thumb? The base of the thumb? The heel of
+					the thumb? The butt of the thumb? The pulpy part of the thumb? The muscley part of the thumb?\n"
 
-				"I guess the ball of the thumb, anyway, I slice a three inch gash on my left hand. Blood gushes out
-				and because there's ice all over the floor and on every single surface on this moon it starts to bounce,
-				like it does on hockey rinks.\n"
+					"I guess the ball of the thumb, anyway, I slice a three inch gash on my left hand. Blood gushes out
+					and because there's ice all over the floor and on every single surface on this moon it starts to bounce,
+					like it does on hockey rinks.\n"
 
-				"\"Hey!\" screams someone from the back, \"What are you doing?\"\n"
+					"\"Hey!\" screams someone from the back, \"What are you doing?\"\n"
 
-				"\"I've cut myself!\" I say convincingly. \"Ow!\""
+					"\"I've cut myself!\" I say convincingly. \"Ow!\""
 
-				Activate(Doctor_Arrives_Knife)
+					Activate(Doctor_Arrives_Knife)
+				}
 			}
 			case else
 			{
-				"I don't know where the bouncer is, but I doubt he's going to let me cut other things and people. ";
+				"I don't know where the bouncer is, I think he's still near the entrance, but I doubt he's going to let me
+				cut other things and people. ";
 
 				if GameEvents[19] = 0
 				{
@@ -740,9 +774,14 @@ object knife "knife"
 object blairsUltraDeath "Blair's Ultra Death"
 {
 	nouns "ultra" "death" "sauce" "bottle"
-	adjective "blair" "blair's" "hot"
+	adjective "blair" "blair's" "hot" "death"
 	article "the"
 	in HotSauceBar
+
+	short_desc
+	{
+		"Sitting by itself on the bar is a bottle of Blair's Ultra Death sauce."
+	}
 	long_desc
 	{
 		"This particular bottle had been open before, it's missing the keychain with the skull that is attached to unopen ones. It contains about five ounces of sauce, the
@@ -750,6 +789,18 @@ object blairsUltraDeath "Blair's Ultra Death"
 	}
 	before
 	{
+		object DoGet
+		{
+			if GameEvents[26] = 0
+			{
+				"I can't reach it, I'd have to talk to the bartender to order it."
+				Bartender.talkValue = 2
+			}
+			else {
+				move self to player
+				"Got it."
+			}
+		}
 		object DoDrink
 		{
 			if GameEvents[17] = 0
@@ -760,13 +811,19 @@ object blairsUltraDeath "Blair's Ultra Death"
 
 				move MiladNahas to location
 
+				Bartender.talkValue = 999
+				Captain.talkValue = 999
+				Bouncer.talkValue = 999
+
+				remove knife
+
 				"I take the Blair's Sauce and turn 180 degrees on the bar stool. I unwrap it and drink the entire thing in one quick slurp.\n"
 				"This was a terrible idea, probably the worst idea I've ever had.\n"
 				"My eyes start to water, my x-ray specs inexplicably start scanning even though they are on top of my head and I start coughing and hiccuping. This is poison, there
 				was a mixup or something, there is no way anyone could have ever put this into a bottle intentionally. It burns, it's burning through my face!\n"
 				"\"Aye pal, one milk then, innit, won ye done wit pure greeting,\" asks(?) the bartender.\n"
 				"I can't respond. I'm hunched over dying. This is it, I'm $%^&ing dying. Even the Captain has gone from an arched eyebrow to actual concern.\n"
-				"A man emerges from the far booth. \"What did this flailing cretin do?\" he asks. I assume I am hallucinating, but he has a white lab coat and a stethescope. So great, while
+				"A man emerges from the far booth. \"What did this flailing cretin do?\" he asks. I assume I am hallucinating, but he has a white lab coat and a stethoscope. So great, while
 				this sauce is killing me I ended up finding a doctor either in full Enceladus City Comic Con Cosplay or a porn.\n"
 				"\"He ingested a little too much of the hot sauce,\" says the Captain. She puts her hand on my forehead. At first I think she's trying to take my temperature and I feel
 				like that was really motherly of her, but then I realize she was just trying to turn my specs off so I don't irradiate every living bit of tissue in the bar."
@@ -784,6 +841,10 @@ object blairsUltraDeath "Blair's Ultra Death"
 
 object mineKey "key"
 {
+	nouns "key"
+	adjective "mine"
+	article "the"
+	
 	long_desc
 	{
 		"I think it's made out of solid brass or a similarly heavy combo of metals, but it's painted black, the paint having started to chip."
@@ -829,25 +890,6 @@ in mineLevelThree
 				"The mine cart is physically attached to rails in the mine, so I cannot do that."
 			}
 		}
-}
-
-object wheelbarrow "wheelbarrow"
-{
-nouns "wheelbarrow"
-article "the"
-in Mine
-
-	long_desc
-	{
-
-	}
-	before
-	{
-		object DoGet
-		{
-			"I can't take that."
-		}
-	}
 }
 
 object silverOre "silver ore"
@@ -906,7 +948,7 @@ article "the"
 			}
 			case else
 			{
-
+				![xxx]
 			}
 		}
 	}
@@ -919,7 +961,18 @@ article "the"
 
 	long_desc
 	{
-
+		"This is a large chunk of alumnium, which presumably we can use to patch up the ship."
+	}
+	before
+	{
+		object DoDrop
+		{
+			"I can't, I need it to help repair the ship."
+		}
+		object DoThrowAt
+		{
+			"It's too weirdly shaped to throw!"
+		}
 	}
 }
 
@@ -929,9 +982,15 @@ nouns "snowmobile"
 article "the"
 in CenterOfTown
 
+		short_desc
+		{
+			"\nAbandoned just a bit beyond us is what appears to be a broken snowmobile."
+		}
+
 		long_desc
 		{
-			!// [xxx]
+			"Arctic Cat was a company that made snowmobiles all the way back in the 1970s and I think somehow someone dragged one through
+			space and time and then left it in barely running condition, from the looks of it, 70 light minutes away on a Saturian moon."
 		}
 		before{
 			object DoEnter, DoDrive

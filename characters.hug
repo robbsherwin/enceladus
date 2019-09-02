@@ -123,6 +123,18 @@ talkValue 0
 				"\"The hull?\"\n"
 				"\"You got it.\""
 			}
+			case 4
+			{
+				"\"Captain, how are we going to find a doctor in here?\"\n"
+
+				if GameEvents[17] = 0
+				{
+					"\"Let's sit first,\" she says."
+				}
+				else {
+					"\"Thinking about that,\" she says. \"I'm wondering if the money move here is to get one to perhaps come to us.\""
+				}
+			}
 			case else
 			{
 				"I don't have anything to say to her at the moment."
@@ -169,7 +181,7 @@ talkValue 1
 			{
 				"\"Hey, the Captain's been a little off since I got back from leave,\" I say to him. \"Did something happen?\"\n"
 				"Finnian turns to me and stops fiddling with the console. \"You really hadn't heard?\" he says. But we
-				hear people approach the bridge, so that is all he says for now.
+				hear people approach the bridge, so that is all he says for now."
 			}
 			case else
 			{
@@ -254,7 +266,6 @@ talkValue 0
 	}
 }
 
-
 npc Mailx "Mr Mailx"
 {
 nouns "mailx" "robot"
@@ -322,16 +333,23 @@ talkValue 0
 				iceBoulder is special !// destroyed
 				remove iceBoulder
 
+				move aluminum to player
+
 				"\"Mr Mailx, could you please destroy the ice blocking our exit?\n"
+
 				"\"All. Right,\" he says.\n"
-				"Mailx does a K-turn and with two gangly haymakers, It takes about five minutes for him to turn around. He then lines his spindly
-				fingers up with the boulder of ice.\n"
+
+				"Mailx attempts a K-turn. It takes about five minutes for him to turn around. He then lines his spindly fingers up with the boulder of ice.\n"
 
 				"His fingers sort of intertwine within each other. I would describe them looking kind of like the end of a drill bit. They definitely
 				come to a sharp point. He then slides them each back about six inches from the front of the boulder. Then he strikes.\n"
 
-				"I guess I've seen videos of martial artists breaking through cement and stone with their bear hands. Mailx has chi, I guess? At any
-				rate, he only needs to do it twice before managing to completely pulverize the ice boulder into harmless rubble."
+				"I guess I've seen videos of martial artists breaking through cement and stone with their bear hands. Mailx has chi, I guess? At some point
+				in the future I will ply myself to enlightenment thinking of how this robot harnessed his inner energy to save us all, but right now, man
+				is it freezing down here. He only needs to strike twice before managing to completely pulverize the ice boulder into harmless rubble.\n"
+
+				"Whoever pushed the boulder down on us used a chunk of aluminum as the centerpiece to it, probably because they wanted to have the same
+				effect as putting a rock in a snowball does. I take it."
 
 				GameEvents[20] = 1 !// This is for noting that we solved the cave-in
 				CenterOfTown is visited !// This is purely for making testing easier.
@@ -389,11 +407,119 @@ npc McGrathley "McGrathley"
 nouns "mcgrathley"
 adjective "riggs"
 in BeforeTheAirlock
-
 charnumber 9
+talkValue 0
 
 	long_desc
 	{
-		!// [xxx]
+		"McGrathley is a mixed race unmodified human that has the world's worst facial hair, which dominates the scene as people look at him. It looks like his face is being slowly mapped
+		for the rest of the colony by twelve fat ants. He wears photochromatic lenses that only sort of work, as we can clearly see his eyes. I'm just glad that someone " ;
+
+		if location = BeforeTheAirlock
+		{
+			"on this ship " ;
+		}
+
+		"has something stupider on their face than I do."
+	}
+}
+
+npc Bouncer "bouncer"
+{
+	nouns "bouncer"
+	article "the"
+	in HotSauceBar
+	is hidden
+	charnumber 10
+	talkValue 1
+
+	long_desc
+	{
+		"He actually looks like Simo Hayha, the Finnish sniper that killed like 500 Russians when the commies tried Zerg rushing Finland in World War II. Because of how the bouncer
+		is specifically dressed, in fact, he looks like the picture of Hayha where he's got the winter coat on and he's looking down the barrel of a gun and he's wearing the face
+		mask with the little eye slits to hide himself (as opposed to later in his life, after the Russians blew away half his face and he brought that mask out
+		to not scare the neighborhood kids when they went Trick or Treating)."
+	}
+	before
+	{
+		object DoTalk
+		{
+			select(self.talkValue)
+			case 1
+			{
+				self.talkValue = 999
+				"\"Hey! Do you know any doctors?\"\n"
+				"\"Is that a threat?\" asks the bouncer, starting to rise.\n"
+				"\"What? No!\"\n"
+				"\"Okay. Better not be a threat,\" he says."
+			}
+			case else
+			{
+				"I don't have anything to say to him."
+			}
+		}
+	}
+}
+
+npc Bartender "bartender"
+{
+	nouns "bartender"
+	article "the"
+	pronouns "she", "her", "her", "herself"
+	is hidden
+	in HotSauceBar
+	charnumber 11
+	talkValue 1
+
+	long_desc
+	{
+		"She is a little shorter than I, in much better shape and of Asian descent. She is wearing a black spaghetti strap tank top,
+		black jeans, black boots and black lipstick. This is the ensemble of someone that has had hot sauce spilled on everything
+		and now avoids color in all its electromagnetic forms."
+	}
+	before
+	{
+		object DoTalk
+		{
+			select(self.talkValue)
+			case 1
+			{
+				Bartender.talkValue = 999
+
+				"\"Are you aware of any doctors maybe hitting the sauce at this bar?\" I smile at my little playful adventure with words
+				there. Unfortunately, it just makes me look like a leering, grinning jackass to the bartender.\n"
+
+				"\"Um. No. I don't know of any,\" she says.\n"
+
+				"\"I think this is where I am supposed to slip you fifty dollars to see if it will loosen your tongue,\" I say. But I don't
+				have money, so I can't do that. The bartender looks at the Captain, gives her a single expression that I assume is one
+				woman telepathically telling the other to take care of her own trash, and the bartender turns her back to me.\"\n"
+
+				"\"I, ahh, normally work best with radioactive metals,\" I say quietly to myself."
+			}
+			case 2
+			{
+				move blairsUltraDeath to player
+
+				GameEvents[26] = 1
+
+				"\"Hey, can I have the Blair's sauce?\" I ask of the bartender. She gives me a look up and down.\n"
+				"\"Have you tasted hot sauces like that one before?\" she asks with an arched eyebrow, having abandoned her accent. Or she adopted mine.\n"
+				"\"Oh yeah,\" I say. \"All the time. Ja'Rod Butler, from Scoville, ah--\" I look toward the Captain because I can't think
+				of an American state right now, \"Jersey, that's me. We grew up around it, it was everywhere.\"\n"
+				"\"If I give this to ya and you drink it and you throw up in me bar I'm going to be really upset,\" says the bartender.\n"
+				"\"Oh man. Do people do that? Just come on in here, taste some sauce and get sick?\"\n"
+				"\"No. They don't. Because I specifically ask them and they answer me honestly and truthfully so it never gets that far.\" She
+				hands me the bottle of sauce. I feel a little bad about constructing a lie that is about a million heat units, but I
+				remember that I'm on a mission here, I'm working. (Then I realize she is too, but that's as far as I go.)"
+
+				Bartender.talkValue = 999
+
+			}
+			case else
+			{
+				"Oh, I think I've ruined her night enough for now."
+			}
+		}
 	}
 }

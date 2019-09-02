@@ -23,7 +23,7 @@ routine DoAbout()
 	"You can talk to people just by using the >talk command, it's context sensitive. You can see current exits for the room you're in by doing >exits"
 	"Try >version for info about this release. and >credits for game credits."
 	"Please use the Hugor interpreter for Windows, Mac and Linux: http://ifwiki.org/index.php/Hugor"
-	"For further information on other games by this author, go to https://www.joltcountry.com/games"
+	"To play other games by this author, go to https://www.joltcountry.com/games"
 	"For Frobozz."
 }
 

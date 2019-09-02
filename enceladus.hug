@@ -108,7 +108,7 @@ array GameEvents[MAXGAMEEVENTS]
 ! GameEvents[12] = Can Ja'Rod leave the Helm?
 ! GameEvents[13] = Has Mailx been pulled out of the hole in the hull? - also use a flag, mailxIsPulled which is set to false initially
 ! GameEvents[14] = Can we leave BeforeTheAirlock and go back towards the Bridge, in other words, is alexandraInAirlock = true and is mailxIsPulled = true?
-! GameEvents[15] = Did Ja'Rod cut himself?
+! GameEvents[15] = Did we send the Doctor, Finnian and Mailx away?
 ! GameEvents[16] = Has Ja'Rod done a scan on the SnowyPath02?
 ! GameEvents[17] = Has Ja'Rod initially sat on the stool?
 ! GameEvents[18] = Is Ja'Rod incapacitated via hot sauce?
@@ -117,7 +117,9 @@ array GameEvents[MAXGAMEEVENTS]
 ! GameEvents[21] = Did Ja'Rod kill the werewolf with the silver?
 ! GameEvents[22] = Did Ja'Rod do a scan in the mine area to reveal the silver ore?
 ! GameEvents[23] = Have we looked at the werewolf?
-! GameEvents[24] = This is for the DoExits in BeforeTheAirlock 
+! GameEvents[24] = This is for the DoExits in BeforeTheAirlock
+! GameEvents[25] = Did the Captain mention the twirling?
+! GameEvents[26] = Did Ja'Rod ask the bartender for the sauce?
 
 global alexandraInAirlock = false
 global mailxIsPulled = false
@@ -165,8 +167,8 @@ routine init
 
 	Activate(CaptainIdle)
 
-  !MovePlayer(mineLevelThree)
-  MovePlayer(TheCaptainsQuarters)
+  MovePlayer(SnowyPath03)
+  !MovePlayer(TheCaptainsQuarters)
 
 	old_screenwidth = display.screenwidth
 

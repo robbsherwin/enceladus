@@ -345,21 +345,50 @@ event in Doctor_Arrives_Knife
 	select(self.timer)
 	case 2
 	{
+		Captain.talkValue = 999
+		Bartender.talkValue = 999
+		Bouncer.talkValue = 999
+
+		"\n\"Hey! You're bleeding all over the place!\" says the bartender.\n"
+		"\"You don't have any sort of certification as a trauma surgeon, do you?\" I ask.\n"
+		"\"What? No, idiot! Get the hell out of my bar! Moron!\" This, by the way, is the best conversation I've had with a pretty girl
+		in a year, by the way, and I don't think I'm going to get her number.\n"
+		"The Captain spins on her stool and stands up, facing the crowd. \"My young traveling colleague is suffering from a terminal
+		case of brain squeezing.\" She points to my specs. \"He has also cut himself, as he lacks the dexterity to manipulate simple tools.\" Jesus.
+		\"Is there a doctor in the bar?\"\n"
+		"It hurts pretty bad, but it doesn't hurt nearly enough as it would if I had to get up and make a speech in front of a bunch of strangers.
+		I got off easy, narmean."
 
 	}
 	case 3
 	{
-		!// Bartender complains that there is blood on the floor
-		!// Captain offers to get more hot sauce that is kept in the mine
-		!// Given the key to the mine
+		"\nLuckily, luckily for me, a middle-aged Indian man in a white lab coat that has been splattered with either hot sauce or blood emerges
+		from the crowd and walks up to us. He is either the worst Doctor in the solar system or the sloppiest eater.\n"
+		"\"What has your simple-minded friend done to himself?\" asks the Doctor to the Captain.\n"
+		"\"Hey man, I'm--\"\n"
+		"\"He cut himself,\" the Captain says, \"But look, that's not really what this is about. I've got a ship about a quarter of a mile west
+		of here. One of my crew was assaulted by a stowaway. I think she's in organ failure, can you help us?\"\n"
+		"That's a lot for the Doctor to take on, but he seems to comprehend what we are asking. Before I can blink he's given me three stitches
+		and a pat on the head. I guess the splotches were hot sauce."
+	}
+	case 4
+	{
+		GameEvents[19] = 1 !// Did Ja'Rod and the Captain find a doctor?
 
+		"\nThe Doctor takes a paternal tone with me. \"My name is Milad Nahas. You should be fine, Enceladus is a fairly sterile moon. Do not
+		touch any of the advanced utensils - knife, fork, spork - for three weeks and you should be fine.\"\n"
+		"\"Thanks, Doc, I--\" He pats me on the head.\n"
+		"The Doctor talks a little more with the Captain, and the Captain presumably uses her charm on the bartender, because the bartender gives
+		her a key, which the Captain hands to me.\n"
+		"\"It will get us into the mine,\" she says. \"Let's go.\""
+
+		move mineKey to player
 	}
 }
 
 daemon Water_Mists
 {
 timer 0
-
 }
 
 event in Water_Mists
@@ -416,7 +445,7 @@ event in JaRod_Hallucinates
 		"\nI think I'm okay ... for now. I stand. I take a quick glance around the bar to see if anyone has ordered wings, if that's a thing here. I pull on the bottom of my T-shirt to show everyone
 		I'm back and all business again. I'm not sure if that point has been made.\n"
 		"\"I'm all business, Captain,\" I say, eliminating all doubt.\n"
-		"\"You're telling me she almost went through an airlock?\" asks the doctor. The Captain nods her head, one professional to another. The doctor sees that I am standing.\n"
+		"\"You're telling me she almost went through an airlock?\" asks the Doctor. The Captain nods her head, one professional to another. The Doctor sees that I am standing.\n"
 		"\"Ja'Rod,\" he says. \"My name is Doctor Milad Nahas.\" He is speaking really slow in perfect Americanized English, which he doesn't really need to do. \"You ingested too
 		much hot sauce, okay? I'm going to ask you some questions to see if we need to stay here or not. Can you tell me your favorite game?\"\n"
 		"\"Yes, it's Mouse Trap,\" I say.\n"
@@ -426,13 +455,12 @@ event in JaRod_Hallucinates
 		did to my life support tech, but as far as I know she's dying in --\" I mime like I am shivering to try to guide the Captain through her speech -- \"Dying in my airlock that was
 		disintegrated open. We absolutely need your help.\"\n"
 		"Doctor Nahas stuffs his stethoscope into a pocket. \"Take me there immediately, please ma'am.\"\n"
-		"The Captain is talking to the bartender as I stagger to my feet. After about ten seconds the bartender slips the Captain something. It's not this huge
-		mystery or anything, as the Captain immediately gives me a black key."
+		"The Captain is talking to the bartender as I stagger to my feet. I get rid of some stuff I don't need. After about ten seconds the bartender slips the Captain something. It's not this huge
+		mystery or anything as to what it was, as the Captain immediately gives me a black key."
 
 		remove blairsUltraDeath
 		remove knife
 		move mineKey to player
-
 	}
 }
 
@@ -456,6 +484,9 @@ event in Cave_In
 
 		"She lets out a sarcastic laugh and sits down, her back up against the far eastern end of the mine, far from the boulder. She closes her eyes.
 		She looks as I would imagine someone looks who has had one disaster after another and just can't take it any longer."
+
+		Captain.talkValue = 1
+		
 	}
 }
 
@@ -470,7 +501,7 @@ event in Captain_Shoots_McGrathley
 	select(self.timer)
 	case 1
 	{
-		if GameEvents[21] = 0
+		if GameEvents[21] = 0 !// Did Ja'Rod kill the werewolf with the silver?
 		{
 			"\n\"Ja'Rod, kill that werewolf!\" shouts the Captain toward me. She whips out the star pistol, which she took from me at some point. She aims
 			it at McGrathley, who is clumsily trying to reload his revolver, apparently being too inexperienced with it to understand that you can
@@ -478,8 +509,8 @@ event in Captain_Shoots_McGrathley
 
 		}
 		else {
-			""
-
+			"The Captain calmly produces the star pistol, which she took from me at some point. She aims it at McGrathley, who is clumsily trying to
+			reload his revolver, apparently being too inexperienced with it to understand that you can load five or six bullets at once."
 		}
 	}
 	case 2
@@ -511,6 +542,7 @@ event in Captain_Shoots_McGrathley
 		else {
 			"\nMcGrathley fires again, this time somehow missing by an even greater distance. Apparently threatening to throw people
 			out airlocks develops different skills than using handheld weapons.\n"
+
 			"After being targeted twice, the Captain flips the safety on the star pistol, which I didn't even know it had, steadies
 			herself and fires a single shot. The Captain, my hero, quietly and without fanfare hits McGrathley right between the eyes.
 			His disintegrates into a sticky pile of ash.\n"
@@ -524,7 +556,9 @@ event in Captain_Shoots_McGrathley
 			remove starPistol
 
 			"\n[Strike any key to continue]"
+
 			pause
+
 			MoveEveryoneToRecRoom()
 		}
 	}

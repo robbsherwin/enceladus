@@ -120,7 +120,7 @@ routine DoClimb
 	}
 	elseif object
 	{
-		print capital player.pronoun #1; 
+		print capital player.pronoun #1;
 		" can't climb ";
 		print The(object, true); "."
 	}
@@ -255,7 +255,8 @@ routine DoBurn
 routine DoCut
 {
 	"A destructive and somewhat less than completely useful
-	course of action."
+	course of action, unless of course, I was to do it with something
+	specific."
 }
 
 routine DoDig
