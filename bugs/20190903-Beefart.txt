@@ -1,0 +1,1521 @@
+Transcription on.
+
+>look
+
+The Captain’s Quarters, on the HMCS Plagoo
+The big thing with the Captain’s living quarters is that it currently doesn’t contain a werewolf trying to gorge itself on any of the crew. That’s fairly clutch. The Captain is wearing a long T-shirt, having just been roused out of bed because it’s the middle of the night.
+
+Her quarters contains a dresser, a computer and (along the starboard wall) her bed.
+
+(We’re in a space ship headed toward Saturn.)
+
+There is a door portside to a long hallway.
+
+The Captain massages her temples.
+
+>look dresser
+The Captain’s dresser is a five foot-tall light aluminum storage container that she keeps her clothes in. It has a small dent in one side where it has been struck repeatedly.
+
+>open dresser
+Opening the dresser reveals the Captain’s jumpsuit.
+
+>look jumpsuit
+So, it’s a size 4 (US) single piece, bandeau styled for a size-conscious fit. It’s got glitter on it, but I don’t know if the Captain added it herself or what.
+
+>wear jumpsuit
+I’m not holding that.
+
+>inspect jumpsuit
+You don’t need to use the word “inspect”.
+
+>take jumpsuit
+I take it out of the Captain’s dresser.
+
+>wear jumpsuit
+It would never fit m— ... it would probably fit me, but I’m still not going to wear it!
+
+>open door
+I can’t — there is a werewolf loose on the ship!
+
+>look room
+That doesn’t make any sense.
+
+>look
+
+The Captain’s Quarters, on the HMCS Plagoo
+The big thing with the Captain’s living quarters is that it currently doesn’t contain a werewolf trying to gorge itself on any of the crew. That’s fairly clutch. The Captain is wearing a long T-shirt, having just been roused out of bed because it’s the middle of the night.
+
+Her quarters contains a dresser, a computer and (along the starboard wall) her bed.
+
+(We’re in a space ship flying toward Saturn.)
+
+There is a door portside to a long hallway.
+
+The Captain is here.
+
+>look computer
+The computers on the HMCS Plagoo are extremely old, as it’s all the Captain could afford after she bought the ship.  This one is a Blue Raspberry. The Captain has an unread instant message.
+
+>read message
+It’s from Finnian O’Connell, the ship’s pilot. I have to steady myself before reading it: in order to protest the temporary pay cut the Captain enforced until things turn around, Finnian changed his instant message font to Comic Sans.
+
+foconnell : there’s  a were wolf on the ship
+foconnell : hello?
+foconnell : cap, r u there?
+foconnell : i woulda thouhgt that would have gotten more of a reaction tbqh
+foconnell : ok ill come over
+
+>respond 
+You don’t need to use the word “respond”.
+
+>respond o'connell
+You don’t need to use the word “respond”.
+
+>talk o'connell
+That doesn’t make any sense.
+
+>answer 
+You don’t need to use the word “answer”.
+
+>use instant message
+Be a little more specific about what you’d like me to do with the instant message.
+
+>write message
+You don’t need to use the word “write”.
+
+>type message
+You don’t need to use the word “type”.
+
+>talk o'connell
+That doesn’t make any sense.
+
+>look
+
+The Captain’s Quarters, on the HMCS Plagoo
+The big thing with the Captain’s living quarters is that it currently doesn’t contain a werewolf trying to gorge itself on any of the crew. That’s fairly clutch. The Captain is wearing a long T-shirt, having just been roused out of bed because it’s the middle of the night.
+
+Her quarters contains a dresser, a computer and (along the starboard wall) her bed.
+
+(We’re in a space ship flying toward Saturn.)
+
+There is a door portside to a long hallway.
+
+The Captain is here.
+
+>look bed
+She somehow fit a king-size in here. None of us have any idea how she got it past the door. My impression was that she cut away part of the hull. It’s pretty old, but mattresses last longer when it’s a single female using them. The rest of us got rack upgrades from a RestWell (TM) vendor on Mimas last year.
+
+>look under bed
+I don’t find anything under the bed.
+
+>look computer
+The computers on the HMCS Plagoo are extremely old, as it’s all the Captain could afford after she bought the ship.  This one is a Blue Raspberry. 
+>use computer
+Be a little more specific about what you’d like me to do with the computer.
+
+>turn on computer
+I can’t do that with the computer.
+
+>start computer
+I can’t do that with the computer.
+
+>look computer
+The computers on the HMCS Plagoo are extremely old, as it’s all the Captain could afford after she bought the ship.  This one is a Blue Raspberry. 
+>Talk to Captain
+I try to tell the Captain about the werewolf, but I am not sure that she even recognizes me.
+
+“Who - sorry, I can’t see anything, it’s too early for this,” she says. “OK, I know you aren’t Grimes, since this conversation is taking place away from the cafeteria.”
+
+“I know it’s not in this room, but that’s it, Captain,” I add.
+
+>turn on light
+That doesn’t make any sense.
+
+>use light
+That doesn’t make any sense.
+
+>talk captain
+That doesn’t make any sense.
+
+>talk to captain
+I try to tell the Captain about the werewolf, but I am not sure that she even recognizes me.
+
+“Who - sorry, I can’t see anything, it’s too early for this,” she says. “OK, I know you aren’t Grimes, since this conversation is taking place away from the cafeteria.”
+
+“I know it’s not in this room, but that’s it, Captain,” I add.
+
+>look at captain
+She is ten years older than me, but looks younger, what with being away from the sun for much of her life.  She’s six feet tall, has auburn hair styled in a 1920’s bob cut and owns a jawline that reveals her position as the toughest person on the ship. I am 78% sure she is not a werewolf.
+
+>wake captain
+That’s not necessary.
+
+>inspect captain
+You don’t need to use the word “inspect”.
+
+>answer captain
+You don’t need to use the word “answer”.
+
+>respond to captain
+You don’t need to use the word “respond”.
+
+>reply to captain
+You don’t need to use the word “reply”.
+
+>speak to captain
+I try to tell the Captain about the werewolf, but I am not sure that she even recognizes me.
+
+“Who - sorry, I can’t see anything, it’s too early for this,” she says. “OK, I know you aren’t Grimes, since this conversation is taking place away from the cafeteria.”
+
+“I know it’s not in this room, but that’s it, Captain,” I add.
+
+>open door
+I can’t — there is a werewolf loose on the ship!
+
+>ask captain about werewolf
+The Captain doesn’t seem to know anything about the werewolf.
+
+>ask captain about o'connell
+I haven’t seen anybody like that.
+
+>ask captain about pilot
+I haven’t seen anybody like that.
+
+>ask captain about door
+The Captain doesn’t seem to know anything about that.
+
+>ask captain about weapons
+You don’t need to use the word “weapons”.
+
+>ask captain about weapon
+You don’t need to use the word “weapon”.
+
+>look for weapon
+You don’t need to use the word “weapon”.
+
+>slap captain
+You don’t need to use the word “slap”.
+
+>hit captain
+Venting my frustrations on the Captain won’t accomplish much.
+
+>touch captain
+Fiddling with the Captain like that probably isn’t the best use of my time at the moment.
+
+>give captain clothes
+Not sure what you’re referring to—try “give (something) to (someone)”.
+
+>give captain jumpsuit
+Not sure what you’re referring to—try “give (something) to (someone)”.
+
+>inv
+I am carrying the Captain’s jumpsuit.
+
+>give jumpsuit to captain
+The Captain throws off her long t-shirt and shimmies into her jumpsuit. She produces a latte out of nowhere. (I mean, I wasn’t looking when she got changed and everything. I am the only gentleman on this ship. I have a reputation, narmean?)
+
+“I’m ready to communicate with you now, Ja’Rod,” she says, at last smiling.
+
+“About the werewolf — “
+
+“Right.” She sips from the latte. She seems much more alert. “With you now.” She doesn’t slurp her latte. She and the crystal ‘Mouse Trap’ game in the rec room are the only classy parts of this ship.
+
+“I don’t know how it got on, but — “
+
+Someone or some thing rattles the door knob from outside her quarters. 
+
+>answer door
+You don’t need to use the word “answer”.
+
+>open door
+I can’t — there is a werewolf loose on the ship!
+
+Someone enters the quarters, but it’s not a werewolf, hell-bent on consuming us all. It’s just Finnian, the pilot. 
+
+“Dun-dun, dun-dun,” he sings, doing the ‘Werewolves of London’ dance with his hands, giving us his profile on each side, mouth wide open to show his incisors. The song has been covered every few years since it came out so we know itm but neither the Captain nor myself react to this. “Hey Cappie, there’s a werewolf on the ship. You banned us from wearing fur, otherwise I would have lasered it, pow!, between the fangs and made a coat out of the part where it didn’t ink itself.”
+
+“No,” says the Captain, looking painfully at Finnian’s chosen ensemble, “I tried to ban you all from wearing fur-lined banana thongs.”
+
+I wiggle one of my teeth. It’s pretty loose! “That’s what you banned? I thought it was from eating bananas!”
+
+“Jesus, Ja’Rod,” says Finnian with a wince. He turns to the Captain. “Kid’s got a mouth that’s craggier than the public road leading up to Pripyat Reactor Four. When the werewolf bites you he’ll actually be injecting vitamins into your bloodstream.”
+
+>
+What?
+
+>talk finnian
+That doesn’t make any sense.
+
+>talk to finnian
+“What do you know about the werewolf?” I ask Finnian.
+
+“I assume it’s a ship malfunction. Maybe you even did it. What is your job on the ship?”
+
+“X-ray Technician.”
+
+Finnian gives me an unchanged look for five seconds too long. “Okay, you definitely don’t have enough responsibility to have caused this.”
+
+Finnian clears his throat and addresses the Captain. “Look, do you want us to kill the thing or what? I don’t want to get in a situation where it has cornered us and I’m trapped in the rec room with nothing other than that butt-fragile Mouse Trap game for six hours.”
+
+>talk to captain
+I don’t have anything to say to her at the moment.
+
+There’s a horrible scream coming from the far, far limits of the hallway.
+
+“Let’s go,” says the Captain. Finnian rifles through her dresser for something proper to wear. “No more screwing around, you two. Let’s get this off the ship before somebody gets killed.” She unlocks the door.
+
+All business, Finnian turns to speak to me. “Why don’t you open the door, kid, and I’ll eff up whatever’s on the other side?”
+
+>open door
+I open the door, but nothing jumps out at us. I can’t explain the following feeling, but I am compelled to state the obvious anyway.
+
+“Nothing out there,” I say. “But it’s dark, and —”
+
+“No, look down, kid,” says Finnian. “Grimes...” Grimes, the geographer we picked up just this week and added to the crew. His body has been ripped apart and slung ten meters down the darkened hall. He weighed at least three hundred pounds, which leaves a lot of biomass to be slung about the floor.
+
+“What killed the lights in the halls?” asks Finnian. “I mean, it was probably the werewolf. Grimes had a thing about conserving electricity, though.”
+
+“He just got engaged,” I whisper, avoiding looking at the wisps and entrails of Grimes’s massive corpse. “He was gonna get married when we got back to Earth...”
+
+“Oh yeah,” says Finnian, poking a flip-flopped toe into Grimes’s extensive stomach. “What, were they were gonna play Canon in Mickey D’s when he walked down the aisle? Also: Captain. Captain? With Grimes not needing his share can the rest of us get a raise?” I’m not sure if the Captain heard that or if she did and just ignored it.
+
+>inspect corpse
+You don’t need to use the word “inspect”.
+
+>look corpse
+You don’t need to use the word “corpse”.
+
+>look grimes
+Grimes was a 300 pound middle aged white guy that was our geographer. He was going to help us find the right place to land when we took jobs, but that’s over and done with now because right now he’s dead on the floor in a pool of his own blood, his throat having been ripped out by the werewolf that got on the ship.
+
+“Let’s get out of here,” says the Captain softly. Whatever is out there could hurt Alexandra. (She is our life support technician and her quarters are nowhere near us.)
+
+>go to alexandra
+I haven’t seen anybody like that.
+
+>go to Alexandra
+I haven’t seen anybody like that.
+
+>follow captain
+The Captain is right here.
+
+>look
+
+The Captain’s Quarters, on the HMCS Plagoo
+The big thing with the Captain’s living quarters is that it currently doesn’t contain a werewolf trying to gorge itself on any of the crew. That’s fairly clutch. The Captain is wearing a long T-shirt, having just been roused out of bed because it’s the middle of the night.
+
+Her quarters contains a dresser, a computer and (along the starboard wall) her bed.
+
+(We’re in a space ship flying toward Saturn.)
+
+There is a door portside to a long hallway.
+
+The Captain and Finnian are here.  The Captain has the latte.
+Grimes is here.
+
+>go down hallway
+You don’t need to use the word “hallway”.
+
+>go hall
+You don’t need to use the word “hall”.
+
+>go
+Which way do you want me to go?
+
+>go portside
+You don’t need to use the word “portside”.
+
+>go north
+I can’t go that way.
+
+>go south
+I can’t go that way.
+
+>go east
+I can’t go that way.
+
+>go west
+
+Hallway Module
+There is a brief hallway module connecting the Captain’s bedroom to the hold, which is up ahead.
+
+“Not to be a pest, dear,” starts Finnian to the Captain, “but do you think we should put some form of self-defense on the solar itinerary?”
+
+The Captain smiles at him without using her eyes. She doesn’t directly address him, which is something she didn’t used to do, but something I noticed her doing when I came back from leave. “I think Ensign Butler lowering his x-ray specs to give us some help on what’s ahead would be the next best tactic,”she says, genuinely sweetly.
+
+Ensign Butler! Oops, that’s me, and yes, as the x-ray technician of the Plagoo, I carry some specs with me. I can put my specs down.
+
+The Captain and Finnian are here.
+
+>use specs
+Be a little more specific about what you’d like me to do with the x-ray specs.
+
+>use specs to look ahead
+You don’t need to use the word “ahead”.
+
+>use specs to look
+That doesn’t make any sense.
+
+>look specs
+The specs are a set of chromatic filters that allow me to see the world in an x-ray sense - it helps a little bit in seeing behind objects unless those objects are particularly dense. I can scan things when they are lowered.
+
+The x-ray specs are currently raised.
+
+>lower specs
+Okay, I’ve lowered my x-ray specs.
+
+>look
+
+Hallway Module
+There is a brief hallway module connecting the Captain’s bedroom to the hold, which is up ahead.
+
+The Captain and Finnian are here.
+
+>go ahead
+You don’t need to use the word “ahead”.
+
+>go
+Which way do you want me to go?
+
+>go west
+
+Ship Hold
+The Plagoo has a small hold right off the Captain’s bedroom, and this is it. The original owner of the ship didn’t trust his crew with the cargo they ran with. Our Captain does, but the Plagoo can’t exactly be reconfigured.
+
+The hold itself normally has poor lighting, it’s even worse now that lighting systems have apparently been damaged. It’s rectangular in shape, maybe ten feet wide and fifteen feet long. The walls were painted a deep maroon like much of the rest of the interior at one point. There’s a great deal of pallets stacked on both sides.
+
+The Captain opens one of the packages on top of a pallet to my right. It’s an unopened star pistol. She unboxes it, avoids cursing at the tight grip plastic keeping the pistol in place and inserts the battery into the grip with a solid ‘twack.’ She hands it to Finnian.
+
+“Let me do the talking if it gets that far, I’ve got an idea what is going on,” she says to Finnian. “I’d say don’t draw attention to yourself, but, well.” She gestures at the hammock. “Keep the pistol hidden.”
+
+Exits lead west, further into the ship, and east, back down the hallway where we came.
+
+The Captain and Finnian are here.
+Finnian has the star pistol.
+
+>go west
+I should wait for the Captain to tell us to proceed instead of just running into trouble. Not trying to be the softest serve on the ship, it’s just that this is a learning experience for me, regarding werewolves on the ship.
+
+“I can’t hide this on me,” says Finnian of the star pistol. “Wait. You want me to hide it on me? Where? Are we carrying duct tape in the hold?”
+
+“No,” starts the Captain. “We aren’t carrying duct tape in the hold.”
+
+Finnian’s face makes about four different expressions before he shakes his head. “Here, kid, you take it. And don’t stare at me, I don’t have a lot on to block the x-ray radiation, you know. Ha! Ha ha ha!” Finnian hands me the star pistol.
+
+>take pistol
+I already have that.
+
+>go west
+I can’t go that way yet. The Captain wants me to lower my x-ray specs and take a look so we can see what’s ahead.
+
+>lower specs
+They are already lowered!
+
+>look 
+
+Ship Hold
+The hold itself normally has poor lighting, it’s even worse now that lighting systems have apparently been damaged. It’s rectangular in shape, maybe ten feet wide and fifteen feet long. The walls were painted a deep maroon like much of the rest of the interior at one point. There’s a great deal of pallets stacked on both sides.
+
+Exits lead west, further into the ship, and east, back down the hallway where we came.
+
+The Captain and Finnian are here.
+
+>look pallets
+You don’t need to use the word “pallets”.
+
+>talk captain
+That doesn’t make any sense.
+
+>talk to captain
+I don’t have anything to say to her at the moment.
+
+>talk to finnian
+I have nothing to say to him.
+
+>go west
+I can’t go that way yet. The Captain wants me to lower my x-ray specs and take a look so we can see what’s ahead.
+
+>look room
+That doesn’t make any sense.
+
+>look at room
+That doesn’t make any sense.
+
+>look around
+
+Ship Hold
+The hold itself normally has poor lighting, it’s even worse now that lighting systems have apparently been damaged. It’s rectangular in shape, maybe ten feet wide and fifteen feet long. The walls were painted a deep maroon like much of the rest of the interior at one point. There’s a great deal of pallets stacked on both sides.
+
+Exits lead west, further into the ship, and east, back down the hallway where we came.
+
+The Captain and Finnian are here.
+
+>look at walls
+That doesn’t make any sense.
+
+>look at stacks
+You don’t need to use the word “stacks”.
+
+>look at pallets
+You don’t need to use the word “pallets”.
+
+>look a ship hold
+You don’t need to use the word “ship”.
+
+>use specs on room
+I haven’t encountered any “room”.  (If you’re sure you need to refer to that, try putting it another way.)
+
+>use specs 
+Be a little more specific about what you’d like me to do with the x-ray specs.
+
+>use specs on walls
+I haven’t encountered anything like that.  (If you’re sure you need to refer to that, try putting it another way.)
+
+>use specs to look
+That doesn’t make any sense.
+
+>use specs to look at room
+That doesn’t make any sense.
+
+>look at captain
+She is ten years older than me, but looks younger, what with being away from the sun for much of her life.  She’s six feet tall, has auburn hair styled in a 1920’s bob cut and owns a jawline that reveals her position as the toughest person on the ship. 
+
+>look at finnian
+He is wearing a lynx coat from head to ankles, a dunce cap and Air Jordans.
+
+>take dunce cap
+I haven’t seen anything like that.
+
+>go west
+I can’t go that way yet. The Captain wants me to lower my x-ray specs and take a look so we can see what’s ahead.
+
+>look west
+I see nothing special to the west.
+
+>look east
+I see nothing special to the east.
+
+>look north
+I see nothing special to the north.
+
+>use specs west
+I haven’t encountered anything like that.  (If you’re sure you need to refer to that, try putting it another way.)
+
+>use specs to look west
+That doesn’t make any sense.
+
+>use x-ray specs
+Be a little more specific about what you’d like me to do with the x-ray specs.
+
+>use x-ray specs to inspect room
+You don’t need to use the word “inspect”.
+
+>use specs to look
+That doesn’t make any sense.
+
+>look through specs
+I can’t see through that.
+
+>look at x-ray specs
+The specs are a set of chromatic filters that allow me to see the world in an x-ray sense - it helps a little bit in seeing behind objects unless those objects are particularly dense. I can scan things when they are lowered.
+
+The x-ray specs are currently lowered.
+
+>turn on specs
+I can’t do that with the x-ray specs.
+
+>start specs
+I can’t do that with the x-ray specs.
+
+>use x-ray specs west
+I haven’t encountered anything like that.  (If you’re sure you need to refer to that, try putting it another way.)
+
+>look west with specs
+That doesn’t make any sense.
+
+>go west 
+I can’t go that way yet. The Captain wants me to lower my x-ray specs and take a look so we can see what’s ahead.
+
+>look ahead
+You don’t need to use the word “ahead”.
+
+>look 
+
+Ship Hold
+The hold itself normally has poor lighting, it’s even worse now that lighting systems have apparently been damaged. It’s rectangular in shape, maybe ten feet wide and fifteen feet long. The walls were painted a deep maroon like much of the rest of the interior at one point. There’s a great deal of pallets stacked on both sides.
+
+Exits lead west, further into the ship, and east, back down the hallway where we came.
+
+The Captain and Finnian are here.
+
+>look at pallets
+You don’t need to use the word “pallets”.
+
+>look at stacks
+You don’t need to use the word “stacks”.
+
+>look at room
+That doesn’t make any sense.
+
+>look at ship hold with specs
+You don’t need to use the word “ship”.
+
+>look at hold with specs
+You don’t need to use the word “hold”.
+
+>use specs on room
+I haven’t encountered any “room”.  (If you’re sure you need to refer to that, try putting it another way.)
+
+>go east
+
+Hallway Module
+There is a brief hallway module connecting the Captain’s bedroom to the hold, which is up ahead.
+
+>use specs
+Be a little more specific about what you’d like me to do with the x-ray specs.
+
+>go west
+
+Ship Hold
+The hold itself normally has poor lighting, it’s even worse now that lighting systems have apparently been damaged. It’s rectangular in shape, maybe ten feet wide and fifteen feet long. The walls were painted a deep maroon like much of the rest of the interior at one point. There’s a great deal of pallets stacked on both sides.
+
+Exits lead west, further into the ship, and east, back down the hallway where we came.
+
+The Captain and Finnian are here.
+
+>talk to captain
+I don’t have anything to say to her at the moment.
+
+>ask captain about specs
+The Captain doesn’t seem to know anything about that.
+
+>ask captain 
+Try having me ask someone about something in particular.
+
+>shoot gun
+You don’t need to use the word “gun”.
+
+>shoot
+Be a little more specific about what you’d like me to shoot.
+
+>shoot door
+I don’t see that.
+
+>look at specs
+The specs are a set of chromatic filters that allow me to see the world in an x-ray sense - it helps a little bit in seeing behind objects unless those objects are particularly dense. I can scan things when they are lowered.
+
+The x-ray specs are currently lowered.
+
+>scan pallets
+You don’t need to use the word “pallets”.
+
+>scan
+I can see ahead that there’s actually two people waiting for us in the next area.
+
+“Captain, I’m seeing two unknown forms and what I think is Alexandra.” Alexandra is our naviagor and the life support tech. “Alexandra seems to be in the fetal position next to the air lock. One of the forms definitely looks like the silouette of a werewolf. The other form standing next to it is taller, has lead boots. No weapons that I can detect. I also think that Grimes’s robot is there.”
+
+“Good work,” says the Captain. “Let’s proceed.”
+
+>go west
+
+Monitoring
+This is one room before the airlock, where I saw two figures next to Alexandra, who is part of our crew, and Mr Mailx, who is the robot that Grimes got working.
+
+“This is what I’d like us to do,” says the Captain, “when we proceed to the airlock up ahead. Finnian, I would like you to accompany me as we talk to our interlopers on the ship. Ja’Rod, I would like you to stay hidden and shoot the hull behind them when I snap my fingers.”
+
+Finnian nods, the disposition he normally carries about has left for a moment. After all, there are enemies on the ship and we can still save Alexandra. I have a few thoughts - why not shoot the werewolf and the other guy instead of putting a hole in the ship, but I just nod as well.
+
+The Captain and Finnian are here.
+
+(My x-ray specs just automatically went back up.)
+
+>talk to captain
+“Can you go over the plan again?” I ask.
+
+“Yup,” she says, “We’re going to go west. You find a place to hide. When I snap my fingers ... shoot the hull.”
+
+“The hull?”
+
+“You got it.”
+
+>hide
+You don’t need to use the word “hide”.
+
+>go west
+
+Before the Airlock
+(I’m hidden behind some cargo crates, but nobody else is.)
+
+We are in a narrow hallway, there are monitors mounted a couple meters high in both directions. Inside our airlock is Mr Mailx and Alexandra. Outside of the airlock is the werewolf and someone I don’t recognize. The Captain and Finnian approach.
+
+“Captain!” says the unknown figure. “How nice of you to join us. I plan on sending every member of your crew out the airlock.”
+
+“How did you get onto my ship?” the Captain asks.
+
+“Through the airlock. The other way. It seems you sent the unencrypted wireless key to Grimes when you hired him, and Grimes failed to secure his communicator.”
+
+“You came in through the airlock on the opposite side? Without that thing wearing a suit?” She points to the werewolf.
+
+The werewolf’s head is still pointed toward the Captain, but it turns bloodshot, vacuum-afflicted eyes towards the man after that for a long second before settling back onto the Captain and Finnian.
+
+“It can take it!” the man hisses. He notices Finnan for the first time. Desperate to change the subject, he addresses Fin. “What are you wearing?”
+
+“Appropriate dress in this area of the solar system for shore leave, McGrathley,” he says. McGrathley! I didn’t recognize him in the spacesuit, but this is Riggs McGrathley, a pirate we’ve encountered once before.
+
+The werewolf, McGrathley, the Captain, Finnian, Alexandra, and Mr Mailx are here.
+
+>wait
+Time passes...
+
+“You look disgusting! Put some clothes on!” shouts McGrathley. We took a job a couple years ago to deliver two tons of mini chile rellenos from Earth to Mimas. We got the job because McGrathley and his crew couldn’t get it done, they couldn’t move the merch and we could. He actually fired lasers at us about losing the deal.
+
+“We put out a distress call as soon as you killed Grimes,” says the Captain. “The sector is going to be crawling with cops.”
+
+“At transmission times of light in a vacuum out here in the middle of nowhere I have plenty of time to send you all into the icy, inhospitable darkness of space. The worst torture imaginable!” The werewolf again shifts its eyes to look at McGrathley for a beat before settling back on the Captain.
+
+>wait
+Time passes...
+
+The Captain snaps her fingers, very softly, her right hand having traveled slowly to her right hip. The lighting is very dark in the ship thanks to the attack, so it’s really not seen at all by either McGrathley or the werewolf. Not that I expect the werewolf to be focused on signs.
+
+>shoot vent
+You don’t need to use the word “vent”.
+
+>shoot wall
+That doesn’t make any sense.
+
+>shoot
+Be a little more specific about what you’d like me to shoot.
+
+>shoot hull
+I emerge from behind some crates and take aim at the section of the hull behind McGrathley and the werewolf. I am shaking a bit, but luckily you don’t actually have to be that accurate when blowing a hole in your ship. The star pistol takes a second to warm up after I squeeze the trigger. A ton of ping there. The werewolf probably had enough time to jump over the crates and rip out my neck, but I think it was about to bring up the fact that McGrathley got a spacesuit for himself and not it. Regardless - oh, there it goes.
+
+There is a horrible screeching sound as the air and everything else nearby starts to get sucked out by the small hole.
+
+The werewolf never had a chance. Being closest, it gets fired through and sent flying into the nothingness of space. McGrathley maybe had an extra half-second, but he was next. He definitely lowered his helmet before he was ejected.
+
+“Don’t body shame me!” shouts Finnian towards our ejected interlopers while all this is going on.
+
+I then comprehend the Captain’s plan - Mr Mailx was next, but was too large for the pistol’s hole. He instead plugged the hole like a Dutch boy’s finger. It was all over before Alexandra, clearly injured, even really moved.
+
+“Finnian, Ja’Rod,” starts the Captain, “Get over to the bridge, we’re going to perform an emergency landing.”
+
+“Aye-aye,” I say and get going. Fin does the same.
+
+[Strike any key to continue]
+
+Bridge
+Finnian and I run back to the helm on the Bridge. The Captain stayed to check on Alexandra. Finnian doesn’t ever really start any conversations with me. After working with him for two years and then a year break and then the last few weeks I have no idea if he likes me or not. It always seems like I am bothering him working when I bring up non-work topics, and it always seems like he thinks I’m tedious when I bring up work at any other time.
+
+“That was crazy, huh?” I say. Why not, what can it hurt.
+
+“Well, the best part of that plan is that it would have also worked with Grimes’s fat ass in the breach, not just his robot.” Former employee bashing! I guess I’m off the hook for a bit.
+
+Finnian sits down and starts fiddling with the navigation controls.
+
+>talk to finnian
+“Hey, the Captain’s been a little off since I got back from leave,” I say to him. “Did something happen?”
+
+Finnian turns to me and stops fiddling with the console. “You really hadn’t heard?” he says. But we hear people approach the bridge, so that is all he says for now.
+
+The Captain joins the rest of us on the bridge. She sits in the command chair.
+
+“How is Alexandra?” I ask, taking over the scanning station.
+
+“She needs a doctor,” says the Captain. “Take us down,” she says to Finnian.
+
+“Hmm?” he says, having not paid attention.
+
+>talk to finnian
+I have nothing to say to him.
+
+“We need to land on Enceladus,” says the Captain. “It’s the closest moon, closest landing site.”
+
+“Where is it? asks Finnian.
+
+“You’re the navigator, what do you mean ‘Where is it?’ Don’t you know?” she says.
+
+“I don’t just have the positions of all the moons of Jupiter memorized!” he says.
+
+“Saturn. Not. Jupiter,” utters Mr Mailx.
+
+“Right, that’s what I mean,” says Finnian.
+
+“Tilt us to port,” I say. “Towards the southern cross.”
+
+“Ahhh... the southern cross? The cross? Is that what you mean?” I don’t think Finnian is joking.
+
+“The constellation,” I say.
+
+“It’s just The Cross. Ol’ Crux.” Finnian adjusts something on the ship’s navigation console.
+
+“No, it’s the Southern Cross. It’s not visible in the northern hemisphere. Of the Earth. Thus the name.” Now I’m certain he’s not joking.
+
+“Wait,” says Finnian. “You’re telling me that God ... GOD, the all knowing and all powerful ... created this piece of religious iconography and then set it in a hemisphere that Christ never visited? What other star patterns are only visible from that side, diagrams on how to escape a crucifix?”
+
+>wait
+Time passes...
+
+Finnian sets the Plagoo down on Enceladus. A rather smooth landing, considering the hull breach that is plugged by the robot.
+
+“Ja’Rod, can you please pull Mr Mailx out of the hole in the ship and get Alexandra to the airlock, where it will be warm? Finnian and I will meet you outside where we can discuss the plan thereafter.” I nod. The Captain seems to be all business, Finnian’s joke(?) about the stars didn’t seem to cheer her up. She gets like this now, pretty morose at times.
+
+There is an exit out of the bridge to the north.
+
+>exit north
+I’m not in the north.
+
+Finnian and the Captain get in the lift downwards.
+
+>go north
+
+Port Side Hallway
+This is just a simple access hallway that allows me to get to different areas of the ship.
+
+I can tell that Finnian has initiated the ship landing procedures, there is a whirring and clicking and sounds of orchestral strikes. Some of the latter may simply be that Finnian is force-piping the album Big Generator through the ship’s audio, however.
+
+>wait
+Time passes...
+
+>go north
+
+PortSide Hallway
+To the north is the airlock and to the south is more hallway.
+
+>go airlock
+I haven’t seen anything like that.
+
+>go out airlock
+I haven’t seen anything like that.
+
+>look
+
+PortSide Hallway
+To the south is more hallway, but eventually the bridge.
+
+>go south
+
+Port Side Hallway
+This is just a simple access hallway that allows me to get to different areas of the ship.
+
+>go south
+
+Bridge
+This is the Bridge of our ship, there’s a chair in the middle of the room for the Captain. Finnian has a navigator’s console before a large black high definition television. I have a station behind the Captain port side.
+
+>look
+
+Bridge
+This is the Bridge of our ship, there’s a chair in the middle of the room for the Captain. Finnian has a navigator’s console before a large black high definition television. I have a station behind the Captain port side.
+
+>talk to finnian
+I don’t see him.
+
+>
+What?
+
+>talk to captain
+I don’t see her.
+
+>look
+
+Bridge
+This is the Bridge of our ship, there’s a chair in the middle of the room for the Captain. Finnian has a navigator’s console before a large black high definition television. I have a station behind the Captain port side.
+
+>look at television
+You don’t need to use the word “television”.
+
+>look at station
+This is the area that I do my work in when I am on the Bridge. My job entails scanning, er, things and getting information. So I’ve got my X-ray specs when things are up close but there’s also a lot of scans I run at this console. Typically I try to get an analysis of other ships when we encounter them but I also provide local weather when we are landing on a planet or, past the asteroid belt, a moon.
+
+>use console
+Be a little more specific about what you’d like me to do with the Scanning Station.
+
+>scan 
+My specs aren’t lowered.
+
+>lower specs
+Okay, I’ve lowered my x-ray specs.
+
+>scan
+Nothing special to report here.
+
+>go north
+
+Port Side Hallway
+This is just a simple access hallway that allows me to get to different areas of the ship.
+
+>go north
+
+PortSide Hallway
+To the south is more hallway, but eventually the bridge.
+
+>look
+
+PortSide Hallway
+To the south is more hallway, but eventually the bridge.
+
+>go to bridge
+You don’t need to use the word “bridge”.
+
+>look
+
+PortSide Hallway
+To the south is more hallway, but eventually the bridge.
+
+>go south
+
+Port Side Hallway
+This is just a simple access hallway that allows me to get to different areas of the ship.
+
+>look
+
+Port Side Hallway
+This is just a simple access hallway that allows me to get to different areas of the ship.
+
+>go south
+
+Bridge
+This is the Bridge of our ship, there’s a chair in the middle of the room for the Captain. Finnian has a navigator’s console before a large black high definition television. I have a station behind the Captain port side.
+
+>look
+
+Bridge
+This is the Bridge of our ship, there’s a chair in the middle of the room for the Captain. Finnian has a navigator’s console before a large black high definition television. I have a station behind the Captain port side.
+
+>use captain chair
+I haven’t encountered any “captain chair”.  (If you’re sure you need to refer to that, try putting it another way.)
+
+>use chair
+Be a little more specific about what you’d like me to do with the Captain’s chair.
+
+>sit chair
+That doesn’t make any sense.
+
+>sit in chair
+I can’t do that with the Captain’s chair.
+
+>use navigator's console
+You don’t need to use the word “navigator’s”.
+
+>use console
+Which console do you mean, the 1) navigation controls or the 2) Scanning Station?
+
+>1
+Be a little more specific about what you’d like me to do with the navigation controls.
+
+>use navigation controls
+Be a little more specific about what you’d like me to do with the navigation controls.
+
+>look navigation controls
+The controls are in front of Finnian, they are what he uses to move the Plagoo - to apply thrust, yaw, roll, tilt, all those things I did playing computer games as a kid that I would never dare try in real life. The console is all buttons, though, the Captain couldn’t afford the flightstick option for the Plagoo.
+
+>talk to finnian
+I don’t see him.
+
+>push buttons
+You don’t need to use the word “buttons”.
+
+>push button
+I haven’t seen anything like that.
+
+>look console
+The controls are in front of Finnian, they are what he uses to move the Plagoo - to apply thrust, yaw, roll, tilt, all those things I did playing computer games as a kid that I would never dare try in real life. The console is all buttons, though, the Captain couldn’t afford the flightstick option for the Plagoo.
+
+>use thrust
+You don’t need to use the word “thrust”.
+
+>go to Mr Mailx
+I don’t see him.
+
+>find Mailx
+You don’t need to use the word “find”.
+
+>look for mailx
+That doesn’t make any sense.
+
+>go 
+Which way do you want me to go?
+
+>north
+
+Port Side Hallway
+This is just a simple access hallway that allows me to get to different areas of the ship.
+
+>go north
+
+PortSide Hallway
+To the south is more hallway, but eventually the bridge.
+
+>go north
+
+Before the Airlock
+I’m before the airlock again. Mr Mailx is here plugging the hole I created. Alexandra is conscious, but laying on a blanket that the Captain somehow produced. 
+
+Mr Mailx and Alexandra are here.
+
+(I need to have both airlock doors shut using the green and red button with Alexandra inside.)
+
+>use green and red button
+I can’t use multiple objects like that.
+
+>use green button
+Be a little more specific about what you’d like me to do with the green button.
+
+>push green button
+The first door to the airlock is now open.
+
+Alexandra, still very much holding what I think is her lower intestine, crawls over inside the airlock.
+
+>push red button
+The door to the outside is now closed.
+
+(I need to have both airlock doors shut using the green and red button with Alexandra inside.)
+
+>remove mailx
+Mr Mailx probably wouldn’t be too big on that idea.
+
+>pull malix
+You don’t need to use the word “malix”.
+
+>pull mailx
+“All right buddy,” I say to Mailx, “Let me get you out of there.”
+
+“Understood. Agreed,” says Mr Mailx.
+
+I count to three, kind of looking the power LEDs that make up his eyes in good eye contact and grip his wispy metal fingers. On three I yank him out and the cases that make up his backside pop out.
+
+“You okay, man?” I ask him.
+
+“Will. Run. Diagnostic.” he says. I nod. “Alexandra, we gotta get you over to the airlock, okay? It’s going to get really cold in a bit with that giant hole in the hull, but in the airlock we can at least control the temperature there.”
+
+She doesn’t say anything but grimaces a nod to let me know she understood. She’s holding her hand against her spleen. Or her liver? Her kidneys maybe. I can’t tell how bruised she is, but it’s enough to keep her laying on the floor.
+
+>take alexandra to airlock
+That doesn’t make any sense.
+
+>look
+
+Before the Airlock
+I’m before the airlock again. Mr Mailx is here plugging the hole I created. Alexandra is conscious, but laying on a blanket that the Captain somehow produced. 
+
+Mr Mailx and Alexandra are here.
+
+(I need to have both airlock doors shut using the green and red button with Alexandra inside.)
+
+>push green button
+The first door to the airlock is now closed.
+
+Alexandra nods at me.
+
+Okay, Alexandra is in the airlock and both doors are shut. I can head back to the Bridge with Mailx now.
+
+>go to bridge
+You don’t need to use the word “bridge”.
+
+>go south
+
+PortSide Hallway
+To the south is more hallway, but eventually the bridge.
+
+Mr Mailx is here.
+
+>go south
+
+Port Side Hallway
+This is just a simple access hallway that allows me to get to different areas of the ship.
+
+Mr Mailx is here.
+
+>go south
+
+Bridge
+This is the Bridge of our ship, there’s a chair in the middle of the room for the Captain. Finnian has a navigator’s console before a large black high definition television. I have a station behind the Captain port side.
+
+I hear the Captain via the communications system on the Plagoo.
+
+“Ensign Butler,” she says, “How is Alexandra?”
+
+“Alexandra is inside the airlock, the temperature controls are active and she’ll be safe there. That room is getting cold.
+
+“Very well. Let’s meet outside for our next steps.”
+
+[Strike any key to continue]
+
+Outside the Plagoo
+Finnian looks around before looking back toward the group. He changed before we came down, now wearing a real Lynx fur coat, a white dunce cap and new old stock original Air Jordans. “Crap, Captain, it’s an ice planet!”
+
+She nods at that. “Intelligence indicates that there’s a small town a kilometer east of here.”
+
+“What’s your source of that intelligence?” asks Finnian.
+
+The Captain grits her teeth. “I consulted Wikipedia. Okay? Is that all right?”
+
+“No it’s not all right!” says Finnian. “Wikipedia’s moderator and administration system is filled with duplicitous losers that turned the exchange of free information into a political battle where scumbags scuttle into tribes to spread their lies. Mr Mailx?”
+
+“Yes,” he says.
+
+“Delete the Wikipedia page on Enceladus and replace it with a 10K image of a giant tarantula.”
+
+“Finnian, stop,” says the Captain.
+
+“Done,” says the robot, presumably having fired off some API calls.
+
+Finnian laughs. It’s a dry, hollow one. “Seventy one minutes from now, good luck to any kid trying to do a book report on Jovian moons. Cite that revision in your bibliography, you sniveling Webelo punks.”
+
+The Captain walks east. Mr Mailx starts up to join her and after a shrug and then a replacing of his precariously-set hat, Finnian goes east too.
+
+>go east
+
+Snowy Path
+“... I’m just saying, have you ever tried to edit something on it? No? Oh, hey Ja’Rod,” says Finnian.
+
+“Our plan is going to be this,” says the Captain. “There’s a hot sauce bar up ahead. We ask around to find a doctor. Since we also need to repair the ship, let’s see if we can find a mine.”
+
+We all nod at this except for Mr Mail, who just keeps treading east with a low whir.
+
+>go east
+
+Snowy Path
+“... bring her back something to drink is all I’m saying, they can’t just have hot sauce. Maybe a bottle of scotch to anesthetize her wound. Hey robot, does scotch kill the bacteria and germs around wounds?”
+
+“No,” says Mr Mailx.
+
+“What does he know, he spends his free time vandalizing encyclopedias,” Fin says.
+
+“What do you think the word anesthetize means?” asks the Captain, who is still walking. For the first time I understand what Finnian has been trying to do lately, he’s trying to cheer her up. It isn’t working, because he’s a socially maladjusted narcissist, but he’s trying.
+
+“Ja’Rod,” she says, “Can you give me a scan of what is up ahead?”
+
+Finnian, Mr Mailx, and the Captain are here.
+
+In the distance, just before the horizon, a beautiful jet of water bursts from a warm fracture in the crust of Enceladus. The gaseous plume fizzles into outer space.
+
+>lower specs
+They are already lowered!
+
+>scan
+“I see giant spiders, tell Mr Mailx to take some on location shots for the next batch of edits,” I say, trying to keep the conversation going. “No, for real though, there is, sure enough, a bar not too far away and it’s across from the entrance to an underground mine. I’m not getting good readings on what sort of metals are down there, so I assume it’s lead and something else.”
+
+In the distance, just before the horizon, a beautiful jet of water bursts from a warm fracture in the crust of Enceladus. The gaseous plume fizzles into outer space.
+
+>go east
+
+Snowy Path
+“Okay, so we need a doctor to come back to the ship,” says Finnian. “D’ya think they’ll just come because Alexandra is hurt? That would make it sort of a house call, wouldn’t it? I don’t know if doctors on this moon do house calls.”
+
+“I don’t think we should bring up payment until whoever we find does, “ says the Captain. “And if they do, let’s let them throw out a number first.”
+
+“Ah-ha!” exclains Finnian. “So good to be on the other side of your negotiations for a chance. I see how it goes now. This mystery doc will be lucky to have an eighth share.”
+
+“None of you are at an eighth of a share,” replies the Captain.
+
+“The robot is. Hey robot, you getting an eighth of a share?”
+
+“No,” says Mr Mailx.
+
+“There ya go. Too bad you look like three poorly stacked Commodores. If the type of machine you were was a Rug Doctor the Captain might have paid you for this.” Finnian waves his hands. “All of this.”
+
+I see now that we landed in just an enormous flat crater — the crater’s edge is just beyond this little section of town. I still have no idea where anyone around here lives. I’m hoping their homes are out of the crater and they all get around by jetpack. (There is what appears to be an abandoned snowmobile close by with tracks leading to the bar, so maybe it’s just that.)
+
+Finnian, the Captain, and Mr Mailx are here.
+
+(My x-ray specs just automatically went back up.)
+
+>look snowmobile
+I haven’t seen anything like that.
+
+>look at snowmobile
+I haven’t seen anything like that.
+
+>go to snowmobile
+I haven’t seen anything like that.
+
+>follow tracks
+You don’t need to use the word “tracks”.
+
+>go to bar
+I haven’t seen anything like that.
+
+>go east
+
+Center of Town
+There is a large log cabin to the south. Pretty rustic. Trees don’t exactly grow here, so the fact that it exists at all means that someone really wanted to have an earthly experience. To the north is a cave, my scan indicated that people can descend downwards.
+
+“I can do the talking once we g— “ starts Finnian.
+
+“I’ll do the talking,” interrupts the Captain.
+
+“I’ll try the milder hot sauces,” I add, helpfully.
+
+Finnian, the Captain, and Mr Mailx are here.
+
+Abandoned just a bit beyond us is what appears to be a broken snowmobile.
+
+>look snowmobile
+Arctic Cat was a company that made snowmobiles all the way back in the 1970s and I think somehow someone dragged one through space and time and then left it in barely running condition, from the looks of it, 70 light minutes away on a Saturian moon.
+
+>turn on snowmobile
+I can’t do that with the snowmobile.
+
+>use snowmobile
+Be a little more specific about what you’d like me to do with the snowmobile.
+
+>start snowmobile
+I can’t do that with the snowmobile.
+
+>turn key snowmobile
+I haven’t encountered anything like that.  (If you’re sure you need to refer to that, try putting it another way.)
+
+>go east
+I can’t go that way.
+
+>open snowmobile
+I can’t do that with the snowmobile.
+
+>sit on snowmobile
+I don’t have any interest in that old piece of moon garbage.
+
+>break snowmobile
+Venting my frustrations on the snowmobile won’t accomplish much.
+
+>go
+Which way do you want me to go?
+
+>map
+You don’t need to use the word “map”.
+
+>look
+
+Center of Town
+
+Finnian, the Captain, and Mr Mailx are here.
+
+Abandoned just a bit beyond us is what appears to be a broken snowmobile.
+
+>use specs on snowmobile
+Be a little more specific about what you’d like me to do with the x-ray specs.
+
+>lower specs
+Okay, I’ve lowered my x-ray specs.
+
+>scan
+Nothing special to report here.
+
+>scan snowmobile
+That doesn’t make any sense.
+
+>repair snowmobile
+You don’t need to use the word “repair”.
+
+>talk to mailx
+He won’t look at me.
+
+>talk to captain
+I don’t have anything to say to her at the moment.
+
+>talk to finnian
+I have nothing to say to him.
+
+>go east
+I can’t go that way.
+
+>go cave
+You don’t need to use the word “cave”.
+
+>go north
+I can’t go that way just yet. Valid exits are to the south and west.
+
+>go south
+
+Hot Sauce Bar
+The four of us enter the bar and we’re greeted by a doorman. He is suited up in a caribou skin and fur coat. I don’t think it was made for him as he’s sitting on a stool and the thing falls all over the floor of the bar like a wedding dress.
+
+“You can’t bring that thing in here,” says the bouncer, but he is pointing to Finnian. Mr Mailx turns his entire body to face Finnian, which is the creepiest thing ever because of how long it takes him to do that on tread.
+
+“That’s my navigator,” says the Captain.
+
+“There’s one room and a bathroom in here, you’ll be able make your way around just fine,” says the bouncer. “Get that cap out of here before I throw you all out myself.”
+
+“Oh, it’s the cap?” asks Finnian. “This thing is the height of fashion far back around the outer moons of Saturn.” The Captain rolls her eyes.
+
+“This is a moon of Saturn, dummy,” says the bouncer.
+
+Finnian looks genuinely surprised at that revelation. “Huh,” he says.
+
+“Mailx, please go with Finnian and wait outside the bar,” says the Captain.
+
+“No!” shrieks the robot.
+
+“Come on, robot,” Finnian says to Mr Mailx. The two of them leave, to presumably wait outside or try to find a print encyclopedia to assert the correctness of the bouncer’s claim.
+
+Now that we’re inside, this looks just like any other bar in the solar system, except colder and with a scent of chile peppers instead of old hops. There are a series of booths around the walls with the bar itself a square right in the middle. I’d say there’s probably thirty or forty men, women and robots in here.
+
+The Captain points to a couple empty stools near the plastic bin of lemons and limes. “Shall we?” she asks.
+
+The Captain is here.
+
+On the bar is a small fruit tray.
+Sitting by itself on the bar is a bottle of Blair’s Ultra Death sauce.
+
+>sit at bar
+That doesn’t make any sense.
+
+>sit
+Be a little more specific about where you’d like me to sit.
+
+>sit chair
+That doesn’t make any sense.
+
+>sit on stool
+I take a seat on the bar stool. The Captain joins me to my left.
+
+The bartender is a late-twenties Asian gal, I’d place her right in the middle of Los Angeles, California with her horn-rimmed glasses and all business body language.
+
+“Right, fancy a mite o Frank’s eh come noe lurves?”
+
+(Nailed it, deep southeast L.A. near Baker, I think.)
+
+>
+What?
+
+>order drink
+That doesn’t make any sense.
+
+>order hot sauce
+That doesn’t make any sense.
+
+>talk bartender
+That doesn’t make any sense.
+
+>talk to bartender
+“Are you aware of any doctors maybe hitting the sauce at this bar?” I smile at my little playful adventure with words there. Unfortunately, it just makes me look like a leering, grinning jackass to the bartender.
+
+“Um. No. I don’t know of any,” she says.
+
+“I think this is where I am supposed to slip you fifty dollars to see if it will loosen your tongue,” I say. But I don’t have money, so I can’t do that. The bartender looks at the Captain, gives her a single expression that I assume is one woman telepathically telling the other to take care of her own trash, and the bartender turns her back to me.”
+
+“I, ahh, normally work best with radioactive metals,” I say quietly to myself.
+
+>talk to captain
+“Captain, how are we going to find a doctor in here?”
+
+“Thinking about that,” she says. “I’m wondering if the money move here is to get one to perhaps come to us.”
+
+>drink hot sauce
+I take the Blair’s Sauce and turn 180 degrees on the bar stool. I unwrap it and drink the entire thing in one quick slurp.
+
+This was a terrible idea, probably the worst idea I’ve ever had.
+
+My eyes start to water, my x-ray specs inexplicably start scanning even though they are on top of my head and I start coughing and hiccuping. This is poison, there was a mixup or something, there is no way anyone could have ever put this into a bottle intentionally. It burns, it’s burning through my face!
+
+“Aye pal, one milk then, innit, won ye done wit pure greeting,” asks(?) the bartender.
+
+I can’t respond. I’m hunched over dying. This is it, I’m $%^&ing dying. Even the Captain has gone from an arched eyebrow to actual concern.
+
+A man emerges from the far booth. “What did this flailing cretin do?” he asks. I assume I am hallucinating, but he has a white lab coat and a stethoscope. So great, while this sauce is killing me I ended up finding a doctor either in full Enceladus City Comic Con Cosplay or a porn.
+
+“He ingested a little too much of the hot sauce,” says the Captain. She puts her hand on my forehead. At first I think she’s trying to take my temperature and I feel like that was really motherly of her, but then I realize she was just trying to turn my specs off so I don’t irradiate every living bit of tissue in the bar.
+
+[Strike any key to continue]
+
+The Doctor rips the two liters of milk that the bartender produced out of her hands and splashes me in the face with it. He forces me to drink about a quarter of the jug. It’s not really helping anything past my throat, but I think I’m not dying any more.
+
+“Thanks, Doc,” I try to say, but what comes out it something more akin to, ‘Quaalude Farsase.’
+
+>talk to doc
+You don’t need to use the word “doc”.
+
+>talk to doctor
+Doctor Nahas is listening.
+
+Oh god, god, the second wave is hitting me, I didn’t realize there would be a second wave. This is awful, this cannot be how this — I spastically throw my hands around and start bicycling while in the fetal position on the floor — 
+
+>wait
+Time passes...
+
+“Give him some milk!” I hear someone shout from the far corner of the bar.
+
+“That won’t help!” shrieks someone else. “That’s a myth! Idiot!”
+
+“Give him a slightly mellower hot sauce,” I hear from the opposite corner of the first guy. Nobody’s doing dick to actually help me though, so I don’t appreciate these suggestions flying around.
+
+>wait
+Time passes...
+
+I think I’m okay ... for now. I stand. I take a quick glance around the bar to see if anyone has ordered wings, if that’s a thing here. I pull on the bottom of my T-shirt to show everyone I’m back and all business again. I’m not sure if that point has been made.
+
+“I’m all business, Captain,” I say, eliminating all doubt.
+
+“You’re telling me she almost went through an airlock?” asks the Doctor. The Captain nods her head, one professional to another. The Doctor sees that I am standing.
+
+“Ja’Rod,” he says. “My name is Doctor Milad Nahas.” He is speaking really slow in perfect Americanized English, which he doesn’t really need to do. “You ingested too much hot sauce, okay? I’m going to ask you some questions to see if we need to stay here or not. Can you tell me your favorite game?”
+
+“Yes, it’s Mouse Trap,” I say.
+
+The Doctor gives a concern look to the Captain. He looks back to me. “Okay, Ja’Rod,” he says, speaking even more slowly. “I’m afraid you may be currently suffering from temporary yet severe mental retardation —”
+
+“It’s all we have on the ship!” exclaims the Captain. “He’s fine, he’s no different than any other member of my crew. Look, I have no idea what the criminal that was on my ship did to my life support tech, but as far as I know she’s dying in —” I mime like I am shivering to try to guide the Captain through her speech — “Dying in my airlock that was disintegrated open. We absolutely need your help.”
+
+Doctor Nahas stuffs his stethoscope into a pocket. “Take me there immediately, please ma’am.”
+
+The Captain is talking to the bartender as I stagger to my feet. I get rid of some stuff I don’t need. After about ten seconds the bartender slips the Captain something. It’s not this huge mystery or anything as to what it was, as the Captain immediately gives me a black key.
+
+>take key
+I already have that.
+
+>wait
+Time passes...
+
+>go north
+
+Center of Town
+The Captain sees Finnian, Mr Mailx and Doctor Nahas about to leave.
+
+“You’re all set?” she asks Finnian.
+
+“Yeah, we’re huffing it back to the Plagoo.”
+
+“I need Mr Mailx, but I have a suspicion that Grimes programmed it to not listen to women,” she adds. Nahas looks at the two of them like they are crazy.
+
+“He ... Grimes told me why he did it. He didn’t do it because of anything other than he didn’t want his fiancee back on Earth to have it open up his stash of —” I make the ‘cut him off’ gesture at Finnian and look towards the Doctor. Him getting weirded out is the last thing we need.
+
+“His, ah, stash of um ... er ... women’s socks,” says Finnian, finally. The fact that it took him ten seconds to come up with something worse than if he just told the truth isn’t helping. “Do you need the robot, Cap? Mailx, go with the Captain,” says Finnian.
+
+“Okay,” says Mailx. Finnian and the Doctor each head back to the Plagoo.
+
+Mr Mailx and the Captain are here.
+
+Abandoned just a bit beyond us is what appears to be a broken snowmobile.
+
+>go north
+
+Mine Entrance
+“How did you get the key, anyway?” I ask the Captain.
+
+“When you were flailing about, I just explained the situation to her and promised her no more theatrics. I guess the mine is owned by the same company that owns the hot sauce bar. I guess they own everything around here.”
+
+“Well, they are doing a great job, they put in air, they put in a little more gravity, they put in... well,”
+
+“Yeah,” says the Captain. “I think we might be the only people in a decade to land here as opposed to crash land here and be stuck.”
+
+The Captain and Mr Mailx are here.
+
+>go north
+(unlocking the door with the key first)
+Unlocked.
+
+(and then opening it)
+Opened.
+
+Mine
+“So we need some metal for patching up the ship,” says the Captain, just reiterating the plan. I don’t quite know how a chunk of metal is going to help, but then it’s unlikely to be my job to fix it, anyway. This area of the mine extends about fifteen feet north. There is a (wooden) beam overhead and a rope leading downwards.
+
+“Shouldn’t there be a cart or something to get us along?” I ask.
+
+Mr Mailx moves slowly to the edge of the hole. “There, Is, One, Aaaaah,” he says, having gotten a little too close to the edge, and fallen. The Captain just shakes her head.
+
+“Let’s go get him,” she says with a sigh.
+
+>look
+
+Mine
+This is a makeshift antechamber, the best they can do here. There is snow on top of us and at all sides. The snow is very compact and hard. Igloo-like, maybe? We can travel downwards if we wanted to.
+
+>go down
+
+Mine Level Two
+The Captain and I, having descended from the rope above, come to rest on this level of the mine.
+
+We don’t really see any metal that can help us out here. It also appears that there hasn’t been much digging, as if there was something interesting further down, but they wanted a base here in case of future expansion. The rope continues to lead downwards. There is some installed blue neon lighting below that I can see. It appears that there’s just one more level to the mine.
+
+The Captain continues by going down.
+
+>go down
+
+Mine Level Three
+Luckily, the rope is close enough to the sides of the mine that I can sort of steady myself and kick until I descend completely.
+
+The mine shaft ends here, in terms of going into the center of Enceladus. Carved out from the rock and snow is a path to the east.
+
+Mr Mailx and the Captain are here.
+The mine cart is here.
+
+>use specs
+Be a little more specific about what you’d like me to do with the x-ray specs.
+
+>lower specs
+They are already lowered!
+
+>scan
+Nothing special to report here.
+
+>go down
+I can’t go that way.
+
+>look
+
+Mine Level Three
+
+Mr Mailx and the Captain are here.
+The mine cart is here.
+
+>ride mine cart
+That doesn’t make any sense.
+
+>use mine cart
+Be a little more specific about what you’d like me to do with the mine cart.
+
+>sit mine cart
+That doesn’t make any sense.
+
+>look mine cart
+It’s more of a lift instead of a cart, but regardless three beings can easily fit inside and it would take us up if we wanted to get into it and go that way.
+
+>push cart
+Pushing the mine cart doesn’t get me anywhere.
+
+>talk to captain
+I don’t have anything to say to her at the moment.
+
+>tak to mailx
+You don’t need to use the word “tak”.
+
+>talk to mailx
+He won’t look at me.
+
+>look
+
+Mine Level Three
+
+Mr Mailx and the Captain are here.
+The mine cart is here.
+
+>go down
+I can’t go that way.
+
+>go up
+We can’t go that way by ourselves.
+
+>use mine cart
+Be a little more specific about what you’d like me to do with the mine cart.
+
+>get in mine cart
+Nobody else seems to want to get into it and I don’t want to be weird, so I don’t do that.
+
+>look
+
+Mine Level Three
+
+Mr Mailx and the Captain are here.
+The mine cart is here.
+
+>save
+Saved.
+
+>quit
+Are you sure you want to quit (YES or NO)? y
+
+Thank you for playing Enceladus by Robb Sherwin.
+
+[ press any key to exit ]
