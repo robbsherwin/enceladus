@@ -26,19 +26,27 @@ talkValue 0
 
 	long_desc
 	{
-		"She is ten years older than me, but looks younger, what with being away from
-		the sun for much of her life.  She's six feet tall, has auburn hair styled in a
-		1920's bob cut and owns a jawline that reveals her position as the toughest person on the
-		ship. " ;
-
-		if location = TheCaptainsQuarters
+		if GameEvents[29] = 0
 		{
-			"I am ";
-			print number self.confidence ;
-			"% sure she is not a werewolf."
+			"She is ten years older than me, but looks younger, what with being away from
+			the sun for much of her life.  She's six feet tall, has auburn hair styled in a
+			1920's bob cut and owns a jawline that reveals her position as the toughest person on the
+			ship. " ;
+
+			if location = TheCaptainsQuarters
+			{
+				"I am ";
+				print number self.confidence ;
+				"% sure she is not a werewolf."
+			}
+			else {
+				""
+			}
 		}
 		else {
-			""
+			"She is ten years older than I am, but looks younger. She is wearing a black leather jacket with
+			an unfastened neck snap, a white thermal shirt, a black belt, blue jeans and boots. She has a 1920's
+			bob cut, brown eyes and black hair."
 		}
 	}
 	before
@@ -157,12 +165,11 @@ talkValue 1
 
 	long_desc
 	{
-		select(location)
-		case TheCaptainsQuarters
+		if GameEvents[28] = 0
 		{
 			"He's wearing a fur-lined banana thong, \Ilittle\i else."
 		}
-		case else
+		else
 		{
 			"He is wearing a lynx coat from head to ankles, a dunce cap and Air Jordans."
 		}

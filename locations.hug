@@ -404,6 +404,9 @@ room OutsideTheShip "Outside the Plagoo"
       move Mailx to SnowyPath01
       move Captain to SnowyPath01
 
+      GameEvents[28] = 1 !// For Finnian's clothes
+      GameEvents[29] = 1 !// For Captain's description
+
       Deactivate(Airlock_Checker)
 
       remove thong
@@ -851,7 +854,10 @@ room mineLevelThree "Mine Level Three"
         "The mine shaft ends here, in terms of going into the center of Enceladus. Carved out from the rock and snow is a path
         to the east."
       }
-
+      else {
+        "The mine shaft ends here, in terms of going into the center of Enceladus. Carved out from the rock and snow is a path
+        to the east."
+      }
     }
   }
   before

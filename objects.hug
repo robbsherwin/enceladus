@@ -970,32 +970,52 @@ article "the"
 				"The werewolf falls over, dead."
 
 				remove silverOre
+				werewolf is not living
 
 				GameEvents[21] = 1
 			}
 			case(McGrathley)
 			{
-				!// Kill the player
+				"I try to throw the silver ore at McGrathley but he has his weapon ready by the time it softly arcs toward him. He blasts it out
+				of the sky and laughs at his accomplishment in triumph."
+
+				remove silverOre
 			}
 			case(Captain)
 			{
-				!// Do not allow
+				"She's on my side! How would that help?"
 			}
 			case(Mailx)
 			{
-				!// Do not allow
+				"I get frustrated with computers as well, but not enough to beat him with some ore!"
 			}
 			case(snowmobile)
 			{
-				!// kill the player
+				"There is no reason for the snowmobile to be any sort of target for me!"
 			}
 			case(Plagoo)
 			{
-				!// go ahead and ricochet it
+				"The werewolf is coming at me fast and I panic! I end up accidentally trying a bank shot off the Plagoo!\n"
+
+				"I hit the werewolf in the chest with the silver. The thing about the plastic genetic surgery that these people sign up for is that in
+				order for the Live Action Role Playing to be accurate, they give themselves the weaknesses of the legendary creatures they want to be
+				as well as the strengths.\n"
+				"The chunk of silver ore goes right through the sternum of the werewolf, passing through like a metal skewer through marshmellow. The ore
+				isn't even particularly slowed down by the werewolf's flesh and strikes the Plagoo, falling to the ground.\n"
+				"The werewolf falls over, dead.\n"
+
+				"\"Ha ha!\" says Finnian through the ship's comm from inside. \"Great shot, Butler!\""
+
+				werewolf is not living
+
+				remove silverOre
+
+				GameEvents[21] = 1
+
 			}
 			case else
 			{
-				![xxx]
+				"That is not a very good target for me!"
 			}
 		}
 	}
@@ -1098,19 +1118,14 @@ article "the"
 
 	long_desc
 	{
-		!// [xxx]
+		"The HMCS Plagoo is a small spaceship that can achieve 99.99% of light speed to move around the solar system. It is green in color, mostly,
+		with yellow highlights and the escape module at the top of the ship is a crimson red."
 	}
 	before
 	{
 		object DoEnter
 		{
-			if GameEvents[21] = 0
-			{
-				"I can't get over there right now."
-			}
-			else {
-				!//[xxx]
-			}
+			"I can't get over there right now."
 		}
 		object DoGet
 		{

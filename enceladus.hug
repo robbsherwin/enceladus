@@ -125,6 +125,10 @@ array GameEvents[MAXGAMEEVENTS]
 ! GameEvents[25] = Did the Captain mention the twirling?
 ! GameEvents[26] = Did Ja'Rod ask the bartender for the sauce?
 ! GameEvents[27] = Has Ja'Rod initially sat on the stool?
+! GameEvents[28] = What is Finnian wearing?
+! GameEvents[29] = For the Captain's description
+
+
 global alexandraInAirlock = false
 global mailxIsPulled = false
 
