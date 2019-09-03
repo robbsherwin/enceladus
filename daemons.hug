@@ -433,8 +433,8 @@ event in JaRod_Hallucinates
 	{
 		GameEvents[18] = 1
 		"\nOh god, god, the second wave is hitting me, I didn't realize there would be a second wave. This is awful, this cannot be how this -- I spastically throw my hands around and start bicycling while in
-		the fetal position on the floor -- "
-
+		the fetal position on the floor -- \n"
+		"\"I'm so - so sorry, I'm aaaaaghhhhh,\" I try to say to the bartender. She just shakes her head and rolls her eyes."
 	}
 	case 3
 	{
@@ -544,9 +544,11 @@ event in Captain_Shoots_McGrathley
 				fracturing it into pieces and the last thing I feel or see or smell is my brain going haywire, being unraveled,
 				being strewn about the moon. It ends, thankfully, it all ends and is all over."
 			}
+
 			endflag = 2
 		}
 		else {
+		
 			"\nMcGrathley fires again, this time somehow missing by an even greater distance. Apparently threatening to throw people
 			out airlocks develops different skills than using handheld weapons.\n"
 

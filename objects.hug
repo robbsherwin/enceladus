@@ -1136,7 +1136,7 @@ article "the"
 
 object refreshingBeverage "gintata"
 {
-	nouns "gintata"
+	nouns "gintata" "gin" "glass" "container" "alcohol"
 	article "the"
 	parse_rank 1
 

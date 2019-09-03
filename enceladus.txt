@@ -12,7 +12,10 @@ Basic game commands:
 TRANSCRIPT ON/OFF For saving a transcript of play
 RECORD ON/OFF For recording the inputs used during play
 SAVE GAME To save the game in progress
-LOAD GAME 
+LOAD GAME To load a previously-saved game
+NP For "now playing" - tells the name of the song currently playing
+
+Enceladus is licensed software. Attribution-NonCommercial-ShareAlike 3.0 Unported (CC BY-NC-SA 3.0)
 
 Robb Sherwin
 beaver@zombieworld.com

@@ -127,6 +127,7 @@ array GameEvents[MAXGAMEEVENTS]
 ! GameEvents[27] = Has Ja'Rod initially sat on the stool?
 ! GameEvents[28] = What is Finnian wearing?
 ! GameEvents[29] = For the Captain's description
+! GameEvents[30] = Did Ja'Rod scan the room with the boulder in it 
 
 
 global alexandraInAirlock = false
@@ -429,11 +430,16 @@ key_object fakeKey
 resource "ENCEL01"
 {
 	"jpg/titlescreen01.jpg"
-	"mod/BIONIC - Pure Motion.mod"
+  "mod/FREDERIC MOTTE - Connected.mod"
+  "mod/FREDERIC MOTTE - Duel.mod"
+	"mod/FREDERIC MOTTE - Knulla Kuk.mod"
+  "mod/JAM - Playing Your Darkest Smile.xm"
 	"mod/JESTER - Elysium.mod"
 	"mod/JESTER - Wizardry.mod"
   "mod/JESTER - Stardust Memories.mod"
 	"mod/JOGEIR LILJEDAHL - G-Comp.mod"
+  "mod/JOGEIR LILJEDAHL - Physical Presence.mod"
+
 	!".\mod\HELLSUN - We Have a Trance.xm"
   !"mod/JESTER - Disco Dreaming.mod"
   "mod/Yomaru Kasuga - Blue Danube.mod" !// Original song was yk_-_bluedanube.mod

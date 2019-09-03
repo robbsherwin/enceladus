@@ -296,7 +296,6 @@ talkValue 0
 		if mailxIsPulled = false
 		{
 			"His fingers are extended out like the wisps of a scarecrow while he is stuck plugging the hole in the Plagoo. " ;
-
 		}
 
 		"He is not an attractive robot."
@@ -345,6 +344,8 @@ talkValue 0
 			{
 				iceBoulder is special !// destroyed
 				remove iceBoulder
+
+				PlayMusic("ENCEL01", "FREDERIC MOTTE - Connected", 80, true, true)
 
 				move aluminum to player
 
@@ -522,22 +523,30 @@ npc Bartender "bartender"
 			}
 			case 2
 			{
-				move blairsUltraDeath to player
 
-				GameEvents[26] = 1
+				if GameEvents[27] = 0
+				{
+					"I should sit on the stool near her first."
+				}
+				else {
 
-				"\"Hey, can I have the Blair's sauce?\" I ask of the bartender. She gives me a look up and down.\n"
-				"\"Have you tasted hot sauces like that one before?\" she asks with an arched eyebrow, having abandoned her accent. Or she adopted mine.\n"
-				"\"Oh yeah,\" I say. \"All the time. Ja'Rod Butler, from Scoville, ah--\" I look toward the Captain because I can't think
-				of an American state right now, \"Jersey, that's me. We grew up around it, it was everywhere.\"\n"
-				"\"If I give this to ya and you drink it and you throw up in me bar I'm going to be really upset,\" says the bartender.\n"
-				"\"Oh man. Do people do that? Just come on in here, taste some sauce and get sick?\"\n"
-				"\"No. They don't. Because I specifically ask them and they answer me honestly and truthfully so it never gets that far.\" She
-				hands me the bottle of sauce. I feel a little bad about constructing a lie that is about a million heat units, but I
-				remember that I'm on a mission here, I'm working. (Then I realize she is too, but that's as far as I go.)"
+					move blairsUltraDeath to player
 
-				Bartender.talkValue = 999
+					GameEvents[26] = 1
 
+					"\"Hey, can I have the Blair's sauce?\" I ask of the bartender. She gives me a look up and down.\n"
+					"\"Have you tasted hot sauces like that one before?\" she asks with an arched eyebrow, having abandoned her accent. Or she adopted mine.\n"
+					"\"Oh yeah,\" I say. \"All the time. Ja'Rod Butler, from Scoville, ah--\" I look toward the Captain because I can't think
+					of an American state right now, \"Jersey, that's me. We grew up around it, it was everywhere.\"\n"
+					"\"If I give this to ya and you drink it and you throw up in me bar I'm going to be really upset,\" says the bartender.\n"
+					"\"Oh man. Do people do that? Just come on in here, taste some sauce and get sick?\"\n"
+					"\"No. They don't. Because I specifically ask them and they answer me honestly and truthfully so it never gets that far.\" She
+					hands me the bottle of sauce. I feel a little bad about constructing a lie that is about a million heat units, but I
+					remember that I'm on a mission here, I'm working. (Then I realize she is too, but that's as far as I go.)"
+
+					Bartender.talkValue = 999
+
+				}
 			}
 			case else
 			{

@@ -344,8 +344,8 @@ room PortSideHall01  "Port Side Hallway"
     {
     	PlayMusic("ENCEL01", "JESTER - Wizardry", 70, true, true)
       "This is just a simple access hallway that allows me to get to different areas of the ship.\n"
-      "I can tell that Finnian has initiated the ship landing procedures, there is a whirring and clicking and sounds of orchestral strikes.
-      Some of the latter may simply be that Finnian is force-piping the album Big Generator through the ship's audio, however."
+      "I can tell that Finnian has completed the ship landing procedures, there is a whirring and clicking and sounds of orchestral strikes.
+      (Some of the latter may simply be that Finnian is force-piping the album Big Generator through the ship's audio, however.)"
     }
     else {
       "This is just a simple access hallway that allows me to get to different areas of the ship."
@@ -354,6 +354,23 @@ room PortSideHall01  "Port Side Hallway"
       {
         move Mailx to location
       }
+    }
+  }
+  before
+  {
+    location DoListen
+    {
+      "Just the whirring of the ship itself and " ;
+      testValue = random(8)
+      select(testValue)
+      case 1 {"'Love Will Find a Way.''" }
+      case 2 {"'Rhythm of Love.'" }
+      case 3 {"'Big Generator, the single.'"}
+      case 4 {"'Shoot High Aim Low.'"}
+      case 5 {"'Almost Like Love.'"}
+      case 6 {"'Final Eyes.'"}
+      case 7 {"'I'm Running.'"}
+      case else {"'Holy Lamb.'"}
     }
   }
 
@@ -398,7 +415,7 @@ room OutsideTheShip "Outside the Plagoo"
   {
     if self is not visited
     {
-      PlayMusic("JOGEIR LILJEDAHL - G-Comp", 80, true, true)
+      PlayMusic("ENCEL01", "JOGEIR LILJEDAHL - G-Comp", 80, true, true)
 
       move Finnian to SnowyPath01
       move Mailx to SnowyPath01
@@ -434,6 +451,9 @@ room OutsideTheShip "Outside the Plagoo"
 
       if GameEvents[20] = 1
       {
+        PlayMusic("ENCEL01", "JOGEIR LILJEDAHL - Physical Presence", 80, true, true)
+        GameEvents[20] = 2 !// Do this once
+
         move werewolf to location
         move McGrathley to location
         remove Alexandra
@@ -681,6 +701,8 @@ long_desc
 {
   if self is not visited
   {
+    PlayMusic("ENCEL01", "JAM - Playing Your Darkest Smile", 50, true, true)
+
     move Captain to location
     Captain.talkValue = 4
 
@@ -719,6 +741,13 @@ long_desc
     }
   }
 }
+  before
+  {
+    location DoExits
+    {
+      "The only exit that I can see out of here is to the north."
+    }
+  }
 
 n_to {
   if GameEvents[19] = 0
@@ -779,6 +808,9 @@ long_desc
 {
   if self is not visited
   {
+
+    PlayMusic("ENCEL01", "FREDERIC MOTTE - Duel", 80, false, true)
+
     move Mailx to mineLevelThree
 
     "\"So we need some metal for patching up the ship,\" says the Captain, just reiterating the plan. I don't quite know
@@ -901,9 +933,9 @@ xrayDescription {
       The only issue is that the ice is harder than anything I can imagine and we have a giant chunk of it in front of us."
     }
 
-    if GameEvents[21] = 0
+    if GameEvents[30] = 0
     {
-      GameEvents[21] = 1
+      GameEvents[30] = 1
       Mailx.talkValue = 2 !// "I should talk to the Captain first."
       Captain.talkValue = 1
 
@@ -917,7 +949,7 @@ xrayDescription {
       move silverOre to player
     }
 
-    if iceBoulder not in location and GameEvents[21] = 1
+    if iceBoulder not in location and GameEvents[30] = 1
     {
       "I don't get anything interesting."
     }
@@ -966,6 +998,9 @@ room RecRoom "Rec Room"
   {
     if self is not visited
     {
+
+      PlayMusic("ENCEL01", "FREDERIC MOTTE - Knulla Kuk", 80, true, true)
+
       "The Recreation Room of the Plagoo is ten feet by ten feet and placed way in the back of the ship. I think the theory
       for the designer of the class of ship that the Plagoo is, is that we'd constantly have people firing weapons at us, so
       put the least important thing towards the tail. We are all gathered here.\n"
