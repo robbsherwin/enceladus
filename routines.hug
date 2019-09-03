@@ -68,6 +68,11 @@ routine DoRead
 	"That doesn't seem to be readable."
 }
 
+routine DoRespond
+{
+	"There's no computer here to respond to an instant message with. (Try using the talk command, like talk to Captain)"
+}
+
 routine DoScan
 {
 	if xRaySpecs is special

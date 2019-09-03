@@ -8931,7 +8931,8 @@ object parse_orders
 	execute
 	{
 		local a
-		if word[1] = "tell", "order", "instruct", "ask", "command"
+		!if word[1] = "tell", "order", "instruct", "ask", "command"
+    if word[1] = "order"
 		{
 			for (a=3; a<=words; a++)
 			{

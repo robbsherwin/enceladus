@@ -30,6 +30,13 @@ Todo:
 - failure message for shooting the boulder
 
 
+Beefart:
+- Added inspect as a synonym for look
+- Added a respond verb that works in the first room for the instant message
+- Gave a response for turning on and off the computer in the Captain's Quarters
+- Gave a response for trying to turn on and off the lights in the Captain's Quarters
+- Made it so talk (person) works, not just talk to person
+- Removed the verbs ask and tell since the game does not use them
 
 
 

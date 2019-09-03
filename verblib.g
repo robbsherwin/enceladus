@@ -21,7 +21,7 @@
 
 xverb "fastforward"
 	*							PlayNewSong
-	
+
 xverb "musicstats"
 	*					DoMusicStats
 
@@ -99,7 +99,7 @@ xverb "undo"
 verb "examine", "x", "watch"
 	*                                                       DoVague
 
-verb "look", "l", "examine", "x", "watch"
+verb "look", "l", "examine", "x", "watch", "inspect"
 	*                                                       DoLookAround
 	* "around"						DoLookAround
 	* "in"/"inside" container                               DoLookIn
@@ -159,7 +159,7 @@ verb "sit", "lie"
 verb "stand"
 	*                                                       DoStand
 	* "up"                                                  DoStand
-	
+
 
 verb "dismount"
 	*                                                       DoStand
@@ -339,11 +339,11 @@ verb "switch", "turn", "flip"
 	* switchable "on"                                       DoSwitchOn
 	* switchable "off"                                      DoSwitchOff
 	* switchable						DoSwitchOnOff
-	
+
 verb "activate", "start"
 	*							DoVague
 	* switchable						DoSwitchOn
-	
+
 verb "deactivate", "stop"
 	*							DoVague
 	* switchable						DoSwitchOff
@@ -395,21 +395,22 @@ verb "hello", "hi", "howdy"
 	* "~and" object                                         DoHello
 	* object                                                DoHello
 
-verb "ask", "question", "consult"
-	*                                                       DoAsk
-	* "about" anything                                      DoAskQuestion
-	* living "about" anything                               DoAsk
-	* living                                                DoAsk
+!verb "ask", "question", "consult"
+!	*                                                       DoAsk
+!	* "about" anything                                      DoAskQuestion
+!	* living "about" anything                               DoAsk
+!	* living                                                DoAsk
 
 verb "talk", "speak"
-	*                                                       DoTalk
+	*																												DoTalk
+	* living                                                DoTalk
 	* "to" living                                           DoTalk
 	* "to" living "about" anything                          DoTalk
 	* "about" anything                                      DoAskQuestion
 
-verb "tell"
-	* "me" "about" anything                                 DoAskQuestion
-	* living "about" anything                               DoTell
+!verb "tell"
+!	* "me" "about" anything                                 DoAskQuestion
+!	* living "about" anything                               DoTell
 
 verb "explain"
 	* "to" "me" "about" anything                            DoAskQuestion

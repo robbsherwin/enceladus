@@ -27,7 +27,7 @@ verb "go", "walk"
 	* object                                                DoGo
 
 ! Changed "look in"'s grammar to allow transparent, non-container objects
-verb "look", "l", "examine", "x", "watch"
+verb "look", "l", "examine", "x", "watch", "inspect"
 	*                                                       DoLookAround
 	* "around"						DoLookAround
 	* "in"/"inside" object                               DoLookIn

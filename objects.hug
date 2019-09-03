@@ -1,14 +1,15 @@
 object captainComputer "computer"
 {
-nouns "computer" "monitor" "screen" "raspberry" "pc"
-adjective "computer" "blue" "pc"
+nouns "computer" "monitor" "screen" "pc" "board"
+adjective "computer" "pc" "circuit"
 article "the Captain's"
-is hidden
+is hidden, switchable
 in captainDesk
 
 	long_desc
 	{
-		"The computers on the HMCS Plagoo are extremely old, as it's all the Captain could afford after she bought the ship.  This one is a Blue Raspberry. ";
+		"The computers on the HMCS Plagoo are extremely old, as it's all the Captain could afford after she bought the ship.  This one is a small circuit board with connectors
+		jutting out. ";
 
 		if instantMessage01 is not known
 		{
@@ -26,6 +27,31 @@ in captainDesk
 		{
 			"That's too heavy and bulky for me to take!"
 		}
+		object DoSwitchOn, DoSwitchOff
+		{
+			"It's self-booting and just stays on all the time."
+		}
+	}
+}
+
+scenery lightSwitch "light switch"
+{
+	nouns "switch"
+	adjective "light" "lights"
+	article "the"
+	is switchable, switchedon
+	in TheCaptainsQuarters
+
+	long_desc
+	{
+		"I can't find it!"
+	}
+	before
+	{
+		object DoSwitchOn, DoSwitchOff
+		{
+			"I don't know where it is!"
+		}
 	}
 }
 
@@ -35,12 +61,12 @@ object instantMessage01 "instant message"
 nouns "message" "instant" "im"
 adjective "instant" "unread"
 article "the"
-is hidden, readable
+is hidden, readable, special
 in TheCaptainsQuarters
 
 	long_desc
 	{
-		self is not special
+		instantMessage01 is not special
 
 		"It's from Finnian O'Connell, the ship's pilot. I have to steady myself before reading it: in order to protest the temporary pay cut the
 		Captain enforced until things turn around, Finnian changed his instant message font to Comic Sans.\n"
@@ -187,7 +213,8 @@ is clothing
 		}
 		object DoWear
 		{
-			"It would never fit m-- ... it would probably fit me, but I'm still not going to wear it!"
+			"It would never fit m-- ... it would probably fit me, but I'm still not going to wear it!\n"
+			"I should probably just give it to the Captain."
 		}
 		object DoGive
 		{
@@ -352,7 +379,7 @@ in JaRod
 
 object starPistol "star pistol"
 {
-nouns "pistol"
+nouns "pistol" "gun" "weapon"
 adjective "star"
 article "the"
 
