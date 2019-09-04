@@ -205,7 +205,8 @@ talkValue 1
 npc Grimes "Grimes"
 {
 charnumber 4
-nouns "grimes"
+nouns "grimes" "harold"
+adjectives "harold" "p."
 is neutral, not living
 talkValue 0
 
@@ -226,7 +227,8 @@ talkValue 0
 
 npc Alexandra	"Alexandra"
 {
-nouns "alexandra"
+nouns "alexandra" "mays"
+adjective "alexandra"
 charnumber 5
 is female
 talkValue 0

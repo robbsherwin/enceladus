@@ -27,7 +27,9 @@ Todo:
 - can't drive snowmobile
 - x airlock should work and it should tell us about the doors
 - add the crowd
+  - make it so we can listen to them? put in funny lines if so?
 - failure message for shooting the boulder
+- take a scan?
 
 
 Beefart:

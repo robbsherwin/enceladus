@@ -1,0 +1,545 @@
+ !\---------------------------------------------------------------------------
+
+	ACSHELP.HUG
+	Help menu system for ENCELADUS
+
+---------------------------------------------------------------------------\!
+
+!----------------------------------------------------------------------------
+! GENERAL HELP MENU:
+!----------------------------------------------------------------------------
+
+replace DoHelp
+{
+	local a = 1
+
+	! Since we're corrupting the graphics window
+	!last_drawn_picture = 0
+
+	! MENU_...COLOR settings added to this DoHelp replacement:
+
+	DEFAULT_TEXTCOLOR = TEXTCOLOR	!used for the help file
+	DEFAULT_BGCOLOR  = BGCOLOR	!used for the help file
+
+	TEXTCOLOR = BRIGHT_WHITE
+	BGCOLOR = BLACK
+
+	MENU_TEXTCOLOR = DEF_FOREGROUND
+	MENU_BGCOLOR = DEF_BACKGROUND
+	MENU_SELECTCOLOR = DEF_SL_FOREGROUND
+	MENU_SELECTBGCOLOR = DEF_SL_BACKGROUND
+
+	while true
+	{
+		menuitem[0] = "ENCELADUS"
+		menuitem[1] = "Introduction"
+		menuitem[2] = "System Requirements"
+		menuitem[3] = "What is Interactive Fiction?"
+		menuitem[4] = "Game Instructions -- Commands"
+		menuitem[5] = ""
+		menuitem[6] = "Credits"
+		menuitem[7] = "License and Copyright Information"
+		menuitem[8] = "About the Hugo Compiler"
+		menuitem[9] = "Release History"
+		a = Menu(10, 0, a)
+		select a
+
+		case 0
+		{
+			TEXTCOLOR = DEFAULT_TEXTCOLOR
+			BGCOLOR = DEFAULT_BGCOLOR
+
+			color TEXTCOLOR, BGCOLOR
+
+			window 0
+
+			cls
+
+			PrintStatusline
+
+			DescribePlace(location)
+			return
+		}
+		case 1:  Help_Introduction
+		case 2:  Help_SystemRequirements
+		case 3:  Help_WhatIsIF
+		case 4:  Help_Commands
+		case 6:  Help_Credits
+		case 7:  Help_License
+		case 8:  Help_AboutHugo
+		case 9: Help_ReleaseHistory
+	}
+}
+
+routine Help_Introduction
+{
+	CenterTitle("\BIntroduction\b")
+
+  "\nYou are Ja'Rod Butler, the X-ray technician on the starship the HMCS Plagoo. The Plagoo is a small saucer-styled
+  spaceship. You recently took shore leave but rejoined your crew: The Captain, Finnian O'Connell (the pilot), Alexandra
+  Mays (life support technician), Harold P. Grimes (geographer), Mr Mailx (API and communication robot).\n"
+
+  "Upon your return, you have discovered that the crew is much more willing to take jobs that are in a grey
+  area, legally. But you're woken up one night because a werewolf has gotten onto the ship!"
+
+	"\n[Press a key...]";
+	pause
+}
+
+routine Help_SystemRequirements
+{
+
+	CenterTitle("\BSystem Requirements\b")
+
+	"\nEnceladus is written with Hugo, a powerful language capable of producing graphical text
+	adventures for many different platforms. This game is currently supports the following operating
+	systems directly:\n"
+
+	"Windows (7, 8, Vista, XP, 98, 10), Mac OS X, Linux (tested on Ubuntu, but should work on all).\n"
+
+  "Please get the correct Hugor interpreter for your operating system. Hugor is downloadable through http://ifwiki.org/index.php/Hugor"
+
+	"\n[Press a key...]";
+	pause
+}
+
+routine Help_WhatIsIf
+{
+
+	CenterTitle("\BWhat is Interactive Fiction?\b")
+
+"Introducing Interactive Fiction\n"
+"by Stephen Granade\n"
+
+"It's been more than two decades since Will Crowther and Don Woods wrote Colossal Cave, the first computer adventure game. Things have gotten complicated since then, what with the proliferation of web sites and the growing number of people using computers.\n"
+
+"This article is a brief overview of the specific brand of interactive fiction covered by this site, namely, computer adventure games. If you're new to the adventure game scene or want a review of what resources are available for the adventure game player, then read on.\n"
+
+"Interactive fiction (IF) is a broad term. Strictly speaking, interactive fiction is anything in which you influence the outcome of a story, like continuous stories you can add to or those old \"Choose Your Own Adventure\" books with their branching stories. But there is a more specialized meaning of interactive fiction which I use on this site: computer adventure games.\n"
+
+"In general, computer adventure games are computer programs which tell you a story. In them you play a character in the story, and you move the story along through your actions. In many pieces of IF you have to solve puzzles to keep the story going, puzzles like \"How do I open the locked door?\" or \"How can I get the bridle off the alpaca so I can return it to Barry?\" In some games you also have to interact with non-player characters (NPCs) to keep the plot unfolding.\n"
+
+"Because IF involves storytelling and puzzle-solving, it tends to emphasize thought over action, a boon for people who like to play computer games but don't like reflex-dependent ones like Quake. If you do like a little action with your thinking, try hybrid games like Tomb Raider, where puzzle solving is blended with jumping and shooting.\n"
+
+"IF comes in two flavors: graphic and text. Text adventures came first. Playing them is like reading a book in which you have to type commands to tell the protagonist what to do. Famous text adventures include Zork and The Hitchhiker's Guide to the Galaxy, which is based on the book by Douglas Adams. Graphic adventures tell their stories through pictures rather than words. You may be familiar with graphic adventures like Myst, in which you view the world through your character's eyes, or Monkey Island, in which you move your character around on-screen.\n"
+
+"If you want to play a graphic adventure, you'll most likely have to pay for it. Most graphic adventures are sold by companies like LucasArts and Cyan, so you'll have to order them from the companies or visit your local software store. Text adventures, on the other hand, tend to be free. If you're looking for a text adventure, chances are you'll find it on the Interactive Fiction Archive. The IF Archive is the world-wide repository for text adventures, and should be the first place you look for new ones. (If you're new to the IF Archive, you'd best read through this guide before going there.)\n"
+
+"Regardless of whether you want to play graphic or text IF, you should be sure to see what reviewers have to say about the game you've picked. Many commercial game sites review graphic adventures, while the main site for text adventure reviews is Baf's Guide to the Interactive Fiction Archive.\n"
+
+"If you play IF, sooner or later you're going to get stuck on a puzzle you can't solve. When that happens, there are places you can go for help. Most adventure game sites provide walkthroughs, which are series of step-by-step instructions explicitly leading you through games.\n"
+
+"However, your best resource for help is other people who have already played the game you're playing. You can talk to other fans of IF on bulletin boards or on Usenet newsgroups. If you're unfamiliar with newsgroups, you can learn more about them at Google Groups, which gives you access to Usenet through the web.\n"
+
+"There's a lot more out there than what I've talked about here, some of it listed on this site. Don't be afraid to go exploring. After all, playing IF can be entertaining and educational; sometimes, it even aspires to be art.\n"
+
+"\n[Press a key...]";
+pause
+}
+
+
+routine Help_Commands
+{
+	CenterTitle("\BCommand Summary\b")
+
+	"\nBasic Gameplay Commands:"
+	"\BNORTH\b to go north. Can be shortened to \"n\"."
+	"\BSOUTH\b to go south. Can be shortened to \"s\"."
+	"\BWEST\b to go west. Can be shortened to \"w\"."
+	"\BEAST\b to go east. Can be shortened to \"e\".\n"
+
+	"\BEXITS\b lists the ways to leave the current area or room.\n"
+
+	"\BUP\b to go up."
+	"\BDOWN\b to go down.\n"
+
+	"\BTALK\b to \Iperson\i: Tells Vest to talk to another character. Can be shortened to \"t\"."
+	"\BEXAMINE\b \Iitem\i: Stare intensely at a particular item. Can be shortened to \"x\"."
+
+	"\BSCAN\b: This gives additional information on rooms through Ja'Rod's X-ray specs."
+
+	"\nManagement Commands:"
+	"\BINVENTORY\b: Displays what Vest is holding. Can be shortened to \"i\"."
+	"\BWAIT\b: Allows time to pass for one turn. Can be shortened to \"z\"."
+	"\BAGAIN\b: Repeats the last command. Can be shortened to \"g\"."
+
+
+  "\nSystem Commands:"
+	"\BABOUT\b: Prints the initial info message."
+  "\BCREDITS\b: Prints the game's credits."
+	"\BHELP\b: Gets you back to these help screens."
+	"\BSAVE\b: Saves the game in progress. You will be prompted for a filename."
+	"\BRESTORE\b: Loads a saved game."
+	"\BRESTART\b: Begins the game anew, as if playing it for the first time."
+	"\BSCRIPT ON\b: Logs the game's text to an output file."
+	"\BSCRIPT OFF\b: Turns off game logging."
+	"\BOOPS\b: When followed by a word, corrects a typo of the previous line with that word."
+	"\BUNDO\b: Takes back the previous command and puts the game in a state one move earlier."
+	"\BPAGE UP\b: Not the literal words, but pressing PGUP on your keyboard will bring forth the scrollback window."
+
+	"\n\INote: the up arrow key will bring up your previous commands.\i"
+
+	"\n[Press a key...]";
+	pause
+}
+
+
+!\routine Help_Hints
+{
+	CenterTitle("\BRegarding hints...\b")
+
+	"\n[Press a key...]";
+	pause
+}
+\!
+
+
+routine Help_ReleaseHistory
+{
+	CenterTitle("\BRelease History\b")
+
+	"\n\IRelease 1.00 (September 28th, 2019)\i\n\
+	\_     The first release of ENCELADUS, as part of the 2019 Interactive Fiction Competition at https://ifcomp.org.\n\n";
+
+		"\n[Press a key...]";
+	pause
+}
+
+routine Help_Credits
+{
+	CenterTitle("\BCredits and Acknowledgments\b")
+
+  "Enceladus was written and programmed by Robb Sherwin."
+	"Roodylib is created and maintained by Jon Blask."
+	"Testing by Beefart, Earl Green (http://www.thelogbook.com for Earl's audio podcasts and YouTube videos), Jizaboz, Rob O'Hara (https://www.robohara.com)."
+	"The Hugo Programming language is by Kent Tessman."
+	"The Hugor Interpreter is created and maintained by Nikos Chantziaras at http://ifwiki.org/index.php/Hugor"
+	"Thanks to Pinback, RetroRomper and Jon Blask.\n"
+	"My other games can be downloaded at my website at https://www.joltcountry.com/games and my graphical text adventure Cryptozookeeper can be purchased on Steam.\n"
+
+  "\BArt\b"
+  "Original digital painting of the Captain by Asteltainn"
+  "Patreon: https://www.patreon.com/asteltainn"
+  "Twitter: https://twitter.com/asteltainn\n"
+
+  "\BMUSIC\b"
+  "All music accessible at The Mod Archive."
+  "FREDERIC MOTTE - Connected.mod - https://modarchive.org/module.php?106806"
+  "FREDERIC MOTTE - Duel.mod - https://modarchive.org/module.php?41604"
+  "FREDERIC MOTTE - Knulla Kuk.mod - https://modarchive.org/module.php?48107"
+  "JAM - Your Darkest Smile.xm - https://modarchive.org/module.php?177735"
+  "JESTER - Elysium.mod - https://modarchive.org/module.php?40475"
+  "JESTER - Wizardry.mod - https://modarchive.org/module.php?63400"
+  "JESTER - Stardust Memories.mod - https://modarchive.org/module.php?59344"
+  "JOGEIR LILJEDAHL - G-Comp.mod - https://modarchive.org/module.php?43046"
+  "JOGEIR LILJEDAHL - Physical Presence.mod - https://modarchive.org/module.php?104644"
+
+  "\n[Press a key...]";
+  pause
+}
+
+routine Help_License
+{
+	CenterTitle("\BLicense and Copyright Information\b")
+
+	print "\n\B"; GameTitle; "\b"
+	"Copyright (c) 2019 by Robb Sherwin"
+
+	"\n\BHugo Compiler and Engine\b"
+	"Copyright (c) 1995-2019 by Kent Tessman"
+	"\nThis game (";
+	GameTitle
+	") is copyright (c) 2019 by Robb Sherwin (the author).  \n"
+
+	GameTitle
+	" is licensed under the Attribution-Noncommercial-No Derivative Works 3.0 Unported license.\n"
+	"You are free:"
+	"\_to Share, to copy, distribute and transmit the work"
+	"\_Under the following conditions:"
+	"\_Attribution. You must attribute the work in the manner specified by the author or licensor (but not in any way that suggests that they endorse you or your use of the work). \n"
+
+	"\BFull License:\b\n"
+
+	"THE WORK (AS DEFINED BELOW) IS PROVIDED UNDER THE TERMS OF THIS CREATIVE COMMONS PUBLIC LICENSE ('CCPL' OR 'LICENSE'). THE WORK IS PROTECTED BY COPYRIGHT AND/OR OTHER APPLICABLE LAW. ANY USE OF THE WORK OTHER THAN AS AUTHORIZED UNDER THIS LICENSE OR COPYRIGHT LAW IS PROHIBITED.\n"
+
+	"BY EXERCISING ANY RIGHTS TO THE WORK PROVIDED HERE, YOU ACCEPT AND AGREE TO BE BOUND BY THE TERMS OF THIS LICENSE. TO THE EXTENT THIS LICENSE MAY BE CONSIDERED TO BE A CONTRACT, THE LICENSOR GRANTS YOU THE RIGHTS CONTAINED HERE IN CONSIDERATION OF YOUR ACCEPTANCE OF SUCH TERMS AND CONDITIONS.\n"
+	"1. \BDefinitions\b\n"
+	"'Adaptation' means a work based upon the Work, or upon the Work and other pre-existing works, such as a translation, adaptation, derivative work, arrangement of music or other alterations of a literary or artistic work, or phonogram or performance and includes cinematographic adaptations or any other form in which the Work may be recast, transformed, or adapted including in any form recognizably derived from the original, except that a work that constitutes a Collection will not be considered an Adaptation for the purpose of this License. For the avoidance of doubt, where the Work is a musical work, performance or phonogram, the synchronization of the Work in timed-relation with a moving image ('synching') will be considered an Adaptation for the purpose of this License. \n"
+	"'Collection' means a collection of literary or artistic works, such as encyclopedias and anthologies, or performances, phonograms or broadcasts, or other works or subject matter other than works listed in Section 1(f) below, which, by reason of the selection and arrangement of their contents, constitute intellectual creations, in which the Work is included in its entirety in unmodified form along with one or more other contributions, each constituting separate and independent works in themselves, which together are assembled into a collective whole. A work that constitutes a Collection will not be considered an Adaptation (as defined above) for the purposes of this License.\n"
+	"'Distribute' means to make available to the public the original and copies of the Work through sale or other transfer of ownership.\n"
+	"'Licensor' means the individual, individuals, entity or entities that offer(s) the Work under the terms of this License.\n"
+	"'Original Author' means, in the case of a literary or artistic work, the individual, individuals, entity or entities who created the Work or if no individual or entity can be identified, the publisher; and in addition (i) in the case of a performance the actors, singers, musicians, dancers, and other persons who act, sing, deliver, declaim, play in, interpret or otherwise perform literary or artistic works or expressions of folklore; (ii) in the case of a phonogram the producer being the person or legal entity who first fixes the sounds of a performance or other sounds; and, (iii) in the case of broadcasts, the organization that transmits the broadcast.\n"
+	"'Work' means the literary and/or artistic work offered under the terms of this License including without limitation any production in the literary, scientific and artistic domain, whatever may be the mode or form of its expression including digital form, such as a book, pamphlet and other writing; a lecture, address, sermon or other work of the same nature; a dramatic or dramatico-musical work; a choreographic work or entertainment in dumb show; a musical composition with or without words; a cinematographic work to which are assimilated works expressed by a process analogous to cinematography; a work of drawing, painting, architecture, sculpture, engraving or lithography; a photographic work to which are assimilated works expressed by a process analogous to photography; a work of applied art; an illustration, map, plan, sketch or three-dimensional work relative to geography, topography, architecture or science; a performance; a broadcast; a phonogram; a compilation of data to the extent ";
+	"it is protected as a copyrightable work; or a work performed by a variety or circus performer to the extent it is not otherwise considered a literary or artistic work.\n"
+	"'You' means an individual or entity exercising rights under this License who has not previously violated the terms of this License with respect to the Work, or who has received express permission from the Licensor to exercise rights under this License despite a previous violation.\n"
+	"'Publicly Perform' means to perform public recitations of the Work and to communicate to the public those public recitations, by any means or process, including by wire or wireless means or public digital performances; to make available to the public Works in such a way that members of the public may access these Works from a place and at a place individually chosen by them; to perform the Work to the public by any means or process and the communication to the public of the performances of the Work, including by public digital performance; to broadcast and rebroadcast the Work by any means including signs, sounds or images.\n"
+	"'Reproduce' means to make copies of the Work by any means including without limitation by sound or visual recordings and the right of fixation and reproducing fixations of the Work, including storage of a protected performance or phonogram in digital form or other electronic medium.\n\n"
+
+	"2. \BFair Dealing Rights\b. Nothing in this License is intended to reduce, limit, or restrict any uses free from copyright or rights arising from limitations or exceptions that are provided for in connection with the copyright protection under copyright law or other applicable laws.\n\n"
+
+	"3. \BLicense Grant\b. Subject to the terms and conditions of this License, Licensor hereby grants You a worldwide, royalty-free, non-exclusive, perpetual (for the duration of the applicable copyright) license to exercise the rights in the Work as stated below:\n"
+
+	"\_to Reproduce the Work, to incorporate the Work into one or more Collections, and to Reproduce the Work as incorporated in the Collections; and, "
+	"\_to Distribute and Publicly Perform the Work including as incorporated in Collections. \n"
+
+	"The above rights may be exercised in all media and formats whether now known or hereafter devised. The above rights include the right to make such modifications as are technically necessary to exercise the rights in other media and formats, but otherwise you have no rights to make Adaptations. Subject to 8(f), all rights not expressly granted by Licensor are hereby reserved, including but not limited to the rights set forth in Section 4(d).\n\n"
+
+	"4. \BRestrictions\b. The license granted in Section 3 above is expressly made subject to and limited by the following restrictions:\n"
+
+	"You may Distribute or Publicly Perform the Work only under the terms of this License. You must include a copy of, or the Uniform Resource Identifier (URI) for, this License with every copy of the Work ";
+	"You Distribute or Publicly Perform. You may not offer or impose any terms on the Work that restrict the terms of this License or the ability of the recipient of the Work to exercise the rights granted to that recipient under the terms of the License. You may not sublicense the Work. You must keep intact all notices that refer to this License and to the disclaimer of warranties with every copy of the Work You Distribute or Publicly Perform. When You Distribute or Publicly Perform the Work, You may not impose any effective technological measures on the Work that restrict the ability of a recipient of the Work from You to exercise the rights granted to that recipient under the terms of the License. This Section 4(a) applies to the Work as incorporated in a Collection, but this does not require the Collection apart from the Work itself to be made subject to the terms of this License. If You create a Collection, upon notice from any Licensor You must, to the extent practicable, ";
+	"remove from the Collection any credit as required by Section 4(c), as requested.\n"
+	"You may not exercise any of the rights granted to You in Section 3 above in any manner that is primarily intended for or directed toward commercial advantage or private monetary compensation. The exchange of the Work for other copyrighted works by means of digital file-sharing or otherwise shall not be considered to be intended for or directed toward commercial advantage or private monetary compensation, provided there is no payment of any monetary compensation in connection with the exchange of copyrighted works.\n "
+	"If You Distribute, or Publicly Perform the Work or Collections, You must, unless a request has been made pursuant to Section 4(a), keep intact all copyright notices for the Work and provide, reasonable to the medium or means You are utilizing: (i) the name of the Original Author (or pseudonym, if applicable) if supplied, and/or if the Original Author and/or Licensor designate another party or parties (e.g., a sponsor institute, publishing entity, journal) for attribution ('Attribution Parties') in Licensor's copyright notice, terms of service or by other reasonable means, the name of such party or parties; (ii) the title of the Work if supplied; (iii) to the extent reasonably practicable, the URI, if any, that Licensor specifies to be associated with the Work, unless such URI does not refer to the copyright notice or licensing information for the Work. The credit required by this Section 4(c) ";
+	"may be implemented in any reasonable manner; provided, however, that in the case of a Collection, at a minimum such credit ";
+	"will appear, if a credit for all contributing authors of Collection appears, then as part of these credits and in a manner at least as prominent as the credits for the other contributing authors. For the avoidance of doubt, You may only use the credit required by this Section for the purpose of attribution in the manner set out above and, by exercising Your rights under this License, You may not implicitly or explicitly assert or imply any connection with, sponsorship or endorsement by the Original Author, Licensor and/or Attribution Parties, as appropriate, of You or Your use of the Work, without the separate, express prior written permission of the Original Author, Licensor and/or Attribution Parties.\n"
+	"For the avoidance of doubt:\n"
+
+	"Non-waivable Compulsory License Schemes. In those jurisdictions in which the right to collect royalties through any statutory or compulsory licensing scheme cannot be waived, the Licensor reserves the exclusive right to collect such royalties for any exercise by You of the rights granted under this License; "
+	"Waivable Compulsory License Schemes. In those jurisdictions in which the right to collect royalties through any statutory or compulsory licensing scheme can be waived, the Licensor reserves the exclusive right to collect such royalties for any exercise by You of the rights granted under this License if Your exercise of such rights is for a purpose or use which is otherwise than noncommercial as permitted under Section 4(b) and otherwise waives the right to collect royalties through any statutory or compulsory licensing scheme; and, "
+	"Voluntary License Schemes. The Licensor reserves the right to collect royalties, whether individually or, in the event that the Licensor is a member of a collecting society that administers voluntary licensing schemes, via that society, from any exercise by You of the rights granted under this License that is for a purpose or use which is otherwise than noncommercial as permitted under Section 4(b).\n"
+	"Except as otherwise agreed in writing by the Licensor or as may be otherwise permitted by applicable law, if You Reproduce, Distribute or Publicly Perform the Work either by itself or as part of any Collections, You must not distort, mutilate, modify or take other derogatory action in relation to the Work which would be prejudicial to the Original Author's honor or reputation.\n\n "
+
+	"5. \BRepresentations, Warranties and Disclaimer\b\n"
+
+	"UNLESS OTHERWISE MUTUALLY AGREED BY THE PARTIES IN WRITING, LICENSOR OFFERS THE WORK AS-IS AND MAKES NO REPRESENTATIONS OR WARRANTIES OF ANY KIND CONCERNING THE WORK, EXPRESS, IMPLIED, STATUTORY OR OTHERWISE, INCLUDING, WITHOUT LIMITATION, WARRANTIES OF TITLE, MERCHANTIBILITY, FITNESS FOR A PARTICULAR PURPOSE, NONINFRINGEMENT, OR THE ABSENCE OF LATENT OR OTHER DEFECTS, ACCURACY, OR THE PRESENCE OF ABSENCE OF ERRORS, WHETHER OR NOT DISCOVERABLE. SOME JURISDICTIONS DO NOT ALLOW THE EXCLUSION OF IMPLIED WARRANTIES, SO SUCH EXCLUSION MAY NOT APPLY TO YOU.\n\n"
+
+	"6. \BLimitation on Liability\b. EXCEPT TO THE EXTENT REQUIRED BY APPLICABLE LAW, IN NO EVENT WILL LICENSOR BE LIABLE TO YOU ON ANY LEGAL THEORY FOR ANY SPECIAL, INCIDENTAL, CONSEQUENTIAL, PUNITIVE OR EXEMPLARY DAMAGES ARISING OUT OF THIS LICENSE OR THE USE OF THE WORK, EVEN IF LICENSOR HAS BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGES.\n\b"
+
+	"7. \BTermination\b\n"
+
+	"This License and the rights granted hereunder will terminate automatically upon any breach by You of the terms of this License. Individuals or entities who have received Collections from You under this License, however, will not have their licenses terminated provided such individuals or entities remain in full compliance with those licenses. Sections 1, 2, 5, 6, 7, and 8 will survive any termination of this License. "
+	"Subject to the above terms and conditions, the license granted here is perpetual (for the duration of the applicable copyright in the Work). Notwithstanding the above, Licensor reserves the right to release the Work under different license terms or to stop distributing the Work at any time; provided, however that any such election will not serve to withdraw this License (or any other license that has been, or is required to be, granted under the terms of this License), and this License will continue in full force and effect unless terminated as stated above. \n\b"
+
+	"8. \BMiscellaneous\b\n"
+
+	"Each time You Distribute or Publicly Perform the Work or a Collection, the Licensor offers to the recipient a license to the Work on the same terms and conditions as the license granted to You under this License.\b "
+	"If any provision of this License is invalid or unenforceable under applicable law, it shall not affect the validity or enforceability of the remainder of the terms of this License, and without further action by the parties to this agreement, such provision shall be reformed to the minimum extent necessary to make such provision valid and enforceable.\b "
+	"No term or provision of this License shall be deemed waived and no breach consented to unless such waiver or consent shall be in writing and signed by the party to be charged with such waiver or consent.\n"
+	"This License constitutes the entire agreement between the parties with respect to the Work licensed here. There are no understandings, agreements or representations with respect to the Work not specified here. Licensor shall not be bound by any additional provisions that may appear in any communication from You. This License may not be modified without the mutual written agreement of the Licensor and You.\n "
+	"The rights granted under, and the subject matter referenced, in this License were drafted utilizing the terminology of the Berne Convention for the Protection of Literary and Artistic Works (as amended on September 28, 1979), the Rome Convention of 1961, the WIPO Copyright Treaty of 1996, the WIPO Performances and Phonograms Treaty of 1996 and the Universal Copyright Convention (as revised on July 24, 1971). These rights and subject matter take effect in the relevant jurisdiction in which the License terms are sought to be enforced according to the corresponding provisions of the implementation of those treaty provisions in the applicable national law. If the standard suite of rights granted under applicable copyright law includes additional rights not granted under this License, such additional rights are deemed to be included in the License; this License is not intended to restrict the license of any rights under applicable law.\n "
+
+
+	"\n\n\B\UWarranty\b\u"
+	print "\n"; GameTitle;
+	" and the Hugo Engine are available free of charge, and there is no
+	warranty whatsoever pertaining to their use."
+
+	"\n\n\B\UDisclaimer\b\u"
+	Disclaimer
+
+	"\n[Press a key...]";
+	pause
+}
+routine Disclaimer
+{
+	"\nThe characters and events in this game are fictitious.  Any
+	resemblance to real characters or events is entirely coincidental."
+}
+
+routine Help_AboutHugo
+{
+	CenterTitle("\BAbout the Hugo Compiler\b")
+
+	"\n\BHugo\b is a language designed and written by Kent Tessman for
+	developing interactive fiction.  The system consists of the \BHugo
+	Compiler\b, which compiles source code to be run by the interpreter
+	(the \BHugo Engine\b)."
+
+	"\nHugo is an easy-to-learn, powerful, and flexible language.  The
+	syntax is relatively straightforward, keeping hieroglyphic syntax
+	to minimum.  Hugo is relatively object-oriented, in that a program
+	consists of a number of objects representing the rooms, objects,
+	and characters that make up the landscape of the story.  Interaction
+	between these objects is governed by a set of rules, or routines,
+	that are specified by the programmer."
+
+	"\nA number of powerful pre-existing routines are available in the
+	\BHugo Library\b, which is a part of the standard Hugo package.  The
+	library routines are designed to manage many of the \"real-world\"
+	aspects of an interactive story, such as weight and containment
+	of objects, the presence or absence of light in a location, doors,
+	vehicles, characters, clothing, and a full complement of player
+	verb routines for moving about, getting things, examining them,
+	opening and closing them, switching them on and off, eating them,
+	drinking them, throwing them, conversing with characters, etc.  By
+	using the library, a programmer need not worry about many of the
+	more mechanical aspects of maintaining the game universe, and can
+	more quickly dive into the writing of the story proper."
+
+	"\nThe Hugo compiler and interpreter are written in ANSI C, and the
+	source code is readily available; porting of Hugo to other computer
+	platforms is encouraged."
+
+	"\nHugo is currently available via anonymous FTP from the
+	\BInteractive Fiction Archive\b at \Iftp.ifarchive.org\i in
+  the directory \Iif-archive/programming/hugo\i.  \
+	There one may find the executable versions of both the compiler and
+	engine, as well as the library files and a number of Hugo example
+	programs.  A selection of Hugo games is available under
+	\Iif-archive/games/hugo\i.  The Interaction Fiction Archive is also
+	an excellent source of materials relating to the history and
+	development of interactive fiction."
+
+	"\nVisit the Hugo Homepage at http://www.generalcoffee.com/hugo/gethugo.html"
+
+	"\n[Press a key...]";
+	pause
+}
+
+routine GameTitle
+{
+	"\BENCELADUS\b";
+}
+
+
+!----------------------------------------------------------------------------
+! HINT SYSTEM:
+!----------------------------------------------------------------------------
+
+routine DoHint          ! i.e., in response to "hint" or "hints"
+{
+	Help_Hints
+
+	window 0
+	cls
+	PrintStatusline
+	DescribePlace(location)
+}
+
+array hint_categories[MAX_MENUITEMS]
+
+routine Help_Hints
+{
+	local i, count, category, old_category
+	local topic, old_topic
+
+	MENU_TEXTCOLOR = DEF_FOREGROUND
+	MENU_BGCOLOR = DEF_BACKGROUND
+	MENU_SELECTCOLOR = DEF_SL_FOREGROUND
+	MENU_SELECTBGCOLOR = DEF_SL_BACKGROUND
+
+	! Since we're corrupting the graphics window
+	last_drawn_picture = 0
+
+:PickHintCategory
+	! First, create a list of hint categories:
+	count = 0
+	for category in hint_category
+	{
+		if category.hints_available
+		{
+			menuitem[++count] = category.name
+			hint_categories[count] = category
+		}
+	}
+
+	if count = 0
+	{
+		CenterTitle("HINTS")
+		"\n[No hints available.  Press any key...]";
+		pause
+		return
+	}
+
+	menuitem[0] = "HINTS"
+	category = Menu(count, 0, old_category)
+	old_category = category
+	if category = 0:  return
+
+	! Convert category from a menu selection number to a
+	! hint_category class:
+	category = hint_categories[category]
+
+:PickHintTopic
+	! For a selected category, create a list of subcategories:
+	for (topic=1; category.(hint1-1+topic)~=""; topic++)
+	{
+		menuitem[topic] = category.(hint1-1+topic)
+		hint_categories[topic] = category.(hint1-1+topic) #2
+	}
+	menuitem[0] = category.name
+
+	! Get the desired topic:
+	topic = Menu(topic-1, 0, old_topic)
+	old_topic = topic
+	if topic = 0
+		jump PickHintCategory
+
+	! If we get here, then we've successfully selected a topic
+	! and can start printing the actual hints:
+	CenterTitle(menuitem[topic])
+
+	! Change topic from a menu selection number to a
+	! hint_topic class:
+	topic = hint_categories[topic]
+
+	i = 0
+:PrintHints
+	for (; i<=topic.hints_revealed; i++)
+	{
+		print ""
+		run topic.(hint1+i)
+	}
+
+	if &topic.(hint1+i) = 0         ! i.e., no more topics
+	{
+		"\n[No more hints.  Press any key...]";
+		pause
+		jump PickHintTopic
+	}
+	else
+	{
+		"[Press 'H' for another hint, or 'Q' to quit]";
+:GetHintKey
+		pause
+		if word[0] = 'Q', 'q', ESCAPE_KEY
+			jump PickHintTopic
+		if word[0] = 'H', 'h'
+		{
+			topic.hints_revealed++
+			print newline
+			jump PrintHints
+		}
+		jump GetHintKey
+	}
+}
+
+property hint1 alias n_to
+property hint2 alias ne_to
+property hint3 alias e_to
+property hint4 alias se_to
+property hint5 alias s_to
+property hint6 alias sw_to
+property hint7 alias w_to
+property hint8 alias nw_to
+property hint9 alias u_to
+property hint10 alias d_to
+
+property hints_available alias in_to
+property hints_revealed alias out_to
+
+! hint_category objects must be explicitly placed "in hint_category".  They
+! should contain two values for each hint1, hint2, etc.:  a label/question
+! and the name of the hint_topic object.  hint_topic objects should be
+! comprised of property routines for hint1, hint2, etc., giving successive
+! hints on the topic.
+
+class hint_category
+{
+	hints_available true
+}
+
+class hint_topic
+{
+	hints_revealed 0
+}
+
+
+hint_topic talking_to_cytserz
+{
+}
+
+hint_topic survive_puzzle
+{
+}

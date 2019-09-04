@@ -143,6 +143,25 @@ event in FinnianGivesPistol
 	}
 }
 
+daemon Hallyway03_Scan_Checker
+{
+!// We are setting the intial timer to be whatever the counter was at when we started this
+timer 0
+}
+
+event in Hallyway03_Scan_Checker
+{
+	self.timer++
+
+	if self.timer > 5
+	{
+		if Captain in location
+		{
+			"\n\"Please do lower your specs and do a \Bscan\b, Ensign Butler,\" says the Captain."
+			Deactivate(self)
+		}
+	}
+}
 
 daemon Airlock_Scene
 {
@@ -548,7 +567,7 @@ event in Captain_Shoots_McGrathley
 			endflag = 2
 		}
 		else {
-		
+
 			"\nMcGrathley fires again, this time somehow missing by an even greater distance. Apparently threatening to throw people
 			out airlocks develops different skills than using handheld weapons.\n"
 

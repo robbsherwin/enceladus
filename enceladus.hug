@@ -42,6 +42,10 @@ verb "lower"
   * "the"/"my" object DoLower
   * object DoLower
 
+verb "perform"
+  * DoVague
+  * "scan"  DoScan
+
 verb "raise"
   * DoVague
   * "the"/"my" object DoRaise
@@ -75,6 +79,7 @@ verb "shoot"
 #include "objects.hug"
 #include "music.hug"
 #include "cango.h"
+#include "acshelp.hug"
 
 global GRAPHICS_ON = TRUE
 global last_drawn_picture
@@ -88,6 +93,10 @@ global testValue = 0 !// Just used when we need a spare use-once variable
 global mistingValue = 30
 
 global	music_volume = 80
+
+global	DEFAULT_TEXTCOLOR
+global	DEFAULT_BGCOLOR
+
 
 array temparray[10] = 0,0,0,0,0,0,0,0,0,0
 array TempTimeArray[5] = 0,0,0,0,0
@@ -127,7 +136,7 @@ array GameEvents[MAXGAMEEVENTS]
 ! GameEvents[27] = Has Ja'Rod initially sat on the stool?
 ! GameEvents[28] = What is Finnian wearing?
 ! GameEvents[29] = For the Captain's description
-! GameEvents[30] = Did Ja'Rod scan the room with the boulder in it 
+! GameEvents[30] = Did Ja'Rod scan the room with the boulder in it
 
 
 global alexandraInAirlock = false
@@ -433,7 +442,7 @@ resource "ENCEL01"
   "mod/FREDERIC MOTTE - Connected.mod"
   "mod/FREDERIC MOTTE - Duel.mod"
 	"mod/FREDERIC MOTTE - Knulla Kuk.mod"
-  "mod/JAM - Playing Your Darkest Smile.xm"
+  "mod/JAM - Your Darkest Smile.xm"
 	"mod/JESTER - Elysium.mod"
 	"mod/JESTER - Wizardry.mod"
   "mod/JESTER - Stardust Memories.mod"

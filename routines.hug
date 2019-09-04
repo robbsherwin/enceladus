@@ -166,6 +166,44 @@ routine MoveEveryoneToRecRoom()
 	MovePlayer(RecRoom)
 }
 
+routine PrintRandomCrowdDiscussion
+{
+	local randomNum
+
+	randomNum = random(6)
+
+	select(randomNum)
+	case 1
+	{
+		"\"... I don't care how bad it is for the Earth, we live a mile up. In fact, I'm going to be throwing my Spray Pam Directly At The Sun Party. You're invited. You don't have to bring
+		anything. Except about forty cans of Pam.\""
+	}
+	case 2
+	{
+		"\"... The commute is between Phobos and Deimos and takes forever. And where I park on Phobos is near a bunch of bugs. They don't come out until I'm halfway to Deimos and that's why I'd like
+		you to help me out. I'm like a Lyft driver for winged bugs. What? I don't kill them, no. Of course when I land I let them go. I said Lyft driver, not Uber.\""
+	}
+	case 3
+	{
+		"\"... I don't want to talk about my ex, they say to never do that on a first date. If you insist... ok. He had the Centaur procedure done. Yeah. After we - yeah. Year and a half of dating,
+		I come home to that. You know what's hot once and exactly once? The second Centaur - right. Right. So. What do you do for fun? Please let it not be Dungeons and Dragons.\""
+	}
+	case 4
+	{
+		"\"... I need a driver. Hmm? Yes, from a Neptunian moon to the Moon. Yes, driving around on the surface as well. What do you mean that's two jobs? What? Driving on the surface of Triton is
+		a separate job from going to Triton to the Moon? Are you trying to screw me? It's driving! Ok. Ok. Ok. Still driving!\""
+	}
+	case 5
+	{
+		"\"... Yeah, I got tons of it. Not literally tons, it's smaller than Earth. It fell out of the sky. I told you you wouldn't believe me.\""
+	}
+	case else
+	{
+		"\"... Protocols changed, if you were still using the old way to encrypt your phone you might as well have been hitting the play button while the bad guys were in the room. Well, I
+		can never remember if it's apt-get or the other way so I didn't personally upgrade, no. I don't have enough money for anyone to steal. Which reminds me. Thanks for the sauce.\""
+	}
+}
+
 routine StartPlanetFallScene
 {
 	MovePlayer(OutsideTheShip)

@@ -246,7 +246,7 @@ is clothing
 
 				Pause100thSeconds(400)
 
-				"Someone or some thing rattles the door knob from outside her quarters. " ;
+				"Someone or some thing enters a passcode to the door from outside her quarters. " ;
 
 					if HallwayDoor is not locked
 					{
@@ -711,6 +711,29 @@ object barStool "bar stool"
 		object DoGet
 		{
 			"Even though the gravity here is lower, my desire to carry around a bar stool doesn't become higher."
+		}
+	}
+}
+
+scenery crowd "crowd"
+{
+	noun "crowd" "patrons" "people" "drunks"
+	article "the"
+
+	long_desc
+	{
+		"They are all huddled together for warmth and conversation. There is low security out here on the moons of Saturn and no videotaping or audio recording, so people inevitably
+		flock here to discuss illicit deals and the like."
+	}
+	before
+	{
+		object DoListen
+		{
+			PrintRandomCrowdDiscussion()
+		}
+		object DoTalk
+		{
+			"I would feel weird just going up to them and starting to talk to them! I don't mind listening to them, but the thought of directly speaking to them is too much for me."
 		}
 	}
 }
