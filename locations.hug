@@ -66,6 +66,7 @@ room Hallway03 "Ship Hold"
     if self is not visited
     {
       PlayMusic("ENCEL01", "JESTER - Stardust Memories", 70, true, true)
+      MusicListing = 6
 
       move starPistol to Finnian
 
@@ -349,6 +350,8 @@ room PortSideHall01  "Port Side Hallway"
     if self is not visited
     {
     	PlayMusic("ENCEL01", "JESTER - Wizardry", 70, true, true)
+      MusicListing = 5
+
       "This is just a simple access hallway that allows me to get to different areas of the ship.\n"
       "I can tell that Finnian has completed the ship landing procedures, there is a whirring and clicking and sounds of orchestral strikes.
       (Some of the latter may simply be that Finnian is force-piping the album Big Generator through the ship's audio, however.)"
@@ -422,6 +425,7 @@ room OutsideTheShip "Outside the Plagoo"
     if self is not visited
     {
       PlayMusic("ENCEL01", "JOGEIR LILJEDAHL - G-Comp", 80, true, true)
+      MusicListing = 7
 
       move Finnian to SnowyPath01
       move Mailx to SnowyPath01
@@ -458,6 +462,8 @@ room OutsideTheShip "Outside the Plagoo"
       if GameEvents[20] = 1
       {
         PlayMusic("ENCEL01", "JOGEIR LILJEDAHL - Physical Presence", 80, true, true)
+        MusicListing = 8
+        
         GameEvents[20] = 2 !// Do this once
 
         move werewolf to location
@@ -708,6 +714,7 @@ long_desc
   if self is not visited
   {
     PlayMusic("ENCEL01", "JAM - Your Darkest Smile", 50, true, true)
+    MusicListing = 4
 
     move Captain to location
     Captain.talkValue = 4
@@ -816,6 +823,7 @@ long_desc
   {
 
     PlayMusic("ENCEL01", "FREDERIC MOTTE - Duel", 80, false, true)
+    MusicListing = 2
 
     move Mailx to mineLevelThree
 
@@ -1006,6 +1014,7 @@ room RecRoom "Rec Room"
     {
 
       PlayMusic("ENCEL01", "FREDERIC MOTTE - Knulla Kuk", 80, true, true)
+      MusicListing = 3
 
       "The Recreation Room of the Plagoo is ten feet by ten feet and placed way in the back of the ship. I think the theory
       for the designer of the class of ship that the Plagoo is, is that we'd constantly have people firing weapons at us, so

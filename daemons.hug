@@ -273,6 +273,7 @@ event in Finnian_Lands_Ship
 	case 4
 	{
 		PlayMusic("ENCEL01", "Yomaru Kasuga - Blue Danube", 60, false, true)
+		MusicListing = 9
 
 		"\nFinnian sets the Plagoo down on Enceladus. A rather smooth landing, considering the hull breach that is plugged by the robot.\n"
 		"\"Ja'Rod, can you please pull Mr Mailx out of the hole in the ship and get Alexandra to the airlock, where it will be warm? Finnian

@@ -348,6 +348,7 @@ talkValue 0
 				remove iceBoulder
 
 				PlayMusic("ENCEL01", "FREDERIC MOTTE - Connected", 80, true, true)
+				MusicListing = 1 
 
 				move aluminum to player
 

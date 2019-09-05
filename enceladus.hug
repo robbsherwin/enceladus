@@ -99,11 +99,7 @@ global	DEFAULT_BGCOLOR
 
 
 array temparray[10] = 0,0,0,0,0,0,0,0,0,0
-array TempTimeArray[5] = 0,0,0,0,0
-array LastTimeArray[5] = 0,0,0,0,0
-array MusicArray[MAXSONGS]
-array MusicName[MAXSONGS]
-array MusicArrayTime[MAXSONGS]
+array MusicListingArray[MAXSONGS]
 array randomArgs[7]
 
 array GameEvents[MAXGAMEEVENTS]
@@ -141,6 +137,7 @@ array GameEvents[MAXGAMEEVENTS]
 
 global alexandraInAirlock = false
 global mailxIsPulled = false
+global MusicListing = 0 
 
 routine init
 {
@@ -436,6 +433,17 @@ key_object fakeKey
 	}
 }
 
+! MusicListingArray[0] = JESTER - Elysium.mod
+! MusicListingArray[1] = FREDERIC MOTTE - Connected.mod
+! MusicListingArray[2] = FREDERIC MOTTE - Duel.mod
+! MusicListingArray[3] = FREDERIC MOTTE - Knulla Kuk.mod
+! MusicListingArray[4] = JAM - Your Darkest Smile.mod
+! MusicListingArray[5] = JESTER - Wizardry.mod
+! MusicListingArray[6] = JESTER - Stardust Memories.mod
+! MusicListingArray[7] = JOGEIR LILJEDAHL - G-Comp.mod
+! MusicListingArray[8] = JOGEIR LILJEDAHL - Physical Presence.mod
+! MusicListingArray[9] = Yomaru Kasuga - Blue Danube
+
 resource "ENCEL01"
 {
 	"jpg/titlescreen01.jpg"
@@ -448,9 +456,6 @@ resource "ENCEL01"
   "mod/JESTER - Stardust Memories.mod"
 	"mod/JOGEIR LILJEDAHL - G-Comp.mod"
   "mod/JOGEIR LILJEDAHL - Physical Presence.mod"
-
-	!".\mod\HELLSUN - We Have a Trance.xm"
-  !"mod/JESTER - Disco Dreaming.mod"
   "mod/Yomaru Kasuga - Blue Danube.mod" !// Original song was yk_-_bluedanube.mod
 
 }

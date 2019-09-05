@@ -19,12 +19,6 @@
 
 #ifclear NO_XVERBS
 
-xverb "fastforward"
-	*							PlayNewSong
-
-xverb "musicstats"
-	*					DoMusicStats
-
 xverb "np"
 	*							DoNP
 

@@ -166,7 +166,6 @@ routine Help_Commands
 
   "\nSystem Commands:"
 	"\BABOUT\b: Prints the initial info message."
-  "\BCREDITS\b: Prints the game's credits."
 	"\BHELP\b: Gets you back to these help screens."
 	"\BSAVE\b: Saves the game in progress. You will be prompted for a filename."
 	"\BRESTORE\b: Loads a saved game."
@@ -217,7 +216,7 @@ routine Help_Credits
 	"Thanks to Pinback, RetroRomper and Jon Blask.\n"
 	"My other games can be downloaded at my website at https://www.joltcountry.com/games and my graphical text adventure Cryptozookeeper can be purchased on Steam.\n"
 
-  "\BArt\b"
+  "\BART\b"
   "Original digital painting of the Captain by Asteltainn"
   "Patreon: https://www.patreon.com/asteltainn"
   "Twitter: https://twitter.com/asteltainn\n"

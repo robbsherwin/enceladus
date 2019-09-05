@@ -7,13 +7,11 @@ routine NewMenu
 	cls
 
 	PlayMusic("ENCEL01", "JESTER - Elysium", 80, true, true)
-	!GrabFirstRandomSong()
-
+	MusicListing = 0
 
 	if (display.hasgraphics) and GRAPHICS_ON = TRUE {
 		picture "ENCEL01", "titlescreen01"
 	}
-
 
 :IntroScreenMenu
 
