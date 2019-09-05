@@ -131,7 +131,7 @@ verb "north", "n", "south", "s", "east", "e", "west", "w", \
 
 verb "go", "walk"
 	*							DoGo
-	* "to"/"in"/"into"/"inside"/"through" object            DoEnter
+	* "to"/"in"/"into"/"inside"/"through" object					DoEnter
 	* "out" object                                          DoGo
 	* "out"/"outside"                                       DoExit
 	* object                                                DoGo
@@ -147,7 +147,7 @@ verb "exit"
 verb "sit", "lie"
 	*                                                       DoEnter
 	* "down"                                                DoSit
-	* "in"/"on" object                                      DoSit
+	* "in"/"on"/"at" object                                 DoSit
 	* "down" "in"/"on" object                               DoSit
 
 verb "stand"

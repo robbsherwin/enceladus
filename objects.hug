@@ -677,7 +677,7 @@ scenery scanningStation "Scanning Station"
 
 object barStool "bar stool"
 {
-	noun "stool"
+	noun "stool" "bar"
 	adjective "bar"
 	article "the"
 	is hidden
@@ -719,6 +719,7 @@ scenery crowd "crowd"
 {
 	noun "crowd" "patrons" "people" "drunks"
 	article "the"
+	in HotSauceBar
 
 	long_desc
 	{
@@ -761,7 +762,12 @@ object fruitTray "fruit tray"
 		object DoGet
 		{
 			"\"Hey! Put that down!\" exclaims the bouncer from the entrance. I make a gesture by raising both of my hands to show him that I am not
-			armed, which seems appropriate to me and I assume nobody else."
+			armed, which seems appropriate to me and I assume nobody else. " ;
+
+			if self is not open
+			{
+				"I can't take it but maybe I could open it."
+			}
 		}
 	}
 }
@@ -839,6 +845,7 @@ object blairsUltraDeath "Blair's Ultra Death"
 	nouns "ultra" "death" "sauce" "bottle"
 	adjective "blair" "blair's" "hot" "death"
 	article "the"
+	is openable, open
 	in HotSauceBar
 
 	short_desc
@@ -863,6 +870,10 @@ object blairsUltraDeath "Blair's Ultra Death"
 				move self to player
 				"Got it."
 			}
+		}
+		object DoClose
+		{
+			"I don't need to do that here, the bottles are always open, baby."
 		}
 		object DoDrink
 		{

@@ -210,11 +210,16 @@ routine Help_Credits
 
   "Enceladus was written and programmed by Robb Sherwin."
 	"Roodylib is created and maintained by Jon Blask."
-	"Testing by Beefart, Earl Green (http://www.thelogbook.com for Earl's audio podcasts and YouTube videos), Jizaboz, Rob O'Hara (https://www.robohara.com)."
 	"The Hugo Programming language is by Kent Tessman."
 	"The Hugor Interpreter is created and maintained by Nikos Chantziaras at http://ifwiki.org/index.php/Hugor"
 	"Thanks to Pinback, RetroRomper and Jon Blask.\n"
 	"My other games can be downloaded at my website at https://www.joltcountry.com/games and my graphical text adventure Cryptozookeeper can be purchased on Steam.\n"
+
+  "\BTESTING\b"
+  "Beefart\n"
+  "Earl Green (http://www.thelogbook.com for Earl's audio podcasts and YouTube videos)\n"
+  "Jizaboz\n"
+  "Rob O'Hara (https://www.robohara.com)\n"
 
   "\BART\b"
   "Original digital painting of the Captain by Asteltainn"

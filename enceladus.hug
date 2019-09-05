@@ -137,7 +137,7 @@ array GameEvents[MAXGAMEEVENTS]
 
 global alexandraInAirlock = false
 global mailxIsPulled = false
-global MusicListing = 0 
+global MusicListing = 0
 
 routine init
 {
@@ -182,7 +182,7 @@ routine init
 
 	Activate(CaptainIdle)
 
-  !MovePlayer(SnowyPath03)
+  !MovePlayer(HotSauceBar)
   MovePlayer(TheCaptainsQuarters)
 
 	old_screenwidth = display.screenwidth
