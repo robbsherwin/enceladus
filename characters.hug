@@ -72,7 +72,7 @@ talkValue 0
 				"\"I thought you had heard. You know, unlike popular opinion, I don't actually read the direct messages of everyone on the crew. I think the ship
 				computer supported that, but I never wanted to know what any of you were thinking anyway. I disabled it permanently when Forburn... he died, Ja'Rod.\"\n"
 
-				"\"I'm so sorry. I didn't know. I had sort of thought something like that had happened but I didn't know. I am so, so sorry, Captain.\"n"
+				"\"I'm so sorry. I didn't know. I had sort of thought something like that had happened but I didn't know. I am so, so sorry, Captain.\"\n"
 
 				"She opens her eyes for the first time and smiles when I say the word 'Captain.' \"We were bringing blood, actually,\" she says. \"Hundreds and hundreds of
 				bags of blood to one of the colonies. All the different types. A ... B ... er...\"\n"
@@ -348,7 +348,7 @@ talkValue 0
 				remove iceBoulder
 
 				PlayMusic("ENCEL01", "FREDERIC MOTTE - Connected", 80, true, true)
-				MusicListing = 1 
+				MusicListing = 1
 
 				move aluminum to player
 
