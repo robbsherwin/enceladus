@@ -1,0 +1,57 @@
+[PREGAME]
+
+- On my monitor, "Change Color Settings" did not seem to begin with a different colored letter like the other options.
+- If you select "Restart" the text "The Captain's Quarters, on the HMSC Plagoo" appear at the top.
+- "About this game" just starts the game.
+
+
+[TYPOS]
+
+on Finnian's arrival:
+"so we know itm but neither"
+
+on Finnian's text message:
+"were wolf" (not sure if this is a typo or intentional)
+
+on Alexandra's first appearance:
+"Alexandra is our naviagor" 
+
+on Snowy Path:
+on one of the screens, Mr Mailx is referred to as simply Mr Mail
+
+in the ice cave inside the mine:
+I am so, so sorry, Captain."n
+(there is a trailing n after that line.)
+
+during final fight"
+"marshmellow" (I spell this wrong all the time, it's marshmallow)
+
+during final fight:
+"his desintegrated into a sticky pile of ash" (he instead of his)
+
+during closing scene:
+drink is spelled gintata and gin-tata
+
+
+[LOGIC/GAME ISSUES]
+
+- The captain's computer is described as simply being a small circuit board. if you try and take it, it says the computer is too heavy and bulky to take.
+
+- The "Werewolves of London dance." Is there a werewolves of london dance? My first two thoughts were the Thriller dance, followed by the dance from Teen Wolf. Maybe I just forgot this one.
+
+- When we first meet Finnian he is introduced as "Finnian, the pilot." In part two of the game, he says he is the navigator. Also, when the game first mentions Alexandra (after scanning), it says Alexandra is the ship's navigator and the life support tech. Later, she is just the life support tech, and not the navigator.
+
+- The game kind of prompted me to press buttons to close the airlocks, but I didn't see in the text any reference to the buttons prior to that. This part felt like there was something I might have missed.
+
+- I went to the hot sauce bar before I went to the mine. I ended up getting the black key before I knew I needed it, and then walked into the mine without ever using it. I didn't understand why anyone would give me a key. I think I did this part in the reverse order than maybe you intended?
+
+- I got some aluminum out of the ice boulder. I assume that was to fix the hole in the hold, but it was never mentioned after that. 
+
+- I never did figure out what (if anything) I was supposed to do with the fruit tray.
+
+- This might be hard to implement, but I spent most of the game carrying around a gun and was told I couldn't shoot almost anything. I was just thinking, maybe there could be a generic response to that, something like, "That might attract the wrong attention" or "You think of what happened to Walrus Man when he pulled one and decide not to" or "The gun only works where it's needed, dummy." Or something else. 
+
+
+
+
+

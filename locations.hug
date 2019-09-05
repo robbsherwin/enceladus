@@ -463,7 +463,7 @@ room OutsideTheShip "Outside the Plagoo"
       {
         PlayMusic("ENCEL01", "JOGEIR LILJEDAHL - Physical Presence", 80, true, true)
         MusicListing = 8
-        
+
         GameEvents[20] = 2 !// Do this once
 
         move werewolf to location
@@ -1012,18 +1012,21 @@ room RecRoom "Rec Room"
   {
     if self is not visited
     {
-
       PlayMusic("ENCEL01", "FREDERIC MOTTE - Knulla Kuk", 80, true, true)
       MusicListing = 3
 
-      "The Recreation Room of the Plagoo is ten feet by ten feet and placed way in the back of the ship. I think the theory
+      "The Recreation Room of the Plagoo is twenty feet by fifteen feet and placed way in the 'back' of the ship. I think the theory
       for the designer of the class of ship that the Plagoo is, is that we'd constantly have people firing weapons at us, so
-      put the least important thing towards the tail. We are all gathered here.\n"
-      "\"I think we just need to all have a drink together after everything that went down,\" says the Captain, laughing, to
-      all of us.\n"
-      "I can see that the Captain and Finnian each have a glass of scotch. Doctor Nahas has a ginger ale. Alexandra has an entire
-      bottle of vodka and someone gave Mr Mailx a Dixie Cup with engine oil in it. (He can't actually drink anything.) Alexandra
-      hands me a drink of my own creation, a gintata.\n"
+      put the least important thing towards the tail. We are all gathered here. I am the last to arrive and overhear the
+      Captain talk about how we can process the aluminum until we can get to a shipyard with Finnian while asking Doctor Nahas
+      to help with arrangements for Grimes's body.\n"
+
+      "The Captain sees that I have arrived and gives me a genuinely warm smile, the first I've seen her make in ages. \"I think
+      we just need to all have a drink together after everything that went down,\" she says to all of us.\n"
+
+      "The Captain and Finnian each have a glass of scotch. Doctor Nahas has a ginger ale. Alexandra has an entire
+      bottle of vodka and someone gave Mr Mailx a Dixie Cup with engine oil in it. (He can't actually drink anything, so
+      this was someone's attempt at humanizing him.) Alexandra hands me a drink of my own invention, a gintata.\n"
 
       "\"To those we miss terribly and to all who remain,\" says the Captain as everyone raises their glass."
 

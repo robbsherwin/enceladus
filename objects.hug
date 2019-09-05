@@ -508,6 +508,22 @@ scenery airlockHull "hull"
 	}
 }
 
+scenery pallets "pallets"
+{
+	noun "pallets" "pallet"
+	article "the"
+	is plural
+	in BeforeTheAirlock
+
+	long_desc
+	{
+		"So, these are relatively new to the ship, we had some order that required them but something must have happened
+		because usually the pallets go with whatever is being moved. I don't understand how they are just here. Unless
+		the item itself is the pallet and that's what we're shipping. I'll be sure to ask people this if I make it through
+		the next few days without getting killed by a werewolf."
+	}
+}
+
 scenery greenButton "green button"
 {
 nouns "button" "green"
@@ -1307,7 +1323,21 @@ scenery miningRope "rope"
 	{
 		object DoClimb
 		{
-			Perform(&DoMove, d_obj)
+			Perform(&DoGo, d_obj)
 		}
+	}
+}
+
+scenery mouseTrap "Mouse Trap"
+{
+	nouns "trap"
+	adjective "mouse"
+	article "the"
+	in RecRoom
+
+	long_desc
+	{
+		"Oh yeah, the pewter Mouse Trap game is here. If anyone asks me to play I'll be sure to have what Alexandra is having. Or
+		maybe a double."
 	}
 }
