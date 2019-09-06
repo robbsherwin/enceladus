@@ -24,10 +24,10 @@ replace DoHelp
 	TEXTCOLOR = BRIGHT_WHITE
 	BGCOLOR = BLACK
 
-	MENU_TEXTCOLOR = DEF_FOREGROUND
-	MENU_BGCOLOR = DEF_BACKGROUND
-	MENU_SELECTCOLOR = DEF_SL_FOREGROUND
-	MENU_SELECTBGCOLOR = DEF_SL_BACKGROUND
+	MENU_TEXTCOLOR = BRIGHT_WHITE
+	MENU_BGCOLOR = BLUE
+	MENU_SELECTCOLOR = BRIGHT_WHITE
+	MENU_SELECTBGCOLOR = RED
 
 	while true
 	{
@@ -163,7 +163,6 @@ routine Help_Commands
 	"\BWAIT\b: Allows time to pass for one turn. Can be shortened to \"z\"."
 	"\BAGAIN\b: Repeats the last command. Can be shortened to \"g\"."
 
-
   "\nSystem Commands:"
 	"\BABOUT\b: Prints the initial info message."
 	"\BHELP\b: Gets you back to these help screens."
@@ -172,6 +171,7 @@ routine Help_Commands
 	"\BRESTART\b: Begins the game anew, as if playing it for the first time."
 	"\BSCRIPT ON\b: Logs the game's text to an output file."
 	"\BSCRIPT OFF\b: Turns off game logging."
+  "\BCOLORS\b: Allows you to change the game's colors. NOTE: A BRIGHT_WHITE background is not possible with this current release."
 	"\BOOPS\b: When followed by a word, corrects a typo of the previous line with that word."
 	"\BUNDO\b: Takes back the previous command and puts the game in a state one move earlier."
 	"\BPAGE UP\b: Not the literal words, but pressing PGUP on your keyboard will bring forth the scrollback window."

@@ -62,6 +62,13 @@ verb "shoot"
   * DoVague
   * object DoShoot
 
+verb "change"
+  * DoVague
+  * "color"/"colors" ChangeColorMenu()
+
+xverb "colors"
+    * ChangeColorMenu()
+
 #include "roodylib.g"
 #include "verblib.g"			! grammar must come first
 #include "hugolib.h"
@@ -153,10 +160,14 @@ routine init
 
 	STATUSTYPE = 0                  ! score/turns
 
-	TEXTCOLOR = DEF_FOREGROUND
-	BGCOLOR = DEF_BACKGROUND
-	SL_TEXTCOLOR = DEF_SL_FOREGROUND
-	SL_BGCOLOR = DEF_SL_BACKGROUND
+	!TEXTCOLOR = DEF_FOREGROUND
+	!BGCOLOR = DEF_BACKGROUND
+	!SL_TEXTCOLOR = DEF_SL_FOREGROUND
+	!SL_BGCOLOR = DEF_SL_BACKGROUND
+
+  TEXTCOLOR = 15
+  BGCOLOR = 4
+  color TEXTCOLOR, BGCOLOR, TEXTCOLOR
 
 	prompt = ">"
 
@@ -325,8 +336,6 @@ extra_scenery "wall" "walls"
 	{
 		if self is not visited
 		{
-			DoInitialGameRoutines()
-
 			"\"Look, Captain, there's a werewolf loose on the ship. We have to go - now!!\"\n"
 			"\"Who are you?' she says. \"And where are my pants??\"\n"
 			"Ah, cripes!\n"

@@ -1,21 +1,5 @@
 !routines.hug
 
-routine DoInitialGameRoutines
-{
-		if (TEXTCOLOR = BGCOLOR)
-			{
-				TEXTCOLOR = WHITE
-				BGCOLOR = RED
-				color TEXTCOLOR, BGCOLOR
-				cls
-			}
-
-			if not glk
-			{
-			     locate 1, 3
-			 }
-}
-
 routine DoAbout()
 {
 	"Enceladus by Robb Sherwin."
