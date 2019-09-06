@@ -29,6 +29,8 @@ routine NewMenu
 	{
 		ChangeColorMenu()
 	}
+	if word[0] = 'A', 'a'
+		ShowAboutThisGameGraphic()
 
 :IntroScreenStartGame
 !Do nothing, just start game
@@ -112,4 +114,19 @@ local tempInput
 	BGCOLOR = tempInput
 
 	color TEXTCOLOR, BGCOLOR
+}
+
+routine ShowAboutThisGameGraphic
+{
+	if (display.hasgraphics) and GRAPHICS_ON = TRUE {
+		cls
+		picture "ENCEL01", "aboutscreen01"
+		pause
+	}
+	else
+	{
+		cls
+		DoAbout()
+		pause
+	}
 }

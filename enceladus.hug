@@ -447,6 +447,7 @@ key_object fakeKey
 resource "ENCEL01"
 {
 	"jpg/titlescreen01.jpg"
+  "jpg/aboutscreen01.jpg"
   "mod/FREDERIC MOTTE - Connected.mod"
   "mod/FREDERIC MOTTE - Duel.mod"
 	"mod/FREDERIC MOTTE - Knulla Kuk.mod"
