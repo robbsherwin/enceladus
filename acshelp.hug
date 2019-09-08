@@ -33,14 +33,15 @@ replace DoHelp
 	{
 		menuitem[0] = "ENCELADUS"
 		menuitem[1] = "Introduction"
-		menuitem[2] = "System Requirements"
-		menuitem[3] = "What is Interactive Fiction?"
-		menuitem[4] = "Game Instructions -- Commands"
-		menuitem[5] = ""
-		menuitem[6] = "Credits"
-		menuitem[7] = "License and Copyright Information"
-		menuitem[8] = "About the Hugo Compiler"
-		menuitem[9] = "Release History"
+    menuitem[2] = "Text-only Introduction"
+		menuitem[3] = "System Requirements"
+		menuitem[4] = "What is Interactive Fiction?"
+		menuitem[5] = "Game Instructions -- Commands"
+		menuitem[6] = ""
+		menuitem[7] = "Credits"
+		menuitem[8] = "License and Copyright Information"
+		menuitem[9] = "About the Hugo Compiler"
+		menuitem[10] = "Release History"
 		a = Menu(10, 0, a)
 		select a
 
@@ -60,27 +61,40 @@ replace DoHelp
 			DescribePlace(location)
 			return
 		}
-		case 1:  Help_Introduction
-		case 2:  Help_SystemRequirements
-		case 3:  Help_WhatIsIF
-		case 4:  Help_Commands
-		case 6:  Help_Credits
-		case 7:  Help_License
-		case 8:  Help_AboutHugo
-		case 9: Help_ReleaseHistory
+		case 1:  Help_ShowAboutGraphic
+    case 2:  Help_Introduction
+		case 3:  Help_SystemRequirements
+		case 4:  Help_WhatIsIF
+		case 5:  Help_Commands
+		case 7:  Help_Credits
+		case 8:  Help_License
+		case 9:  Help_AboutHugo
+		case 10: Help_ReleaseHistory
 	}
+}
+
+routine Help_ShowAboutGraphic
+{
+  cls
+  picture "ENCEL01", "aboutscreen02"
+  pause
 }
 
 routine Help_Introduction
 {
 	CenterTitle("\BIntroduction\b")
 
-  "\nYou are Ja'Rod Butler, the X-ray technician on the starship the HMCS Plagoo. The Plagoo is a small saucer-styled
-  spaceship. You recently took shore leave but rejoined your crew: The Captain, Finnian O'Connell (the pilot), Alexandra
-  Mays (life support technician), Harold P. Grimes (geographer), Mr Mailx (API and communication robot).\n"
+  "\nIt is the future.\n"
+  "You are Ensign Ja'Rod Butler, returning from an extended shore leave, back on the spaceship known as
+  the HMCS Plagoo.\n"
 
-  "Upon your return, you have discovered that the crew is much more willing to take jobs that are in a grey
-  area, legally. But you're woken up one night because a werewolf has gotten onto the ship!"
+  "Two minutes ago, you were alerted to the fact that a werewolf has somehow gotten onto the ship. One
+  minute ago you made it into the quarters of the Plagoo's Captain to wake her up.\n"
+
+  "With any luck you'll be able to get rid of the werewolf without it hurting anyone. But, spoiler, check your
+  inventory.\n"
+
+  "You're not carrying any luck."
 
 	"\n[Press a key...]";
 	pause
@@ -204,6 +218,7 @@ routine Help_ReleaseHistory
 	pause
 }
 
+
 routine Help_Credits
 {
 	CenterTitle("\BCredits and Acknowledgments\b")
@@ -216,13 +231,15 @@ routine Help_Credits
 	"My other games can be downloaded at my website at https://www.joltcountry.com/games and my graphical text adventure Cryptozookeeper can be purchased on Steam.\n"
 
   "\BTESTING\b"
-  "Beefart\n"
-  "Earl Green (http://www.thelogbook.com for Earl's audio podcasts and YouTube videos)\n"
-  "Jizaboz\n"
-  "Rob O'Hara (https://www.robohara.com)\n"
+  "Beefart"
+  "Earl Green (http://www.thelogbook.com for Earl's audio podcasts and YouTube videos)"
+  "Jizaboz (http://jizaboz.blogspot.com/ for the Lab of Jizaboz)"
+  "Rob O'Hara (https://www.robohara.com)"
+  "Gunther Schmidl\n"
 
   "\BART\b"
   "Original digital painting of the Captain by Asteltainn"
+  "DeviantArt: https://www.deviantart.com/asteltainn"
   "Patreon: https://www.patreon.com/asteltainn"
   "Twitter: https://twitter.com/asteltainn\n"
 
@@ -251,9 +268,6 @@ routine Help_License
 
 	"\n\BHugo Compiler and Engine\b"
 	"Copyright (c) 1995-2019 by Kent Tessman"
-	"\nThis game (";
-	GameTitle
-	") is copyright (c) 2019 by Robb Sherwin (the author).  \n"
 
 	GameTitle
 	" is licensed under the Attribution-Noncommercial-No Derivative Works 3.0 Unported license.\n"
@@ -386,6 +400,7 @@ routine Help_AboutHugo
 	development of interactive fiction."
 
 	"\nVisit the Hugo Homepage at http://www.generalcoffee.com/hugo/gethugo.html"
+  "Visit the unofficial support forum for Hugo at the Jolt Country BBS, at https://www.joltcountry.com/phpBB3"
 
 	"\n[Press a key...]";
 	pause

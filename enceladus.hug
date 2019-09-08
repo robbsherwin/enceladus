@@ -46,12 +46,12 @@ verb "perform"
   * DoVague
   * "scan"  DoScan
 
-verb "raise"
+verb "raise","lift"
   * DoVague
   * "the"/"my" object DoRaise
   * object DoRaise
 
-verb "respond"
+verb "respond","reply"
   * DoRespond
 
 verb "scan"
@@ -322,7 +322,7 @@ adjectives "ja'rod" "jarod"
 
 	long_desc
 	{
-		"I am a twenty-three Ethiopian male, I am 5'9\" tall and I weigh 115 pounds. I have black hair and brown eyes. I am wearing a white T-shirt, blue denim jeans and black Doc Martins for shoes. My
+		"I am a twenty-three year old Ethiopian male, I am 5'9\" tall and I weigh 115 pounds. I have black hair and brown eyes. I am wearing a white T-shirt, blue denim jeans and black Doc Martins for shoes. My
     hair is buzzed pretty tightly against my head and I am clean-shaven."
 	}
 }
@@ -369,7 +369,8 @@ extra_scenery "wall" "walls"
     {
       if Finnian in location
       {
-        "I could just talk to him if I wanted to respond to his instant message."
+        "I could just talk to him if I wanted to respond to his instant message. (But because he'll think the Captain wrote the reply, I take the opportunity to tell him
+        he's been fined so he has something to enjoy the next time he checks his messages.)"
       }
       else {
         if instantMessage01 is special
@@ -378,7 +379,7 @@ extra_scenery "wall" "walls"
         }
         else {
           "I type a response telling Finnian to get his butt down here. He'll think the Captain wrote it but that's ok! Nobody respects my authority, so
-          I don't mine trying hers. The power!"
+          I don't mine trying hers. I've never known such power!"
         }
       }
     }
@@ -456,7 +457,7 @@ key_object fakeKey
 resource "ENCEL01"
 {
 	"jpg/titlescreen01.jpg"
-  "jpg/aboutscreen01.jpg"
+  "jpg/aboutscreen02.jpg"
   "mod/FREDERIC MOTTE - Connected.mod"
   "mod/FREDERIC MOTTE - Duel.mod"
 	"mod/FREDERIC MOTTE - Knulla Kuk.mod"

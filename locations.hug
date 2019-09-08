@@ -558,7 +558,7 @@ room SnowyPath02 "Snowy Path"
   {
     location DoExits
     {
-      "There are exists east and west from here."
+      "There are exits east and west from here."
     }
   }
 
@@ -783,10 +783,10 @@ long_desc
     "\"How did you get the key, anyway?\" I ask the Captain.\n"
     "\"When you were flailing about, I just explained the situation to her and promised her no more theatrics. I guess
     the mine is owned by the same company that owns the hot sauce bar. I guess they own everything around here.\"\n"
-    "\"Well, they are doing a great job, they put in air, they put in a little more gravity, they put in... well,\"\n"
-    "\"Yeah,\" says the Captain. \"I think we might be the only people in a decade to land here as opposed to crash
-    land here and be stuck.\""
-
+    "\"Well, they are doing a great job, they put in air, they put in a little more gravity, they put in...
+    well...\" I can't really think of what else this company did to make it nice here.\n"
+    "\"Yeah,\" says the Captain, out of compliments for Enceladus as well. \"I think we might be the only people
+    in a decade to land here as opposed to crash land here and be stuck.\""
   }
   else {
     "The mine descends deep into the belly of the moon, but standing before us at the moment
@@ -910,7 +910,7 @@ room mineLevelThree "Mine Level Three"
   {
     location DoExits
     {
-      "There's an exist east of where we are now. Entering the mine cart can also, in theory, bring us up."
+      "There's an exit east of where we are now. Entering the mine cart can also, in theory, bring us up."
     }
   }
 

@@ -140,7 +140,7 @@ routine ShowAboutThisGameGraphic
 {
 	if (display.hasgraphics) and GRAPHICS_ON = TRUE {
 		cls
-		picture "ENCEL01", "aboutscreen01"
+		picture "ENCEL01", "aboutscreen02"
 		pause
 	}
 	else
