@@ -948,7 +948,7 @@ object mineKey "key"
 	}
 }
 
-vehicle mineCart "mine cart"
+object mineCart "mine cart"
 {
 nouns "cart"
 adjective "mine"
@@ -1006,17 +1006,19 @@ article "the"
 		{
 			"I don't think dropping the ore is a good idea."
 		}
-		object DoThrowAt
+		object DoThrowAt, DoHit
 		{
 			select(xobject)
 			case(werewolf)
 			{
 				!// Kill the werewolf
-				"I hit the werewolf in the chest with the silver. The thing about the plastic genetic surgery that these people sign up for is that in
+				"I successfully strike the werewolf in the chest with the silver. The thing about the plastic genetic surgery that these people sign up for is that in
 				order for the Live Action Role Playing to be accurate, they give themselves the weaknesses of the legendary creatures they want to be
 				as well as the strengths.\n"
-				"The chunk of silver ore goes right through the sternum of the werewolf, passing through like a metal skewer through marshmellow. The ore
+
+				"The chunk of silver ore goes right through the sternum of the werewolf, passing through like a metal skewer through marshmallow. The ore
 				isn't even particularly slowed down by the werewolf's flesh and strikes the Plagoo, falling to the ground.\n"
+				
 				"The werewolf falls over, dead."
 
 				remove silverOre
@@ -1050,11 +1052,12 @@ article "the"
 				"I hit the werewolf in the chest with the silver. The thing about the plastic genetic surgery that these people sign up for is that in
 				order for the Live Action Role Playing to be accurate, they give themselves the weaknesses of the legendary creatures they want to be
 				as well as the strengths.\n"
-				"The chunk of silver ore goes right through the sternum of the werewolf, passing through like a metal skewer through marshmellow. The ore
+
+				"The chunk of silver ore goes right through the sternum of the werewolf, passing through like a metal skewer through marshmallow. The ore
 				isn't even particularly slowed down by the werewolf's flesh and strikes the Plagoo, falling to the ground.\n"
 				"The werewolf falls over, dead.\n"
 
-				"\"Ha ha!\" says Finnian through the ship's comm from inside. \"Great shot, Butler!\""
+				"\"BZZZT! Ha ha!\" says Finnian through the ship's comm from inside. \"Great shot, Butler!\""
 
 				werewolf is not living
 
@@ -1093,7 +1096,7 @@ article "the"
 	}
 }
 
-vehicle snowmobile "snowmobile"
+object snowmobile "snowmobile"
 {
 nouns "snowmobile"
 article "the"
@@ -1132,6 +1135,16 @@ in CenterOfTown
 			{
 				"It's too heavy for me to carry, even with Enceladus's decreased gravity!"
 			}
+			object DoFix
+			{
+				if self in CenterOfTown
+				{
+					"I couldn't imagine anyone being capable of fixing that old thing."
+				}
+				else {
+					"It's fine!"
+				}
+			}
 		}
 }
 
@@ -1168,8 +1181,8 @@ article "the"
 
 	long_desc
 	{
-		"The HMCS Plagoo is a small spaceship that can achieve 99.99% of light speed to move around the solar system. It is green in color, mostly,
-		with yellow highlights and the escape module at the top of the ship is a crimson red."
+		"The HMCS Plagoo is a small, saucer-shaped space ship that can achieve 99.99% of light speed to move around the solar system. It is green in color, mostly,
+		somewhere between emerald and seaweed. The Plagoo has yellow accents and the escape module at the top of the ship (that also has retrofitted magnetic tip) is crimson red."
 	}
 	before
 	{

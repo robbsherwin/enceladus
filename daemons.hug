@@ -542,6 +542,25 @@ event in Captain_Shoots_McGrathley
 	}
 	case 2
 	{
+		if GameEvents[21] = 0 !// Did Ja'Rod kill the werewolf with the silver?
+		{
+			"\nThe werewolf is quickly gaining ground and coming straight for me. Fangs out, tongue out, chest completely undefended."
+
+			"\nMcGrathley fires again, this time somehow missing by an even greater distance. Apparently threatening to throw people
+			out airlocks develops different skills than using handheld weapons.\n"
+
+			"The Captain didn't even flinch."
+		}
+		else {
+			"\nMcGrathley fires again, this time somehow missing by an even greater distance. Apparently threatening to throw people
+			out airlocks develops different skills than using handheld weapons.\n"
+
+			"The Captain didn't even flinch."
+		}
+	}
+
+	case 3
+	{
 		if GameEvents[21] = 0
 		{
 			if silverOre in player
@@ -558,28 +577,25 @@ event in Captain_Shoots_McGrathley
 			else {
 				"\nThe werewolf, with that head start, covers more ground than I would have thought possible and places both of its hands around
 				my neck. It makes a slashing motion, causing my blood to squirt out of my head and about thirty feet into the air without
-				the gravity of terra firma to bring it back down. It's just a stupid genetically engineered monster, just a normal
+				the gravity of planet Earth to bring it back down. It's just a stupid genetically engineered monster, just a normal
 				guy that had some work done with all the strengths and weaknesses of the mythical werewolf creature. I try combing
 				my head for anything I could have encountered that would have stopped it, but it digs its nails into my skull,
 				fracturing it into pieces and the last thing I feel or see or smell is my brain going haywire, being unraveled,
-				being strewn about the moon. It ends, thankfully, it all ends and is all over."
+				being strewn about the surface. It ends, thankfully, it all ends, all my problems are gone and it is all over."
 			}
 
 			endflag = 2
 		}
 		else {
 
-			"\nMcGrathley fires again, this time somehow missing by an even greater distance. Apparently threatening to throw people
-			out airlocks develops different skills than using handheld weapons.\n"
-
-			"After being targeted twice, the Captain flips the safety on the star pistol, which I didn't even know it had, steadies
+			"\nAfter being targeted twice, the Captain flips the safety on the star pistol, which I didn't even know it had, steadies
 			herself and fires a single shot. The Captain, my hero, quietly and without fanfare hits McGrathley right between the eyes.
-			His disintegrates into a sticky pile of ash.\n"
+			His body looks as if possessed by a scarlet ghost for two seconds before disintegrating into a sticky pile of ash.\n"
 
 			"Finnian lowers the boarding ramp of the Plagoo with enough force to cause McGrathley's ashes to scatter into chunks
-			upon the Enceladusian surface.\n"
+			upon the Enceladean surface.\n"
 
-			"The Captain puts the star pistol away as all of us get onto the boarding ramp. I can't help notice that she
+			"The Captain puts the star pistol away as all of us ascend the boarding ramp. I can't help notice that she quickly
 			twirled it one time before hiding it though."
 
 			remove starPistol
@@ -604,10 +620,8 @@ event in Ending_Daemon
 	select(self.timer)
 	case 1
 	{
-
 		"You have won the game."
 		endflag = 1
-
 
 	}
 }

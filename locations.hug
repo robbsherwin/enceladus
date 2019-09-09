@@ -917,6 +917,10 @@ room mineLevelThree "Mine Level Three"
 !// Mine Cart is in here and can take us up.
 u_to {"We can't go that way by ourselves."}
 e_to bottomOfMine
+cant_go {
+  "I can't go that way. " ;
+  Perform(&DoExits)
+  }
 }
 
 room bottomOfMine "Bottom of Mine"

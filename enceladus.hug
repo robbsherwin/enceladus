@@ -15,7 +15,7 @@
 
 ! Uncomment the following to include verb stub routines:
 #set VERBSTUBS
-#set USE_VEHICLES
+!#set USE_VEHICLES
 #set NEW_DESCRIBEPLACE
 
 #ifset DEBUG
@@ -34,8 +34,16 @@ $MAXROUTINES=1024
 verb "about"
   * DoAbout
 
+verb "drive"
+  * DoVague
+  * object DoEnter
+
 verb "exits"
   * DoExits
+
+verb "fix", "repair"
+  * DoVague
+  * object DoFix
 
 verb "lower"
   * DoVague
@@ -360,7 +368,7 @@ extra_scenery "wall" "walls"
 			OneOf("cruising","flying","headed")
 			" toward Saturn.)\n"
 
-			"There is a door portside to a long hallway."
+			"There is a door facing west that leads to a long hallway."
 		}
 	}
   before

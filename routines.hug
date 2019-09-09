@@ -22,6 +22,11 @@ routine DoExits
 	YouCanGo()
 }
 
+routine DoFix
+{
+	"I can't fix that."
+}
+
 replace DoKiss
 {
 	"This is an awful time for that."
