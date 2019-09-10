@@ -44,10 +44,10 @@ event in FinnianEnters
 
 		"\"No,\" says the Captain, looking painfully at Finnian's chosen ensemble, \"I tried to ban you all from wearing fur-lined banana thongs.\"\n"
 
-		"I wiggle one of my teeth. It's pretty loose! \"That's what you banned? I thought it was from eating bananas!\"\n"
+		"I wiggle one of my teeth. It's extremely loose. \"That's what you banned? I thought we were banned from eating bananas.\"\n"
 
-		"\"Jesus, Ja'Rod,\" says Finnian with a wince. He turns to the Captain. \"Kid's got a mouth that's craggier than the public road leading up
-		to Pripyat Reactor Four. When the werewolf bites you he'll actually be injecting vitamins into your bloodstream.\""
+		"\"Jesus, Ja'Rod,\" says Finnian with a wince. He turns to the Captain. \"Kid's got a mouth that's craggier than the road leading up
+		to Pripyat Reactor Four. When the werewolf bites him, it'll actually be injecting vitamins into his bloodstream.\""
 
 		move tooth to location
 	}
