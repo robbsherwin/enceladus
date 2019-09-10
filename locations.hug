@@ -12,7 +12,11 @@ room Hallway02 "Hallway Module"
       TheCaptainsQuarters.name = "The Captain's Quarters" !// Remove the bit about us being on the Plagoo
     }
 
-    "There is a brief hallway module connecting the Captain's bedroom to the hold, which is up ahead."
+    "There is a brief hallway module connecting the Captain's bedroom (which is to the east) to the hold, which is west.
+    For some reason, the modules are all colored a deep burgundy, which nobody likes, but nobody dislikes enough to change.
+    (The Plagoo has a red magnetic pole installed at the top of the ship, which is how we get away with these compass
+    directions. No longer needing to know terms like port and aft really opened the solar system up to normal people who
+    maybe shouldn't be out here.)"
 
     if self is not visited
     {
