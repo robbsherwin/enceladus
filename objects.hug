@@ -335,9 +335,11 @@ in JaRod
 
 	long_desc
 	{
-		"The specs are a set of chromatic filters that allow me to see the world in an x-ray sense - it helps a little bit in seeing behind objects
-		unless those objects are particularly dense. I can \Bscan\b things when they are lowered.\n"
-		"The x-ray specs are currently " ;
+		"The X-ray specs are glasses that, when lowered, allow me to take a scan of where I am. They work as a miniaturized X-ray machine at that point:
+		the X-ray radiation gives me a view of the world that allows me to see through some walls and some flesh, and the electronics inside the
+		specs give me an understanding of the chemical composition of things that I am looking at.\n"
+
+		"The X-ray specs are currently " ;
 		if self is special
 		{
 			"lowered."
@@ -360,7 +362,7 @@ in JaRod
 			}
 			else {
 				self is special
-				"Okay, I've lowered my x-ray specs."
+				"Okay, I've lowered my X-ray specs."
 			}
 		}
 		object DoRaise
@@ -371,7 +373,7 @@ in JaRod
 			}
 			else {
 				self is not special
-				"My x-ray specs are now raised."
+				"My X-ray specs are now raised."
 			}
 		}
 	}
@@ -1018,7 +1020,7 @@ article "the"
 
 				"The chunk of silver ore goes right through the sternum of the werewolf, passing through like a metal skewer through marshmallow. The ore
 				isn't even particularly slowed down by the werewolf's flesh and strikes the Plagoo, falling to the ground.\n"
-				
+
 				"The werewolf falls over, dead."
 
 				remove silverOre

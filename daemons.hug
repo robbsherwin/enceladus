@@ -307,7 +307,7 @@ event in SpecsGoUp
 	select(self.timer)
 	case 2 {
 		xraySpecs is not special
-		"\n(My x-ray specs just automatically went back up.)"
+		"\n(My X-ray specs just automatically went back up.)"
 	}
 }
 

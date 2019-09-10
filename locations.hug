@@ -22,11 +22,11 @@ room Hallway02 "Hallway Module"
       if xraySpecs is not special
       {
         "The Captain smiles at him without using her eyes. She doesn't directly address him, which is something she didn't used to do,
-        but something I noticed her doing when I came back from leave. \"I think Ensign Butler lowering his x-ray specs to give
+        but something I noticed her doing when I came back from shore leave. \"I think Ensign Butler lowering his X-ray specs to give
         us some help on what's ahead would be the next best tactic,\"she says, genuinely sweetly.\n"
 
-        "Ensign Butler! Oops, that's me, and yes, as the x-ray technician of the Plagoo, I carry some specs with me.
-        I can put my specs down."
+        "Ensign Butler! Oops, that's me, and yes, as the X-ray technician of the Plagoo, I carry some specs with me.
+        I can \Blower my specs\b and perform a \Bscan\b with them."
 
         xraySpecs is not hidden
       }
@@ -142,7 +142,7 @@ w_to {
       return Hallway04
     }
     else {
-      "I can't go that way yet. The Captain wants me to lower my x-ray specs and perform a \Bscan\b so we can see what's ahead."
+      "I can't go that way yet. The Captain wants me to lower my X-ray specs and perform a \Bscan\b so we can see what's ahead."
     }
   }
 }

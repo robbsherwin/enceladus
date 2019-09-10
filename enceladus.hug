@@ -358,11 +358,20 @@ extra_scenery "wall" "walls"
 		}
 		else
 		{
-			"The big thing with the Captain's living quarters is that it currently doesn't contain a werewolf trying to gorge
-			itself on any of the crew. That's fairly clutch. The Captain is wearing a long T-shirt, having just been roused out
-			of bed because it's the middle of the night.\n"
+      if jumpsuit in Captain
+      {
+        "The Captain's living quarters has two deep gray walls and two light blue walls. The walls jut out a bit along
+        the northern wall and there is a criss-cross pattern there. Warm lighting abounds, the general vibe
+        she has for her place is one of a cozy retreat for quiet contemplation, normally.\n"
 
-			"Her quarters contains a dresser, a computer and (along the starboard wall) her bed.\n"
+      }
+      else {
+        "The big thing with the Captain's living quarters is that it currently doesn't contain a werewolf trying to gorge
+  			itself on any of the crew. That's fairly clutch. The Captain is wearing a long T-shirt, having just been roused out
+  			of bed because it's the middle of the night.\n"
+      }
+
+			"Her quarters contains a dresser, a computer and (along the eastern wall) her bed.\n"
 
 			"(We're in a space ship ";
 			OneOf("cruising","flying","headed")
