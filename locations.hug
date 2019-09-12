@@ -1044,6 +1044,12 @@ room RecRoom "Rec Room"
       Mailx is hidden
       Alexandra is hidden
 
+      Alexandra.talkValue = 2
+      Mailx.talkValue = 6
+      MiladNahas.talkValue = 1
+      Captain.talkValue = 6
+      Finnian.talkValue = 3
+
     }
     else {
       "This is the rec room of the Plagoo. Everyone here has their glasses raised in a toast, with drinking of said

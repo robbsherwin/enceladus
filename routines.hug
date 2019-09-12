@@ -17,6 +17,11 @@ routine DoDrive()
 	"I can't drive that."
 }
 
+routine DoHide()
+{
+	"I don't need to do that now."
+}
+
 routine DoExits
 {
 	YouCanGo()

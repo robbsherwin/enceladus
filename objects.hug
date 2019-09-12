@@ -524,6 +524,19 @@ scenery pallets "pallets"
 		the item itself is the pallet and that's what we're shipping. I'll be sure to ask people this if I make it through
 		the next few days without getting killed by a werewolf."
 	}
+	before
+	{
+		object DoHide
+		{
+			if GameEvents[11] = 1 !// Is this our second time in the Before the Airlock room?
+			{
+				"I'm doing that!"
+			}
+			else {
+				"No need to do that!"
+			}
+		}
+	}
 }
 
 scenery greenButton "green button"

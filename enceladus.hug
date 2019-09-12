@@ -38,6 +38,11 @@ verb "drive"
   * DoVague
   * object DoEnter
 
+verb "hide"
+  * DoHide
+  * "behind" object DoHide
+  * object DoHide
+
 verb "exits"
   * DoExits
 
