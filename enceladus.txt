@@ -14,8 +14,17 @@ RECORD ON/OFF For recording the inputs used during play
 SAVE GAME To save the game in progress
 LOAD GAME To load a previously-saved game
 NP For "now playing" - tells the name of the song currently playing
+HELP - for a menu of info regarding the game.
 
-Enceladus is licensed software. Attribution-NonCommercial-ShareAlike 3.0 Unported (CC BY-NC-SA 3.0)
+The two commands I should note to clarify in-game actions are:
+TALK to person: this starts a conversation between Ja'Rod and someone
+SCAN: This lets Ja'Rod use his X-ray specs to scan rooms.
+
+Enceladus is licensed software for Creative Commons.
+Attribution-NonCommercial-ShareAlike 3.0 Unported (CC BY-NC-SA 3.0)
+
+For more info about the 2019 Interactive Fiction
+Competition, head to https://ifcomp.org
 
 Robb Sherwin
 beaver@zombieworld.com
