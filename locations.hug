@@ -87,7 +87,7 @@ room Hallway03 "Ship Hold"
     if self is not visited
     {
       "\nThe Captain opens one of the packages on top of a pallet to my right. It's an unopened star pistol. She unboxes it, avoids
-      cursing at the tight grip plastic keeping the pistol in place and inserts the battery into the grip with a solid 'twack.' She
+      cursing at the tight plastic grip keeping the pistol in place and inserts the battery into the grip with a solid 'thwack.' She
       hands it to Finnian.\n"
 
       "\"Let me do the talking if it gets that far, I've got an idea what is going on,\" she says to Finnian. \"I'd say don't draw
@@ -727,9 +727,9 @@ long_desc
     falls all over the floor of the bar like a wedding dress.\n"
     "\"You can't bring that thing in here,\" says the bouncer, but he is pointing to Finnian. Mr Mailx turns his entire body to face Finnian, which is the creepiest thing ever because
     of how long it takes him to do that on tread.\n"
-    "\"That's my navigator,\" says the Captain.\n"
+    "\"That's my pilot,\" says the Captain.\n"
     "\"There's one room and a bathroom in here, you'll be able make your way around just fine,\" says the bouncer. \"Get that cap out of here before I throw you all out myself.\"\n"
-    "\"Oh, it's the cap?\" asks Finnian. \"This thing is the height of fashion far back around the outer moons of Saturn.\" The Captain rolls her eyes.\n"
+    "\"Oh, it's the cap?\" asks Finnian. \"This thing is the height of fashion far back around the outer moons of Saturn.\" The Captain looks skyward.\n"
     "\"This is a moon of Saturn, dummy,\" says the bouncer.\n"
     "Finnian looks genuinely surprised at that revelation. \"Huh,\" he says.\n"
     "\"Mailx, please go with Finnian and wait outside the bar,\" says the Captain.\n"

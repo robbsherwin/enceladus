@@ -157,7 +157,7 @@ event in Hallyway03_Scan_Checker
 	{
 		if Captain in location
 		{
-			"\n\"Please do lower your specs and do a \Bscan\b, Ensign Butler,\" says the Captain."
+			"\n\"Please lower your specs and perform a \Bscan\b, Ensign Butler,\" says the Captain."
 			Deactivate(self)
 		}
 	}
@@ -176,12 +176,14 @@ event in Airlock_Scene
 	case 2
 	{
 		"\n\"You look disgusting! Put some clothes on!\" shouts McGrathley. We took a job a couple years ago to deliver two tons
-		of mini chile rellenos from Earth to Mimas. We got the job because McGrathley and his crew couldn't get it done, they couldn't move the merch and we could.
-		He actually fired lasers at us about losing the deal.\n"
-		"\"We put out a distress call as soon as you killed Grimes,\" says the Captain. \"The sector is going to be crawling with cops.\"\n"
-		"\"At transmission times of light in a vacuum out here in the middle of nowhere I have plenty of time to send you all into the icy, inhospitable
-		darkness of space. The worst torture imaginable!\" The werewolf again shifts its eyes to look at McGrathley for a beat before settling back on the Captain."
+		of mini chile rellenos from Earth to Mimas. We got the job because McGrathley and his crew couldn't get it done, they couldn't
+		move the merch and we could. He actually fired lasers at us because he lost the deal.\n"
 
+		"\"We put out a distress call as soon as you killed Grimes,\" says the Captain. \"The sector is going to be crawling with cops.\"\n"
+
+		"\"At light speed, no doubt,\" says McGrathley. \"Which, out here in the middle of nowhere... means I have plenty of time to send you all into
+		the icy, inhospitable darkness of outer ... space. The worst torture imaginable!\" The werewolf again shifts just its eyes to look at McGrathley
+		for a beat before settling back on the Captain."
 	}
 	case 3
 	{
@@ -197,6 +199,7 @@ event in Airlock_Scene
 		}
 		else {
 			"\nCool as can be, the Captain snaps her fingers again.\n"
+
 			"\"No more sarcasm, Captain? No more trying to get your little shots in?\" Technically, it was Finnian who did both of those things, but I keep my
 			mouth shut. I think I am forgetting something but I don't know what."
 		}
@@ -210,9 +213,11 @@ event in Airlock_Scene
 		}
 		else {
 			"\nMcGrathley presses the red button on the airlock panel.\n"
-			"Alexandra's eyes go wide, she tries to get to her feet, but there is nothing she can do. She is flung into the dark void of outerspace. Her eyes go bloodshot,
+
+			"Alexandra's eyes go wide, she tries to get to her feet, but there is nothing she can do. She is flung into the dark void of outer space. Her eyes go bloodshot,
 			her skin starts to swell. Mr Mailx is also ejected and bounces once into Alexandra, sending them both spinning. Alexandra manages to extend one useless hand
 			towards us before the difference in pressure has sent them spiraling so far away from us that they are mere specs reflecting the dim light of the sun.\n"
+
 			"\"You two!\" screams McGrathley. \"Into the airlock! Oh - and get that one behind the crates!\" Oh no no no the werewolf can see me, it's coming, how
 			can anything leap that far and that fast, no! No!!"
 
@@ -249,7 +254,7 @@ event in Finnian_Lands_Ship
 
 		"\"Where is it? asks Finnian.\n"
 
-		"\"You're the navigator, what do you mean 'Where is it?' Don't you know?\" she says.\n"
+		"\"You're the pilot, what do you mean 'Where is it?' Don't you know?\" she says.\n"
 
 		"\"I don't just have the positions of all the moons of Jupiter memorized!\" he says.\n"
 
@@ -475,7 +480,7 @@ event in JaRod_Hallucinates
 		"\"Ja'Rod,\" he says. \"My name is Doctor Milad Nahas.\" He is speaking really slow in perfect Americanized English, which he doesn't really need to do. \"You ingested too
 		much hot sauce, okay? I'm going to ask you some questions to see if we need to stay here or not. Can you tell me your favorite game?\"\n"
 		"\"Yes, it's Mouse Trap,\" I say.\n"
-		"The Doctor gives a concern look to the Captain. He looks back to me. \"Okay, Ja'Rod,\" he says, speaking even more slowly. \"I'm afraid you may be currently suffering from temporary
+		"The Doctor gives a concerned look to the Captain. He looks back to me. \"Okay, Ja'Rod,\" he says, speaking even more slowly. \"I'm afraid you may be currently suffering from temporary
 		yet severe mental retardation --\"\n"
 		"\"It's all we have on the ship!\" exclaims the Captain. \"He's fine, he's no different than any other member of my crew. Look, I have no idea what the criminal that was on my ship
 		did to my life support tech, but as far as I know she's dying in --\" I mime like I am shivering to try to guide the Captain through her speech -- \"Dying in my airlock that was

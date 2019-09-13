@@ -389,7 +389,8 @@ article "the"
 	{
 		"There was a wave of retro nostalgia that hit laser weapons about a decade ago. This pistol looks like a atom-for-atom
 		reconstruction of a French Navy pistol, with a curved walnut stock, brass fittings. Somewhere inside are the electronic
-		components allowing it to produce steel-melting laser beams."
+		components allowing it to produce steel-melting laser beams. They aren't the greatest build in terms of quality, the
+		cooldown period is a really, really long time."
 	}
 	before
 	{
@@ -405,6 +406,25 @@ article "the"
 			{
 				GameEvents[25] = 1
 				"\n\"Oh my, be careful with that, please, Ja'Rod,\" says the Captain."
+			}
+		}
+		object DoGet
+		{
+			if self in Captain
+			{
+				"I can't possibly take it from her."
+			}
+			elseif self in Finnian
+			{
+				"I don't feel right just taking it from him."
+			}
+			elseif self in player
+			{
+				"I already have it!"
+			}
+			else {
+				"I thought I already had it."
+				move self to player
 			}
 		}
 	}
@@ -507,6 +527,20 @@ scenery airlockHull "hull"
 				"Well, I can't shoot it again."
 			}
 		}
+	}
+}
+
+scenery hallway03Pallets "pallets"
+{
+	noun "pallets" "pallet" "package" "packages"
+	article "the"
+	is plural
+	in Hallway03
+
+	long_desc
+	{
+		"Those aren't important. Those aren't important to me, I mean. I don't work with the merchandise we might be carting around.
+		I'm an X-ray guy."
 	}
 }
 
@@ -773,7 +807,7 @@ scenery crowd "crowd"
 
 object fruitTray "fruit tray"
 {
-	nouns "tray"
+	nouns "tray" "caddy"
 	adjective "fruit"
 	article "the"
 	in HotSauceBar
@@ -786,7 +820,8 @@ object fruitTray "fruit tray"
 
 	long_desc
 	{
-		"I am not sure what the proper name for this thing is, it's probably not fruit tray, but that's what I am going to go with, I guess. "
+		"I am not completely sure what the proper name for this thing is, it's probably not fruit tray.  Maybe fruit caddy? Perhaps the name
+		is regional, like water fountain or bubbler."
 	}
 	before
 	{
@@ -874,7 +909,7 @@ object knife "knife"
 object blairsUltraDeath "Blair's Ultra Death"
 {
 	nouns "ultra" "death" "sauce" "bottle"
-	adjective "blair" "blair's" "hot" "death"
+	adjective "blair" "blair's" "hot" "death" "ultra" "sauce"
 	article "the"
 	is openable, open
 	in HotSauceBar

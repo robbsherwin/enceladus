@@ -71,8 +71,9 @@ verb "scan"
   * DoScan
   * "room"/"location"/"area" DoScan
 
-verb "shoot"
+verb "shoot","fire","blast"
   * DoVague
+  * "at" object DoShoot
   * object DoShoot
 
 verb "change"
@@ -206,7 +207,7 @@ routine init
 
 	Activate(CaptainIdle)
 
-  !MovePlayer(Mine)
+  !MovePlayer(HotSauceBar)
   MovePlayer(TheCaptainsQuarters)
 
 	old_screenwidth = display.screenwidth

@@ -8,23 +8,34 @@ Enceladus Debug and Bug Sheet
 6. Maybe include a window in the Captain's quarters so you don't explicitly need to see you're on a spaceship headed to Saturn? A sassy or quirky "Remember when Pluto was a planet? Because that's what's flying by... What a crock science is."
 7. "take off x-ray specs" doesn't work?
 8. command "put down x-ray specs" doesn't work after explicitly being told to put them down by the Captain and Finnian.
-9.  "She unboxes it, avoids cursing at the tight grip plastic keeping the pistol in place and inserts the battery into the grip with a solid 'twack.'" Shouldn't that be "avoids cursing at the tight plastic grip that keeps the pistol in place..."
-10. Should 'twack' be 'thwack' ?
+9.  "She unboxes it, avoids cursing at the tight grip plastic keeping the pistol in place and inserts the battery into
+the grip with a solid 'twack.'" Shouldn't that be "avoids cursing at the tight plastic grip that keeps the pistol in place..."
 11. No additional pistol dialogue after it's handed to you and you can more closely examine it? Maybe some initials poorly carved or you get to see how shoddy it is?
 12. "robot that Grimes got working." Maybe "that Grimes managed to scrounge enough parts for to resemble a functioning robot." Feels like a opportunity for more colorful language.
-
 13. "(I'm hidden behind some cargo crates, but nobody else is.)" Maybe "(I'm shoved up against the most slapped together crates, while everybody else doesn't have to endure the smell of whatever goo we're transporting)"
 14. "- each a Raspberry Pi board" maybe a bit too modern for a futuristic space ship, werewolf fighting, space pirate invading, text adventure?
 15. ""At transmission times of light in a vacuum out here in the middle of nowhere" needs a comma (,) after nowhere.
-16. Neither "fire at hull" nor "attack hull" work after the Captain gives her signal.
-17. The transition from the hull and sending the Werewolf and pirate out to space, then to the bridge was jarring and didn't relaly jive very well. It just seemed sudden and there were few environmental cues to let the player wrap their head around it.
+
+17. The transition from the hull and sending the Werewolf and pirate out to space, then to the bridge was jarring and didn't relaly jive very well. It just
+ seemed sudden and there were few environmental cues to let the player wrap their head around it.
 18. More banter (talk to Captain, Finnian, etc.) on the way from the ship to the town would be nice.
 19. Sitting by itself on the bar is a bottle of Blair's Ultra Death sauce.
+20. "many people they've made puke up." Throw up? Vomit? I've never heard nor used "puke up" in my life.
+21. The Blair's Ultra Death puzzle feels a tad too obtuse, like the oyster one from Cryptozookeeper.
+
+23. "as I stagger to my feet. I get rid of some stuff I don't need." There has to be a better, more interesting way to say "I threw up again?"
+
+
+
+Corrected
+
+10. Should 'twack' be 'thwack' ?
+
+16. Neither "fire at hull" nor "attack hull" work after the Captain gives her signal.
+
 >drink Ultra Death
 I haven't encountered any "ultra death".  (If you're sure you need to refer to that, try putting it another way.)
 >look at Blair's Ultra Death sauce
 I haven't encountered any "blair's ultra death sauce".  (If you're sure you need to refer to that, try putting it another way.)
-20. "many people they've made puke up." Throw up? Vomit? I've never heard nor used "puke up" in my life.
-21. The Blair's Ultra Death puzzle feels a tad too obtuse, like the oyster one from Cryptozookeeper.
+
 22. "The Doctor gives a concern look to the Captain." Concerned
-23. "as I stagger to my feet. I get rid of some stuff I don't need." There has to be a better, more interesting way to say "I threw up again?"
