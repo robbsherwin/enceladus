@@ -296,7 +296,8 @@ talkValue 0
 				self.talkValue = 999
 
 				"\"You seem like you're feeling better!\"\n"
-				"\"Sometimes the old medicine works best, eh?\" she says, tipping the bottle of vodka to you."
+				"\"Sometimes the old medicine works best, eh?\" she says, tipping the bottle of vodka to you. \"Although seeing the master plan to keep me alive
+				was to put me in an airlock and close the doors, I'm never doubting how important my job in Life Support Tech is ever again.\""
 			}
 			case else
 			{
