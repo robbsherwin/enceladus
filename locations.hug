@@ -447,15 +447,24 @@ room OutsideTheShip "Outside the Plagoo"
 
       "Finnian looks around before looking back toward the group. He changed before we came down, now wearing a real Lynx fur coat, a white dunce cap and new
       old stock original Air Jordans. \"Crap, Captain, it's an ice planet!\"\n"
-      "She nods at that. \"Intelligence indicates that there's a small town a kilometer east of here.\"\n"
+
+      "She nods at that. \"Intelligence indicates that there's a small town a kilometer east of here. There's a mine, which we need, and a kind of bar.\"\n"
+
       "\"What's your source of that intelligence?\" asks Finnian.\n"
+
       "The Captain grits her teeth. \"I consulted Wikipedia. Okay? Is that all right?\"\n"
+
       "\"No it's not all right!\" says Finnian. \"Wikipedia's moderator and administration system is filled with duplicitous losers that turned the
       exchange of free information into a political battle where scumbags scuttle into tribes to spread their lies. Mr Mailx?\"\n"
+
       "\"Yes,\" he says.\n"
+
       "\"Delete the Wikipedia page on Enceladus and replace it with a 10K image of a giant tarantula.\"\n"
+
       "\"Finnian, stop,\" says the Captain.\n"
+
       "\"Done,\" says the robot, presumably having fired off some API calls.\n"
+
       "Finnian laughs. It's a dry, hollow one. \"Seventy one minutes from now, good luck to any kid trying to do a book report on Jovian moons. Cite
       that revision in your bibliography, you sniveling Webelo punks.\"\n"
 
@@ -477,6 +486,8 @@ room OutsideTheShip "Outside the Plagoo"
         remove MiladNahas
         move starPistol to Captain
         starPistol is hidden
+
+        move handheldScanner to McGrathley
 
         "McGrathley and the werewolf are here, it appears that they are trying to hack into the boarding ramp of the Plagoo in order to board it.\n"
 

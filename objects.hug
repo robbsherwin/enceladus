@@ -1404,3 +1404,24 @@ scenery mouseTrap "Mouse Trap"
 		maybe a double."
 	}
 }
+
+object handheldScanner "scanner"
+{
+	nouns "scanner"
+	adjective "handheld"
+	article "the"
+	is hidden
+
+	long_desc
+	{
+		"It's just a little handheld computer tablet with some listening mods, nothing really out of the ordinary. I assume McGrathley was trying to use it to
+		get into the ship by sending off the wireless key to bring the boarding ramp down."
+	}
+	before
+	{
+		object DoGet
+		{
+			"I am not close enough to get it."
+		}
+	}
+}

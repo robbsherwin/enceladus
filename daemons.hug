@@ -245,7 +245,8 @@ event in Finnian_Lands_Ship
 
 		"\nThe Captain joins the rest of us on the bridge. She sits in the command chair.\n"
 		"\"How is Alexandra?\" I ask, taking over the scanning station.\n"
-		"\"She needs a doctor,\" says the Captain. \"Take us down,\" she says to Finnian.\n"
+		"\"She needs a doctor,\" says the Captain. \"Unfortunately, we don't have a safety valve when the Life Support Tech needs life support.\" She looks over at
+		Finnian. \"Take us down,\" she says.\n"
 		"\"Hmm?\" he says, having not paid attention."
 	}
 	case 3
@@ -281,6 +282,7 @@ event in Finnian_Lands_Ship
 		MusicListing = 9
 
 		"\nFinnian sets the Plagoo down on Enceladus. A rather smooth landing, considering the hull breach that is plugged by the robot.\n"
+		
 		"\"Ja'Rod, can you please pull Mr Mailx out of the hole in the ship and get Alexandra to the airlock, where it will be warm? Finnian
 		and I will meet you outside where we can discuss the plan thereafter.\" I nod. The Captain seems to be all business, Finnian's
 		joke(?) about the stars didn't seem to cheer her up. She gets like this now, pretty morose at times.\n"
