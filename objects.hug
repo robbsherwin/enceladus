@@ -495,36 +495,44 @@ scenery airlockHull "hull"
 	{
 		object DoShoot
 		{
-			if GameEvents[10] = 0
+
+			if GameEvents[9] = 0
 			{
-				GameEvents[10] = 1
-
-				"I emerge from behind some crates and take aim at the section of the hull behind McGrathley and the werewolf. I am shaking
-				a bit, but luckily you don't actually have to be that accurate when blowing a hole in your ship. The star pistol takes a second
-				 to warm up after I squeeze the trigger. A ton of ping there. The werewolf probably had enough time to jump
-				over the crates and rip out my neck, but I think it was about to bring up the fact that McGrathley got a spacesuit
-				for himself and not it. Regardless - oh, there it goes.\n"
-				"There is a horrible screeching sound as the air and everything else nearby starts to get sucked out by the small hole.\n"
-				"The werewolf never had a chance. Being closest, it gets fired through and sent flying into the nothingness of space. McGrathley
-				maybe had an extra half-second, but he was next. He definitely lowered his helmet before he was ejected.\n"
-				"\"Don't body shame me!\" shouts Finnian towards our ejected interlopers while all this is going on.\n"
-				"I then comprehend the Captain's plan - Mr Mailx was next, but was too large for the pistol's hole. He instead plugged
-				the hole like a Dutch boy's finger. It was all over before Alexandra, clearly injured, even really moved.\n"
-				"\"Finnian, Ja'Rod,\" starts the Captain, \"Get over to the bridge, we're going to perform an emergency landing.\"\n"
-				"\"Aye-aye,\" I say and get going. Fin does the same."
-
-				"\n[Strike any key to continue]"
-
-				pause
-
-				MovePlayer(Bridge)
-				move Captain to Bridge
-				move Finnian to Bridge
-				remove werewolf
-				remove McGrathley
+				"I should wait until the Captain gives me a sign!"
 			}
-			else {
-				"Well, I can't shoot it again."
+			else
+			{
+				if GameEvents[10] = 0
+				{
+					GameEvents[10] = 1
+
+					"I emerge from behind some crates and take aim at the section of the hull behind McGrathley and the werewolf. I am shaking
+					a bit, but luckily you don't actually have to be that accurate when blowing a hole in your ship. The star pistol takes a second
+					 to warm up after I squeeze the trigger. A ton of ping there. The werewolf probably had enough time to jump
+					over the crates and rip out my neck, but I think it was about to bring up the fact that McGrathley got a spacesuit
+					for himself and not it. Regardless - oh, there it goes.\n"
+					"There is a horrible screeching sound as the air and everything else nearby starts to get sucked out by the small hole.\n"
+					"The werewolf never had a chance. Being closest, it gets fired through and sent flying into the nothingness of space. McGrathley
+					maybe had an extra half-second, but he was next. He definitely lowered his helmet before he was ejected.\n"
+					"\"Don't body shame me!\" shouts Finnian towards our ejected interlopers while all this is going on.\n"
+					"I then comprehend the Captain's plan - Mr Mailx was next, but was too large for the pistol's hole. He instead plugged
+					the hole like a Dutch boy's finger. It was all over before Alexandra, clearly injured, even really moved.\n"
+					"\"Finnian, Ja'Rod,\" starts the Captain, \"Get over to the bridge, we're going to perform an emergency landing.\"\n"
+					"\"Aye-aye,\" I say and get going. Fin does the same."
+
+					"\n[Strike any key to continue]"
+
+					pause
+
+					MovePlayer(Bridge)
+					move Captain to Bridge
+					move Finnian to Bridge
+					remove werewolf
+					remove McGrathley
+				}
+				else {
+					"Well, I can't shoot it again."
+				}
 			}
 		}
 	}
