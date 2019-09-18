@@ -706,6 +706,26 @@ scenery navigationControls "navigation controls"
 	}
 }
 
+scenery commPanel "inter-communications panel"
+{
+	noun "panel"
+	adjective "inter" "communications" "inter-communications" "intercommunications"
+	article "the"
+	in Bridge 
+
+	long_desc
+	{
+		"This is kind of a speaker placed against the ceiling of the Bridge. Mr Mailx can interface with it at any time.
+		I should be able to as well, but I misplaced my communicator a while ago and I haven't filled out the form in
+		triplicate to get another one. Which is fine, after a werewolf coming onto the ship I don't plan on
+		being alone for the near future!"
+	}
+}
+
+inter-communications panel
+
+
+
 scenery captainsChair "Captain's chair"
 {
 	noun "chair"
