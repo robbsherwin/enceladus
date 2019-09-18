@@ -38,7 +38,7 @@ event in FinnianEnters
 		"\nSomeone enters the quarters, but it's not a werewolf, hell-bent on consuming us all. It's just Finnian, the pilot. \n"
 
 		"\"Dun-dun, dun-dun,\" he sings, doing the 'Werewolves of London' dance with his hands, giving us his profile on each side, mouth wide open to show his
-		incisors. The song has been covered every few years since it came out so we know itm but neither the Captain nor myself react to this.
+		incisors. The song has been covered every few years since it came out so we know it, but neither the Captain nor myself react to this.
 		\"Hey Cappie, there's a werewolf on the ship. You banned us from wearing fur, otherwise I would have lasered it, pow!, between the fangs and made a
 		coat out of the part where it didn't ink itself.\"\n"
 
@@ -282,7 +282,7 @@ event in Finnian_Lands_Ship
 		MusicListing = 9
 
 		"\nFinnian sets the Plagoo down on Enceladus. A rather smooth landing, considering the hull breach that is plugged by the robot.\n"
-		
+
 		"\"Ja'Rod, can you please pull Mr Mailx out of the hole in the ship and get Alexandra to the airlock, where it will be warm? Finnian
 		and I will meet you outside where we can discuss the plan thereafter.\" I nod. The Captain seems to be all business, Finnian's
 		joke(?) about the stars didn't seem to cheer her up. She gets like this now, pretty morose at times.\n"
