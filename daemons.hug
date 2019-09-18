@@ -508,6 +508,8 @@ event in Cave_In
 	select(self.timer)
 	case 2
 	{
+		GameEvents[31] = 1 !// Did the cave in happen yet?
+		
 		move iceBoulder to location
 
 		"\nI can hear \Isomething\i going on up top, I think we all can. But we're down here in the depths of the mine and can't really get back up. The

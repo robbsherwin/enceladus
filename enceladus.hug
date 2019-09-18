@@ -154,6 +154,7 @@ array GameEvents[MAXGAMEEVENTS]
 ! GameEvents[28] = What is Finnian wearing?
 ! GameEvents[29] = For the Captain's description
 ! GameEvents[30] = Did Ja'Rod scan the room with the boulder in it
+! GameEvents[31] = Did the Cave-In happen yet?
 
 
 global alexandraInAirlock = false
@@ -207,7 +208,7 @@ routine init
 
 	Activate(CaptainIdle)
 
-  !MovePlayer(HotSauceBar)
+  !MovePlayer(mineLevelThree)
   MovePlayer(TheCaptainsQuarters)
 
 	old_screenwidth = display.screenwidth

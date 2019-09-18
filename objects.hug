@@ -711,7 +711,7 @@ scenery commPanel "inter-communications panel"
 	noun "panel"
 	adjective "inter" "communications" "inter-communications" "intercommunications"
 	article "the"
-	in Bridge 
+	in Bridge
 
 	long_desc
 	{
@@ -721,10 +721,6 @@ scenery commPanel "inter-communications panel"
 		being alone for the near future!"
 	}
 }
-
-inter-communications panel
-
-
 
 scenery captainsChair "Captain's chair"
 {

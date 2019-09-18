@@ -527,7 +527,7 @@ room SnowyPath01 "Snowy Path"
       "\"... I'm just saying, have you ever tried to edit something on it? No? Oh, hey Ja'Rod,\" says Finnian.\n"
       "\"Our plan is going to be this,\" says the Captain. \"There's a hot sauce bar up ahead. To the east. We ask around to find a doctor. Since
       we also need to repair the ship, let's see if we can find a mine.\"\n"
-      "We all nod at this except for Mr Mail, who just keeps treading east with a low whir."
+      "We all nod at this except for Mr Mailx, who just keeps treading east with a low whir."
     }
     else {
       "I am on a snowy path towards civilization on the moon Enceladus. My goal from here is to go east and join up with everyone."
@@ -855,6 +855,13 @@ long_desc
     is very compact and hard. Igloo-like, maybe? We can travel downwards if we wanted to."
   }
 }
+before
+{
+  location DoExits
+  {
+    "We can go down into the mine ... and we can go south back to town."
+  }
+}
 
 s_to { return mineDoor}
 d_to {
@@ -886,6 +893,13 @@ room mineLevelTwo "Mine Level Two"
     if self is not visited
     {
       "\nThe Captain continues by going down."
+    }
+  }
+  before
+  {
+    location DoExits
+    {
+      "We can only go down from here."
     }
   }
 
@@ -960,33 +974,39 @@ room bottomOfMine "Bottom of Mine"
 
 xrayDescription {
 
+  if GameEvents[31] = 0 !// Did the cave-in happen yet?
+  {
+    "I don't really get anything back and the moment that is interesting. Not right now, anyway."
+
+  }
+  else {
     if iceBoulder in location
     {
       "I take a quick scan of the area. This boulder is definitely pure ice, nothing else to it as far as I can tell.
       The only issue is that the ice is harder than anything I can imagine and we have a giant chunk of it in front of us."
+
+      if GameEvents[30] = 0
+      {
+        GameEvents[30] = 1
+        Mailx.talkValue = 2 !// "I should talk to the Captain first."
+        Captain.talkValue = 1
+
+        move silverOre to location
+
+        "\nI... okay, I do find something interesting in the mine itself, however, a vein of silver ore about the size of a baseball, just
+        half an inch from the side of the northern wall. Covered in much more supple icy snow, I dig at it until it almost pops
+        out and ends up on the ground. I pick it up. I have no idea if the Captain is aware of what I just did, I should definitely talk
+        to her about it."
+
+        move silverOre to player
+
+      }
     }
-
-    if GameEvents[30] = 0
-    {
-      GameEvents[30] = 1
-      Mailx.talkValue = 2 !// "I should talk to the Captain first."
-      Captain.talkValue = 1
-
-      move silverOre to location
-
-      "\nI... okay, I do find something interesting in the mine itself, however, a vein of silver ore about the size of a baseball, just
-      half an inch from the side of the northern wall. Covered in much more supple icy snow, I dig at it until it almost pops
-      out and ends up on the ground. I pick it up. I have no idea if the Captain is aware of what I just did, I should definitely talk
-      to her about it."
-
-      move silverOre to player
-    }
-
-    if iceBoulder not in location and GameEvents[30] = 1
-    {
-      "I don't get anything interesting."
+    else {
+      "I don't get anything interesting in the scan."
     }
   }
+}
 
 before
 {

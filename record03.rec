@@ -47,6 +47,8 @@ w
 scan
 lower my specs
 scan
+lower my specs
+scan
 e
 e
 exits
@@ -75,19 +77,29 @@ z
 n
 look
 n
+exits
 n
+exits
 d
+exits
+lower my specs
 talk to captain
 talk to mailx
 d
+exits
 talk to mailx
 talk to captain
 x cart
 e
 scan
 lower my specs
+scan
+lower my specs
+scan
+w
 talk to captain
 talk to mailx
+exits
 scan
 i
 x ore
