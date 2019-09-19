@@ -331,7 +331,7 @@ conscious
 
 player_character JaRod "I"
 {
-pronoun "I" "me" "my" "myself"
+pronoun "I" "me" "my"
 nouns "jarod" "me" "self" "ja'rod" "butler"
 adjectives "ja'rod" "jarod"
 
