@@ -12971,48 +12971,7 @@ replace DoWait(count)                   ! count argument is from DoWaitUntil
 	return true
 }
 
-!----------------------------------------------------------------------------
-!* REPLACED VERBSTUB.H ROUTINES
-!----------------------------------------------------------------------------
-#ifclear _VERBSTUB_H
-! Roody's note: SEARCH is a pretty common verb. Roodylib adds it regardless.
-routine DoSearch
-{}
-#endif
-! Roody's note: Fixes some pronoun stuff. Suggested by Mike Snyder.
-replace DoSearch
-{
-	if object = player
-	{
-		"Search ";
-		The(player)
-		" indeed."
-	}
-	elseif object is container and child(object)
-		Perform(&DoLookIn, object)
-	elseif object is living
-	{
-		print CThe(object); MatchPlural(object, "doesn't", "don't");
-		" let ";
-		The(player)
-		if object.pronouns
-		{
-			" search ";
-			if object.pronouns #2
-				print object.pronouns #2;
-			else
-				print object.pronoun;
-		}
-		print "."
-	}
-	else
-	{
-		CThe(player)
-		MatchPlural(player, "doesn't", "don't")
-		" find anything new."
-	}
-	return true
-}
+
 
 ! Roody's note: Applies "DoListen" logic to DoSmell. Makes it a standard verb.
 #ifclear _VERBSTUB_H

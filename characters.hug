@@ -166,7 +166,7 @@ npc Finnian "Finnian"
 charnumber 3
 nouns "finnian""o'connell" "pilot"
 adjectives "finnian"
-is neutral
+is neutral, living
 talkValue 1
 
 	long_desc
@@ -250,7 +250,7 @@ npc Alexandra	"Alexandra"
 nouns "alexandra" "mays"
 adjective "alexandra"
 charnumber 5
-is female
+is female, living
 talkValue 0
 
 	long_desc
@@ -313,6 +313,7 @@ nouns "mailx" "robot"
 adjective "mr"
 charnumber 6
 talkValue 0
+is living
 
 	long_desc
 	{
@@ -430,7 +431,7 @@ nouns "werewolf" "wolf"
 adjectives "man"
 article "the"
 charnumber 7
-is known
+is known, living
 in BeforeTheAirlock
 
 	long_desc
@@ -457,6 +458,7 @@ nouns "milad" "nahas" "doctor"
 adjectives "doctor" "milad"
 charnumber 8
 talkValue 0
+is living
 
 	long_desc
 	{
@@ -496,6 +498,7 @@ adjective "riggs"
 in BeforeTheAirlock
 charnumber 9
 talkValue 0
+is living
 
 	long_desc
 	{
@@ -519,6 +522,7 @@ npc Bouncer "bouncer"
 	is hidden
 	charnumber 10
 	talkValue 1
+	is living
 
 	long_desc
 	{
@@ -557,6 +561,7 @@ npc Bartender "bartender"
 	in HotSauceBar
 	charnumber 11
 	talkValue 1
+	is living
 
 	long_desc
 	{
