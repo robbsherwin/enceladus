@@ -369,14 +369,10 @@ verb "drink", "sip", "swallow"
 	* object                                                DoDrink
 
 verb "hit", "strike", "break", "attack", "whack", "beat", \
-	"punch", "kick", "clobber"
+	"punch", "kick", "clobber", "kill"
 	*                                                       DoVague
 	* object "with"/"using" held                            DoHit
 	* object                                                DoHit
-
-verb "kill", "murder", "fight"
-	*                                                       DoVague
-	* living                                                DoHit
 
 
 !

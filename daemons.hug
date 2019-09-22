@@ -509,7 +509,7 @@ event in Cave_In
 	case 2
 	{
 		GameEvents[31] = 1 !// Did the cave in happen yet?
-		
+
 		move iceBoulder to location
 
 		"\nI can hear \Isomething\i going on up top, I think we all can. But we're down here in the depths of the mine and can't really get back up. The
@@ -597,9 +597,11 @@ event in Captain_Shoots_McGrathley
 		}
 		else {
 
-			"\nAfter being targeted twice, the Captain flips the safety on the star pistol, which I didn't even know it had, steadies
-			herself and fires a single shot. The Captain, my hero, quietly and without fanfare hits McGrathley right between the eyes.
-			His body looks as if possessed by a scarlet ghost for two seconds before disintegrating into a sticky pile of ash.\n"
+			"\nAfter being targeted twice, to say nothing of having her life and the life of her crew threatened by this unhinged
+			lunatic, the Captain flips the cooldown override on the star pistol, which I didn't even know it had, steadies herself
+			and fires a single shot. The Captain, my hero, quietly and without fanfare hits McGrathley right between the eyes.\n"
+
+			"His body freezes in mid-action, as if possessed by a scarlet ghost, and then disintegrates into a sticky pile of ash.\n"
 
 			"Finnian lowers the boarding ramp of the Plagoo with enough force to cause McGrathley's ashes to scatter into chunks
 			upon the Enceladean surface.\n"

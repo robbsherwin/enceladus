@@ -342,10 +342,21 @@ is living
 					"I count to three, kind of looking the power LEDs that make up his eyes in good eye contact and grip his wispy metal fingers. On three
 					I yank him out and the cases that make up his backside pop out.\n"
 					"\"You okay, man?\" I ask him.\n"
-					"\"Will. Run. Diagnostic.\" he says. I nod. \"Alexandra, we gotta get you over to the airlock, okay? It's going to get really cold in a bit
-					with that giant hole in the hull, but in the airlock we can at least control the temperature there.\"\n"
-					"She doesn't say anything but grimaces a nod to let me know she understood. She's holding her hand against her spleen. Or her liver? Her kidneys
-					maybe. I can't tell how bruised she is, but it's enough to keep her laying on the floor."
+					"\"Will. Run. Diagnostic.\" he says. I nod. " ;
+
+					if alexandraInAirlock = false
+					{
+						"\"Alexandra, we gotta get you over to the airlock, okay? It's going to get really cold in a bit
+						with that giant hole in the hull, but in the airlock we can at least control the temperature there.\"\n"
+
+						"She doesn't say anything but grimaces a nod to let me know she understood. She's holding her hand against her spleen. Or her liver? Her kidneys
+						maybe. I can't tell how bruised she is, but it's enough to keep her laying on the floor."
+					}
+					else {
+						"I sort of wait a little bit to see if is going to tell me if his diagnostic passed or not, but it occurs to me that it could days or hours
+						to run and I can't do anything to help him if it fails. We had his behind exposed to the vacuum of space, I'd expect a few failing
+						QA tests. Anyway, he's out now."
+					}
 
 					mailxIsPulled = true
 				}
@@ -450,6 +461,25 @@ in BeforeTheAirlock
 		"Its eyes look a bit messed up, they are bloodshot, cells just bursting with blood, and I don't think it
 		was picked out by him when he did this to himself."
 	}
+	before
+	{
+		object DoHit
+		{
+			if location = OutsideTheShip
+			{
+				if xobject = silverOre
+				{
+					KillTheWerewolf()
+				}
+				else {
+					"Sure, but with what?"
+				}
+			}
+			else {
+				"It's too deadly for me to attack directly!"
+			}
+		}
+	}
 }
 
 npc MiladNahas "Doctor Nahas"
@@ -511,6 +541,25 @@ is living
 		}
 
 		"has something stupider on their face than I do."
+	}
+	before
+	{
+		object DoHit
+		{
+			if location = OutsideTheShip
+			{
+				if werewolf is living
+				{
+					"I should take care of the werewolf first!"
+				}
+				else {
+					"I can't really do anything to him directly, but I start waving my hands around to give him something other than the Captain to aim at!"
+				}
+			}
+			else {
+				"He's much too powerful for me to take on by myself in like hand to hand combat! Plus I don't know any hand to hand combat!"
+			}
+		}
 	}
 }
 

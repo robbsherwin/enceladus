@@ -125,15 +125,46 @@ Scene Seven: Hot Sauce Bar
 
 Scene Eight: The Mine
 
+  With the key given to you by the Captain before leaving the Hot Sauce
+  Bar, you can get into the Mine along with the Captain and Mr Mailx by leaving
+  the bar and going north.
+
+  Entering the mine, Mailx will "leave" you for a bit, so go
+  >down
+  a few times to find him.
+
+  At the bottom of the mine is more room to the east.
+
+  >east
+
+  After one turn there will be a cave-in. You'll want to
+  >scan
+  >talk to captain
+  >talk to mailx
+  >west
+  >enter mine cart
+
+  Exit the mine by going south. The Captain will make the snowmobile
+  workable. Go ahead and
+
+  >enter snowmobile
+
 Scene Nine: Outside the Plagoo
+
+  You should be able to take out the werewolf from here.
+  >throw silver at werewolf
+
+  And the Captain will take it from here...
 
 Scene Ten: All Good Things
 
-  You can talk to everyone, and then
+  Inside the Rec Room of the Plagoo, you can talk to everyone
+  if you want, and then
   >drink gintata
 
 I hope you had some fun, let me know what you think if you made it this
 far with the game!
 
 Robb Sherwin
+beaver@zombieworld.com
 September 28th, 2019

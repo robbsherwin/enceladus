@@ -1085,20 +1085,7 @@ article "the"
 			select(xobject)
 			case(werewolf)
 			{
-				!// Kill the werewolf
-				"I successfully strike the werewolf in the chest with the silver. The thing about the plastic genetic surgery that these people sign up for is that in
-				order for the Live Action Role Playing to be accurate, they give themselves the weaknesses of the legendary creatures they want to be
-				as well as the strengths.\n"
-
-				"The chunk of silver ore goes right through the sternum of the werewolf, passing through like a metal skewer through marshmallow. The ore
-				isn't even particularly slowed down by the werewolf's flesh and strikes the Plagoo, falling to the ground.\n"
-
-				"The werewolf falls over, dead."
-
-				remove silverOre
-				werewolf is not living
-
-				GameEvents[21] = 1
+				KillTheWerewolf()
 			}
 			case(McGrathley)
 			{
