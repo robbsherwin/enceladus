@@ -111,8 +111,8 @@ xrayDescription {
         Deactivate(Hallyway03_Scan_Checker)
 
         "I can see ahead that there's actually two people waiting for us in the next area.\n"
-        "\"Captain, I'm seeing two unknown forms and what I think is Alexandra.\" Alexandra is our naviagor and the life support tech. \"Alexandra
-        seems to be in the fetal position next to the air lock. One of the forms definitely looks like the silouette of a werewolf. The other
+        "\"Captain, I'm seeing two unknown forms and what I think is Alexandra.\" Alexandra is our life support tech. \"Alexandra
+        seems to be in the fetal position next to the air lock. One of the forms definitely looks like the silhouette of a werewolf. The other
         form standing next to it is taller, has lead boots. No weapons that I can detect. I also think that Grimes's robot is there.\""
 
         if GameEvents[8] = 0
@@ -739,7 +739,7 @@ long_desc
     "\"You can't bring that thing in here,\" says the bouncer, but he is pointing to Finnian. Mr Mailx turns his entire body to face Finnian, which is the creepiest thing ever because
     of how long it takes him to do that on tread.\n"
     "\"That's my pilot,\" says the Captain.\n"
-    "\"There's one room and a bathroom in here, you'll be able make your way around just fine,\" says the bouncer. \"Get that cap out of here before I throw you all out myself.\"\n"
+    "\"There's one room and a bathroom in here, you'll be able to make your way around just fine,\" says the bouncer. \"Get that cap out of here before I throw you all out myself.\"\n"
     "\"Oh, it's the cap?\" asks Finnian. \"This thing is the height of fashion far back around the outer moons of Saturn.\" The Captain looks skyward.\n"
     "\"This is a moon of Saturn, dummy,\" says the bouncer.\n"
     "Finnian looks genuinely surprised at that revelation. \"Huh,\" he says.\n"
