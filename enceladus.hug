@@ -15,7 +15,7 @@
 
 ! Uncomment the following to include verb stub routines:
 #set VERBSTUBS
-#set USE_VEHICLES
+!#set USE_VEHICLES
 #set NEW_DESCRIBEPLACE
 
 #ifset DEBUG
@@ -34,8 +34,21 @@ $MAXROUTINES=1024
 verb "about"
   * DoAbout
 
+verb "drive"
+  * DoVague
+  * object DoEnter
+
+verb "hide"
+  * DoHide
+  * "behind" object DoHide
+  * object DoHide
+
 verb "exits"
   * DoExits
+
+verb "fix", "repair"
+  * DoVague
+  * object DoFix
 
 verb "lower"
   * DoVague
@@ -58,8 +71,9 @@ verb "scan"
   * DoScan
   * "room"/"location"/"area" DoScan
 
-verb "shoot"
+verb "shoot","fire","blast"
   * DoVague
+  * "at" object DoShoot
   * object DoShoot
 
 verb "change"
@@ -118,7 +132,7 @@ array GameEvents[MAXGAMEEVENTS]
 ! GameEvents[6] = Stops flavor text from being printed twice in Hallway03
 ! GameEvents[7] = Did Ja'Rod look after lowering his specs?
 ! GameEvents[8] = Did the Captain praise Ja'Rod for looking into the next room?
-! GameEvents[9] = Does the Captain want us to shoot the pistol?
+! GameEvents[9] = Does the Captain want us to shoot the hull with the pistol?
 ! GameEvents[10] = Did Ja'Rod shoot the pistol at the hull successfully?
 ! GameEvents[11] = Is this our second time in the Before the Airlock room?
 ! GameEvents[12] = Can Ja'Rod leave the Helm?
@@ -140,6 +154,7 @@ array GameEvents[MAXGAMEEVENTS]
 ! GameEvents[28] = What is Finnian wearing?
 ! GameEvents[29] = For the Captain's description
 ! GameEvents[30] = Did Ja'Rod scan the room with the boulder in it
+! GameEvents[31] = Did the Cave-In happen yet?
 
 
 global alexandraInAirlock = false
@@ -193,7 +208,7 @@ routine init
 
 	Activate(CaptainIdle)
 
-  !MovePlayer(Mine)
+  !MovePlayer(mineLevelThree)
   MovePlayer(TheCaptainsQuarters)
 
 	old_screenwidth = display.screenwidth
@@ -223,7 +238,6 @@ routine main
 		speaking = 0
 
 }
-
 
 character NPC
 {
@@ -316,7 +330,7 @@ conscious
 
 player_character JaRod "I"
 {
-pronoun "I" "me" "my" "myself"
+pronoun "I" "me" "my"
 nouns "jarod" "me" "self" "ja'rod" "butler"
 adjectives "ja'rod" "jarod"
 
@@ -350,17 +364,26 @@ extra_scenery "wall" "walls"
 		}
 		else
 		{
-			"The big thing with the Captain's living quarters is that it currently doesn't contain a werewolf trying to gorge
-			itself on any of the crew. That's fairly clutch. The Captain is wearing a long T-shirt, having just been roused out
-			of bed because it's the middle of the night.\n"
+      if jumpsuit in Captain
+      {
+        "The Captain's living quarters has two deep gray walls and two light blue walls. The walls jut out a bit along
+        the northern wall and there is a criss-cross pattern there. Warm lighting abounds, the general vibe
+        she has for her place is one of a cozy retreat for quiet contemplation, normally.\n"
 
-			"Her quarters contains a dresser, a computer and (along the starboard wall) her bed.\n"
+      }
+      else {
+        "The big thing with the Captain's living quarters is that it currently doesn't contain a werewolf trying to gorge
+  			itself on any of the crew. That's fairly clutch. The Captain is wearing a long T-shirt, having just been roused out
+  			of bed because it's the middle of the night.\n"
+      }
+
+			"Her quarters contains a dresser, a computer and (along the eastern wall) her bed.\n"
 
 			"(We're in a space ship ";
 			OneOf("cruising","flying","headed")
 			" toward Saturn.)\n"
 
-			"There is a door portside to a long hallway."
+			"There is a door facing west that leads to a long hallway."
 		}
 	}
   before

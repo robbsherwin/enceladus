@@ -1,0 +1,170 @@
+Enceladus Walkthrough
+
+Enceladus was created by Robb Sherwin for the 2019
+Interactive Fiction Competition. To play more of
+my games, please go to https://www.joltcountry.com/games
+
+For more info about the 2019 Interactive Fiction
+Competition, head to https://ifcomp.org
+
+Scene One: There's a Werewolf On the HMCS Plagoo!
+
+  The Captain has to get dressed, but she's in too much of a
+  sleep fog to do so. Can you think of a way to help out?
+  What is in the room that might aid such a thing?
+
+    >hit the dresser
+    >get the jumpsuit
+    >give jumpsuit to Captain
+
+  There are other people on the ship! Are they attempting to break
+  into the Captain's Quarters or are they your colleagues?
+
+    (You can check some of the scenery out and listen in, but
+    eventually the plan will be to open the door)
+
+    >open door
+
+    (And now the three of you will head west. Yes, it's a ship so it
+    would normally have ship-like directions, but geez, it's the comp.
+    The Plagoo has a red magnetic pole sticking out of it if that helps.
+    [It helps the author.])
+
+
+Scene Two: Creepy Hallways!
+
+  The Captain will formulate a plan as you all walk west to explore
+  the ship and try to catch the werewolf. The two commands to be
+  aware of are:
+
+    >lower my specs
+    (This will lower Ja'Rod's - your - X-ray specs. They go back up after
+    they are used because this is dangerous future technology. When you
+    want to perform a scan or are asked to perform a scan, just try:)
+
+    >scan
+    (If the specs are lowered, you'll be good. I bought real X-ray specs
+    from the back of a comic in preparation for this game and I'd like
+    to distinguish the ones in the game from the real ones in so
+    much as the ones in the game don't actively encourage real world
+    workplace sexual harassment. I'll explain this bit on Twitter after
+    the comp starts.)
+
+  Hopefully from here the way is clear, but we're going west a lot.
+
+
+Scene Three: The Airlock!
+
+  The Captain should have explained the plan. You should have a star pistol
+  and you'll automatically be hiding. She's gonna snap her fingers and then
+  hope you...
+
+  >shoot hull
+
+  That will clear out the room a little.
+
+
+Scene Four: Trashing Former Co-Workers With Current Co-Workers
+
+  The reason for this scene is to make some space jokes, don't get
+  too hung up on anything here. ROBB has to get his LITTLE JOKES in.
+  Eventually you - Ja'Rod - get asked to help out the two crewmembers
+  left behind. I think it's
+
+  >north
+
+  To leave the Bridge. Keep going that direction a bunch and you'll get
+  to the alternate entrance for the airlock.
+
+
+Scene Five: Aftermath of the Airlock
+
+  Okay, hopefully it makes sense conceptually what is going on. The Plagoo
+  has landed on Enceladus. Mr Mailx is plugging the hole of the airlock
+  and Alexandra has been wounded, but since there is not a doctor on the
+  ship it's unclear where. Enceladus is an ice moon, so it's going to
+  get really cold with a hole in the hull. You can talk to both of them
+  but here's the walkthrough bit:
+
+  >pull mailx
+  >press green button
+  >press red button
+  >press green button
+
+  With that in mind, everyone should be safe for a bit. Let's go back
+  to the Bridge
+
+  >south
+  >south
+  >south
+
+Scene Six: Enceladus Surface
+
+  We need a doctor and some metal for the ship. Let's find a doctor first.
+  >east
+  >east
+  >east
+
+Scene Seven: Hot Sauce Bar
+
+  >sit on stool
+
+  There's a couple things you can do here. You can get the bottle of hot sauce
+  and drink that.
+  >talk to bartender
+  >drink hot sauce
+
+  OR ... or you can open the fruit tray (my wife told me it is called
+  a fruit caddy, and I am intending to add that as a synonym, but if caddy
+  doesn't work, let's go with fruit tray) and open that up and take the knife
+  and
+  >cut myself with knife
+
+  The Captain will talk to the bartender to get the key to the mine while you
+  are being treated.
+
+Scene Eight: The Mine
+
+  With the key given to you by the Captain before leaving the Hot Sauce
+  Bar, you can get into the Mine along with the Captain and Mr Mailx by leaving
+  the bar and going north.
+
+  Entering the mine, Mailx will "leave" you for a bit, so go
+  >down
+  a few times to find him.
+
+  At the bottom of the mine is more room to the east.
+
+  >east
+
+  After one turn there will be a cave-in. You'll want to
+  >scan
+  >talk to captain
+  >talk to mailx
+  >west
+  >enter mine cart
+
+  Exit the mine by going south. The Captain will make the snowmobile
+  workable. Go ahead and
+
+  >enter snowmobile
+
+Scene Nine: Outside the Plagoo
+
+  You should be able to take out the werewolf from here.
+  >throw silver at werewolf
+
+  And the Captain will take it from here...
+
+Scene Ten: All Good Things
+
+  Inside the Rec Room of the Plagoo, you can talk to everyone
+  if you want, and then
+  >drink gintata
+
+I hope you had some fun, let me know what you think if you made it this
+far with the game!
+
+Robb Sherwin
+beaver@zombieworld.com
+September 28th, 2019

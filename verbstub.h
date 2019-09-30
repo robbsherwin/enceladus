@@ -275,35 +275,30 @@ routine DoYell
 
 routine DoSearch
 {
-	if object = player
+	if object = Player
 	{
-		"Search ";
-		The(player)
-		" indeed."
+		DoInventory
 	}
 	elseif object is container and child(object)
 		Perform(&DoLookIn, object)
-	elseif object is living
+
+!	elseif object is living
+	elseif object is living and object.conscious = 1
 	{
 		print CThe(object); MatchPlural(object, "doesn't", "don't");
-		" let ";
-		The(player)
+		" let me search ";
 		if object.pronouns #2
-		{
-			" search ";
-			if object.pronouns #2
-				print object.pronouns #2;
-			else
-				print object.pronoun;
-		}
-		print "."
+			print object.pronouns #2; "."
+		else
+			print object.pronoun; "."
+	}
+	elseif object is living and object.conscious = 0
+	{
+		Perform(&DoLookIn, object)
 	}
 	else
-	{
-		CThe(player)
-		MatchPlural(player, "doesn't", "don't")
-		" find anything new."
-	}
+		"I don't find anything."
+
 	return true
 }
 

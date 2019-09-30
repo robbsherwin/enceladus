@@ -38,16 +38,16 @@ event in FinnianEnters
 		"\nSomeone enters the quarters, but it's not a werewolf, hell-bent on consuming us all. It's just Finnian, the pilot. \n"
 
 		"\"Dun-dun, dun-dun,\" he sings, doing the 'Werewolves of London' dance with his hands, giving us his profile on each side, mouth wide open to show his
-		incisors. The song has been covered every few years since it came out so we know itm but neither the Captain nor myself react to this.
+		incisors. The song has been covered every few years since it came out so we know it, but neither the Captain nor myself react to this.
 		\"Hey Cappie, there's a werewolf on the ship. You banned us from wearing fur, otherwise I would have lasered it, pow!, between the fangs and made a
 		coat out of the part where it didn't ink itself.\"\n"
 
 		"\"No,\" says the Captain, looking painfully at Finnian's chosen ensemble, \"I tried to ban you all from wearing fur-lined banana thongs.\"\n"
 
-		"I wiggle one of my teeth. It's pretty loose! \"That's what you banned? I thought it was from eating bananas!\"\n"
+		"I wiggle one of my teeth. It's extremely loose. \"That's what you banned? I thought we were banned from eating bananas.\"\n"
 
-		"\"Jesus, Ja'Rod,\" says Finnian with a wince. He turns to the Captain. \"Kid's got a mouth that's craggier than the public road leading up
-		to Pripyat Reactor Four. When the werewolf bites you he'll actually be injecting vitamins into your bloodstream.\""
+		"\"Jesus, Ja'Rod,\" says Finnian with a wince. He turns to the Captain. \"Kid's got a mouth that's craggier than the road leading up
+		to Pripyat Reactor Four. When the werewolf bites him, it'll actually be injecting vitamins into his bloodstream.\""
 
 		move tooth to location
 	}
@@ -97,7 +97,7 @@ event in DiscussGrimesDeath
 		"\"What killed the lights in the halls?\" asks Finnian. \"I mean, it was probably the werewolf. Grimes had a thing about conserving electricity, though.\"\n"
 		"\"He just got engaged,\" I whisper, avoiding looking at the wisps and entrails of Grimes's massive corpse. \"He was gonna get married
 		when we got back to Earth...\"\n"
-		"\"Oh yeah,\" says Finnian, poking a flip-flopped toe into Grimes's extensive stomach. \"What, were they were gonna play Canon in Mickey D's when he walked
+		"\"Oh yeah,\" says Finnian, poking a flip-flopped toe into Grimes's extensive stomach. \"What, were they gonna play Canon in Mickey D's when he walked
 		down the aisle? Also: Captain. Captain? With Grimes not needing his share can the rest of us get a raise?\" I'm not sure if the Captain heard that or
 		if she did and just ignored it."
 
@@ -157,7 +157,7 @@ event in Hallyway03_Scan_Checker
 	{
 		if Captain in location
 		{
-			"\n\"Please do lower your specs and do a \Bscan\b, Ensign Butler,\" says the Captain."
+			"\n\"Please lower your specs and perform a \Bscan\b, Ensign Butler,\" says the Captain."
 			Deactivate(self)
 		}
 	}
@@ -176,12 +176,14 @@ event in Airlock_Scene
 	case 2
 	{
 		"\n\"You look disgusting! Put some clothes on!\" shouts McGrathley. We took a job a couple years ago to deliver two tons
-		of mini chile rellenos from Earth to Mimas. We got the job because McGrathley and his crew couldn't get it done, they couldn't move the merch and we could.
-		He actually fired lasers at us about losing the deal.\n"
-		"\"We put out a distress call as soon as you killed Grimes,\" says the Captain. \"The sector is going to be crawling with cops.\"\n"
-		"\"At transmission times of light in a vacuum out here in the middle of nowhere I have plenty of time to send you all into the icy, inhospitable
-		darkness of space. The worst torture imaginable!\" The werewolf again shifts its eyes to look at McGrathley for a beat before settling back on the Captain."
+		of mini chile rellenos from Earth to Mimas. We got the job because McGrathley and his crew couldn't get it done, they couldn't
+		move the merch and we could. He actually fired lasers at us because he lost the deal.\n"
 
+		"\"We put out a distress call as soon as you killed Grimes,\" says the Captain. \"The sector is going to be crawling with cops.\"\n"
+
+		"\"At light speed, no doubt,\" says McGrathley. \"Which, out here in the middle of nowhere... means I have plenty of time to send you all into
+		the icy, inhospitable darkness of outer ... space. The worst torture imaginable!\" The werewolf again shifts just its eyes to look at McGrathley
+		for a beat before settling back on the Captain."
 	}
 	case 3
 	{
@@ -197,6 +199,7 @@ event in Airlock_Scene
 		}
 		else {
 			"\nCool as can be, the Captain snaps her fingers again.\n"
+
 			"\"No more sarcasm, Captain? No more trying to get your little shots in?\" Technically, it was Finnian who did both of those things, but I keep my
 			mouth shut. I think I am forgetting something but I don't know what."
 		}
@@ -210,9 +213,11 @@ event in Airlock_Scene
 		}
 		else {
 			"\nMcGrathley presses the red button on the airlock panel.\n"
-			"Alexandra's eyes go wide, she tries to get to her feet, but there is nothing she can do. She is flung into the dark void of outerspace. Her eyes go bloodshot,
+
+			"Alexandra's eyes go wide, she tries to get to her feet, but there is nothing she can do. She is flung into the dark void of outer space. Her eyes go bloodshot,
 			her skin starts to swell. Mr Mailx is also ejected and bounces once into Alexandra, sending them both spinning. Alexandra manages to extend one useless hand
 			towards us before the difference in pressure has sent them spiraling so far away from us that they are mere specs reflecting the dim light of the sun.\n"
+
 			"\"You two!\" screams McGrathley. \"Into the airlock! Oh - and get that one behind the crates!\" Oh no no no the werewolf can see me, it's coming, how
 			can anything leap that far and that fast, no! No!!"
 
@@ -240,7 +245,8 @@ event in Finnian_Lands_Ship
 
 		"\nThe Captain joins the rest of us on the bridge. She sits in the command chair.\n"
 		"\"How is Alexandra?\" I ask, taking over the scanning station.\n"
-		"\"She needs a doctor,\" says the Captain. \"Take us down,\" she says to Finnian.\n"
+		"\"She needs a doctor,\" says the Captain. \"Unfortunately, we don't have a safety valve when the Life Support Tech needs life support.\" She looks over at
+		Finnian. \"Take us down,\" she says.\n"
 		"\"Hmm?\" he says, having not paid attention."
 	}
 	case 3
@@ -249,11 +255,11 @@ event in Finnian_Lands_Ship
 
 		"\"Where is it? asks Finnian.\n"
 
-		"\"You're the navigator, what do you mean 'Where is it?' Don't you know?\" she says.\n"
+		"\"You're the pilot, what do you mean 'Where is it?' Don't you know?\" she says.\n"
 
 		"\"I don't just have the positions of all the moons of Jupiter memorized!\" he says.\n"
 
-		"\"Saturn. Not. Jupiter,\" utters Mr Mailx.\n"
+		"The Plagoo inter-communications panel buzzes. \"Saturn,\" adds Mr Mailx. \"Not. Jupiter,\" he continues.\n"
 
 		"\"Right, that's what I mean,\" says Finnian.\n"
 
@@ -276,6 +282,7 @@ event in Finnian_Lands_Ship
 		MusicListing = 9
 
 		"\nFinnian sets the Plagoo down on Enceladus. A rather smooth landing, considering the hull breach that is plugged by the robot.\n"
+
 		"\"Ja'Rod, can you please pull Mr Mailx out of the hole in the ship and get Alexandra to the airlock, where it will be warm? Finnian
 		and I will meet you outside where we can discuss the plan thereafter.\" I nod. The Captain seems to be all business, Finnian's
 		joke(?) about the stars didn't seem to cheer her up. She gets like this now, pretty morose at times.\n"
@@ -307,7 +314,7 @@ event in SpecsGoUp
 	select(self.timer)
 	case 2 {
 		xraySpecs is not special
-		"\n(My x-ray specs just automatically went back up.)"
+		"\n(My X-ray specs just automatically went back up.)"
 	}
 }
 
@@ -475,7 +482,7 @@ event in JaRod_Hallucinates
 		"\"Ja'Rod,\" he says. \"My name is Doctor Milad Nahas.\" He is speaking really slow in perfect Americanized English, which he doesn't really need to do. \"You ingested too
 		much hot sauce, okay? I'm going to ask you some questions to see if we need to stay here or not. Can you tell me your favorite game?\"\n"
 		"\"Yes, it's Mouse Trap,\" I say.\n"
-		"The Doctor gives a concern look to the Captain. He looks back to me. \"Okay, Ja'Rod,\" he says, speaking even more slowly. \"I'm afraid you may be currently suffering from temporary
+		"The Doctor gives a concerned look to the Captain. He looks back to me. \"Okay, Ja'Rod,\" he says, speaking even more slowly. \"I'm afraid you may be currently suffering from temporary
 		yet severe mental retardation --\"\n"
 		"\"It's all we have on the ship!\" exclaims the Captain. \"He's fine, he's no different than any other member of my crew. Look, I have no idea what the criminal that was on my ship
 		did to my life support tech, but as far as I know she's dying in --\" I mime like I am shivering to try to guide the Captain through her speech -- \"Dying in my airlock that was
@@ -501,6 +508,8 @@ event in Cave_In
 	select(self.timer)
 	case 2
 	{
+		GameEvents[31] = 1 !// Did the cave in happen yet?
+
 		move iceBoulder to location
 
 		"\nI can hear \Isomething\i going on up top, I think we all can. But we're down here in the depths of the mine and can't really get back up. The
@@ -542,6 +551,25 @@ event in Captain_Shoots_McGrathley
 	}
 	case 2
 	{
+		if GameEvents[21] = 0 !// Did Ja'Rod kill the werewolf with the silver?
+		{
+			"\nThe werewolf is quickly gaining ground and coming straight for me. Fangs out, tongue out, chest completely undefended."
+
+			"\nMcGrathley fires again, this time somehow missing by an even greater distance. Apparently threatening to throw people
+			out airlocks develops different skills than using handheld weapons.\n"
+
+			"The Captain didn't even flinch."
+		}
+		else {
+			"\nMcGrathley fires again, this time somehow missing by an even greater distance. Apparently threatening to throw people
+			out airlocks develops different skills than using handheld weapons.\n"
+
+			"The Captain didn't even flinch."
+		}
+	}
+
+	case 3
+	{
 		if GameEvents[21] = 0
 		{
 			if silverOre in player
@@ -558,28 +586,27 @@ event in Captain_Shoots_McGrathley
 			else {
 				"\nThe werewolf, with that head start, covers more ground than I would have thought possible and places both of its hands around
 				my neck. It makes a slashing motion, causing my blood to squirt out of my head and about thirty feet into the air without
-				the gravity of terra firma to bring it back down. It's just a stupid genetically engineered monster, just a normal
+				the gravity of planet Earth to bring it back down. It's just a stupid genetically engineered monster, just a normal
 				guy that had some work done with all the strengths and weaknesses of the mythical werewolf creature. I try combing
 				my head for anything I could have encountered that would have stopped it, but it digs its nails into my skull,
 				fracturing it into pieces and the last thing I feel or see or smell is my brain going haywire, being unraveled,
-				being strewn about the moon. It ends, thankfully, it all ends and is all over."
+				being strewn about the surface. It ends, thankfully, it all ends, all my problems are gone and it is all over."
 			}
 
 			endflag = 2
 		}
 		else {
 
-			"\nMcGrathley fires again, this time somehow missing by an even greater distance. Apparently threatening to throw people
-			out airlocks develops different skills than using handheld weapons.\n"
+			"\nAfter being targeted twice, to say nothing of having her life and the life of her crew threatened by this unhinged
+			lunatic, the Captain flips the cooldown override on the star pistol, which I didn't even know it had, steadies herself
+			and fires a single shot. The Captain, my hero, quietly and without fanfare hits McGrathley right between the eyes.\n"
 
-			"After being targeted twice, the Captain flips the safety on the star pistol, which I didn't even know it had, steadies
-			herself and fires a single shot. The Captain, my hero, quietly and without fanfare hits McGrathley right between the eyes.
-			His disintegrates into a sticky pile of ash.\n"
+			"His body freezes in mid-action, as if possessed by a scarlet ghost, and then disintegrates into a sticky pile of ash.\n"
 
 			"Finnian lowers the boarding ramp of the Plagoo with enough force to cause McGrathley's ashes to scatter into chunks
-			upon the Enceladusian surface.\n"
+			upon the Enceladean surface.\n"
 
-			"The Captain puts the star pistol away as all of us get onto the boarding ramp. I can't help notice that she
+			"The Captain puts the star pistol away as all of us ascend the boarding ramp. I can't help notice that she quickly
 			twirled it one time before hiding it though."
 
 			remove starPistol
@@ -604,10 +631,8 @@ event in Ending_Daemon
 	select(self.timer)
 	case 1
 	{
-
 		"You have won the game."
 		endflag = 1
-
 
 	}
 }

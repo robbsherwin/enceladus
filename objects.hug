@@ -335,9 +335,11 @@ in JaRod
 
 	long_desc
 	{
-		"The specs are a set of chromatic filters that allow me to see the world in an x-ray sense - it helps a little bit in seeing behind objects
-		unless those objects are particularly dense. I can \Bscan\b things when they are lowered.\n"
-		"The x-ray specs are currently " ;
+		"The X-ray specs are glasses that, when lowered, allow me to take a scan of where I am. They work as a miniaturized X-ray machine at that point:
+		the X-ray radiation gives me a view of the world that allows me to see through some walls and some flesh, and the electronics inside the
+		specs give me an understanding of the chemical composition of things that I am looking at.\n"
+
+		"The X-ray specs are currently " ;
 		if self is special
 		{
 			"lowered."
@@ -360,7 +362,7 @@ in JaRod
 			}
 			else {
 				self is special
-				"Okay, I've lowered my x-ray specs."
+				"Okay, I've lowered my X-ray specs."
 			}
 		}
 		object DoRaise
@@ -371,7 +373,7 @@ in JaRod
 			}
 			else {
 				self is not special
-				"My x-ray specs are now raised."
+				"My X-ray specs are now raised."
 			}
 		}
 	}
@@ -387,7 +389,8 @@ article "the"
 	{
 		"There was a wave of retro nostalgia that hit laser weapons about a decade ago. This pistol looks like a atom-for-atom
 		reconstruction of a French Navy pistol, with a curved walnut stock, brass fittings. Somewhere inside are the electronic
-		components allowing it to produce steel-melting laser beams."
+		components allowing it to produce steel-melting laser beams. They aren't the greatest build in terms of quality, the
+		cooldown period is a really, really long time."
 	}
 	before
 	{
@@ -403,6 +406,25 @@ article "the"
 			{
 				GameEvents[25] = 1
 				"\n\"Oh my, be careful with that, please, Ja'Rod,\" says the Captain."
+			}
+		}
+		object DoGet
+		{
+			if self in Captain
+			{
+				"I can't possibly take it from her."
+			}
+			elseif self in Finnian
+			{
+				"I don't feel right just taking it from him."
+			}
+			elseif self in player
+			{
+				"I already have it!"
+			}
+			else {
+				"I thought I already had it."
+				move self to player
 			}
 		}
 	}
@@ -473,38 +495,60 @@ scenery airlockHull "hull"
 	{
 		object DoShoot
 		{
-			if GameEvents[10] = 0
+
+			if GameEvents[9] = 0
 			{
-				GameEvents[10] = 1
-
-				"I emerge from behind some crates and take aim at the section of the hull behind McGrathley and the werewolf. I am shaking
-				a bit, but luckily you don't actually have to be that accurate when blowing a hole in your ship. The star pistol takes a second
-				 to warm up after I squeeze the trigger. A ton of ping there. The werewolf probably had enough time to jump
-				over the crates and rip out my neck, but I think it was about to bring up the fact that McGrathley got a spacesuit
-				for himself and not it. Regardless - oh, there it goes.\n"
-				"There is a horrible screeching sound as the air and everything else nearby starts to get sucked out by the small hole.\n"
-				"The werewolf never had a chance. Being closest, it gets fired through and sent flying into the nothingness of space. McGrathley
-				maybe had an extra half-second, but he was next. He definitely lowered his helmet before he was ejected.\n"
-				"\"Don't body shame me!\" shouts Finnian towards our ejected interlopers while all this is going on.\n"
-				"I then comprehend the Captain's plan - Mr Mailx was next, but was too large for the pistol's hole. He instead plugged
-				the hole like a Dutch boy's finger. It was all over before Alexandra, clearly injured, even really moved.\n"
-				"\"Finnian, Ja'Rod,\" starts the Captain, \"Get over to the bridge, we're going to perform an emergency landing.\"\n"
-				"\"Aye-aye,\" I say and get going. Fin does the same."
-
-				"\n[Strike any key to continue]"
-
-				pause
-
-				MovePlayer(Bridge)
-				move Captain to Bridge
-				move Finnian to Bridge
-				remove werewolf
-				remove McGrathley
+				"I should wait until the Captain gives me a sign!"
 			}
-			else {
-				"Well, I can't shoot it again."
+			else
+			{
+				if GameEvents[10] = 0
+				{
+					GameEvents[10] = 1
+
+					"I emerge from behind some crates and take aim at the section of the hull behind McGrathley and the werewolf. I am shaking
+					a bit, but luckily you don't actually have to be that accurate when blowing a hole in your ship. The star pistol takes a second
+					 to warm up after I squeeze the trigger. A ton of ping there. The werewolf probably had enough time to jump
+					over the crates and rip out my neck, but I think it was about to bring up the fact that McGrathley got a spacesuit
+					for himself and not it. Regardless - oh, there it goes.\n"
+					"There is a horrible screeching sound as the air and everything else nearby starts to get sucked out by the small hole.\n"
+					"The werewolf never had a chance. Being closest, it gets fired through and sent flying into the nothingness of space. McGrathley
+					maybe had an extra half-second, but he was next. He definitely lowered his helmet before he was ejected.\n"
+					"\"Don't body shame me!\" shouts Finnian towards our ejected interlopers while all this is going on.\n"
+					"I then comprehend the Captain's plan - Mr Mailx was next, but was too large for the pistol's hole. He instead plugged
+					the hole like a Dutch boy's finger. It was all over before Alexandra, clearly injured, even really moved.\n"
+					"\"Finnian, Ja'Rod,\" starts the Captain, \"Get over to the bridge, we're going to perform an emergency landing.\"\n"
+					"\"Aye-aye,\" I say and get going. Fin does the same."
+
+					"\n[Strike any key to continue]"
+
+					pause
+
+					MovePlayer(Bridge)
+					move Captain to Bridge
+					move Finnian to Bridge
+					remove werewolf
+					remove McGrathley
+				}
+				else {
+					"Well, I can't shoot it again."
+				}
 			}
 		}
+	}
+}
+
+scenery hallway03Pallets "pallets"
+{
+	noun "pallets" "pallet" "package" "packages"
+	article "the"
+	is plural
+	in Hallway03
+
+	long_desc
+	{
+		"Those aren't important. Those aren't important to me, I mean. I don't work with the merchandise we might be carting around.
+		I'm an X-ray guy."
 	}
 }
 
@@ -521,6 +565,19 @@ scenery pallets "pallets"
 		because usually the pallets go with whatever is being moved. I don't understand how they are just here. Unless
 		the item itself is the pallet and that's what we're shipping. I'll be sure to ask people this if I make it through
 		the next few days without getting killed by a werewolf."
+	}
+	before
+	{
+		object DoHide
+		{
+			if GameEvents[11] = 1 !// Is this our second time in the Before the Airlock room?
+			{
+				"I'm doing that!"
+			}
+			else {
+				"No need to do that!"
+			}
+		}
 	}
 }
 
@@ -649,6 +706,22 @@ scenery navigationControls "navigation controls"
 	}
 }
 
+scenery commPanel "inter-communications panel"
+{
+	noun "panel"
+	adjective "inter" "communications" "inter-communications" "intercommunications"
+	article "the"
+	in Bridge
+
+	long_desc
+	{
+		"This is kind of a speaker placed against the ceiling of the Bridge. Mr Mailx can interface with it at any time.
+		I should be able to as well, but I misplaced my communicator a while ago and I haven't filled out the form in
+		triplicate to get another one. Which is fine, after a werewolf coming onto the ship I don't plan on
+		being alone for the near future!"
+	}
+}
+
 scenery captainsChair "Captain's chair"
 {
 	noun "chair"
@@ -758,7 +831,7 @@ scenery crowd "crowd"
 
 object fruitTray "fruit tray"
 {
-	nouns "tray"
+	nouns "tray" "caddy"
 	adjective "fruit"
 	article "the"
 	in HotSauceBar
@@ -771,7 +844,8 @@ object fruitTray "fruit tray"
 
 	long_desc
 	{
-		"I am not sure what the proper name for this thing is, it's probably not fruit tray, but that's what I am going to go with, I guess. "
+		"I am not completely sure what the proper name for this thing is, it's probably not fruit tray.  Maybe fruit caddy? Perhaps the name
+		is regional, like water fountain or bubbler."
 	}
 	before
 	{
@@ -859,7 +933,7 @@ object knife "knife"
 object blairsUltraDeath "Blair's Ultra Death"
 {
 	nouns "ultra" "death" "sauce" "bottle"
-	adjective "blair" "blair's" "hot" "death"
+	adjective "blair" "blair's" "hot" "death" "ultra" "sauce"
 	article "the"
 	is openable, open
 	in HotSauceBar
@@ -948,7 +1022,7 @@ object mineKey "key"
 	}
 }
 
-vehicle mineCart "mine cart"
+object mineCart "mine cart"
 {
 nouns "cart"
 adjective "mine"
@@ -1006,23 +1080,12 @@ article "the"
 		{
 			"I don't think dropping the ore is a good idea."
 		}
-		object DoThrowAt
+		object DoThrowAt, DoHit
 		{
 			select(xobject)
 			case(werewolf)
 			{
-				!// Kill the werewolf
-				"I hit the werewolf in the chest with the silver. The thing about the plastic genetic surgery that these people sign up for is that in
-				order for the Live Action Role Playing to be accurate, they give themselves the weaknesses of the legendary creatures they want to be
-				as well as the strengths.\n"
-				"The chunk of silver ore goes right through the sternum of the werewolf, passing through like a metal skewer through marshmellow. The ore
-				isn't even particularly slowed down by the werewolf's flesh and strikes the Plagoo, falling to the ground.\n"
-				"The werewolf falls over, dead."
-
-				remove silverOre
-				werewolf is not living
-
-				GameEvents[21] = 1
+				KillTheWerewolf()
 			}
 			case(McGrathley)
 			{
@@ -1050,11 +1113,12 @@ article "the"
 				"I hit the werewolf in the chest with the silver. The thing about the plastic genetic surgery that these people sign up for is that in
 				order for the Live Action Role Playing to be accurate, they give themselves the weaknesses of the legendary creatures they want to be
 				as well as the strengths.\n"
-				"The chunk of silver ore goes right through the sternum of the werewolf, passing through like a metal skewer through marshmellow. The ore
+
+				"The chunk of silver ore goes right through the sternum of the werewolf, passing through like a metal skewer through marshmallow. The ore
 				isn't even particularly slowed down by the werewolf's flesh and strikes the Plagoo, falling to the ground.\n"
 				"The werewolf falls over, dead.\n"
 
-				"\"Ha ha!\" says Finnian through the ship's comm from inside. \"Great shot, Butler!\""
+				"\"BZZZT! Ha ha!\" says Finnian through the ship's comm from inside. \"Great shot, Butler!\""
 
 				werewolf is not living
 
@@ -1078,7 +1142,7 @@ article "the"
 
 	long_desc
 	{
-		"This is a large chunk of alumnium, which presumably we can use to patch up the ship."
+		"This is a large chunk of aluminum, which presumably we can use to patch up the ship."
 	}
 	before
 	{
@@ -1093,7 +1157,7 @@ article "the"
 	}
 }
 
-vehicle snowmobile "snowmobile"
+object snowmobile "snowmobile"
 {
 nouns "snowmobile"
 article "the"
@@ -1132,6 +1196,16 @@ in CenterOfTown
 			{
 				"It's too heavy for me to carry, even with Enceladus's decreased gravity!"
 			}
+			object DoFix
+			{
+				if self in CenterOfTown
+				{
+					"I couldn't imagine anyone being capable of fixing that old thing."
+				}
+				else {
+					"It's fine!"
+				}
+			}
 		}
 }
 
@@ -1168,8 +1242,8 @@ article "the"
 
 	long_desc
 	{
-		"The HMCS Plagoo is a small spaceship that can achieve 99.99% of light speed to move around the solar system. It is green in color, mostly,
-		with yellow highlights and the escape module at the top of the ship is a crimson red."
+		"The HMCS Plagoo is a small, saucer-shaped space ship that can achieve 99.99% of light speed to move around the solar system. It is green in color, mostly,
+		somewhere between emerald and seaweed. The Plagoo has yellow accents and the escape module at the top of the ship (that also has retrofitted magnetic tip) is crimson red."
 	}
 	before
 	{
@@ -1339,5 +1413,26 @@ scenery mouseTrap "Mouse Trap"
 	{
 		"Oh yeah, the pewter Mouse Trap game is here. If anyone asks me to play I'll be sure to have what Alexandra is having. Or
 		maybe a double."
+	}
+}
+
+object handheldScanner "scanner"
+{
+	nouns "scanner"
+	adjective "handheld"
+	article "the"
+	is hidden
+
+	long_desc
+	{
+		"It's just a little handheld computer tablet with some listening mods, nothing really out of the ordinary. I assume McGrathley was trying to use it to
+		get into the ship by sending off the wireless key to bring the boarding ramp down."
+	}
+	before
+	{
+		object DoGet
+		{
+			"I am not close enough to get it."
+		}
 	}
 }

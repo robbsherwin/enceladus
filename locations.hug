@@ -12,7 +12,11 @@ room Hallway02 "Hallway Module"
       TheCaptainsQuarters.name = "The Captain's Quarters" !// Remove the bit about us being on the Plagoo
     }
 
-    "There is a brief hallway module connecting the Captain's bedroom to the hold, which is up ahead."
+    "There is a brief hallway module connecting the Captain's bedroom (which is to the east) to the hold, which is west.
+    For some reason, the modules are all colored a deep burgundy, which nobody likes, but nobody dislikes enough to change.
+    (The Plagoo has a red magnetic pole installed at the top of the ship, which is how we get away with these compass
+    directions. No longer needing to know terms like port and aft really opened the solar system up to normal people who
+    maybe shouldn't be out here.)"
 
     if self is not visited
     {
@@ -22,11 +26,11 @@ room Hallway02 "Hallway Module"
       if xraySpecs is not special
       {
         "The Captain smiles at him without using her eyes. She doesn't directly address him, which is something she didn't used to do,
-        but something I noticed her doing when I came back from leave. \"I think Ensign Butler lowering his x-ray specs to give
+        but something I noticed her doing when I came back from shore leave. \"I think Ensign Butler lowering his X-ray specs to give
         us some help on what's ahead would be the next best tactic,\"she says, genuinely sweetly.\n"
 
-        "Ensign Butler! Oops, that's me, and yes, as the x-ray technician of the Plagoo, I carry some specs with me.
-        I can put my specs down."
+        "Ensign Butler! Oops, that's me, and yes, as the X-ray technician of the Plagoo, I carry some specs with me.
+        I can \Blower my specs\b and perform a \Bscan\b with them."
 
         xraySpecs is not hidden
       }
@@ -83,7 +87,7 @@ room Hallway03 "Ship Hold"
     if self is not visited
     {
       "\nThe Captain opens one of the packages on top of a pallet to my right. It's an unopened star pistol. She unboxes it, avoids
-      cursing at the tight grip plastic keeping the pistol in place and inserts the battery into the grip with a solid 'twack.' She
+      cursing at the tight plastic grip keeping the pistol in place and inserts the battery into the grip with a solid 'thwack.' She
       hands it to Finnian.\n"
 
       "\"Let me do the talking if it gets that far, I've got an idea what is going on,\" she says to Finnian. \"I'd say don't draw
@@ -107,8 +111,8 @@ xrayDescription {
         Deactivate(Hallyway03_Scan_Checker)
 
         "I can see ahead that there's actually two people waiting for us in the next area.\n"
-        "\"Captain, I'm seeing two unknown forms and what I think is Alexandra.\" Alexandra is our naviagor and the life support tech. \"Alexandra
-        seems to be in the fetal position next to the air lock. One of the forms definitely looks like the silouette of a werewolf. The other
+        "\"Captain, I'm seeing two unknown forms and what I think is Alexandra.\" Alexandra is our life support tech. \"Alexandra
+        seems to be in the fetal position next to the air lock. One of the forms definitely looks like the silhouette of a werewolf. The other
         form standing next to it is taller, has lead boots. No weapons that I can detect. I also think that Grimes's robot is there.\""
 
         if GameEvents[8] = 0
@@ -142,7 +146,7 @@ w_to {
       return Hallway04
     }
     else {
-      "I can't go that way yet. The Captain wants me to lower my x-ray specs and perform a \Bscan\b so we can see what's ahead."
+      "I can't go that way yet. The Captain wants me to lower my X-ray specs and perform a \Bscan\b so we can see what's ahead."
     }
   }
 }
@@ -443,15 +447,24 @@ room OutsideTheShip "Outside the Plagoo"
 
       "Finnian looks around before looking back toward the group. He changed before we came down, now wearing a real Lynx fur coat, a white dunce cap and new
       old stock original Air Jordans. \"Crap, Captain, it's an ice planet!\"\n"
-      "She nods at that. \"Intelligence indicates that there's a small town a kilometer east of here.\"\n"
+
+      "She nods at that. \"Intelligence indicates that there's a small town a kilometer east of here. There's a mine, which we need, and a kind of bar.\"\n"
+
       "\"What's your source of that intelligence?\" asks Finnian.\n"
+
       "The Captain grits her teeth. \"I consulted Wikipedia. Okay? Is that all right?\"\n"
+
       "\"No it's not all right!\" says Finnian. \"Wikipedia's moderator and administration system is filled with duplicitous losers that turned the
       exchange of free information into a political battle where scumbags scuttle into tribes to spread their lies. Mr Mailx?\"\n"
+
       "\"Yes,\" he says.\n"
+
       "\"Delete the Wikipedia page on Enceladus and replace it with a 10K image of a giant tarantula.\"\n"
+
       "\"Finnian, stop,\" says the Captain.\n"
+
       "\"Done,\" says the robot, presumably having fired off some API calls.\n"
+
       "Finnian laughs. It's a dry, hollow one. \"Seventy one minutes from now, good luck to any kid trying to do a book report on Jovian moons. Cite
       that revision in your bibliography, you sniveling Webelo punks.\"\n"
 
@@ -473,6 +486,8 @@ room OutsideTheShip "Outside the Plagoo"
         remove MiladNahas
         move starPistol to Captain
         starPistol is hidden
+
+        move handheldScanner to McGrathley
 
         "McGrathley and the werewolf are here, it appears that they are trying to hack into the boarding ramp of the Plagoo in order to board it.\n"
 
@@ -512,7 +527,7 @@ room SnowyPath01 "Snowy Path"
       "\"... I'm just saying, have you ever tried to edit something on it? No? Oh, hey Ja'Rod,\" says Finnian.\n"
       "\"Our plan is going to be this,\" says the Captain. \"There's a hot sauce bar up ahead. To the east. We ask around to find a doctor. Since
       we also need to repair the ship, let's see if we can find a mine.\"\n"
-      "We all nod at this except for Mr Mail, who just keeps treading east with a low whir."
+      "We all nod at this except for Mr Mailx, who just keeps treading east with a low whir."
     }
     else {
       "I am on a snowy path towards civilization on the moon Enceladus. My goal from here is to go east and join up with everyone."
@@ -723,9 +738,9 @@ long_desc
     falls all over the floor of the bar like a wedding dress.\n"
     "\"You can't bring that thing in here,\" says the bouncer, but he is pointing to Finnian. Mr Mailx turns his entire body to face Finnian, which is the creepiest thing ever because
     of how long it takes him to do that on tread.\n"
-    "\"That's my navigator,\" says the Captain.\n"
-    "\"There's one room and a bathroom in here, you'll be able make your way around just fine,\" says the bouncer. \"Get that cap out of here before I throw you all out myself.\"\n"
-    "\"Oh, it's the cap?\" asks Finnian. \"This thing is the height of fashion far back around the outer moons of Saturn.\" The Captain rolls her eyes.\n"
+    "\"That's my pilot,\" says the Captain.\n"
+    "\"There's one room and a bathroom in here, you'll be able to make your way around just fine,\" says the bouncer. \"Get that cap out of here before I throw you all out myself.\"\n"
+    "\"Oh, it's the cap?\" asks Finnian. \"This thing is the height of fashion far back around the outer moons of Saturn.\" The Captain looks skyward.\n"
     "\"This is a moon of Saturn, dummy,\" says the bouncer.\n"
     "Finnian looks genuinely surprised at that revelation. \"Huh,\" he says.\n"
     "\"Mailx, please go with Finnian and wait outside the bar,\" says the Captain.\n"
@@ -840,6 +855,13 @@ long_desc
     is very compact and hard. Igloo-like, maybe? We can travel downwards if we wanted to."
   }
 }
+before
+{
+  location DoExits
+  {
+    "We can go down into the mine ... and we can go south back to town."
+  }
+}
 
 s_to { return mineDoor}
 d_to {
@@ -871,6 +893,13 @@ room mineLevelTwo "Mine Level Two"
     if self is not visited
     {
       "\nThe Captain continues by going down."
+    }
+  }
+  before
+  {
+    location DoExits
+    {
+      "We can only go down from here."
     }
   }
 
@@ -917,6 +946,10 @@ room mineLevelThree "Mine Level Three"
 !// Mine Cart is in here and can take us up.
 u_to {"We can't go that way by ourselves."}
 e_to bottomOfMine
+cant_go {
+  "I can't go that way. " ;
+  Perform(&DoExits)
+  }
 }
 
 room bottomOfMine "Bottom of Mine"
@@ -941,33 +974,39 @@ room bottomOfMine "Bottom of Mine"
 
 xrayDescription {
 
+  if GameEvents[31] = 0 !// Did the cave-in happen yet?
+  {
+    "I don't really get anything back and the moment that is interesting. Not right now, anyway."
+
+  }
+  else {
     if iceBoulder in location
     {
       "I take a quick scan of the area. This boulder is definitely pure ice, nothing else to it as far as I can tell.
       The only issue is that the ice is harder than anything I can imagine and we have a giant chunk of it in front of us."
+
+      if GameEvents[30] = 0
+      {
+        GameEvents[30] = 1
+        Mailx.talkValue = 2 !// "I should talk to the Captain first."
+        Captain.talkValue = 1
+
+        move silverOre to location
+
+        "\nI... okay, I do find something interesting in the mine itself, however, a vein of silver ore about the size of a baseball, just
+        half an inch from the side of the northern wall. Covered in much more supple icy snow, I dig at it until it almost pops
+        out and ends up on the ground. I pick it up. I have no idea if the Captain is aware of what I just did, I should definitely talk
+        to her about it."
+
+        move silverOre to player
+
+      }
     }
-
-    if GameEvents[30] = 0
-    {
-      GameEvents[30] = 1
-      Mailx.talkValue = 2 !// "I should talk to the Captain first."
-      Captain.talkValue = 1
-
-      move silverOre to location
-
-      "\nI... okay, I do find something interesting in the mine itself, however, a vein of silver ore about the size of a baseball, just
-      half an inch from the side of the northern wall. Covered in much more supple icy snow, I dig at it until it almost pops
-      out and ends up on the ground. I pick it up. I have no idea if the Captain is aware of what I just did, I should definitely talk
-      to her about it."
-
-      move silverOre to player
-    }
-
-    if iceBoulder not in location and GameEvents[30] = 1
-    {
-      "I don't get anything interesting."
+    else {
+      "I don't get anything interesting in the scan."
     }
   }
+}
 
 before
 {
@@ -1035,6 +1074,12 @@ room RecRoom "Rec Room"
       Finnian is hidden
       Mailx is hidden
       Alexandra is hidden
+
+      Alexandra.talkValue = 2
+      Mailx.talkValue = 6
+      MiladNahas.talkValue = 1
+      Captain.talkValue = 6
+      Finnian.talkValue = 3
 
     }
     else {

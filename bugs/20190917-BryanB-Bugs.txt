@@ -1,0 +1,15 @@
+Fixed:
+1.  After Finnian has entered the Captain's Quarters and started humming, there's a line "The song has been covered every few years since it came out so we know itm" -- I assume "itm" should be "it."
+2.  After Grimes has been discovered and the group has begun to mourn, Finnian says, "What, were they were gonna play Canon in Mickey D's when he walked down the aisle?"  There's a duplicate "were" there -- read the sentence twice if you don't believe me.  I make that kind of mistake a lot in my writing, unfortunately.
+3.  If you try to search the captain in the Captain's Quarters, the game tells you, "The captain doesn't let I search her."  "i" should be "me" there, of course.  Full disclosure: I only noticed this during my second playthrough which was largely devoted to trying to do strange things.  Most users wouldn't see it.
+5.  Mailx participates in a conversation on the bridge, saying "Saturn. Not. Jupiter."  But isn't Mailx still stuck in the hull at this point?  He could be talking over the ship intercom or something, but that isn't at all clear.
+7.  When you get to the first Snowy Path room on Enceladus, Mailx is referred to as simply Mr Mail -- no x at the end.  He hates that.
+8.  At Mine Level 2 during my first playthrough, I scanned and got a weird garbled error message that referenced Roodylib.  I got the same message again later on in that playthrough somewhere else in the mines when I scanned.  However, I've been unable to duplicate this issue subsequently so you might have a hard time tracking down the bug.
+9.  If you scan immediately upon entering the Bottom of Mine (before the boulder is dropped), you will still pick up the silver but talking to the captain won't progress the game.  As far as I can tell, you're trapped in the room if you do this and there's no way out.
+4.  If you shoot the hull before the captain snaps her fingers, everything seems to work okay until you get taken to the bridge.  There McGrathley launches into some of his dialogue even though he's supposed to be floating out in space.
+6.  If you let Alexandra into the airlock first before rescuing Mailx, the game text indicates that you still need to help Alexandra once you've pulled Mailx free even though your job is actually done at that point.
+
+
+ToDo:
+Can't Reproduce:
+10.  When you're at Snowy Path 2, west of the bar, you can lower specs, scan, and then go east without your specs being raised again.  I don't think they're raised again until you get to Bottom of Mine...which I kind of liked since it made it easy to do a lot of scanning.

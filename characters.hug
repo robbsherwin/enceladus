@@ -147,6 +147,12 @@ talkValue 0
 			{
 				"I think she is having a nervous breakdown at the moment."
 			}
+			case 6
+			{
+				self.talkValue = 999
+				"\"Thank you for everything, Captain,\" I say, glad to have made it through this last caper unscathed.\n"
+				"She nods and smiles. She indicates that I should go ahead and drink my gintata."
+			}
 			case else
 			{
 				"I don't have anything to say to her at the moment."
@@ -160,7 +166,7 @@ npc Finnian "Finnian"
 charnumber 3
 nouns "finnian""o'connell" "pilot"
 adjectives "finnian"
-is neutral
+is neutral, living
 talkValue 1
 
 	long_desc
@@ -194,6 +200,16 @@ talkValue 1
 				"Finnian turns to me and stops fiddling with the console. \"You really hadn't heard?\" he says. But we
 				hear people approach the bridge, so that is all he says for now."
 			}
+			case 3
+			{
+				self.talkValue = 999
+
+				"\"It's good to see you, man.\"\n"
+				"\"Hey, you did good out there, kid,\" says Finnian. \"Now drink up! It's not fun when the rest of us
+				are planning on getting bombed and there's someone in the room who is not, who is all judgy.\" He indicates
+				the robot in that last statement, which I think Mr Mailx understood because he turned to glare at
+				him."
+			}
 			case else
 			{
 				"I have nothing to say to him."
@@ -222,6 +238,10 @@ talkValue 0
 		{
 			"Grimes is dead."
 		}
+		object DoGet
+		{
+			"He's too big for me to move."
+		}
 	}
 }
 
@@ -230,7 +250,7 @@ npc Alexandra	"Alexandra"
 nouns "alexandra" "mays"
 adjective "alexandra"
 charnumber 5
-is female
+is female, living
 talkValue 0
 
 	long_desc
@@ -271,6 +291,14 @@ talkValue 0
 				"\"Enceladus. Is. A. Moon,\" says Mailx.\n"
 				"There's a green button and a red button on the control panel for the airlock."
 			}
+			case 2
+			{
+				self.talkValue = 999
+
+				"\"You seem like you're feeling better!\"\n"
+				"\"Sometimes the old medicine works best, eh?\" she says, tipping the bottle of vodka to you. \"Although seeing the master plan to keep me alive
+				was to put me in an airlock and close the doors, I'm never doubting how important my job in Life Support Tech is ever again.\""
+			}
 			case else
 			{
 				"I don't have anything that I can think of right now to say to Alexandra."
@@ -285,6 +313,7 @@ nouns "mailx" "robot"
 adjective "mr"
 charnumber 6
 talkValue 0
+is living
 
 	long_desc
 	{
@@ -313,10 +342,21 @@ talkValue 0
 					"I count to three, kind of looking the power LEDs that make up his eyes in good eye contact and grip his wispy metal fingers. On three
 					I yank him out and the cases that make up his backside pop out.\n"
 					"\"You okay, man?\" I ask him.\n"
-					"\"Will. Run. Diagnostic.\" he says. I nod. \"Alexandra, we gotta get you over to the airlock, okay? It's going to get really cold in a bit
-					with that giant hole in the hull, but in the airlock we can at least control the temperature there.\"\n"
-					"She doesn't say anything but grimaces a nod to let me know she understood. She's holding her hand against her spleen. Or her liver? Her kidneys
-					maybe. I can't tell how bruised she is, but it's enough to keep her laying on the floor."
+					"\"Will. Run. Diagnostic.\" he says. I nod. " ;
+
+					if alexandraInAirlock = false
+					{
+						"\"Alexandra, we gotta get you over to the airlock, okay? It's going to get really cold in a bit
+						with that giant hole in the hull, but in the airlock we can at least control the temperature there.\"\n"
+
+						"She doesn't say anything but grimaces a nod to let me know she understood. She's holding her hand against her spleen. Or her liver? Her kidneys
+						maybe. I can't tell how bruised she is, but it's enough to keep her laying on the floor."
+					}
+					else {
+						"I sort of wait a little bit to see if is going to tell me if his diagnostic passed or not, but it occurs to me that it could days or hours
+						to run and I can't do anything to help him if it fails. We had his behind exposed to the vacuum of space, I'd expect a few failing
+						QA tests. Anyway, he's out now."
+					}
 
 					mailxIsPulled = true
 				}
@@ -381,6 +421,13 @@ talkValue 0
 			{
 				"I think he's sulking."
 			}
+			case 6
+			{
+				self.talkValue = 999
+
+				"\"Thank you for your help, Mr Mailx. I hope you'll stay with us.\"\n"
+				"\"Okay,\" he says, with no more warmth or affection than he had before, which was none. Ah well."
+			}
 			case else
 			{
 				"He won't look at me."
@@ -395,7 +442,7 @@ nouns "werewolf" "wolf"
 adjectives "man"
 article "the"
 charnumber 7
-is known
+is known, living
 in BeforeTheAirlock
 
 	long_desc
@@ -414,6 +461,25 @@ in BeforeTheAirlock
 		"Its eyes look a bit messed up, they are bloodshot, cells just bursting with blood, and I don't think it
 		was picked out by him when he did this to himself."
 	}
+	before
+	{
+		object DoHit
+		{
+			if location = OutsideTheShip
+			{
+				if xobject = silverOre
+				{
+					KillTheWerewolf()
+				}
+				else {
+					"Sure, but with what?"
+				}
+			}
+			else {
+				"It's too deadly for me to attack directly!"
+			}
+		}
+	}
 }
 
 npc MiladNahas "Doctor Nahas"
@@ -421,11 +487,37 @@ npc MiladNahas "Doctor Nahas"
 nouns "milad" "nahas" "doctor"
 adjectives "doctor" "milad"
 charnumber 8
+talkValue 0
+is living
 
 	long_desc
 	{
 		"Doctor Nahas is a middle aged Indian man with brown eyes and jet black hair. He is wearing a eggshell-colored smock
 		over a cyan polo, grey chinos and fur boots."
+	}
+	before
+	{
+		object DoTalk
+		{
+			select(self.talkValue)
+			case 0
+			{
+				"I don't have anything to say to the Doctor."
+			}
+			case 1
+			{
+				self.talkValue = 999
+
+				"\"I hope you will fly with us for a bit!\" I say to him.\n"
+				"\"That seems very possible,\" he says. \"You and your crew have found ways to become injured that I have never seen
+				before. It's like real-life laboratory conditions. I still don't even know what organ was most horribly
+				affected on Alexandra.\""
+			}
+			case else
+			{
+				"I don't have anything else to say to him."
+			}
+		}
 	}
 }
 
@@ -436,6 +528,7 @@ adjective "riggs"
 in BeforeTheAirlock
 charnumber 9
 talkValue 0
+is living
 
 	long_desc
 	{
@@ -449,6 +542,25 @@ talkValue 0
 
 		"has something stupider on their face than I do."
 	}
+	before
+	{
+		object DoHit
+		{
+			if location = OutsideTheShip
+			{
+				if werewolf is living
+				{
+					"I should take care of the werewolf first!"
+				}
+				else {
+					"I can't really do anything to him directly, but I start waving my hands around to give him something other than the Captain to aim at!"
+				}
+			}
+			else {
+				"He's much too powerful for me to take on by myself in like hand to hand combat! Plus I don't know any hand to hand combat!"
+			}
+		}
+	}
 }
 
 npc Bouncer "bouncer"
@@ -459,6 +571,7 @@ npc Bouncer "bouncer"
 	is hidden
 	charnumber 10
 	talkValue 1
+	is living
 
 	long_desc
 	{
@@ -497,6 +610,7 @@ npc Bartender "bartender"
 	in HotSauceBar
 	charnumber 11
 	talkValue 1
+	is living
 
 	long_desc
 	{
