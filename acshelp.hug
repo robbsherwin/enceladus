@@ -211,7 +211,10 @@ routine Help_ReleaseHistory
 {
 	CenterTitle("\BRelease History\b")
 
-	"\n\IRelease 1.00 (September 28th, 2019)\i\n\
+  "\n\IRelease 1.01 (October 15th, 2019)\i\n\
+  \_     Updated the testers section.\n\n";
+
+	"\n\IRelease 1.00 (October 1st, 2019)\i\n\
 	\_     The first release of ENCELADUS, as part of the 2019 Interactive Fiction Competition at https://ifcomp.org.\n\n";
 
 		"\n[Press a key...]";
