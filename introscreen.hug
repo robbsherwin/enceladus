@@ -10,25 +10,27 @@ routine NewMenu
 	PlayMusic("ENCEL01", "JESTER - Elysium", 80, true, true)
 	MusicListing = 0
 
-	if (display.hasgraphics) and GRAPHICS_ON = TRUE {
-		picture "ENCEL01", "titlescreen01"
-	}
-
 :IntroScreenMenu
 
-	pause
+	!// Do this if we have graphics, but on mobile just start the game 
+	if (display.hasgraphics) and GRAPHICS_ON = TRUE {
 
-	if word[0] = 'S', 's', 'Q', 'q', ESCAPE_KEY, ENTER_KEY, MOUSE_CLICK
-	{
-		jump IntroScreenStartGame
-	}
-	if word[0] = 'C', 'c'
-	{
-		ChangeColorMenu(false)
-	}
-	if word[0] = 'A', 'a'
-		ShowAboutThisGameGraphic()
+		picture "ENCEL01", "titlescreen01"
+		pause
 
+		if word[0] = 'S', 's', 'Q', 'q', ESCAPE_KEY, ENTER_KEY, MOUSE_CLICK
+		{
+			jump IntroScreenStartGame
+		}
+		if word[0] = 'C', 'c'
+		{
+			ChangeColorMenu(false)
+		}
+		if word[0] = 'A', 'a'
+		{
+			ShowAboutThisGameGraphic()
+		}
+}
 :IntroScreenStartGame
 !Set colors to be default.
 
