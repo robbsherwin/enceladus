@@ -8,6 +8,12 @@ Enceladus was created by Robb Sherwin for the 2019
 Interactive Fiction Competition. To play more of
 my games, please go to https://www.joltcountry.com/games
 
+The Windows version of Hugor, which is used to run the game,
+is included. But versions of Hugor exist for OSX and Linux.
+You can get the latest version of Hugor for all platforms
+here: http://ifwiki.org/index.php/Hugor
+
+
 Basic game commands:
 TRANSCRIPT ON/OFF For saving a transcript of play
 RECORD ON/OFF For recording the inputs used during play
@@ -25,6 +31,9 @@ Attribution-NonCommercial-ShareAlike 3.0 Unported (CC BY-NC-SA 3.0)
 
 For more info about the 2019 Interactive Fiction
 Competition, head to https://ifcomp.org
+
+And lastly, you can play Enceladus online by going here:
+http://textadventures.online/play/?story=library/enceladus.hex
 
 Robb Sherwin
 beaver@zombieworld.com
