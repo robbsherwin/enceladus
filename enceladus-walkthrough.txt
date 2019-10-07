@@ -23,7 +23,7 @@ Scene One: There's a Werewolf On the HMCS Plagoo!
     (You can check some of the scenery out and listen in, but
     eventually the plan will be to open the door)
 
-    >open door
+    >open door  
 
     (And now the three of you will head west. Yes, it's a ship so it
     would normally have ship-like directions, but geez, it's the comp.
