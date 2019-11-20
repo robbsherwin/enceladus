@@ -221,7 +221,7 @@ routine VersionOfGame()
 	print "\BEnceladus\b"
 	print "Interactive Fiction"
 	print "Copyright (c) 2019. Written and programmed by Robb Sherwin"
-	print "Release 1.00 / Serial number 190123 / Hugo 3.1"
+	print "Release 1.01 / Serial number 190123 / Hugo 3.1"
 	print "Please type >about for specific information and >help for Help."
 	""
 }

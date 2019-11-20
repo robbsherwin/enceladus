@@ -12,7 +12,7 @@ routine NewMenu
 
 :IntroScreenMenu
 
-	!// Do this if we have graphics, but on mobile just start the game 
+	!// Do this if we have graphics, but on mobile just start the game
 	if (display.hasgraphics) and GRAPHICS_ON = TRUE {
 
 		picture "ENCEL01", "titlescreen01"
